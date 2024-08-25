@@ -143,6 +143,13 @@
           console.error('Error fetching data:', error);
         });
     });
+
+    // Event listener to open chrome://settings/help when / key is pressed
+    document.addEventListener('keydown', function(event) {
+      if (event.key === '/') {
+        window.open('chrome://settings/help', '_blank');
+      }
+    });
   </script>
 </body>
 </html>
