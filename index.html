@@ -7,22 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   body {
-    background-color: #121212;
+    background: radial-gradient(circle, #0f0f1a, #000000);
     color: #E0E0E0;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   h1 {
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #FFAB40;
+    color: #00bcd4;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 10px #00bcd4;
   }
   .preloader {
     position: fixed;
@@ -30,19 +27,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(18, 18, 18, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
   }
   .spinner {
-    border: 6px solid #444;
-    border-top: 6px solid #FFAB40;
+    border: 4px solid #0f0f1a;
+    border-top: 4px solid #00bcd4;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    animation: spin 1s linear infinite;
+    animation: spin 1.2s linear infinite;
   }
   @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -50,53 +47,50 @@
   }
   table {
     width: 100%;
-    max-width: 1200px;
     border-collapse: collapse;
-    background-color: #1E1E1E;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
   }
   th, td {
-    padding: 12px;
+    padding: 16px;
     text-align: left;
     color: #E0E0E0;
-    font-size: 1rem;
   }
   th {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.5);
     font-weight: 500;
-    text-transform: uppercase;
+    border-bottom: 2px solid #00bcd4;
   }
   tr:nth-child(even) {
-    background-color: #2C2C2C;
+    background: rgba(0, 0, 0, 0.3);
   }
   tr:hover {
-    background-color: #444;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px #00bcd4;
   }
   .pagination {
     margin-top: 20px;
     text-align: center;
   }
   .pagination button {
-    background-color: #FFAB40;
-    color: #121212;
+    background: linear-gradient(135deg, #00bcd4, #0288d1);
+    color: #ffffff;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1rem;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .pagination button:hover {
-    background-color: #FF9100;
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   .pagination button.active {
-    background-color: #FF6D00;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #0288d1, #00bcd4);
   }
 </style>
 </head>
