@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chrome Canary Releases</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #333;
+  }
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .pagination button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 2px;
+    cursor: pointer;
+  }
+  .pagination button.active {
+    background-color: #777;
+  }
+</style>
+</head>
+<body>
+  <h1 id="pageTitle">Chrome Canary Releases</h1>
+  <table id="releaseTable">
+    <thead>
+      <tr>
+        <th>S. No.</th>
+        <th>Start Time (IST)</th>
+        <th>Version Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <div class="pagination" id="pagination">
+    <!-- Pagination buttons will be dynamically added here -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ISTOffset = 5.5 * 60 * 60 * 1000; // IST Offset in milliseconds
+
+      fetch('https://versionhistory.googleapis.com/v1/chrome/platforms/win64/channels/canary/versions/all/releases')
+        .then(response => response.json())
+        .then(data => {
+          const releases = data.releases;
+          const currentTime = new Date();
+          const releasesInIST = releases.map(release => {
+            const startTimeUTC = new Date(release.serving.startTime);
+            const startTimeIST = new Date(startTimeUTC.getTime() + ISTOffset);
+            return { ...release, startTimeIST };
+          });
+
+          // Filter releases from the last month
+          const oneMonthAgo = new Date(currentTime.setMonth(currentTime.getMonth() - 1));
+          const recentReleases = releasesInIST.filter(release => release.startTimeIST >= oneMonthAgo);
+
+          // Pagination setup
+          const releasesPerPage = 10;
+          let currentPage = 1;
+          const totalPages = Math.ceil(recentReleases.length / releasesPerPage);
+
+          function renderPage(page) {
+            const tableBody = document.querySelector('#releaseTable tbody');
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            const start = (page - 1) * releasesPerPage;
+            const end = start + releasesPerPage;
+            const releasesToDisplay = recentReleases.slice(start, end);
+
+            releasesToDisplay.forEach((release, index) => {
+              const formattedTime = release.startTimeIST.toLocaleString('en-IN', {
+                day: '2-digit', month: '2-digit', year: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+              });
+
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${start + index + 1}</td>
+                <td>${formattedTime}</td>
+                <td>${release.version}</td>
+              `;
+              tableBody.appendChild(row);
+            });
+
+            // Update pagination buttons
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+              const button = document.createElement('button');
+              button.textContent = i;
+              if (i === page) {
+                button.classList.add('active');
+              }
+              button.addEventListener('click', () => {
+                currentPage = i;
+                renderPage(i);
+              });
+              pagination.appendChild(button);
+            }
+          }
+
+          renderPage(currentPage);
+
+          // Show time passed since the last update (Sr. No. 1)
+          const lastRelease = recentReleases[0];
+          const timePassed = new Date(new Date() - lastRelease.startTimeIST);
+          
+          const months = timePassed.getUTCMonth(); // getUTCMonth() returns months elapsed
+          const days = timePassed.getUTCDate() - 1; // getUTCDate() returns days elapsed (subtract 1 because it's 1-indexed)
+          const hours = timePassed.getUTCHours();
+          const minutes = timePassed.getUTCMinutes();
+          
+          const timePassedString = `${days} days, ${hours} hrs, ${minutes} mins`;
+
+          const pageTitle = document.getElementById('pageTitle');
+          pageTitle.textContent += ` (${timePassedString})`;
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    });
+  </script>
+</body>
+</html>
