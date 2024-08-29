@@ -108,6 +108,10 @@
   .pulsate-green {
     animation: pulsateGreen 2s infinite;
   }
+  a {
+    color: #E0E0E0;
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
@@ -183,7 +187,7 @@
               row.innerHTML = `
                 <td>${start + index + 1}</td>
                 <td>${formattedTime}</td>
-                <td>${release.version}</td>
+                <td>${index === 0 && page === 1 ? `<a href="https://ravanabackup.github.io/chromecanary/latest.html">${release.version}</a>` : release.version}</td>
                 <td>${timePassedString}</td>
               `;
               
@@ -226,23 +230,19 @@
           
           const timePassedString = `${days} days, ${hours} hrs, ${minutes} mins`;
 
-          const pageTitle = document.getElementById('pageTitle');
-          pageTitle.textContent += ` (${timePassedString})`;
+          // Display the time passed in the table
+          const tableBody = document.querySelector('#releaseTable tbody');
+          const firstRow = tableBody.querySelector('tr');
+          const timePassedCell = firstRow.querySelector('td:last-child');
+          timePassedCell.textContent = timePassedString;
 
-          // Hide preloader
+          // Hide preloader once content is loaded
           preloader.style.display = 'none';
         })
         .catch(error => {
           console.error('Error fetching data:', error);
-          preloader.style.display = 'none'; // Hide preloader on error
+          preloader.style.display = 'none';
         });
-    });
-
-    // Event listener to open https://chromiumdash.appspot.com/releases?platform=Windows when / key is pressed
-    document.addEventListener('keydown', function(event) {
-      if (event.key === '/') {
-        window.open('https://chromiumdash.appspot.com/releases?platform=Windows', '_blank');
-      }
     });
   </script>
 </body>
