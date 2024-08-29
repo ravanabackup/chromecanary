@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chrome for Testing - Latest Version</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    background: radial-gradient(circle, #0f0f1a, #000000);
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    text-align: center;
+    text-shadow: 0 0 10px #00bcd4;
+  }
+  .info-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 20px;
+    animation: pulsate 2s infinite;
+  }
+  .info-item {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  .label {
+    font-weight: 500;
+    color: #00bcd4;
+  }
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .spinner {
+    border: 4px solid #0f0f1a;
+    border-top: 4px solid #00bcd4;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes pulsate {
+    0% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 188, 212, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0); }
+  }
+</style>
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <h1>Chrome for Testing - Latest Version</h1>
+  <div class="info-container" id="infoContainer">
+    <!-- Information will be dynamically added here -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const preloader = document.getElementById('preloader');
+      const infoContainer = document.getElementById('infoContainer');
+
+      fetch('https://rawgithubusercontent.deno.dev/GoogleChromeLabs/chrome-for-testing/main/data/known-good-versions.json')
+        .then(response => response.json())
+        .then(data => {
+          const timestamp = new Date(data.timestamp);
+          const versions = data.versions;
+
+          // Find the largest version number
+          const latestVersion = versions.reduce((max, current) => {
+            return (compareVersions(current.version, max.version) > 0) ? current : max;
+          });
+
+          // Format the timestamp in Indian time zone
+          const options = {
+            timeZone: 'Asia/Kolkata',
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+          };
+          const formattedTimestamp = timestamp.toLocaleString('en-IN', options);
+
+          // Calculate time passed since last update
+          const now = new Date();
+          const timePassed = getTimePassed(timestamp, now);
+
+          // Update the info container
+          infoContainer.innerHTML = `
+            <div class="info-item"><span class="label">Latest Version:</span> ${latestVersion.version}</div>
+            <div class="info-item"><span class="label">Revision:</span> ${latestVersion.revision}</div>
+            <div class="info-item"><span class="label">Timestamp (IST):</span> ${formattedTimestamp}</div>
+            <div class="info-item"><span class="label">Time Passed Since Last Update:</span> ${timePassed}</div>
+          `;
+
+          // Hide preloader
+          preloader.style.display = 'none';
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+          infoContainer.innerHTML = '<div class="info-item">Error loading data. Please try again later.</div>';
+          preloader.style.display = 'none';
+        });
+
+      // Function to compare version numbers
+      function compareVersions(v1, v2) {
+        const parts1 = v1.split('.').map(Number);
+        const parts2 = v2.split('.').map(Number);
+        for (let i = 0; i < parts1.length; ++i) {
+          if (parts1[i] > parts2[i]) return 1;
+          if (parts1[i] < parts2[i]) return -1;
+        }
+        return 0;
+      }
+
+      // Function to calculate time passed since last update
+      function getTimePassed(timestamp, now) {
+        const diffMs = now - timestamp;
+        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const diffHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const diffMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+        const diffSeconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+        return `${diffDays} days, ${diffHours} hours, ${diffMinutes} minutes, and ${diffSeconds} seconds`;
+      }
+    });
+  </script>
+</body>
+</html>
