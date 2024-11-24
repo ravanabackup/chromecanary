@@ -66,6 +66,29 @@
             min-height: 150px;
         }
 
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #1e88e5;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button.fetching {
+            background-color: #e53935; /* Red */
+        }
+
+        button.success {
+            background-color: #43a047; /* Green */
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
         .new-hashtag {
             color: #66bb6a; /* Green */
             font-weight: bold;
@@ -107,7 +130,8 @@
     <div class="container">
         <div class="box">
             <h2>Old Data</h2>
-            <textarea id="oldData" placeholder="Paste old data here..."></textarea>
+            <button id="fetchOldData">Import Data from URL</button>
+            <textarea id="oldData" placeholder="Or manually add old data here..."></textarea>
         </div>
         <div class="box">
             <h2>New Data</h2>
@@ -125,10 +149,45 @@
     </footer>
 
     <script>
+        const fetchOldDataButton = document.getElementById('fetchOldData');
         const oldData = document.getElementById('oldData');
         const newData = document.getElementById('newData');
         const comparisonResultDiv = document.getElementById('comparisonResult');
 
+        // Fetch old data from the URL
+        fetchOldDataButton.addEventListener('click', async () => {
+            const url = 'https://raw.githubusercontent.com/ravanabackup/chromecanary/refs/heads/main/flags.txt';
+            fetchOldDataButton.textContent = 'Loading...';
+            fetchOldDataButton.classList.add('fetching'); // Change to red
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Failed to fetch data');
+                const text = await response.text();
+
+                // Extract hashtags from the fetched text
+                const hashtags = [...new Set(text.match(/#\S+/g) || [])].sort((a, b) => a.localeCompare(b));
+                oldData.value = hashtags.join('\n');
+
+                // Update button to success (green)
+                fetchOldDataButton.textContent = 'Data Imported Successfully';
+                fetchOldDataButton.classList.remove('fetching');
+                fetchOldDataButton.classList.add('success');
+
+                compareHashtags();
+            } catch (error) {
+                fetchOldDataButton.textContent = 'Error: Try Again';
+                alert('Error fetching data: ' + error.message);
+            } finally {
+                setTimeout(() => {
+                    // Reset button after 3 seconds
+                    fetchOldDataButton.textContent = 'Import Data from URL';
+                    fetchOldDataButton.classList.remove('fetching', 'success');
+                }, 3000);
+            }
+        });
+
+        // Compare hashtags between old and new data
         function compareHashtags() {
             // Extract hashtags from both inputs
             const oldHashtags = new Set((oldData.value.match(/#\S+/g) || []).map(tag => tag.trim()));
@@ -151,7 +210,7 @@
             comparisonResultDiv.innerHTML = `${addedOutput}\n\n${removedOutput}`;
         }
 
-        // Add event listeners for input in both text areas
+        // Add event listeners for manual input
         oldData.addEventListener('input', compareHashtags);
         newData.addEventListener('input', compareHashtags);
     </script>
