@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashtag Comparator</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .box h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #90caf9;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #1e1e1e;
+            border: 1px solid #424242;
+            color: #e0e0e0;
+            border-radius: 8px;
+            resize: none;
+        }
+
+        .result {
+            padding: 10px;
+            border: 1px solid #424242;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+            font-size: 16px;
+            white-space: pre-wrap;
+            min-height: 150px;
+        }
+
+        .new-hashtag {
+            color: #66bb6a; /* Green */
+            font-weight: bold;
+        }
+
+        .removed-hashtag {
+            color: #ef5350; /* Red */
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #757575;
+        }
+
+        /* Scrollbars */
+        textarea::-webkit-scrollbar,
+        .result::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        textarea::-webkit-scrollbar-thumb,
+        .result::-webkit-scrollbar-thumb {
+            background: #757575;
+            border-radius: 4px;
+        }
+
+        textarea::-webkit-scrollbar-thumb:hover,
+        .result::-webkit-scrollbar-thumb:hover {
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modern Hashtag Comparator</h1>
+
+    <div class="container">
+        <div class="box">
+            <h2>Old Data</h2>
+            <textarea id="oldData" placeholder="Paste old data here..."></textarea>
+        </div>
+        <div class="box">
+            <h2>New Data</h2>
+            <textarea id="newData" placeholder="Paste new data here..."></textarea>
+        </div>
+    </div>
+
+    <div>
+        <h2>Comparison Results</h2>
+        <div id="comparisonResult" class="result"></div>
+    </div>
+
+    <footer>
+        Hashtag Comparator &copy; 2024
+    </footer>
+
+    <script>
+        const oldData = document.getElementById('oldData');
+        const newData = document.getElementById('newData');
+        const comparisonResultDiv = document.getElementById('comparisonResult');
+
+        function compareHashtags() {
+            // Extract hashtags from both inputs
+            const oldHashtags = new Set((oldData.value.match(/#\S+/g) || []).map(tag => tag.trim()));
+            const newHashtags = new Set((newData.value.match(/#\S+/g) || []).map(tag => tag.trim()));
+
+            // Find new hashtags
+            const addedHashtags = [...newHashtags].filter(tag => !oldHashtags.has(tag));
+            // Find removed hashtags
+            const removedHashtags = [...oldHashtags].filter(tag => !newHashtags.has(tag));
+
+            // Create the comparison result
+            const addedOutput = addedHashtags.length > 0
+                ? addedHashtags.map(tag => `<span class="new-hashtag">+ ${tag}</span>`).join('\n')
+                : 'No new hashtags';
+            const removedOutput = removedHashtags.length > 0
+                ? removedHashtags.map(tag => `<span class="removed-hashtag">- ${tag}</span>`).join('\n')
+                : 'No hashtags removed';
+
+            // Display the result
+            comparisonResultDiv.innerHTML = `${addedOutput}\n\n${removedOutput}`;
+        }
+
+        // Add event listeners for input in both text areas
+        oldData.addEventListener('input', compareHashtags);
+        newData.addEventListener('input', compareHashtags);
+    </script>
+</body>
+</html>
