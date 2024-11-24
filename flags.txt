@@ -1,0 +1,2837 @@
+Experiments
+133.0.6856.0
+Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
+ Smooth Scrolling
+Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android, Lacros
+
+#smooth-scrolling
+
+Enabled
+ Overlay Scrollbars
+Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS, Lacros
+
+#overlay-scrollbars
+
+Enabled
+ Fluent scrollbars.
+Stylizes scrollbars with Microsoft Fluent design. – Windows, Linux
+
+#fluent-scrollbars
+
+Enabled
+ Connect to Cast devices on all IP addresses
+Have the Media Router connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#media-router-cast-allow-all-ips
+
+Enabled
+ Parallel downloading
+Enable parallel downloading to accelerate download speed. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-parallel-downloading
+
+Enabled
+ Windows 11 Mica titlebar
+Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
+
+#windows11-mica-titlebar
+
+Enabled
+ Support Tool Screenshot
+Enables the Support Tool to capture and include a screenshot in the exported packet. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#support-tool-screenshot
+
+Enabled
+ Desktop Screenshots
+Enables taking screenshots from the desktop sharing hub. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#sharing-desktop-screenshots
+
+Enabled
+ Holding Esc to exit browser fullscreen
+Allows users to press and hold Esc key to exit browser fullscreen. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#press-and-hold-esc-to-exit-browser-fullscreen
+
+Enabled
+ Extensions Menu Access Control
+Enables a redesigned extensions menu that allows the user to control extensions site access. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#extensions-menu-access-control
+
+Enabled
+Temporarily unexpire M131 flags.
+Temporarily unexpire flags that expired as of M131. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#temporary-unexpire-flags-m131
+
+Default
+Temporarily unexpire M132 flags.
+Temporarily unexpire flags that expired as of M132. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#temporary-unexpire-flags-m132
+
+Default
+Enable benchmarking
+Sets all features to a fixed state; that is, disables randomization for feature states. If '(Default Feature States)' is selected, sets all features to their default state. If '(Match Field Trial Testing Config)' is selected, sets all features to the state configured in the field trial testing config. This is used by developers and testers to diagnose whether an observed problem is caused by a non-default base::Feature configuration. This flag is automatically reset after 3 restarts and will be off from the 4th restart. On the 3rd restart, the flag will appear to be off but the effect is still active. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-benchmarking
+
+Disabled
+Override software rendering list
+Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#ignore-gpu-blocklist
+
+Disabled
+Accelerated 2D canvas
+Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#disable-accelerated-2d-canvas
+
+Enabled
+Select HW overlay strategies
+Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#overlay-strategies
+
+Default
+Tint composited content
+Tint contents composited using Viz with a shade of red to help debug and study overlay support. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#tint-composited-content
+
+Disabled
+Show overdraw feedback
+Visualize overdraw by color-coding elements based on if they have other elements drawn underneath. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#show-overdraw-feedback
+
+Disabled
+Partial swap
+Sets partial swap behavior. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#ui-disable-partial-swap
+
+Enabled
+Allow WebRTC to adjust the input volume.
+Allow the Audio Processing Module in WebRTC to adjust the input volume during a real-time call. Disable if microphone muting or clipping issues are observed when the browser is running and used for a real-time call. This flag is experimental and may be removed at any time. – Mac, Windows, Linux
+
+#enable-webrtc-allow-input-volume-adjustment
+
+Default
+WebRTC downmix capture audio method.
+Override the method that the Audio Processing Module in WebRTC uses to downmix the captured audio to mono (when needed) during a real-time call. This flag is experimental and may be removed at any time. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-webrtc-apm-downmix-capture-audio-method
+
+Default
+Web HID in WebView
+Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#web-hid-in-web-view
+
+Default
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#extensions-on-chrome-urls
+
+Disabled
+Show Autofill predictions
+Annotates web forms with Autofill field type predictions as placeholder text. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#show-autofill-type-predictions
+
+Default
+Backdrop Filter Mirror Edge
+When sampling being the backdrop edge for backdrop-filter, samples beyond the edge are mirrored back into the backdrop rather than duplicating the pixels at the edge. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#backdrop-filter-mirror-edge
+
+Default
+Experimental QUIC protocol
+Enable experimental QUIC protocol support. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-quic
+
+Default
+WebTransport Developer Mode
+When enabled, removes the requirement that all certificates used for WebTransport over HTTP/3 are issued by a known certificate root. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#webtransport-developer-mode
+
+Disabled
+Latest stable JavaScript features
+Some web pages use legacy or non-standard JavaScript extensions that may conflict with the latest JavaScript features. This flag allows disabling support of those features for compatibility with such pages. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#disable-javascript-harmony-shipping
+
+Enabled
+Experimental JavaScript
+Enable web pages to use experimental JavaScript features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-javascript-harmony
+
+Disabled
+Enable enterprise profile badging on the avatar
+Enable enterprise profile badging on the toolbar avatar – Mac, Windows, Linux
+
+#enable-enterprise-profile-badging-for-avatar
+
+Default
+Enable enterprise profile badging in the profile menu
+Enable enterprise profile badging in the profile menu. This includes showing the enterprise logo and the management disclaimer under the email – Mac, Windows, Linux
+
+#enable-enterprise-profile-badging-for-menu
+
+Default
+Enable enterprise updated profile creation screens
+Enable enterprise updated profile creation screens in the profile picker and forced profile creation. – Mac, Windows, Linux
+
+#enable-enterprise-updated-profile-creation-screen
+
+Default
+Enable the managed profile required interstitial
+Enable the interstitial shown when a managed profile creation is required. – Mac, Windows, Linux
+
+#enable-enterprise-profile-required-interstitial
+
+Default
+Experimental WebAssembly
+Enable web pages to use experimental WebAssembly features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-experimental-webassembly-features
+
+Disabled
+Experimental WebAssembly JavaScript Promise Integration (JSPI)
+Enable web pages to use experimental WebAssembly JavaScript Promise Integration (JSPI) API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-experimental-webassembly-jspi
+
+Default
+WebAssembly baseline compiler
+Enables WebAssembly baseline compilation and tier up. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webassembly-baseline
+
+Default
+WebAssembly lazy compilation
+Enables lazy (JIT on first call) compilation of WebAssembly modules. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webassembly-lazy-compilation
+
+Default
+WebAssembly tiering
+Enables tiered compilation of WebAssembly (will tier up to TurboFan if #enable-webassembly-baseline is enabled). – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webassembly-tiering
+
+Default
+WebAssembly Memory64
+Enables 64-bit memory indices on WebAssembly operations – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webassembly-memory64
+
+Default
+Future V8 VM features
+This enables upcoming and experimental V8 VM features. This flag does not enable experimental JavaScript features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-future-v8-vm-features
+
+Default
+GPU rasterization
+Use GPU to rasterize web content. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-gpu-rasterization
+
+Default
+Enable Fontations font backend
+If enabled, the Fontations font backend will be used for web fonts where otherwise FreeType would have been used. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-fontations-backend
+
+Default
+Experimental Web Platform features
+Enables experimental Web Platform features that are in development. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-experimental-web-platform-features
+
+Disabled
+Touch UI Layout
+Enables touch UI layout in the browser's top chrome. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#top-chrome-touch-ui
+
+Default
+Top Chrome Toasts
+Enables the use of toasts to present confirmation of user actions. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#top-chrome-toasts
+
+Default
+Hardware-accelerated video decode
+Hardware-accelerated video decode where available. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#disable-accelerated-video-decode
+
+Enabled
+Hardware-accelerated video encode
+Hardware-accelerated video encode where available. – Mac, Windows, ChromeOS, Android
+
+#disable-accelerated-video-encode
+
+Enabled
+Hardware Secure Decryption
+Enable/Disable the use of hardware secure Content Decryption Module (CDM) for protected content playback. – Windows
+
+#enable-hardware-secure-decryption
+
+Default
+Hardware Secure Decryption Experiment
+Enable/Disable the use of hardware secure Content Decryption Module (CDM) for experimental protected content playback. – Windows
+
+#enable-hardware-secure-decryption-experiment
+
+Default
+Hardware Secure Decryption Fallback
+Allows automatically disabling hardware secure Content Decryption Module (CDM) after failures or crashes. Subsequent playback may use software secure CDMs. If this feature is disabled, the fallback will never happen and users could be stuck with playback failures. – Windows
+
+#enable-hardware-secure-decryption-fallback
+
+Default
+Fluent Overlay scrollbars.
+Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
+
+#fluent-overlay-scrollbars
+
+Default
+Enable Zero-Copy Video Capture
+Camera produces a gpu friendly buffer on capture and, if there is, hardware accelerated video encoder consumes the buffer – Windows
+
+#zero-copy-video-capture
+
+Default
+Predictions on Username first flow with intermediate values
+New single username predictions based on voting from Username First Flow with intermediate values. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#username-first-flow-with-intermediate-values-predictions
+
+Default
+Username first flow with intermediate values voting
+Support voting on username first flow with intermediate values. Username first flow is login/sign-up flow where a user has to type username first on one page and then password on another page. Intermediate fields are usually an OTP field or CAPTCHA. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#username-first-flow-with-intermediate-values-voting
+
+Default
+Show autofill signatures.
+Annotates web forms with Autofill signatures as HTML attributes. Also marks password fields suitable for password generation. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-show-autofill-signatures
+
+Disabled
+Use Google Payments sandbox servers
+For developers: use the sandbox service for Google Payments API calls. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#wallet-service-use-sandbox
+
+Default
+Use the new permissions backend for Web Bluetooth
+Enables the new permissions backend for Web Bluetooth. This will enable persistent storage of device permissions and Web Bluetooth features such as BluetoothDevice.watchAdvertisements() and Bluetooth.getDevices() – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-web-bluetooth-new-permissions-backend
+
+Default
+Automatic detection of WebUSB-compatible devices
+When enabled, the user will be notified when a device which advertises support for WebUSB is connected. Disable if problems with USB devices are observed when the browser is running. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-webusb-device-detection
+
+Default
+Touch initiated drag and drop
+Touch drag and drop can be initiated through long press on a draggable element. – Windows, ChromeOS
+
+#enable-touch-drag-drop
+
+Default
+WebGL Developer Extensions
+Enabling this option allows web applications to access WebGL extensions intended only for use during development time. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webgl-developer-extensions
+
+Disabled
+WebGL Draft Extensions
+Enabling this option allows web applications to access the WebGL extensions that are still in draft status. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webgl-draft-extensions
+
+Disabled
+Zero-copy rasterizer
+Raster threads write directly to GPU memory associated with tiles. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-zero-copy
+
+Default
+Vulkan
+Use vulkan as the graphics backend. – Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-vulkan
+
+Default
+In-Product Help Demo Mode
+Selects the In-Product Help demo mode. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#in-product-help-demo-mode-choice
+
+Default
+Enable Isolated Web Apps
+Enables experimental support for Isolated Web Apps. See https://github.com/reillyeon/isolated-web-apps for more information. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-isolated-web-apps
+
+Default
+Enable Isolated Web App Developer Mode
+Enables the installation of unverified Isolated Web Apps – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-isolated-web-app-dev-mode
+
+Default
+Enable Controlled Frame
+Enables experimental support for Controlled Frame. See https://github.com/WICG/controlled-frame/blob/main/EXPLAINER.md for more information. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-controlled-frame
+
+Default
+Isolate additional origins
+Requires dedicated processes for an additional set of origins, specified as a comma-separated list. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#isolate-origins
+
+Disabled
+Disable site isolation
+Disables site isolation (SitePerProcess, IsolateOrigins, etc). Intended for diagnosing bugs that may be due to out-of-process iframes. Opt-out has no effect if site isolation is force-enabled using a command line switch or using an enterprise policy. Caution: this disables important mitigations for the Spectre CPU vulnerability affecting most computers. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#site-isolation-trial-opt-out
+
+Default
+Enable audio descriptions.
+When enabled, HTML5 video elements with a 'descriptions' WebVTT track will speak the audio descriptions aloud as the video plays. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#text-based-audio-descriptions
+
+Default
+Bypass user engagement checks
+Bypasses user engagement checks for displaying app banners, such as requiring that users have visited the site before and that the banner hasn't been shown recently. This allows developers to test that other eligibility requirements for showing app banners, such as having a manifest, are met. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#bypass-app-banner-engagement-checks
+
+Default
+Desktop PWA Sub Apps
+Enable installed PWAs to create shortcuts by installing their sub apps. Prototype implementation of: https://github.com/ivansandrk/multi-apps/blob/main/explainer.md – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-desktop-pwas-sub-apps
+
+Default
+Desktop PWA Scope Extensions
+Enable web app manifests to declare scope extensions to extend app scope to other origins. Prototype implementation of: https://github.com/WICG/manifest-incubations/blob/gh-pages/scope_extensions-explainer.md – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-desktop-pwas-scope-extensions
+
+Default
+Desktop PWA Borderless
+Enable web app manifests to declare borderless mode as a display override. Prototype implementation of: go/borderless-mode. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-desktop-pwas-borderless
+
+Default
+Desktop PWA Additional Windowing Controls
+Enable PWAs to: (1) manually recreate the minimize, maximize and restore window functionalities, (2) set windows (non-/)resizable and (3) listen to window's move events with respective APIs. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-desktop-pwas-additional-windowing-controls
+
+Default
+Record web app debug info
+Enables recording additional web app related debugging data to be displayed in: chrome://web-app-internals – Mac, Windows, Linux, ChromeOS, Lacros
+
+#record-web-app-debug-info
+
+Default
+Desktop PWA sync changes
+Changes the integration of desktop PWAs with sync such that apps that are installed while sync is turned off will not be added to sync when sync is enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-desktop-pwas-sync-changes
+
+Default
+Use Chrome Sync sandbox
+Connects to the testing server for Chrome Sync. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#use-sync-sandbox
+
+Disabled
+Media Remoting without videos in fullscreen mode
+Starts Media Remoting from Global Media Controls without making the videos fullscreen. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#media-remoting-without-fullscreen
+
+Default
+Allow all sites to initiate mirroring
+When enabled, allows all websites to request to initiate tab mirroring via Presentation API. Requires #cast-media-route-provider to also be enabled – Mac, Windows, Linux, ChromeOS, Lacros
+
+#allow-all-sites-to-initiate-mirroring
+
+Default
+Delay media sink discovery until explicit user interaction with cast
+Delay the browser background discovery of Cast and DIAL devices until users have interacted with the Cast UI or visited a site supporting Cast SDK or Remote Playback API. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#delay-media-sink-discovery
+
+Default
+Show the permission rejected error message in the Cast/GMC UI.
+Show an error message in the Cast/GMC UI to inform users when the network permission is rejected and Chrome's Cast feature is disabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#show-cast-permission-rejected-error
+
+Default
+Enables logging of all Cast messages.
+Enables logging of all messages exchanged between websites, Chrome, and Cast receivers in chrome://media-router-internals. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-message-logging
+
+Default
+Toggle hardware accelerated H.264 video encoding for Cast Streaming
+The default is to allow hardware H.264 encoding when recommended for the platform. If enabled, hardware H.264 encoding will always be allowed when supported by the platform. If disabled, hardware H.264 encoding will never be used. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-streaming-hardware-h264
+
+Default
+Toggle hardware accelerated VP8 video encoding for Cast Streaming
+The default is to allow hardware VP8 encoding when recommended for the platform. If enabled, hardware VP8 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP8 encoding will never be used. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-streaming-hardware-vp8
+
+Default
+Toggle hardware accelerated VP9 video encoding for Cast Streaming
+The default is to allow hardware VP9 encoding when recommended for the platform. If enabled, hardware VP9 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP9 encoding will never be used. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-streaming-hardware-vp9
+
+Default
+Toggles using the media::VideoEncoder implementation for Cast Streaming
+When enabled, the media base VideoEncoder implementation is used instead of the media cast implementation. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-streaming-media-video-encoder
+
+Default
+Toggle a performance metrics overlay while Cast Streaming
+When enabled, a text overlay is rendered on top of each frame sent while Cast Streaming that includes frame duration, resolution, timestamp, low latency mode, capture duration, target playout delay, target bitrate, and encoder utilitization. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-streaming-performance-overlay
+
+Default
+Enable AV1 video encoding for Cast Streaming
+Offers the AV1 video codec when negotiating Cast Streaming, and uses AV1 if selected for the session. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-cast-streaming-av1
+
+Default
+Enable hardware H264 video encoding on for Cast Streaming on Windows
+Offers the H264 video codec when negotiating Cast Streaming, and uses hardware-accelerated H264 encoding if selected for the session – Windows
+
+#enable-cast-streaming-win-hardware-h264
+
+Default
+Enable VP8 video encoding for Cast Streaming
+Offers the VP8 video codec when negotiating Cast Streaming, and uses VP8 if selected for the session. If true, software VP8 encoding will be offered and hardware VP8 encoding may be offered if enabled and available on this platform. If false, software VP8 will not be offered and hardware VP8 will only be offered if #cast-streaming-hardware-vp8 is explicitly set to true. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-cast-streaming-vp8
+
+Default
+Enable VP9 video encoding for Cast Streaming
+Offers the VP9 video codec when negotiating Cast Streaming, and uses VP9 if selected for the session. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-cast-streaming-vp9
+
+Default
+HiDPI tab capture support for Cast Streaming
+Enables HiDPI tab capture during Cast Streaming mirroring sessions. May reduce performance on some platforms and also improve quality of video frames. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-cast-streaming-with-hidpi
+
+Default
+Web Share
+Enables the Web Share (navigator.share) APIs on experimentally supported platforms. – Mac, Windows, ChromeOS
+
+#web-share
+
+Default
+WebXR Hand Input
+Enables access to articulated hand tracking sensor input in WebXR. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#webxr-hand-input
+
+Default
+WebXR/WebGPU Binding
+Enables rendering with WebGPU for WebXR sessions. – Windows, Android
+
+#webxr-webgpu-binding
+
+Default
+WebXR Incubations
+Enables experimental features for WebXR. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#webxr-incubations
+
+Default
+WebXR Internals Debugging Page
+Enables the webxr-internals developer page which can be used to help debug issues with the WebXR Device API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#webxr-internals
+
+Default
+Force WebXr Runtime
+Force the browser to use a particular runtime, even if it would not usually be enabled or would otherwise not be selected based on the attached hardware. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#webxr-runtime
+
+Default
+WebXr Hand Anonymization Strategy
+Force the browser to use a particular strategy for anonymizing hand data, the default order has a hierarchy of strategies to try and if all of them fail, then no data will be returned, while this choice does allow the (not recommended) alternative of bypassing these algorithms all together. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#webxr-hand-anonymization
+
+Default
+Experimental system keyboard lock
+Enables websites to use the keyboard.lock() API to intercept system keyboard shortcuts and have the events routed directly to the website when in fullscreen mode. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#system-keyboard-lock
+
+Default
+Block scripts loaded via document.write
+Disallows fetches for third-party parser-blocking scripts inserted into the main frame via document.write. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#disallow-doc-written-script-loads
+
+Default
+CSS view transition layered capture
+Controls the way view transition elements are captured. When enabled, view transition borders, backgrounds, effects etc. are captured as style instead of being baked into the image. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#view-transition-layered-capture
+
+Default
+CSS view transitions: compute visual overflow from surfaces
+Changes the underlying mechanism to compute the view transition live element geometry. This shouldn't have web-observable effects, but exposing as a flag for easy triage. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#view-transition-overflow-rect-from-surface
+
+Default
+Use Windows Runtime MIDI API
+Use Windows Runtime MIDI API for WebMIDI (effective only on Windows 10 or later). – Windows
+
+#use-winrt-midi-api
+
+Default
+Use Windows WGC API for screen capture
+Use Windows.Graphics.Capture API based screen capturer in combination with the WebRTC based Web API getDisplayMedia. Requires Windows 10, version 1803 or higher. Adds a thin yellow border around the captured screen area. The DXGI API is used as screen capture API when this flag is disabled. – Windows
+
+#webrtc-allow-wgc-screen-capturer
+
+Default
+Use Windows WGC API for window capture
+Use Windows.Graphics.Capture API based windows capturer in combination with the WebRTC based Web API getDisplayMedia. Requires Windows 10, version 1803 or higher. Adds a thin yellow border around the captured window area. The GDI API is used as window capture API when this flag is disabled. – Windows
+
+#webrtc-allow-wgc-window-capturer
+
+Default
+Enable offering upload of Autofilled credit cards
+Enables a new option to upload credit cards to Google Payments for sync to all Chrome devices. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-autofill-credit-card-upload
+
+Default
+Force UI direction
+Explicitly force the UI to left-to-right (LTR) or right-to-left (RTL) mode, overriding the default direction of the UI language. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#force-ui-direction
+
+Default
+Force text direction
+Explicitly force the per-character directionality of UI text to left-to-right (LTR) or right-to-left (RTL) mode, overriding the default direction of the character language. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#force-text-direction
+
+Default
+TLS 1.3 Early Data
+This option enables TLS 1.3 Early Data, allowing GET requests to be sent during the handshake when resuming a connection to a compatible TLS 1.3 server. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-tls13-early-data
+
+Default
+TLS 1.3 post-quantum key agreement
+This option enables a post-quantum key agreement in TLS 1.3. The #use-ml-kem flag controls whether ML-KEM or Kyber is used. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-tls13-kyber
+
+Default
+Use ML-KEM in TLS 1.3
+This option uses the ML-KEM standard as the post-quantum key agreement in TLS 1.3, instead of the Kyber draft standard. Post-quantum key agreement must be enabled (see #enable-tls13-kyber) for this option to have an effect. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#use-ml-kem
+
+Default
+Auto Dark Mode for Web Contents
+Automatically render all web contents using a dark theme. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-force-dark
+
+Default
+Experimental Web Payments API features
+Enable experimental Web Payments API features – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-web-payments-experimental-features
+
+Default
+Web Payments App Store Billing Debug Mode
+App-store purchases (e.g., Google Play Store) within a TWA can be requested using the Payment Request API. This flag removes the restriction that the TWA has to be installed from the app-store. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-debug-for-store-billing
+
+Default
+Secure Payment Confirmation Debug Mode
+This flag removes the restriction that PaymentCredential in WebAuthn and secure payment confirmation in PaymentRequest API must use user verifying platform authenticators. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-debug-for-secure-payment-confirmation
+
+Default
+Secure Payment Confirmation Network and Issuer Icons
+Allow the passing in and display of card network and issuer icons for the Secure Payment Confirmation Web API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-network-and-issuer-icons-for-secure-payment-confirmation
+
+Default
+Enable (deprecated) synchronous mutation events
+Mutation Events are a deprecated set of events which cause performance issues. Disabling this feature turns off Mutation Events. NOTE: Disabling these events can cause breakage on some sites that are still reliant on these deprecated features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#mutation-events
+
+Default
+Enables keyboard focusable scrollers
+Scrollers without focusable children are keyboard-focusable by default. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#keyboard-focusable-scrollers
+
+Default
+Fill passwords on account selection
+Filling of passwords when an account is explicitly selected by the user rather than autofilling credentials on page load. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fill-on-account-select
+
+Default
+Generic Sensor Extra Classes
+Enables an extra set of sensor classes based on Generic Sensor API, which expose previously unavailable platform features, i.e. AmbientLightSensor and Magnetometer interfaces. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-generic-sensor-extra-classes
+
+Default
+Most Visited Tile: New scoring function
+When showing MV tiles, use a new scoring function to compute the score of each segment. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#most-visited-tiles-new-scoring
+
+Default
+Allow local history zero-prefix suggestions beyond NTP
+Enables local history zero-prefix suggestions in every context in which the remote zero-prefix suggestions are enabled. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-local-history-zero-suggest-beyond-ntp
+
+Default
+Omnibox Zero Prefix Suggest Prefetch Request Debouncing
+Enables the use of a request debouncer to throttle the volume of ZPS prefetch requests issued to the remote Suggest service. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-zero-suggest-prefetch-debouncing
+
+Default
+Omnibox Zero Prefix Suggestion Prefetching on SRP
+Enables prefetching of the zero prefix suggestions for eligible users on the Search Results page. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-zero-suggest-prefetching-on-srp
+
+Default
+Log Omnibox URL Scoring Signals
+Enables Omnibox to log scoring signals of URL suggestions. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-ml-log-url-scoring-signals
+
+Default
+Omnibox ML Scoring with Piecewise Score Mapping
+Specifies how to blend URL ML scores and search traditional scores using a piecewise ML score mapping function. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-ml-url-piecewise-mapped-search-blending
+
+Default
+Omnibox ML URL Score Caching
+Enables in-memory caching of ML URL scores. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-ml-url-score-caching
+
+Default
+Omnibox ML URL Scoring
+Enables ML-based relevance scoring for Omnibox URL Suggestions. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-ml-url-scoring
+
+Default
+Omnibox ML URL Search Blending
+Specifies how to blend URL ML scores and search traditional scores. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-ml-url-search-blending
+
+Default
+Omnibox URL Scoring Model
+Enables ML scoring model for Omnibox URL sugestions. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-ml-url-scoring-model
+
+Default
+Omnibox on device head suggestions (non-incognito only)
+Google head non personalized search suggestions provided by a compact on device model for non-incognito. Turn off this feature if you have other apps running which affects local file access (e.g. anti-virus software) and are experiencing searchbox typing lags. – Windows
+
+#omnibox-on-device-head-suggestions
+
+Default
+Omnibox on device head suggestions (incognito only)
+Google head non personalized search suggestions provided by a compact on device model for incognito. Turn off this feature if you have other apps running which affects local file access (e.g. anti-virus software) and are experiencing searchbox typing lags. – Windows
+
+#omnibox-on-device-head-suggestions-incognito
+
+Default
+Omnibox on device tail suggestions
+Google tail non personalized search suggestions provided by a compact on device model. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-on-device-tail-suggestions
+
+Default
+Force color profile
+Forces Chrome to use a specific color profile instead of the color of the window's current monitor, as specified by the operating system. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#force-color-profile
+
+Default
+Forced Colors
+Enables forced colors mode for web content. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#forced-colors
+
+Default
+Chrome heap profiler start mode.
+Starts heap profiling service that records sampled memory allocation profile having each sample attributed with a callstack. The sampling resolution is controlled with --memlog-sampling-rate flag. Recorded heap dumps can be obtained at chrome://tracing [category:memory-infra] and chrome://memory-internals. This setting controls which processes will be profiled since their start. To profile any given process at a later time use chrome://memory-internals page. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#memlog
+
+Disabled
+Heap profiling sampling interval (in bytes).
+Heap profiling service uses Poisson process to sample allocations. Default value for the interval between samples is 1000000 (1MB). This results in low noise for large and/or frequent allocations [size * frequency >> 1MB]. This means that aggregate numbers [e.g. total size of malloc-ed objects] and large and/or frequent allocations can be trusted with high fidelity. Lower intervals produce higher samples resolution, but come at a cost of higher performance overhead. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#memlog-sampling-rate
+
+Default
+Heap profiling stack traces type.
+By default heap profiling service records native stacks. A post-processing step is required to symbolize the stacks. 'Native with thread names' adds the thread name as the first frame of each native stack. It's also possible to record a pseudo stack using trace events as identifiers. It's also possible to do a mix of both. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#memlog-stack-mode
+
+Default
+Omnibox Max URL Matches
+The maximum number of URL matches to show, unless there are no replacements. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omnibox-max-url-matches
+
+Default
+Enable optimization guide debug logs
+Enables the optimization guide to log and save debug messages that can be shown in the internals page. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#optimization-guide-debug-logs
+
+Disabled
+Enables optimization guide on device
+Enables the optimization guide to execute models on device. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#optimization-guide-on-device-model
+
+Default
+Text Safety Classifier
+Enables text safety classifier for on-device models – Mac, Windows, Linux, ChromeOS, Lacros
+
+#text-safety-classifier
+
+Default
+Organic repeatable queries in Most Visited tiles
+Enables showing the most repeated queries, from the device browsing history, organically among the most visited sites in the MV tiles. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#organic-repeatable-queries
+
+Default
+History Embeddings
+When enabled, the history embeddings feature may operate. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#history-embeddings
+
+Default
+History Embeddings Answers
+When enabled, the history embeddings feature may answer some queries. Has no effect if the History Embeddings feature is disabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#history-embeddings-answers
+
+Default
+Page Image Service - Optimization Guide Salient Images
+Enables the PageImageService fetching images from the Optimization Guide Salient Images source. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#page-image-service-optimization-guide-salient-images
+
+Default
+Page content annotations - Remote page metadata
+Enables fetching of page load metadata to be persisted on-device. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#page-content-annotations-remote-page-metadata
+
+Default
+Block insecure private network requests.
+Prevents non-secure contexts from making subresource requests to more-private IP addresses. See also: https://developer.chrome.com/blog/private-network-access-update/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#block-insecure-private-network-requests
+
+Default
+Respect the result of Private Network Access preflights
+Enables sending Private Network Access preflights ahead of requests to more-private IP addresses. These preflight requests must succeed in order for the request to proceed. See also: https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#private-network-access-respect-preflight-results
+
+Default
+Reduce waiting time for Private Network Access preflights response
+Reduce the waiting time for Private Network Access preflights to 200 milliseconds. The default timeout period for requests is 5 minutes. See also: https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#private-network-access-preflight-short-timeout
+
+Default
+Enable Permission Prompt for Private Network Access
+Enable Permission Prompt for HTTPS public websites accessing HTTP more-private devices. Require to set a fetch option `targetAddressSpace` on the request to relax mixed content check. See also: https://developer.chrome.com/blog/private-network-access-update-2023-02-02/ – Mac, Windows, Linux, ChromeOS, Lacros
+
+#private-network-access-permission-prompt
+
+Default
+Ignore Private Network Access errors for worker-related requests
+Ignore Private Network Access errors for worker-related requests, including worker script fetches, and fetches initiated in a worker. Instead of blocking the requests, the errors will be shown as an issue in DevTools. See also: https://developer.chrome.com/blog/private-network-access-update/ and https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#private-network-access-ignore-worker-errors
+
+Default
+Ignore Private Network Access errors for navigation-related requests
+Ignore Private Network Access errors for navigation-related requests, including iframes and popups. Instead of blocking the requests, the errorswill be shown as an issue in DevTools. See also: https://developer.chrome.com/blog/private-network-access-update/ and https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#private-network-access-ignore-navigation-errors
+
+Default
+Tab Groups Defer Remote Navigations
+Prevents remote navigations from being performed when a tab is backgrounded in a group – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-groups-defer-remote-navigations
+
+Default
+Tab Groups Save and Sync V2
+Enables saving and recalling of tab groups but enhanced. Highly experimental. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-groups-save-v2
+
+Default
+Tab Group Sync Service Desktop Migration
+Enables use of the TabGroupSyncService. This is a backend only change. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-group-sync-service-desktop-migration
+
+Default
+Tab Groups Save UI Update
+Enables saved tab group pinning, everything menu and bookmarks bar change – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-groups-save-ui-update
+
+Default
+Tab Scrolling
+Enables tab strip to scroll left and right when full. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#scrollable-tabstrip
+
+Default
+Tab Scrolling With Dragging
+Scrolls the tabstrip while dragging tabs towards the end of the visible view. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#scrollable-tabstrip-with-dragging
+
+Default
+TabStripModel Collection Based Storage
+Enables the collection based storage of tabstrip model. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tabstrip-collection-storage
+
+Default
+Tabstrip Combo Button
+Combines tab search and the new tab button into a single combo button. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tabstrip-combo-button
+
+Default
+Tab Scrolling Overflow Indicator
+Choices for overflow indicators shown when the tabstrip is in scrolling mode. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#scrollable-tabstrip-overflow
+
+Default
+Toolbar pinning
+Enables the ability to pin features to the toolbar via the Customize Chrome side panel. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#toolbar-pinning
+
+Default
+Side Panel Resizing
+Allows users to resize the side panel and persist the width across browser sessions. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#side-panel-resizing
+
+Default
+Product Specifications
+Enable the Product Specifications feature. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#product-specifications
+
+Default
+Product Specifications Multi Specifics
+Enable the Product Specifications backed by the sync multi specifics representation. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#product-specifications-multi-specifics
+
+Default
+Added to set confirmation toast
+Enable to show the added to set confirmation in a toast. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#compare-confirmation-toast
+
+Default
+Price Tracking Subscription Service Product Version
+Enable the product version logging for price tracking subscription service – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#price-tracking-subscription-service-product-version
+
+Default
+NTP Alpha Background Collections
+Shows alpha NTP background collections in Customize Chrome. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-alpha-background-collections
+
+Default
+NTP Background Image Error Detection
+Checks NTP background image links for HTTP status errors. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-background-image-error-detection
+
+Default
+NTP Calendar Module
+Shows the Google Calendar module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-calendar-module
+
+Default
+NTP Drive Module Show Six Files
+Shows six files in the NTP Drive module, instead of three. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-drive-module-show-six-files
+
+Default
+NTP Mobile Promo
+NTP Mobile Promo – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-mobile-promo
+
+Default
+Force NTP Mobile Promo
+Force NTP Mobile Promo – Mac, Windows, Linux, ChromeOS, Lacros
+
+#force-ntp-mobile-promo
+
+Disabled
+NTP Most Relevant Tab Resumption Module
+Shows the Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-most-relevant-tab-resumption-module
+
+Default
+NTP Most Relevant Tab Resumption Module with Device Icon
+Shows the device icon instead of device name on Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-most-relevant-tab-resumption-module-device-icon
+
+Default
+NTP Outlook Calendar Module
+Shows the Outlook Calendar module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-outlook-calendar-module
+
+Default
+Chrome Refresh Themed Realbox
+CR23 theming will be applied in Realbox when enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-realbox-cr23-theming
+
+Default
+NTP Sharepoint Module
+Shows the Sharepoint module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-sharepoint-module
+
+Default
+NTP Microsoft Authentication Module
+Shows the Microsoft Authentication Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-microsoft-authentication-module
+
+Default
+Chrome-wide echo cancellation
+Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
+
+#chrome-wide-echo-cancellation
+
+Default
+Tab Search Position Setting
+Whether to show the tab search position options in the settings page. – Windows, Linux, ChromeOS
+
+#tab-search-position-setting
+
+Default
+Enable network logging to file
+Enables network logging to a file named netlog.json in the user data directory. The file can be imported into chrome://net-internals. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-network-logging-to-file
+
+Disabled
+Web Authentication Enterprise Attestation
+Permit a set of origins to request a uniquely identifying enterprise attestation statement from a security key when creating a Web Authentication credential. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#web-authentication-permit-enterprise-attestation
+
+Disabled
+Zero-copy tab capture
+Enable zero-copy content tab for getDisplayMedia() APIs. – Mac, Windows, ChromeOS
+
+#zero-copy-tab-capture
+
+Default
+PDF Chrome Refresh 2023
+Use new CR23 icons and colors for the PDF Viewer. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-cr23
+
+Default
+OOPIF for PDF Viewer
+Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-oopif
+
+Default
+PDF portfolio
+Enable PDF portfolio feature. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-portfolio
+
+Default
+Use Skia Renderer
+Use Skia as the PDF renderer. This flag will have no effect if the renderer choice is controlled by an enterprise policy. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-use-skia-renderer
+
+Default
+PDF Ink Signatures
+Enables the ability to annotate PDFs using a new ink library. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-ink2
+
+Default
+Read printer capabilities with XPS
+When enabled, utilize XPS interface to read printer capabilities. – Windows
+
+#read-printer-capabilities-with-xps
+
+Default
+Use XPS for printing
+When enabled, use XPS printing API instead of the GDI print API. – Windows
+
+#use-xps-for-printing
+
+Default
+Use XPS for printing from PDF
+When enabled, use XPS printing API instead of the GDI print API when printing PDF documents. – Windows
+
+#use-xps-for-printing-from-pdf
+
+Default
+Insecure origins treated as secure
+Treat given (insecure) origins as secure origins. Multiple origins can be supplied as a comma-separated list. Origins must have their protocol specified e.g. "http://example.com". For the definition of secure contexts, see https://w3c.github.io/webappsec-secure-contexts/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#unsafely-treat-insecure-origin-as-secure
+
+Disabled
+Disable subframe process reuse
+Prevents out-of-process iframes from reusing compatible processes from unrelated tabs. This is an experimental mode that will result in more processes being created. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#disable-process-reuse
+
+Default
+Subframe process reuse thresholds
+Enable thresholds for subframe process reuse. When out-of-process iframes attempt to reuse compatible processes from unrelated tabs, process reuse will only be allowed if the process stays below predefined thresholds (e.g., below a certain memory limit). – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#subframe-process-reuse-thresholds
+
+Default
+Multilingual Live Caption
+Enables the multilingual Live Caption Feature which allows for many language choices and automated language choices. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-live-caption-multilang
+
+Default
+Reading Mode Read Aloud
+Enables the experimental Read Aloud feature in Reading Mode. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#read-anything-read-aloud
+
+Default
+Reading Mode Read Aloud Phrase Highlighting
+Enables the experimental Reading Mode feature that highlights by phrases when reading aloud, when the phrase option is selected from the highlight menu. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#read-anything-read-aloud-phrase-highlighting
+
+Default
+Reading Mode with images added via algorithm
+Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#read-anything-images-via-algorithm
+
+Default
+Reading Mode Google Docs Integration
+Allows Reading Mode to work on Google Docs. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#read-anything-docs-integration
+
+Default
+Reading Mode Google Docs Load More Button
+Adds a button to the end of the Reading Mode UI. When clicked, the main page scrolls to show the next page's content. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#read-anything-docs-load-more-button
+
+Default
+Drop Input Events Before First Paint
+Before the user can see the first paint of a new page they cannot intentionally interact with elements on that page. By dropping the events we prevent accidental interaction with a page the user has not seen yet. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#drop-input-events-before-first-paint
+
+Default
+Boundary Event Dispatch Tracks Node Removal
+Mouse and Pointer boundary event dispatch (i.e. dispatch of enter, leave, over, out events) tracks DOM node removal to fix event pairing on ancestor nodes. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#boundary-event-dispatch-tracks-node-removal
+
+Default
+Happiness Tracking Surveys Demo
+Enable showing Happiness Tracking Surveys Demo to users on Desktop – Mac, Windows, Linux, ChromeOS, Lacros
+
+#happiness-tracking-surveys-for-desktop-demo
+
+Default
+Choose ANGLE graphics backend
+Choose the graphics backend for ANGLE. D3D11 is used on most Windows computers by default. Using the OpenGL driver as the graphics backend may result in higher performance in some graphics-heavy applications, particularly on NVIDIA GPUs. It can increase battery and memory usage of video playback. – Windows
+
+#use-angle
+
+Default
+Gamepad Multitouch
+Enables the ability to receive input from multitouch surface on the gamepad object. – Windows
+
+#enable-gamepad-multitouch
+
+Default
+Enable gpu service logging
+Enable printing the actual GL driver calls. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-gpu-service-logging
+
+Disabled
+Hardware Media Key Handling
+Enables using media keys to control the active media session. This requires MediaSessionService to be enabled too – Mac, Windows, Linux, ChromeOS, Lacros
+
+#hardware-media-key-handling
+
+Default
+AVIF gainmap HDR image rendering
+If enabled, Chrome uses the gainmap (if present) in AVIF images to render the HDR version on HDR displays and the SDR version on SDR displays. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#avif-gainmap-hdr-images
+
+Default
+CrabbyAvif for decoding AVIF images
+If enabled, CrabbyAvif will be used instead of libavif for decoding AVIF images – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#crabbyavif
+
+Default
+FileSystemObserver
+Enables the FileSystemObserver interface, which allows websites to be notified of changes to the file system. See https://github.com/whatwg/fs/blob/main/proposals/FileSystemObserver.md for more information. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#file-system-observer
+
+Default
+Strict-Origin-Isolation
+Experimental security mode that strengthens the site isolation policy. Controls whether site isolation should use origins instead of scheme and eTLD+1. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#strict-origin-isolation
+
+Default
+Enable the `FencedFrameConfig` constructor.
+The `FencedFrameConfig` constructor allows you to test the <fencedframe> element without running an ad auction, as you can manually supply a URL to navigate the fenced frame to. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-fenced-frames-developer-mode
+
+Default
+Unsafe WebGPU Support
+Convenience flag for WebGPU development. Enables best-effort WebGPU support on unsupported configurations and more! Note that this flag could expose security issues to websites so only use it for your own development. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-unsafe-webgpu
+
+Disabled
+WebGPU Developer Features
+Enables web applications to access WebGPU features intended only for use during development. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-webgpu-developer-features
+
+Disabled
+Global Media Controls updated UI
+Show updated UI for Global Media Controls in all the non-CrOS desktop platforms. – Mac, Windows, Linux
+
+#global-media-controls-updated-ui
+
+Default
+Elastic Overscroll
+Enables Elastic Overscrolling on touchscreens and precision touchpads. – Windows, Android
+
+#elastic-overscroll
+
+Default
+Element Capture
+Enables Element Capture - an API allowing the mutation of a tab-capture media track into a track capturing just a specific DOM element. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#element-capture
+
+Default
+Device Posture API
+Enables Device Posture API (foldable devices) – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#device-posture
+
+Default
+Viewport Segments API
+Enable the viewport segment API, giving information about the logical segments of the device (dual screen and foldable devices) – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#viewport-segments
+
+Default
+Enable location provider manager for Geolocation API
+Enables usage of the location provider manager to select between the operating system's location API or the network-based provider as the data source for Geolocation API. – Mac, Windows
+
+#enable-location-provider-manager
+
+Default
+Automatic Fullscreen Content Setting
+Enables a new Automatic Fullscreen content setting that lets allowlisted origins use the HTML Fullscreen API without transient activation. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#automatic-fullscreen-content-setting
+
+Default
+Run video capture service in browser
+Run the video capture service in the browser process. – Windows, ChromeOS
+
+#run-video-capture-service-in-browser
+
+Default
+Tracking Protection for 3PCD
+Enables the tracking protection UI + prefs that will be used for the 3PCD 1%. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#tracking-protection-3pcd
+
+Default
+MediaFoundation Video Capture
+Enable/Disable the usage of MediaFoundation for video capture. Fall back to DirectShow if disabled. – Windows
+
+#enable-media-foundation-video-capture
+
+Default
+Enable experimental cookie features
+Enable new features that affect setting, sending, and managing cookies. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-experimental-cookie-features
+
+Default
+Enables canvas 2D methods BeginLayer and EndLayer
+Enables the canvas 2D methods BeginLayer and EndLayer. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#canvas-2d-layers
+
+Disabled
+Enables WebNN API
+Enables the Web Machine Learning Neural Network (WebNN) API. Spec at https://www.w3.org/TR/webnn/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#web-machine-learning-neural-network
+
+Default
+Enables experimental WebNN API features
+Enables additional, experimental features in Web Machine Learning Neural Network (WebNN) API. Requires the "WebNN API" flag to be enabled. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#experimental-web-machine-learning-neural-network
+
+Default
+One time permission
+Enables experimental one time permissions for Geolocation, Microphone and Camera. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#one-time-permission
+
+Default
+Left-hand side activity indicators
+Moves activity indicators to the left-hand side of location bar. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#left-hand-side-activity-indicators
+
+Default
+Merchant Trust
+Enables the merchant trust UI in page info. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#merchant-trust
+
+Default
+Privacy Policy Insights
+Enables the privacy policy insights UI in page info. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#privacy-policy-insights
+
+Default
+Enable PWA install update dialog for icon changes
+Enable a confirmation dialog that shows up when a PWA changes its icon – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#pwa-update-dialog-for-icon
+
+Default
+Keyboard and Pointer Lock prompt
+Requesting to use the keyboard or pointer lock API causes a permissionprompt to be shown. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#keyboard-and-pointer-lock-prompt
+
+Default
+Enables Out-of-Process Printer Drivers
+Enables printing interactions with the operating system to be performed out-of-process. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-oop-print-drivers
+
+Default
+Privacy Sandbox Internals Page
+Enables the chrome://privacy-sandbox-internals debugging page. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#privacy-sandbox-internals
+
+Default
+Privacy Sandbox Privacy Guide Ad Topics
+Enables the Ad Topics card in the Privacy Guide to be displayed, subject to regional availability. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#privacy-sandbox-privacy-guide-ad-topics
+
+Default
+Private State Tokens Dev UI
+Enables the chrome://privacy-sandbox-internals/private-state-tokens page.Relies on privacy-sandbox-internals also being enabled – Mac, Windows, Linux, ChromeOS, Lacros
+
+#private-state-tokens-dev-ui
+
+Default
+Related Website Sets Dev UI
+Enables the chrome://privacy-sandbox-internals/related-website-sets page. Relies on privacy-sandbox-internals also being enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#related-website-sets-dev-ui
+
+Default
+Align SurfaceLayerImpls to pixel grid
+Align SurfaceLayerImpl compositor textures to pixel grid. This is important when an iframe is rendered cross-process to its parent, and fails to align with the pixel grid (e.g. when the parent frame has a non-integral scale factor). Failure to align to the pixel grid can result in the iframe's text becoming blurry. SurfaceLayerImpl also is used for <canvas>, which may also benefit from the alignment. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#align-surface-layer-impl-to-pixel-grid
+
+Default
+Speculation Rules API target hint
+Enable target_hint param on Speculation Rules API for prerendering. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-speculation-rules-prerendering-target-hint
+
+Default
+Prerender more document lifecycle phases
+Allows prerendering pages to execute more lifecycle updates, such as prepaint, before activation – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#prerender-early-document-lifecycle-update
+
+Default
+Warm up compositor
+Allows compositor to start warming up on certain signals – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#warm-up-compositor
+
+Default
+Warm up compositor on prerendering
+Enables compositor warming up on paticular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#prerender2-warm-up-compositor
+
+Default
+Make the text in PDF images interactable
+Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-searchify
+
+Default
+PDF XFA support
+Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-xfa-forms
+
+Default
+Debugging tools for UI
+Enables additional keyboard shortcuts to help debugging. – Mac, Windows, Linux, Lacros
+
+#ui-debug-tools
+
+Default
+FedCmAuthz
+Enables RPs to request authorization for custom IdP scopes. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-authz
+
+Default
+FedCmButtonMode
+Enables RPs specify whether they want to trigger the FedCM widget flow or the button flow. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-button-mode
+
+Default
+FedCM with IdP Registration support
+Enables RPs to get identity credentials from registered IdPs. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#fedcm-idp-registration
+
+Default
+FedCmMetricsEndpoint
+Allows the FedCM API to send performance measurement to the metrics endpoint on the identity provider side. Requires FedCM to be enabled. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-metrics-endpoint
+
+Default
+FedCmMultiIdp
+Allows the FedCM API to request multiple identity providers simultaneously. Requires FedCM to be enabled as well. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#fedcm-multi-idp
+
+Default
+FedCmSelectiveDisclosure
+Allows a relying party to selectively request a set of identity attributes to be disclosed. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-selective-disclosure
+
+Default
+FedCmUseOtherAccount
+Enables the "Use a different account" button on the FedCM account chooser to log in to another IdP account, for IdPs who have opted in. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-use-other-account
+
+Default
+FedCmWithStorageAccessAPI
+Allows Storage Access API to auto-resolve if the user has allowed a FedCM connection. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-with-storage-access-api
+
+Default
+FedCmWithoutWellKnownEnforcement
+Supports configURL that's not in the IdP's .well-known file. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#fedcm-without-well-known-enforcement
+
+Default
+DigitalCredentials
+Enables the three-party verifier/holder/issuer identity model. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#web-identity-digital-credentials
+
+Default
+DigitalCredentialsCreation
+Enables the Digital Credentials Creation API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#web-identity-digital-credentials-creation
+
+Default
+Lens overlay
+Enables Lens search via an overlay on any page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay
+
+Default
+Bind cookies to their setting origin's port
+If enabled, cookies will only be accessible by origins with the same port as the one that originally set the cookie. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#bind-cookies-to-port
+
+Default
+Bind cookies to their setting origin's scheme
+If enabled, cookies will only be accessible by origins with the same scheme as the one that originally set the cookie – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#bind-cookies-to-scheme
+
+Default
+Prerendering
+If enabled, browser features and the speculation rules API can trigger prerendering. If disabled, all prerendering APIs still exist, but a prerender will never successfully take place. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#prerender2
+
+Default
+Test Third Party Cookie Phaseout
+Enable to test third-party cookie phaseout. Learn more: https://goo.gle/3pcd-flags – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#test-third-party-cookie-phaseout
+
+Disabled
+Third-party Cookie Phase Out Facilitated Testing
+Enables third-party cookie phase out for facilitated testing described in https://developer.chrome.com/en/docs/privacy-sandbox/chrome-testing/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#tpc-phase-out-facilitated-testing
+
+Default
+Third-party Cookie Grants Heuristics Testing
+Enables temporary storage access grants for certain user behavior heuristics. See https://github.com/amaliev/3pcd-exemption-heuristics/blob/main/explainer.md for more details. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#tpcd-heuristics-grants
+
+Default
+Third-Party Cookie Deprecation Metadata Grants for Testing
+Provides a control for enabling/disabling Third-Party Cookie Deprecation Metadata Grants (WRT its default state) for testing. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#tpcd-metadata-grants
+
+Default
+Third-Party Cookie Deprecation Trial Grants for Testing
+Controls creation of cookie access grants for the Third-Party Cookies Deprecation Trial. Please note that, even if enabled, this will still require #tracking-protection-3pcd to be enabled and a pref to be set, for it to have an effect. See https://developer.chrome.com/blog/cookie-countdown-2023oct/ for more details. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#third-party-cookie-deprecation-trial
+
+Default
+Top-Level Third-Party Cookie Deprecation Trial Grants for Testing
+Controls creation of cookie access grants for the Top-Level Third-Party Cookies Deprecation Trial. Please note that, even if enabled, this will still require #tracking-protection-3pcd to be enabled and a pref to be set, for it to have an effect. See https://developer.chrome.com/blog/cookie-countdown-2023oct/ for more details. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#top-level-third-party-cookie-deprecation-trial
+
+Default
+Allow enabling Balanced Mode for HTTPS-First Mode.
+Enable tri-state HTTPS-First Mode setting in chrome://settings/security. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#https-first-balanced-mode
+
+Default
+Dialog UI for HTTPS-First Modes
+Use a dialog-based UI for HFM – Mac, Windows, Linux, ChromeOS, Lacros
+
+#https-first-dialog-ui
+
+Default
+Use the new interstitial for HTTPS-First Modes
+Use the new interstitial with updated text and icons for HTTPS-First Modes – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#https-first-mode-interstitial-august2024-refresh
+
+Default
+HTTPS-First Mode V2 For Engaged Sites
+Enable Site-Engagement based HTTPS-First Mode. Shows HTTPS-First Mode interstitial on sites whose HTTPS URLs have high Site Engagement scores. Requires #https-upgrades feature to be enabled – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#https-first-mode-v2-for-engaged-sites
+
+Default
+HTTPS-First Mode in Incognito new Settings UI
+Enable new HTTPS-First Mode settings UI for HTTPS-First Mode in Incognito. Must also enable #https-first-mode-incognito. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#https-first-mode-incognito-new-settings
+
+Default
+HTTPS-First Mode For Typically Secure Users
+Automatically enables HTTPS-First Mode if the user has a typically secure browsing pattern. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#https-first-mode-for-typically-secure-users
+
+Default
+Enables AI Data collection via extension
+Enables an extension API to allow specific extensions to collect data from browser process. This data may contain profile specific information and may be otherwise unavailable to an extension. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-extension-ai-data-collection
+
+Disabled
+IPH Extensions Menu
+Enables In-Product-Help that appears when at least one extension has access to the current page. This feature is gated by extensions-menu-access-control. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#iph-extensions-menu-feature
+
+Default
+IPH Extensions Request Access Button Feature
+Enables In-Product-Help that appears when at least one extension is requesting access to the current page. This feature is gated by extensions-menu-access-control. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#iph-extensions-request-access-button-feature
+
+Default
+Extension Manifest V2 Deprecation Warning Stage
+Displays a warning that affected MV2 extensions may no longer be supported due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#extension-manifest-v2-deprecation-warning
+
+Default
+Extension Manifest V2 Deprecation Disabled Stage
+Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#extension-manifest-v2-deprecation-disabled
+
+Default
+Extension Manifest V2 Deprecation Unsupported Stage
+Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation and cannot be re-enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#extension-manifest-v2-deprecation-unsupported
+
+Default
+Force Native Host Executables to Launch Directly
+Force Native Host executables to launch directly via CreateProcess. – Windows
+
+#launch-windows-native-hosts-directly
+
+Default
+Out-of-process 2D canvas rasterization.
+The rasterization of 2d canvas contents is performed in the GPU process. Requires that out-of-process rasterization be enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#canvas-oop-rasterization
+
+Default
+Captured Surface Control
+Enables an API that allows an application to control scroll and zoom on the tab which it is capturing. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#captured-surface-control
+
+Default
+Skia Graphite
+Enable Skia Graphite. This will use the Dawn backend by default, but can be overridden with command line flags for testing on non-official developer builds. See --skia-graphite-backend flag in gpu_switches.h. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#skia-graphite
+
+Default
+Skia Graphite Precompilation
+Enable Skia Graphite Precompilation. This is only relevant when Graphite is enabled but can then be overridden via the --enable-skia-graphite-precompilation and --disable-skia-graphite-precompilation command line flags – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#skia-graphite-precompilation
+
+Default
+Tab audio muting UI control
+When enabled, the audio indicators in the tab strip double as tab audio mute controls. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-tab-audio-muting
+
+Default
+Customize Chrome Side Panel Extension Card
+If enabled, shows an extension card within the Customize Chrome Side Panel for access to the Chrome Web Store extensions. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#customize-chrome-side-panel-extensions-card
+
+Default
+Enable delegated compositing
+When enabled and applicable, the act of compositing is delegated to the system compositor. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-delegated-compositing
+
+Default
+Enable drawn rect for render passes
+When enabled and applicable, render passes will track drawn area in a rect to allow for finer grain damage. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-render-pass-drawn-rect
+
+Default
+Media Session enterpictureinpicture action
+Enables the 'enterpictureinpicture' MediaSessionAction to allow websites to register an action handler for entering picture-in-picture. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#media-session-enter-picture-in-picture
+
+Default
+Auto picture in picture video heuristics
+Enables the use of video heuristics for tracking HTMLVideoElement visibility. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#auto-picture-in-picture-video-heuristics
+
+Default
+Auto picture in picture for video playback
+Enables auto picture in picture for video playback. Requires chrome://flags/#auto-picture-in-picture-video-heuristics to be enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#auto-picture-in-picture-for-video-playback
+
+Default
+Video picture-in-picture controls update 2024
+Displays an updated UI for video picture-in-picture controls from its 2024UI update – Mac, Windows, Linux, ChromeOS, Lacros
+
+#video-picture-in-picture-controls-update-2024
+
+Default
+Document Picture-in-Picture Animate Resize
+Use an animation when programmatically resizing a documentpicture-in-picture window – Mac, Windows, Linux, ChromeOS, Lacros
+
+#document-picture-in-picture-animate-resize
+
+Default
+Main Node Annotations
+Uses Screen2x main content extractor to annotate the accessibility tree with the main landmark on the node identified as main. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#main-node-annotations
+
+Default
+Origin-keyed Processes by default
+Enables origin-keyed process isolation for most pages (i.e., those assigned to an origin-keyed agent cluster by default). This improves security but also increases the number of processes created. Note: enabling this feature also enables 'Origin-keyed Agent Clusters by default'. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#origin-keyed-processes-by-default
+
+Default
+Isolated sandboxed iframes
+When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-isolated-sandboxed-iframes
+
+Default
+Download Warning Improvements
+Enable UI improvements for downloads, download scanning, and download warnings. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#download-warning-improvements
+
+Default
+Reduce Accept-Language request header
+Reduce the amount of information available in the Accept-Language request header. See https://github.com/Tanych/accept-language for more info. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#reduce-accept-language
+
+Default
+Omit TLS client certificates if credential mode disallows
+Strictly conform the Fetch spec to omit TLS client certificates if credential mode disallows. Without this flag enabled, Chrome will always try sending client certificates regardless of the credential mode. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#omit-cors-client-cert
+
+Default
+Safe Browsing Local Lists use v5 API
+Fetch and check local lists using the Safe Browsing v5 API instead of the v4 Update API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#safe-browsing-local-lists-use-sbv5
+
+Default
+Permission Module for unused sites in Safety Check
+When enabled, adds the unused sites permission module to Safety Check on desktop. The module will be shown depending on the browser state. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#safety-check-unused-site-permissions
+
+Default
+Safety Check v2
+When enabled, Safety Check v2 will be visible in settings. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#safety-hub
+
+Default
+Plus address full form filling
+When enabled, the email on address profile suggestions is replaced with the user's plus address for the current domain – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#plus-address-full-form-fill
+
+Default
+HaTS for Safety Check v2 on Desktop
+Enables one-off HaTS surveys for Safety Check v2 on Desktop. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#safety-hub-one-off-survey
+
+Default
+On device notification content detection model
+Enables checking the on-device notification content detection model for verdicts on how suspicious the notification content looks and logging metrics based on the response. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#on-device-notification-content-detection-model
+
+Default
+Web Bluetooth confirm pairing support
+Enable confirm-only and confirm-pin pairing mode support for Web Bluetooth – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-web-bluetooth-confirm-pairing-support
+
+Default
+Parse standalone CVC fields for VCN card on file in forms
+When enabled, Autofill will attempt to find standalone CVC fields for VCN card on file when parsing forms. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-parse-vcn-card-on-file-standalone-cvc-fields
+
+Default
+Background Resource Fetch
+Process resource requests in a background thread inside Blink. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#background-resource-fetch
+
+Default
+WebUI Omnibox Popup
+If enabled, shows the omnibox suggestions popup in WebUI. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#webui-omnibox-popup
+
+Default
+Sync Autofill Wallet Credential Data
+When enabled, allows syncing of the autofill wallet credential data type. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#sync-autofill-wallet-credential-data
+
+Default
+Sync Autofill Wallet Usage Data
+When enabled, allows syncing of the autofill wallet usage data type. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#sync-autofill-wallet-usage-data
+
+Default
+Enable the account data storage for preferences for syncing users
+Enables storing preferences in a second, Gaia-account-scoped storage for syncing users – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-preferences-account-storage
+
+Default
+Chrome for iOS promo : passwords
+When enabled, the new Contextual Chrome for iOS promo will be shown tothe eligible users when they save/update their passwords. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ios-promo-refreshed-password-bubble
+
+Default
+Chrome for iOS promo : addresses
+When enabled, the Contextual Chrome for iOS promo will be shown tothe eligible users when they save/update their address. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ios-promo-address-bubble
+
+Default
+Chrome for iOS promo : payments
+When enabled, the Contextual Chrome for iOS promo will be shown tothe eligible users when they save/update their payments. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ios-promo-payment-bubble
+
+Default
+Compression dictionary transport
+Enables compression dictionary transport features. Requires chrome://flags/#enable-compression-dictionary-transport-backend to be enabled. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compression-dictionary-transport
+
+Default
+Compression dictionary transport backend
+Enables the backend of compression dictionary transport features. Requires chrome://flags/#enable-compression-dictionary-transport to be enabled for testing the feature. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compression-dictionary-transport-backend
+
+Default
+Compression dictionary transport over HTTP/1
+When this is enabled, Chromium can use stored shared dictionaries even when the connection is using HTTP/1 for non-localhost requests. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compression-dictionary-transport-allow-http1
+
+Default
+Compression dictionary transport over HTTP/2
+When this is enabled, Chromium can use stored shared dictionaries even when the connection is using HTTP/2 for non-localhost requests. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compression-dictionary-transport-allow-http2
+
+Default
+Compression dictionary transport require knwon root cert
+When this is enabled, Chromium can use stored shared dictionaries only when the connection is using a well known root cert or when the server is a localhost. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compression-dictionary-transport-require-known-root-cert
+
+Default
+Enable mitigation algorithm for rate obfuscation in compute pressure
+Rate Obfuscation Mitigation is used to avoid fingerprinting attacks. Its usage introduces some timing penalties to the compute pressure results.This mitigation might introduce slight precision errors.When disabled this helps to test how predictable and accurate compute pressure is, but the Compute Pressure API can be susceptible to fingerprinting attacks. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compute-pressure-rate-obfuscation-mitigation
+
+Default
+Enables the container-type property to have no layout containment
+The container-type property was recently changed to not add layout containment, this allows users to temporarily disable this change. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-container-type-no-layout-containment
+
+Default
+Enable mitigation algorithm to break calibration attempt in compute pressure
+In a calibration process an attacker tries to manipulate the CPU so that Compute Pressure API would report a transition into a certain pressure state with the highest probability in response to the pressure exerted by the fabricated workload.Break Calibration Mitigation is used to avoid calibration attempts by introducing some randomness in the result of the platform collector.This mitigation might introduce slight precision errors.When disabled this helps to test how predictable and accurate compute pressure is, but the Compute Pressure API can be susceptible to calibration attempts. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-compute-pressure-break-calibration-mitigation
+
+Default
+Changes the target playout delay for Cast mirroring.
+Choose a target playout delay for Cast mirroring. A lower delay will decrease latency, but may impact other quality indicators. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cast-mirroring-target-playout-delay
+
+Default (200ms)
+Enable ProcessPerSite up to main frame threshold
+Proactively reuses same-site renderer processes to host multiple main frames, up to a certain threshold. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-process-per-site-up-to-main-frame-threshold
+
+Default
+Camera and Mic Effects
+Enables effects for camera and mic streams. – Mac, Windows, Linux
+
+#camera-mic-effects
+
+Default
+Camera and Mic Preview
+Enables camera and mic preview in permission bubble and site settings. – Mac, Windows, Linux
+
+#camera-mic-preview
+
+Default
+getUserMedia deferred device settings selection
+Enables deferring device settings selection for getUserMedia until after the user grants permission. – Mac, Windows, Linux
+
+#get-user-media-deferred-device-settings-selection
+
+Default
+Enable RenderDocument
+Enable swapping RenderFrameHosts on same-site navigations – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#render-document
+
+Default
+Enable EnterpriseSearchAggregatorSettings policy
+Enable the policy that allows organizations to set a Search Aggregator engine that can be used in the Omnibox – Mac, Windows, Linux, ChromeOS
+
+#enable-search-aggregator-policy
+
+Default
+SiteInstanceGroups for data: URLs
+Put data: URL subframes in a separate SiteInstance from the initiator, but in the same SiteInstanceGroup, and thus the same process. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#site-instance-groups-for-data-urls
+
+Default
+CWS Info Fast Check
+When enabled, Chrome checks and fetches metadata for installed extensions more frequently. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#cws-info-fast-check
+
+Default
+Extension Telemetry for Enterprise
+When enabled, the extension telemetry service collects signals and generates reports to send for enterprise. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#extension-telemetry-for-enterprise
+
+Default
+Enable CVC storage and filling for payments autofill
+When enabled, we will store CVC for both local and server credit cards. This will also allow the users to autofill their CVCs on checkout pages. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-cvc-storage-and-filling
+
+Default
+Privacy Sandbox Enrollment Overrides
+Allows a list of sites to use Privacy Sandbox features without them being enrolled and attested into the Privacy Sandbox experiment. See: https://developer.chrome.com/en/docs/privacy-sandbox/enroll/ – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#privacy-sandbox-enrollment-overrides
+
+Disabled
+Third party profile management
+Enables profile management triggered by third-party sign-ins. – Mac, Windows, Linux
+
+#third-party-profile-management
+
+Default
+OIDC profile management
+Enables profile management triggered by OIDC authentications. – Mac, Windows, Linux
+
+#oidc-auth-profile-management
+
+Default
+Explicit Browser Signin UI On Desktop
+Enables the UNO model on Desktop. Used for the launch of the UNO model on Desktop, as well as for the later phases of the experiment. – Mac, Windows, Linux
+
+#explicit-browser-signin-ui-on-desktop
+
+Default
+Enable generic OIDC profile management
+Enables profile management triggered by generic OIDC authentications. – Mac, Windows, Linux
+
+#enable-generic-oidc-auth-profile-management
+
+Default
+Desktop PWA Link Capturing with Scope Extensions
+Allows the 'Desktop PWA Scope Extensions' feature to be used with the 'Desktop PWA Link Capturing' feature. Both of those features are required to be turned on for this flag to have an effect. – Mac, Windows, Linux
+
+#enable-user-link-capturing-scope-extensions-pwa
+
+Default
+Desktop PWA Link Capturing
+Enables opening links from Chrome in an installed PWA. Currently under reimplementation. – Mac, Windows, Linux, ChromeOS
+
+#enable-user-navigation-capturing-pwa
+
+Default
+Disable IP Protection Proxy
+When disabled, prevents use of the IP Protection proxy. This is intended to help with diagnosing any issues that could be caused by the feature being enabled. For the current status of this feature, see: https://chromestatus.com/feature/5111460239245312 – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#ip-protection-proxy-opt-out
+
+Default
+Protected Audiences Consented Debug Token
+Enables Protected Audience Consented Debugging with the provided token. Protected Audience auctions running on a Bidding and Auction API trusted server with a matching token will be able to log information about the auction to enable debugging. Note that this logging may include information about the user's browsing history normally kept private. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#protected-audience-debug-token
+
+Disabled
+Deprecate the unload event
+Controls the default for Permissions-Policy unload. If enabled, unload handlers are deprecated and will not receive the unload event unless a Permissions-Policy to enable them has been explicitly set. If disabled, unload handlers will continue to receive the unload event unless explicity disabled by Permissions-Policy, even during the gradual rollout of their deprecation. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#deprecate-unload
+
+Default
+Enable risk-based authentication for FPAN retrieval
+When enabled, server card retrieval will begin with a risk-based check instead of jumping straight to CVC or biometric auth. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-fpan-risk-based-authentication
+
+Default
+Enable Immediate Draw When Interactive
+Causes viz to activate and draw frames immediately during a touch interaction or scroll. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#draw-immediately-when-interactive
+
+Default
+Ack On Surface Activation When Interactive
+If enabled, immediately send acks to clients when a viz surface activates and when that surface is a dependency of an interactive frame (i.e., when there is an active scroll or a touch interaction). This effectively removes back-pressure in this case. This can result in wasted work and contention, but should regularize the timing of client rendering. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#ack-on-surface-activation-when-interactive
+
+Default
+Enable server-based IBAN uploading and autofilling
+When enabled, Autofill will attempt to offer upload save for IBANs (International Bank Account Numbers) and autofill server-based IBANs. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-server-iban
+
+Default
+Builtin HLS player
+Enables chrome's builtin HLS player instead of Android's MediaPlayer – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-builtin-hls
+
+Default
+Profiles Reordering
+Enables profiles reordering in the Profile Picker main view by drag and dropping the Profile Tiles. The order is saved when changed and persisted. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#profiles-reordering
+
+Default
+Batch Upload Desktop
+Enables the Batch Upload feature for Desktop. This allows to upload local data to the account data when signed in. Currently only supports Passwords and Addresses – Mac, Windows, Linux
+
+#batch-upload-desktop
+
+Default
+Device Bound Session Credentials
+Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
+
+#enable-bound-session-credentials
+
+Default
+Device Bound Session Credentials with software keys
+Enables mock software-backed cryptographic keys for Google session credentials binding (not secure). This is intented to be used for manual testing only. – Mac, Windows, Linux
+
+#enable-bound-session-credentials-software-keys-for-manual-testing
+
+Default
+Observable API
+A reactive programming primitive for ergonomically handling streams of async data. See https://github.com/WICG/observable. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#observable-api
+
+Default
+Atomic DOM move (Node.moveBefore)
+Introduces a state-preserving atomic move primitive to the DOM, by calling Node.moveBefore. See https://github.com/whatwg/dom/issues/1255. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#atomic-move
+
+Default
+Web App System Media Controls
+Enable instanced system media controls for web apps – Mac, Windows
+
+#enable-web-app-system-media-controls
+
+Default
+CCO Edits
+Enables CCO editing feature – Mac, Windows, Linux, ChromeOS
+
+#CCO
+
+Default
+Compose Proactive Nudge
+Enables proactive nudging for Compose – Mac, Windows, Linux, ChromeOS
+
+#compose-proactive-nudge
+
+Default
+Compose Nudge At Cursor
+Shows the Compose proactive nudge at the cursor location – Mac, Windows, Linux, ChromeOS
+
+#compose-nudge-display-at-cursor
+
+Default
+Compose Polite a11y announcement
+Uses polite announcements to alert the user that a compose popup is available to interact with. – Mac, Windows, Linux, ChromeOS
+
+#compose-polite-nudge
+
+Default
+Compose Segmentation Promotion
+Enables the segmentation platfrom for the Compose proactive nudge – Mac, Windows, Linux, ChromeOS
+
+#compose-segmentation-promotion
+
+Default
+Compose Selection Nudge
+Enables nudge on selection for Compose – Mac, Windows, Linux, ChromeOS
+
+#compose-selection-nudge
+
+Default
+Compose Upfront Input Modes
+Enables upfront input modes in the Compose dialog – Mac, Windows, Linux, ChromeOS
+
+#compose-upfront-input-modes
+
+Default
+Show permission grants from Related Website Sets
+Shows permission grants created by Related Website Sets in Chrome Settings UI and Page Info Bubble, default is hidden – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#related-website-sets-permission-grants
+
+Default
+Compact mode for the browser - Prototype
+This feature is a prototype. Reduces the height of the browser controls (tabstrip, toolbar, bookmarks bar, etc.) to allow more space for the web contents – Mac, Windows, Linux, ChromeOS, Lacros
+
+#compact-mode
+
+Default
+Tear Off Web App Tab
+Open Web App window when tearing off a tab that's displaying a url handled by an installed Web App. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#tear-off-web-app-tab-opens-web-app-window
+
+Default
+Password manual fallback
+Enables triggering password suggestions through the context menu – Mac, Windows, Linux, ChromeOS, Lacros
+
+#password-manual-fallback-available
+
+Default
+Enable Isolated Web Apps to bypass USB restrictions
+When enabled, allows Isolated Web Apps to access blocklisted devices and protected interfaces through WebUSB API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-unrestricted-usb
+
+Default
+Enable 3DS authentication for virtual cards
+When enabled, Chrome will trigger 3DS authentication during a virtual card retrieval if a challenge is required, 3DS authentication is available for the card, and FIDO is not. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-enable-vcn-3ds-authentication
+
+Default
+Link Preview
+When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#link-preview
+
+Default
+Enable showing card benefits for American Express cards
+When enabled, card benefits offered by American Express will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-card-benefits-for-american-express
+
+Default
+Enable showing card benefits for Capital One cards
+When enabled, card benefits offered by Capital One will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-card-benefits-for-capital-one
+
+Default
+Enable syncing card benefits
+When enabled, card benefits offered by issuers will be synced from the Payments server. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-card-benefits-sync
+
+Default
+Linked Services Setting
+Add Linked Services Setting to the Sync Settings page. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#linked-services-setting
+
+Default
+Enable virtual card suggestion graying out for opted-out merchants
+When enabled, Chrome will display grayed out virtual card suggestions on merchant websites where the merchant has opted-out of virtual cards. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-vcn-gray-out-for-merchant-opt-out
+
+Default
+Enable Fingerprinting Protection Blocklist
+Enable Fingerprinting Protection which may block fingerprinting resources from loading in a 3p context. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#enable-fingerprinting-protection-blocklist
+
+Default
+Device Bound Session Credentials (Standard)
+Enables the official version of Device Bound Session Credentials. For more information see https://github.com/WICG/dbsc. – Windows
+
+#enable-standard-device-bound-session-credentials
+
+Default
+Device Bound Session Credentials (Standard) Persistence
+Enables session persistence for the official version of Device Bound Session Credentials. – Windows
+
+#enable-standard-device-bound-session-persistence
+
+Default
+Removes passwords that can no longer be decrypted
+If enabled local passwords that current encyrption key cannot decrypt, will be deleted to restore the full functionality of password manager. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#clear-undecryptable-passwords
+
+Default
+Enable autofill support for Verve cards
+When enabled, Verve-branded card art will be shown for Verve cards. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-verve-card-support
+
+Default
+Cert Management V2 UI
+Enables the Cert Management V2 UI; accessible at chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
+
+#cert-management-v2-ui
+
+Default
+Cert Management V2 UI Write features
+Enables the Cert Management V2 UI write features, using a chrome managed DB to store user added certs. This is new functionality for Windows and Mac. For Linux and ChromeOS, this is a change as previously user-added certs would be written to the platform cert store. The UI is accessible at chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
+
+#cert-management-v2-ui-write
+
+Default
+Password leak toggle move
+Enables the new location of the password leak toggle option under standard protection on chrome://settings/security to the advanced section of the chrome://settings/security page. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#password-leak-toggle-move
+
+Default
+Showing password suggestions on autofocused password forms
+Enables showing password suggestions without requiring the user to click on the already focused field if the field was autofocused on the page load. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#pwm-show-suggestions-on-autofocus
+
+Default
+Enable optimization guide dogfood logging
+If this client is a Google-internal dogfood client, overrides enterprise policy to enable model quality logs. Googlers: See go/chrome-mqls-debug-logging for details. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#optimization-guide-enable-dogfood-logging
+
+Disabled
+Enable automatic passkey upgrades in Google Password Manager
+Enable the WebAuthn Conditional Create feature and let websites automatically create passkeys in GPM if there is a matching password credential for the same user. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#web-authentication-passkey-upgrade
+
+Default
+Short ruby heuristics
+When enabled, line breaking doesn't happen inside <ruby>s with shorter contents even if `text-wrap: nowrap` is not specified. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#ruby-short-heuristics
+
+Default
+Prompt API for Gemini Nano
+Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#prompt-api-for-gemini-nano
+
+Default
+Summarization API for Gemini Nano
+Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#summarization-api-for-gemini-nano
+
+Default
+Writer API for Gemini Nano
+Enables the Writer API, allowing you to write a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#writer-api-for-gemini-nano
+
+Default
+Rewriter API for Gemini Nano
+Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#rewriter-api-for-gemini-nano
+
+Default
+CSS text-box-trim
+Enable experimental CSS text-box-trim property. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#text-box-trim
+
+Default
+Storage Access Headers
+Enables HTTP headers related to the Storage Access API. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#storage-access-headers
+
+Default
+Credit card upload save UI treatment
+When enabled, shows different text and images in the UI of the credit card upload save bubble. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-upstream-updated-ui
+
+Default
+Enable performance intervention suggestions.
+When enabled, performance intervention UI will automatically pop up and suggest tabs to take action on during times of poor performance. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#performance-intervention-ui
+
+Default
+Enable performance intervention demo mode.
+When enabled, CPU thresholds and rate limiting will be ignored so performance intervention UI may be easily triggered through natural browser usage or force triggered in chrome://discards. All suggested actionable tabs will meet the normal discard criteria except for needing to stay in the background for a set minimum time. Requires chrome://flags/#performance-intervention-ui to be enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#performance-intervention-demo-mode
+
+Default
+Enable bookmarks in transport mode
+Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linux
+
+#sync-enable-bookmarks-in-transport-mode
+
+Default
+Enable visited URL aggregates visibility score based filtering
+Enables filtering of visited URL aggregates based on history URL visibility scores. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#visited-url-ranking-service-history-visibility-score-filter
+
+Default
+Defer Renderer Tasks After Input
+If enabled, tasks in the renderer will be deferred after discrete input events, e.g. keypress, until after the subsequent frame. The associated policy controls which tasks types can be deferred. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#defer-renderer-tasks-after-input
+
+Default
+threaded-scroll-prevent-rendering-starvation
+Prevents main thread rendering starvation during threaded scrolling based on a given threshold. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#threaded-scroll-prevent-rendering-starvation
+
+Default
+Timeout for the credit card upload request
+When enabled, sets a client-side timeout on the Autofill credit card upload request. Upon timeout, the client will terminate the upload UI, but the request may still succeed server-side. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-upload-card-request-timeout
+
+Default
+Timeout for the credit card VCN enrollment request
+When enabled, sets a client-side timeout on the Autofill credit card VCN enrollment request. Upon timeout, the client will terminate the VCN enrollment UI, but the request may still succeed server-side. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-vcn-enroll-request-timeout
+
+Default
+Timeout for the credit card unmask request
+When enabled, sets a client-side timeout on the Autofill credit card unmask request. Upon timeout, the client will terminate the current unmask server call, which may or may not terminate the ongoing unmask UI. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-unmask-card-request-timeout
+
+Default
+Adjust feature reports received with WebHID
+Enable/Disable a fix for a bug that caused feature reports to be offset by one byte when received from devices that do not use numbered reports. – Windows
+
+#hid-get-feature-report-fix
+
+Default
+Translate Open Settings
+Add an option to the translate bubble menu to open language settings. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#translate-open-settings
+
+Default
+Tab Organization
+Enables the Auto Tab Groups feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-organization
+
+Default
+Tab Organization Settings Visibility
+Shows Tab Organization in the settings UI – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-organization-settings-visibility
+
+Default
+Multi Tab Organization
+Enables Auto Tab Groups suggestions for multiple tab groups at once. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#multi-tab-organization
+
+Default
+Tab Reorganization
+Enables Auto Tab Groups suggestions for adding tabs to existing groups – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-reorganization
+
+Default
+Tab Reorganization Divider
+Shows a divider in Auto Tab Groups suggestions for existing groups, indicating which tabs in the group are new. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tab-reorganization-divider
+
+Default
+Tab Declutter
+Enables the Tab Declutter feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#tabstrip-declutter
+
+Default
+Remove "Show cards from your Google Account" dropdown
+When enabled, the "Show cards from your Google Account" Autofill suggestion will not be displayed, and Autofill will work as if it had been selected. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-remove-payments-butter-dropdown
+
+Default
+Language detection web platform API
+When enabled, JS can use the web platform's language detection API – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#language-detection-api
+
+Default
+Supervised Profile Hide Guest
+Hides Guest Profile entry points for supervised users – Mac, Windows, Linux
+
+#supervised-profile-hide-guest
+
+Default
+Supervised Profile SafeSearch
+Enables SafeSearch in Google Search for supervised users in the pending state. – Mac, Windows, Linux
+
+#supervised-profile-safe-search
+
+Default
+Supervised Profile YouTube reauth
+Ask supervised users to re-authenticate when attempting to access YouTube in the pending state. – Mac, Windows, Linux
+
+#supervised-profile-youtube-reauth
+
+Default
+Supervised Profile blocked site reauth
+Ask supervised users to re-authenticate when attempting to navigate to a site blocked by parental controls. – Mac, Windows, Linux
+
+#supervised-profile-blocked-site-reauth
+
+Default
+Supervised Profile reauth in subframes
+If "Supervised Profile YouTube reauth" or "Supervised Profile blocked site reauth" is enabled, require supervised users to re-authenticate before accessing embedded YouTube videos or blocked sites in subframes, respectively. – Mac, Windows, Linux
+
+#supervised-profile-subframe-reauth
+
+Default
+Supervised Profile filtering fallback
+Applies website filters for supervised users in the pending state, if the Family Link website filtering setting is set to block explicit sites. If the Family Link website filtering setting is set to another value, it is applied in the pending regardless of this flag. – Mac, Windows, Linux
+
+#supervised-profile-filtering-fallback
+
+Default
+Supervised Profile custom strings
+Displays modified strings on both the sign-in intercept UI and the pre-UNO sync opt out screen – Mac, Windows, Linux
+
+#supervised-profile-custom-strings
+
+Default
+Supervised Profile sign-in IPH
+Displays an in-product help message when a Profile becomes owned by a supervised user (either on creation of the new profile, or after sign in). – Mac, Windows, Linux
+
+#supervised-profile-sign-in-iph
+
+Default
+Supervised Profile show kite badge
+Shows a kite badge on the profile avatar for supervised users. – Mac, Windows, Linux
+
+#supervised-profile-kite-badging
+
+Default
+Use rewritten display FrameIntervalDecider
+Rewrite is meant to preserve existing behavior and enable new features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#use-frame-interval-decider
+
+Default
+Data Sharing
+Enabled all Data Sharing related UI and features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#data-sharing
+
+Default
+Data Sharing Join Only
+Enabled Data Sharing Joining flow related UI and features. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#data-sharing-join-only
+
+Default
+History Sync Alternative Illustration
+Enables history sync alternative illustration. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#history-sync-alternative-illustration
+
+Default
+Enable CVC storage and filling enhancement for payments autofill
+When enabled, will enhance CVV storage project. Provide better suggestion, resolve conflict with COF project and add logging. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-cvc-storage-and-filling-enhancement
+
+Default
+Improved signin UI
+Enables redesign of profile menu and signin settings ; new signin promos and better signin errors. – Mac, Windows, Linux
+
+#improved-signin-ui-on-desktop
+
+Default
+Outline Silhouette Icon
+Enables the improved silhouette icon for signed out profiles – Mac, Windows, Linux
+
+#outline-silhouette-icon
+
+Default
+Discounts on navigation
+Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#discount-on-navigation
+
+Default
+DevTools Privacy UI
+Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#devtools-privacy-ui
+
+Default
+Permission Predictions V3
+Use the Permission Predictions Service V3 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires and `Safe Browsing` to be enabled. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#permission-predictions-v3
+
+Default
+Task Manager Desktop Refresh
+Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-task-manager-desktop-refresh
+
+Default
+Network Time for Certificate Verification
+Use time fetched from the network for certificate verification decisions. If certificate verification fails with the network time, it will fall back to system time. – Mac, Windows, Linux, Android
+
+#cert-verification-network-time
+
+Default
+Lens overlay translate button
+Enables translate button via the Lens overlay. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay-translate-button
+
+Default
+Lens overlay contextual search box
+Enables contextual search box in the Lens overlay. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay-contextual-search-box
+
+Default
+Lens overlay latency optimizations
+Enables latency optimizations for the Lens overlay. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay-latency-optimizations
+
+Default
+Lens overlay image context menu actions
+Enables image context menu actions in the Lens overlay. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay-image-context-menu-actions
+
+Default
+Enable logging form events to all parsed form on a web page.
+When enabled, a form event will log to all of the parsed forms of the same type on a webpage. This means credit card form events will log to all credit card form types and address form events will log to all address form types. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-log-form-events-to-all-parsed-form-types
+
+Default
+Enable buy now pay later on Autofill for Affirm
+When enabled, users will have the option to pay with buy now pay later with Affirm on specific merchant webpages. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-enable-buy-now-pay-later-for-affirm
+
+Default
+Enable buy now pay later on Autofill for Zip
+When enabled, users will have the option to pay with buy now pay later with Zip on specific merchant webpages. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-enable-buy-now-pay-later-for-zip
+
+Default
+Enable syncing buy now pay later user data.
+When enabled, Chrome will sync user data related to buy now pay later. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-enable-buy-now-pay-later-syncing
+
+Default
+Enable CVC storage and filling standalone form enhancement for payments autofill
+When enabled, this will enhance the CVV storage project. The enhancement will enable CVV storage suggestions for standalone CVC fields. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-cvc-storage-and-filling-standalone-form-enhancement
+
+Default
+Enable bookmarks selected type on sign-in for testing
+Test-only flag to help with the development of sync-enable-bookmarks-in-transport-mode. Enables the bookmarks UserSelectableType upon sign-in – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-bookmarks-selected-type-on-signin-for-testing
+
+Default
+Separate local and account themes
+Keeps the local and the account theme separate. If the user signs out or sync is turned off, only the account theme is removed and the pre-existing local theme is restored. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#separate-local-and-account-themes
+
+Default
+Enable showing in-process help UI for card benefits
+When enabled, in-process help UI will be shown for Autofill card suggestions with benefits. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-enable-card-benefits-iph
+
+Default
+Privacy Sandbox Privacy Policy
+Enables the Privacy Policy link to be displayed on the Privacy Sandbox Consent dialog, subject to regional availability. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#privacy-sandbox-privacy-policy
+
+Default
+Enable retrieval of card info(with CVC) from issuer for enrolled cards
+When enabled, runtime retrieval of CVC along with card number and expiry from issuer for enrolled cards will be enabled during form fill. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#autofill-enable-card-info-runtime-retrieval
+
+Default
+Experimental translation API
+Enables the on-device language translation API. See https://github.com/WICG/translation-api/blob/main/README.md – Mac, Windows, Linux
+
+#translation-api
+
+Default
+Grouped affiliation password suggestions
+Enables offering credentials coming from grouped domains for filling – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#password-form-grouped-affiliations
+
+Default
+AI settings page refresh
+Enables a revamp of the existing AI settings page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ai-settings-page-refresh
+
+Default
+Clientside password form classifier.
+Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#password-form-clientside-classifier
+
+Default
+Contextual cueing
+Enables the contextual cueing system to support showing actions – Mac, Windows, Linux
+
+#contextual-cueing
+
+Default
+Partitioned Popins
+Allows Partitioned Popins to be opened. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#partitioned-popins
+
+Default
+Separate local and account search engines
+Keeps the local and the account search engines separate. If the user signs out or sync is turned off, the account search engines are removed while the pre-existing/local search engines are left behind. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#separate-local-and-account-search-engines
+
+Default
+PartitionAlloc with Advanced Checks
+Enables an extra security layer on PartitionAlloc. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#partition-alloc-with-advanced-checks
+
+Default
+Partition the Visited Link Database
+Style links as visited only if they have been clicked from this top-level site and frame origin before. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#partition-visited-link-database
+
+Default
+Partition the Visited Link Database, including 'self-links'
+Style links as visited only if they have been clicked from this top-level site and frame origin before. Additionally, style links pointing to the same URL as the page it is displayed on, which have been :visited from any top-level site and frame origin, if they are displayed in a top-level frame or same-origin subframe. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#partition-visited-link-database-with-self-links
+
+Default
+Disable bulk local credit card migration flows
+When enabled, local credit card migration flows will not be offered, both from checkout flows and from the payment methods settings page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-disable-local-card-migration
+
+Default
+Predictable Reported Quota
+Enables reporting of a predictable quota from the StorageManager's estimate API. This flag is intended only for validating if this change caused an unforseen bug. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#predictable-reported-quota
+
+Default
+Allow legacy extension manifest versions
+Allows extensions with legacy (unsupported) manifest versions to be loaded as unpacked extensions. This should only be used for maintaining legacy extensions and will be removed in the future. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#allow-legacy-mv2-extensions
+
+Default
+More Lens overlay translate languages
+Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay-translate-languages
+
+Default
+Glic
+Enables glic – Mac, Windows, Linux
+
+#glic
+
+Default
+ServiceWorkerAutoPreload
+Dispatches a preload request for navigation before starting the service worker. See https://github.com/explainers-by-googlers/service-worker-auto-preload – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#service-worker-auto-preload
+
+Default
+Enable Save and Fill
+When enabled, show an option to offer saving and filling a credit card with a single click when users don't have any cards saved in Autofill. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-enable-save-and-fill
+
+Default
+Autofill suggestions with improved labels
+When enabled, the autofill suggestion labels are more more descriptive and relevant. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#autofill-improved-labels
+
+Default
