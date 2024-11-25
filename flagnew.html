@@ -114,6 +114,10 @@
             background-color: rgba(244, 67, 54, 0.2) !important;
         }
 
+        .existing-flag {
+            background-color: rgba(255, 152, 0, 0.2) !important;
+        }
+
         .section-header {
             background-color: #2c2c2c;
             color: #90caf9;
@@ -185,21 +189,21 @@
     <div class="container">
         <div class="box">
             <div class="version-label">
-                Old Data
+                Old Version Data
                 <span class="version-number" id="oldVersion">Loading...</span>
             </div>
             <textarea id="oldData" placeholder="Old data will be imported here..."></textarea>
             <div class="button-container">
-                <button id="fetchOldData">Import Data from URL</button>
+                <button id="fetchOldData">Import Old Version Data from URL</button>
                 <div id="loader" class="loader"></div>
             </div>
         </div>
         <div class="box">
             <div class="version-label">
-                New Data
+                New Version Data
                 <span class="version-number" id="newVersion">Waiting for input...</span>
             </div>
-            <textarea id="newData" placeholder="Paste new data here..."></textarea>
+            <textarea id="newData" placeholder="Paste New Version Data here..."></textarea>
         </div>
     </div>
 
@@ -309,32 +313,58 @@
         }
 
         function compareFlags() {
-            if (!oldData.value.trim() || !newData.value.trim()) {
+            if (!oldData.value.trim()) {
                 return;
             }
 
             const { version: oldVersion, flags: oldFlagsWithDesc } = extractVersionAndFlags(oldData.value);
-            const { version: newVersion, flags: newFlagsWithDesc } = extractVersionAndFlags(newData.value);
-            
             oldVersionSpan.textContent = oldVersion;
-            newVersionSpan.textContent = newVersion || 'Waiting for input...';
+
+            // Handle case when new data is empty
+            if (!newData.value.trim()) {
+                newVersionSpan.textContent = 'No new data';
+                versionComparisonSpan.textContent = `${oldVersion} (Showing existing flags)`;
+                
+                const tbody = comparisonTable.querySelector('tbody');
+                tbody.innerHTML = '';
+
+                // Show existing flags with orange background
+                const existingFlags = Object.entries(oldFlagsWithDesc);
+                
+                // Update status with count of existing flags
+                statusDiv.textContent = `Showing ${existingFlags.length} existing flags`;
+
+                const sectionRow = tbody.insertRow();
+                sectionRow.innerHTML = '<td colspan="3" class="section-header">Existing Flags</td>';
+
+                existingFlags.forEach(([flag, description]) => {
+                    const row = tbody.insertRow();
+                    row.className = 'existing-flag';
+                    row.innerHTML = `
+                        <td>Existing</td>
+                        <td>${flag}</td>
+                        <td>${description || ''}</td>
+                    `;
+                });
+                return;
+            }
+
+            // Normal comparison logic when both old and new data exist
+            const { version: newVersion, flags: newFlagsWithDesc } = extractVersionAndFlags(newData.value);
+            newVersionSpan.textContent = newVersion || 'Unknown';
             updateVersionComparison();
 
             const oldFlags = new Set(Object.keys(oldFlagsWithDesc));
             const newFlags = new Set(Object.keys(newFlagsWithDesc));
             
-            // Find added and removed flags
             const addedFlags = [...newFlags].filter(flag => !oldFlags.has(flag));
             const removedFlags = [...oldFlags].filter(flag => !newFlags.has(flag));
 
-            // Update status
             statusDiv.textContent = `Found ${addedFlags.length} new flags and ${removedFlags.length} removed flags`;
 
-            // Clear existing table rows
             const tbody = comparisonTable.querySelector('tbody');
             tbody.innerHTML = '';
 
-            // Add section for new flags
             if (addedFlags.length > 0) {
                 const sectionRow = tbody.insertRow();
                 sectionRow.innerHTML = '<td colspan="3" class="section-header">New Flags</td>';
@@ -350,7 +380,6 @@
                 });
             }
 
-            // Add section for removed flags
             if (removedFlags.length > 0) {
                 const sectionRow = tbody.insertRow();
                 sectionRow.innerHTML = '<td colspan="3" class="section-header">Removed Flags</td>';
