@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +19,18 @@
             line-height: 1.6;
         }
 
-        h1, h2 {
-            color: #ffffff;
+        .header {
             text-align: center;
             margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .version-info {
+            color: #90caf9;
+            font-size: 16px;
         }
 
         .container {
@@ -177,7 +184,7 @@
             .container {
                 flex-direction: column;
             }
-            
+
             .box {
                 width: 100%;
             }
@@ -185,22 +192,22 @@
     </style>
 </head>
 <body>
-    <h1>Chrome Flags Comparator</h1>
+    <div class="header">
+        <h1>Chrome Flags Comparator</h1>
+        <div class="version-info" id="versionInfo">
+            Loading version information...
+        </div>
+    </div>
 
     <div class="container">
         <div class="box">
-         <div id="latestVersionInfo" class="status">
-        <div>Latest Chrome Version: <span class="version-info">Loading...</span></div>
-        <div>Revision: <span class="version-info">Loading...</span></div>
-        <div>Last Updated (IST): <span class="version-info">Loading...</span></div>
-    </div>
             <div class="version-label">
                 Old Version Data
                 <span class="version-number" id="oldVersion">Loading...</span>
             </div>
             <textarea id="oldData" placeholder="Old data will be imported here..."></textarea>
             <div class="button-container">
-                <button id="fetchOldData">Import Old Version Data from URL</button>
+                <button id="fetchOldData">Import Data from URL</button>
                 <div id="loader" class="loader"></div>
             </div>
         </div>
@@ -231,7 +238,6 @@
         <tbody>
         </tbody>
     </table>
-
     <footer>
         Chrome Flags Comparator &copy; 2024
     </footer>
@@ -291,8 +297,8 @@ const latestVersionInfo = document.getElementById('latestVersionInfo');
             return 0;
         }
 
-        async function fetchLatestVersionInfo() {
-            const latestVersionInfo = document.getElementById('latestVersionInfo');
+         async function fetchLatestVersionInfo() {
+            const versionInfo = document.getElementById('versionInfo');
             try {
                 const response = await fetch('https://raw.githubusercontent.com/GoogleChromeLabs/chrome-for-testing/main/data/known-good-versions.json');
                 const data = await response.json();
@@ -314,19 +320,29 @@ const latestVersionInfo = document.getElementById('latestVersionInfo');
                 };
                 const formattedTimestamp = timestamp.toLocaleString('en-IN', options);
 
-                latestVersionInfo.innerHTML = `
-                    <div>Latest Chrome Version: <span class="version-info">${latestVersion.version}</span></div>
-                    <div>Revision: <span class="version-info">${latestVersion.revision}</span></div>
-                    <div>Last Updated (IST): <span class="version-info">${formattedTimestamp}</span></div>
+                versionInfo.innerHTML = `
+                    Latest Chrome Version: ${latestVersion.version}<br>Revision: ${latestVersion.revision}<br>Last Updated (IST): ${formattedTimestamp}
                 `;
             } catch (error) {
                 console.error('Error fetching latest version:', error);
-                latestVersionInfo.innerHTML = `
-                    <div>Latest Chrome Version: <span class="version-info">Unable to fetch</span></div>
-                    <div>Revision: <span class="version-info">Unable to fetch</span></div>
-                    <div>Last Updated (IST): <span class="version-info">Unable to fetch</span></div>
+                versionInfo.innerHTML = `
+                    Latest Chrome Version: Unable to fetch &middot; Revision: Unable to fetch &middot; Last Updated (IST): Unable to fetch
                 `;
             }
+        }
+
+        function compareVersions(v1, v2) {
+            const parts1 = v1.split('.').map(Number);
+            const parts2 = v2.split('.').map(Number);
+
+            for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
+                const num1 = parts1[i] || 0;
+                const num2 = parts2[i] || 0;
+
+                if (num1 > num2) return 1;
+                if (num1 < num2) return -1;
+            }
+            return 0;
         }
 
         // Call the function when the page loads
