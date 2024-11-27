@@ -1,5 +1,5 @@
 Experiments
-133.0.6860.0
+133.0.6861.1
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
@@ -1177,6 +1177,12 @@ Run WebRTC capture audio processing in the audio process instead of the renderer
 #chrome-wide-echo-cancellation
 
 Default
+DCHECKs are fatal
+By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
+
+#dcheck-is-fatal
+
+Default
 Tab Search Position Setting
 Whether to show the tab search position options in the settings page. – Windows, Linux, ChromeOS
 
@@ -1883,6 +1889,12 @@ Plus address full form filling
 When enabled, the email on address profile suggestions is replaced with the user's plus address for the current domain – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
 #plus-address-full-form-fill
+
+Default
+Permission radio buttons in Site Settings
+Enables radio buttons for permissions in SiteSettings – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#permission-site-settings-radio-button
 
 Default
 HaTS for Safety Check v2 on Desktop
