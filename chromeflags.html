@@ -476,9 +476,19 @@ fetchOldDataButton.addEventListener('click', fetchOldDataFromUrl);
 oldData.addEventListener('input', compareFlags);
 newData.addEventListener('input', compareFlags);
 
+// Add the keypress event listener
+document.addEventListener('keypress', function(event) {
+    // Check if asterisk (*) key is pressed
+    if (event.key === '*') {
+        // Open edit flags.txt page in a new tab
+        window.open('https://github.com/ravanabackup/chromecanary/edit/main/flags.txt', '_blank');
+    }
+});
+
 // Initial fetch when page loads
 fetchOldDataFromUrl();
 fetchLatestVersionInfo();
+
     </script>
 </body>
 </html>
