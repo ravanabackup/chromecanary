@@ -1,5 +1,5 @@
 Experiments
-133.0.6865.0
+133.0.6866.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
@@ -1733,6 +1733,12 @@ HTTPS-First Mode For Typically Secure Users
 Automatically enables HTTPS-First Mode if the user has a typically secure browsing pattern. – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
 #https-first-mode-for-typically-secure-users
+
+Default
+Enable extension permission omnibox.directInput
+Allows extensions to request permission omnibox.directInput, which enables unscoped mode in the Omnibox – Mac, Windows, Linux, ChromeOS, Lacros
+
+#experimental-omnibox-labs
 
 Default
 Enables AI Data collection via extension
