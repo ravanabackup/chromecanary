@@ -157,6 +157,9 @@
                     latestReleaseTime: 'N/A' 
                 };
 
+                // Update page title with latest platform name
+                document.title = `CV - ${PLATFORM_NAMES[latestVersion.platform] || 'Latest Platform'}`;
+
                 // Update latest version summary
                 document.getElementById('latestVersionSummary').innerHTML = `
                     Latest Overall Version: <strong>${latestVersion.latestVersion}</strong> 
