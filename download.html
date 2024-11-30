@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Canary Downloads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-8 flex-grow">
+        <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+            <div class="bg-blue-600 dark:bg-blue-800 text-white py-4 px-6">
+                <h1 class="text-2xl font-bold">Chrome Canary Downloads</h1>
+                <p class="text-sm text-blue-100 dark:text-blue-200">
+                    Latest version: <span id="version">Loading...</span>
+                </p>
+                <p class="text-sm text-blue-100 dark:text-blue-200">
+                    Released at: <span id="releaseTime">Loading...</span>
+                </p>
+            </div>
+            
+            <div class="p-6">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">Platform</th>
+                                <th scope="col" class="px-6 py-3">Download</th>
+                            </tr>
+                        </thead>
+                        <tbody id="downloadBody">
+                            <!-- Rows will be dynamically populated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 dark:bg-gray-700 text-center py-4 text-sm text-gray-600 dark:text-gray-300">
+                <p>These are Chrome for Testing builds. Always download from official sources.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchChromeVersion() {
+            try {
+                // Note: This is a conceptual example. In a real-world scenario, 
+                // you would need a backend proxy to handle the actual API call
+                const proxyUrl = 'https://versionhistory.googleapis.com/v1/chrome/platforms/win64/channels/canary/versions/all/releases';
+                
+                const response = await fetch(proxyUrl);
+                const data = await response.json();
+
+                // Sort releases by start time to get the latest
+                const sortedReleases = data.releases.sort((a, b) => 
+                    new Date(b.serving.startTime) - new Date(a.serving.startTime)
+                );
+                
+                const latestRelease = sortedReleases[0];
+                const version = latestRelease.version;
+                
+                // Convert UTC to IST
+                const startTimeUTC = new Date(latestRelease.serving.startTime);
+                const startTimeIST = new Date(startTimeUTC.toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}));
+                
+                // Format IST time
+                const formattedTime = startTimeIST.toLocaleString('en-IN', {
+                    timeZone: 'Asia/Kolkata',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                });
+
+                // Update version and release time
+                document.getElementById('version').textContent = version;
+                document.getElementById('releaseTime').textContent = formattedTime + ' IST';
+
+                // Platforms to download
+                const platforms = [
+                    { name: 'Windows 64-bit', path: 'win64/chrome-win64.zip' },
+                    { name: 'Windows 32-bit', path: 'win32/chrome-win32.zip' },
+                    { name: 'macOS ARM64 (Apple Silicon)', path: 'mac-arm64/chrome-mac-arm64.zip' },
+                    { name: 'macOS x64 (Intel)', path: 'mac-x64/chrome-mac-x64.zip' },
+                    { name: 'Linux 64-bit', path: 'linux64/chrome-linux64.zip' }
+                ];
+
+                // Base URL for downloads
+                const baseUrl = `https://storage.googleapis.com/chrome-for-testing-public/${version}`;
+
+                // Populate download body
+                const downloadBody = document.getElementById('downloadBody');
+                downloadBody.innerHTML = platforms.map(platform => `
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">${platform.name}</td>
+                        <td class="px-6 py-4">
+                            <a href="${baseUrl}/${platform.path}" 
+                               class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors dark:bg-blue-500 dark:hover:bg-blue-600">
+                                Download
+                            </a>
+                        </td>
+                    </tr>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error fetching Chrome version:', error);
+                document.getElementById('version').textContent = 'Failed to load';
+            }
+        }
+
+        // Call the function when page loads
+        fetchChromeVersion();
+    </script>
+</body>
+</html>
