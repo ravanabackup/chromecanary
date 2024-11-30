@@ -20,6 +20,9 @@
                     Latest version: <span id="version">Loading...</span>
                 </p>
                 <p class="text-sm text-blue-100 dark:text-blue-200">
+                    Linux Version: <span id="linuxVersion">Loading...</span>
+                </p>
+                <p class="text-sm text-blue-100 dark:text-blue-200">
                     Released at: <span id="releaseTime">Loading...</span>
                 </p>
             </div>
@@ -49,23 +52,31 @@
     <script>
         async function fetchChromeVersion() {
             try {
-                // Note: This is a conceptual example. In a real-world scenario, 
-                // you would need a backend proxy to handle the actual API call
-                const proxyUrl = 'https://versionhistory.googleapis.com/v1/chrome/platforms/win64/channels/canary/versions/all/releases';
-                
-                const response = await fetch(proxyUrl);
-                const data = await response.json();
+                // Fetch versions for different platforms
+                const [windowsResponse, linuxResponse] = await Promise.all([
+                    fetch('https://versionhistory.googleapis.com/v1/chrome/platforms/win64/channels/canary/versions/all/releases'),
+                    fetch('https://versionhistory.googleapis.com/v1/chrome/platforms/linux/channels/canary/versions/all/releases')
+                ]);
+
+                const windowsData = await windowsResponse.json();
+                const linuxData = await linuxResponse.json();
 
                 // Sort releases by start time to get the latest
-                const sortedReleases = data.releases.sort((a, b) => 
+                const windowsSortedReleases = windowsData.releases.sort((a, b) => 
+                    new Date(b.serving.startTime) - new Date(a.serving.startTime)
+                );
+                const linuxSortedReleases = linuxData.releases.sort((a, b) => 
                     new Date(b.serving.startTime) - new Date(a.serving.startTime)
                 );
                 
-                const latestRelease = sortedReleases[0];
-                const version = latestRelease.version;
+                const windowsLatestRelease = windowsSortedReleases[0];
+                const linuxLatestRelease = linuxSortedReleases[0];
+                
+                const windowsVersion = windowsLatestRelease.version;
+                const linuxVersion = linuxLatestRelease.version;
                 
                 // Convert UTC to IST
-                const startTimeUTC = new Date(latestRelease.serving.startTime);
+                const startTimeUTC = new Date(windowsLatestRelease.serving.startTime);
                 const startTimeIST = new Date(startTimeUTC.toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}));
                 
                 // Format IST time
@@ -81,20 +92,21 @@
                 });
 
                 // Update version and release time
-                document.getElementById('version').textContent = version;
+                document.getElementById('version').textContent = windowsVersion;
+                document.getElementById('linuxVersion').textContent = linuxVersion;
                 document.getElementById('releaseTime').textContent = formattedTime + ' IST';
 
                 // Platforms to download
                 const platforms = [
-                    { name: 'Windows 64-bit', path: 'win64/chrome-win64.zip' },
-                    { name: 'Windows 32-bit', path: 'win32/chrome-win32.zip' },
-                    { name: 'macOS ARM64 (Apple Silicon)', path: 'mac-arm64/chrome-mac-arm64.zip' },
-                    { name: 'macOS x64 (Intel)', path: 'mac-x64/chrome-mac-x64.zip' },
-                    { name: 'Linux 64-bit', path: 'linux64/chrome-linux64.zip' }
+                    { name: 'Windows 64-bit', path: 'win64/chrome-win64.zip', version: windowsVersion },
+                    { name: 'Windows 32-bit', path: 'win32/chrome-win32.zip', version: windowsVersion },
+                    { name: 'macOS ARM64 (Apple Silicon)', path: 'mac-arm64/chrome-mac-arm64.zip', version: windowsVersion },
+                    { name: 'macOS x64 (Intel)', path: 'mac-x64/chrome-mac-x64.zip', version: windowsVersion },
+                    { name: 'Linux 64-bit', path: 'linux64/chrome-linux64.zip', version: linuxVersion }
                 ];
 
                 // Base URL for downloads
-                const baseUrl = `https://storage.googleapis.com/chrome-for-testing-public/${version}`;
+                const baseUrl = (platform) => `https://storage.googleapis.com/chrome-for-testing-public/${platform.version}`;
 
                 // Populate download body
                 const downloadBody = document.getElementById('downloadBody');
@@ -102,9 +114,9 @@
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">${platform.name}</td>
                         <td class="px-6 py-4">
-                            <a href="${baseUrl}/${platform.path}" 
+                            <a href="${baseUrl(platform)}/${platform.path}" 
                                class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors dark:bg-blue-500 dark:hover:bg-blue-600">
-                                Download
+                                Download ${platform.version}
                             </a>
                         </td>
                     </tr>
@@ -113,6 +125,7 @@
             } catch (error) {
                 console.error('Error fetching Chrome version:', error);
                 document.getElementById('version').textContent = 'Failed to load';
+                document.getElementById('linuxVersion').textContent = 'Failed to load';
             }
         }
 
