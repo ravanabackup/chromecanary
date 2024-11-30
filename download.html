@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,27 +10,31 @@
             darkMode: 'class',
         }
     </script>
+    <style>
+        /* Additional dark mode enhancements */
+        body {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
+<body class="bg-gray-900 dark:bg-gray-900 text-gray-100 dark:text-gray-100 min-h-screen flex flex-col">
     <div class="container mx-auto px-4 py-8 flex-grow">
-        <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-            <div class="bg-blue-600 dark:bg-blue-800 text-white py-4 px-6">
+        <div class="max-w-4xl mx-auto bg-gray-800 dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+            <div class="bg-blue-800 dark:bg-blue-900 text-white py-4 px-6">
                 <h1 class="text-2xl font-bold">Chrome Canary Downloads</h1>
-                <p class="text-sm text-blue-100 dark:text-blue-200">
-                    Latest version: <span id="version">Loading...</span>
+                <p class="text-sm text-blue-200 dark:text-blue-200">
+                    Latest version: <span id="version">Loading...</span> <span id="versionReleaseTime">Loading...</span>
                 </p>
-                <p class="text-sm text-blue-100 dark:text-blue-200">
-                    Linux Version: <span id="linuxVersion">Loading...</span>
-                </p>
-                <p class="text-sm text-blue-100 dark:text-blue-200">
-                    Released at: <span id="releaseTime">Loading...</span>
+                <p class="text-sm text-blue-200 dark:text-blue-200">
+                    Linux Version: <span id="linuxVersion">Loading...</span> <span id="linuxVersionReleaseTime">Loading...</span>
                 </p>
             </div>
             
             <div class="p-6">
                 <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <table class="w-full text-sm text-left text-gray-400 dark:text-gray-400">
+                        <thead class="text-xs text-gray-300 uppercase bg-gray-700 dark:bg-gray-700">
                             <tr>
                                 <th scope="col" class="px-6 py-3">Platform</th>
                                 <th scope="col" class="px-6 py-3">Download</th>
@@ -43,13 +47,26 @@
                 </div>
             </div>
             
-            <div class="bg-gray-100 dark:bg-gray-700 text-center py-4 text-sm text-gray-600 dark:text-gray-300">
+            <div class="bg-gray-700 dark:bg-gray-700 text-center py-4 text-sm text-gray-300 dark:text-gray-300">
                 <p>These are Chrome for Testing builds. Always download from official sources.</p>
             </div>
         </div>
     </div>
 
     <script>
+        function formatReleaseTime(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleString('en-IN', {
+                timeZone: 'Asia/Kolkata',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true
+            });
+        }
+
         async function fetchChromeVersion() {
             try {
                 // Fetch versions for different platforms
@@ -74,27 +91,16 @@
                 
                 const windowsVersion = windowsLatestRelease.version;
                 const linuxVersion = linuxLatestRelease.version;
-                
-                // Convert UTC to IST
-                const startTimeUTC = new Date(windowsLatestRelease.serving.startTime);
-                const startTimeIST = new Date(startTimeUTC.toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}));
-                
-                // Format IST time
-                const formattedTime = startTimeIST.toLocaleString('en-IN', {
-                    timeZone: 'Asia/Kolkata',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                    hour12: true
-                });
+
+                // Format release times
+                const windowsReleaseTime = formatReleaseTime(windowsLatestRelease.serving.startTime);
+                const linuxReleaseTime = formatReleaseTime(linuxLatestRelease.serving.startTime);
 
                 // Update version and release time
                 document.getElementById('version').textContent = windowsVersion;
+                document.getElementById('versionReleaseTime').textContent = `(${windowsReleaseTime})`;
                 document.getElementById('linuxVersion').textContent = linuxVersion;
-                document.getElementById('releaseTime').textContent = formattedTime + ' IST';
+                document.getElementById('linuxVersionReleaseTime').textContent = `(${linuxReleaseTime})`;
 
                 // Platforms to download
                 const platforms = [
@@ -111,11 +117,11 @@
                 // Populate download body
                 const downloadBody = document.getElementById('downloadBody');
                 downloadBody.innerHTML = platforms.map(platform => `
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">${platform.name}</td>
+                    <tr class="bg-gray-800 border-b border-gray-700 hover:bg-gray-700">
+                        <td class="px-6 py-4 font-medium text-white">${platform.name}</td>
                         <td class="px-6 py-4">
                             <a href="${baseUrl(platform)}/${platform.path}" 
-                               class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors dark:bg-blue-500 dark:hover:bg-blue-600">
+                               class="inline-block px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors">
                                 Download ${platform.version}
                             </a>
                         </td>
