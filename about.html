@@ -2,103 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrome URL Comparison Tool</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            background: linear-gradient(135deg, #121212 0%, #1e1e2e 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        .container {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
+        .glass-container {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         textarea {
-            width: 100%;
-            height: 200px;
+            transition: all 0.3s ease;
+            background: rgba(45, 55, 72, 0.4);
+            border: 1px solid rgba(45, 55, 72, 0.6);
+            color: #e0e0e0;
         }
-        #result {
-            margin-top: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+        }
+        .btn {
+            transition: all 0.3s ease;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            border-radius: 12px;
+            overflow: hidden;
         }
         .new-url {
-            background-color: #90EE90;
-            color: green;
-            padding: 5px;
-            margin: 5px 0;
-            border-radius: 3px;
+            color: white;
+            background-color: rgba(46, 125, 50, 0.7);
+            transition: background-color 0.3s ease;
+        }
+        .new-url:hover {
+            background-color: rgba(46, 125, 50, 0.9);
         }
         .removed-url {
-            background-color: #FFB6C1;
-            color: red;
-            padding: 5px;
-            margin: 5px 0;
-            border-radius: 3px;
+        	color: white;
+            background-color: rgba(198, 40, 40, 0.7);
+            transition: background-color 0.3s ease;
+        }
+        .removed-url:hover {
+            background-color: rgba(198, 40, 40, 0.9);
         }
     </style>
 </head>
-<body>
-    <h1>Chrome URL Comparison Tool</h1>
-    <div class="container">
-        <div>
-            <h2>Original Text</h2>
-            <textarea id="oldText" placeholder="Paste original chrome:// URLs here"></textarea>
+<body class="min-h-screen flex flex-col justify-center items-center py-10">
+    <div class="w-full max-w-4xl p-6 glass-container">
+        <h1 class="text-4xl font-bold text-center text-green-500 mb-8">Chrome URL Comparison Tool</h1>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+                <h2 class="text-2xl text-center text-gray-200 mb-4">Original Text</h2>
+                <textarea 
+                    id="oldText" 
+                    class="w-full h-64 resize-none rounded-lg p-4" 
+                    placeholder="Paste original chrome:// URLs here"
+                ></textarea>
+                <div class="flex justify-center mt-4">
+                    <button 
+                        onclick="fetchOriginalData()" 
+                        class="btn"
+                    >
+                        Fetch Data - 133.0.6868.0
+                    </button>
+                </div>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl text-center text-gray-200 mb-4">New Text</h2>
+                <textarea 
+                    id="newText" 
+                    class="w-full h-64 resize-none rounded-lg p-4" 
+                    placeholder="Paste new chrome:// URLs here"
+                ></textarea>
+            </div>
         </div>
-        <div>
-            <h2>New Text</h2>
-            <textarea id="newText" placeholder="Paste new chrome:// URLs here"></textarea>
+        
+        <div class="flex justify-center">
+            <button 
+                onclick="compareUrls()" 
+                class="btn text-lg"
+            >
+                Compare URLs
+            </button>
+        </div>
+        
+        <div id="result" class="mt-8">
+            <div id="result-new" class="mb-6"></div>
+            <div id="result-removed"></div>
         </div>
     </div>
-    <button onclick="compareUrls()">Compare URLs</button>
-    
-    <div id="result-new"></div>
-    <div id="result-removed"></div>
 
     <script>
+        async function fetchOriginalData() {
+            const oldText = document.getElementById('oldText');
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/ravanabackup/chromecanary/refs/heads/main/about.txt');
+                if (response.ok) {
+                    const data = await response.text();
+                    oldText.value = data;
+                } else {
+                    alert('Failed to fetch data: ' + response.status);
+                }
+            } catch (error) {
+                alert('Error fetching data: ' + error.message);
+            }
+        }
+
         function compareUrls() {
             const oldText = document.getElementById('oldText').value;
             const newText = document.getElementById('newText').value;
             const resultNewDiv = document.getElementById('result-new');
             const resultRemovedDiv = document.getElementById('result-removed');
             
-            // Extract chrome:// URLs from both inputs
             const oldUrls = extractChromeUrls(oldText);
             const newUrls = extractChromeUrls(newText);
             
-            // Find new and removed URLs
             const newUniqueUrls = newUrls.filter(url => !oldUrls.includes(url));
             const removedUrls = oldUrls.filter(url => !newUrls.includes(url));
             
-            // Display new URLs
-            if (newUniqueUrls.length === 0) {
-                resultNewDiv.innerHTML = '<p>No new chrome:// URLs found.</p>';
-            } else {
-                resultNewDiv.innerHTML = '<h2>New Chrome URLs:</h2>';
-                newUniqueUrls.forEach(url => {
-                    resultNewDiv.innerHTML += `<div class="new-url">${url}</div>`;
-                });
-            }
-            
-            // Display removed URLs
-            if (removedUrls.length === 0) {
-                resultRemovedDiv.innerHTML = '<p>No removed chrome:// URLs found.</p>';
-            } else {
-                resultRemovedDiv.innerHTML = '<h2>Removed Chrome URLs:</h2>';
-                removedUrls.forEach(url => {
-                    resultRemovedDiv.innerHTML += `<div class="removed-url">${url}</div>`;
-                });
-            }
+            resultNewDiv.innerHTML = generateTable('New Chrome URLs', newUniqueUrls, 'new-url');
+            resultRemovedDiv.innerHTML = generateTable('Removed Chrome URLs', removedUrls, 'removed-url');
         }
-        
+
         function extractChromeUrls(text) {
-            // Regular expression to match chrome:// URLs
             const chromeUrlRegex = /chrome:\/\/\S+/g;
-            
-            // Find and return all unique chrome:// URLs
             return [...new Set(text.match(chromeUrlRegex) || [])];
+        }
+
+        function generateTable(title, urls, className) {
+            if (urls.length === 0) {
+                return `<h2 class="text-2xl text-center text-gray-300">${title}</h2><p class="text-center text-gray-500">No URLs found.</p>`;
+            }
+            let table = `
+                <h2 class="text-2xl text-center text-gray-300 mb-4">${title}</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-opacity-20 rounded-lg">
+                        <thead>
+                            <tr>
+                                <th class="text-left p-4 bg-gray-700 text-gray-200">URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            urls.forEach(url => {
+                table += `
+                    <tr>
+                        <td class="${className} p-4 text-sm font-mono">${url}</td>
+                    </tr>
+                `;
+            });
+            table += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            return table;
         }
     </script>
 </body>
