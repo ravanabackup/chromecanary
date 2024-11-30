@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chrome URL Comparison Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .new-url {
+            background-color: #90EE90;
+            color: green;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+        .removed-url {
+            background-color: #FFB6C1;
+            color: red;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chrome URL Comparison Tool</h1>
+    <div class="container">
+        <div>
+            <h2>Original Text</h2>
+            <textarea id="oldText" placeholder="Paste original chrome:// URLs here"></textarea>
+        </div>
+        <div>
+            <h2>New Text</h2>
+            <textarea id="newText" placeholder="Paste new chrome:// URLs here"></textarea>
+        </div>
+    </div>
+    <button onclick="compareUrls()">Compare URLs</button>
+    
+    <div id="result-new"></div>
+    <div id="result-removed"></div>
+
+    <script>
+        function compareUrls() {
+            const oldText = document.getElementById('oldText').value;
+            const newText = document.getElementById('newText').value;
+            const resultNewDiv = document.getElementById('result-new');
+            const resultRemovedDiv = document.getElementById('result-removed');
+            
+            // Extract chrome:// URLs from both inputs
+            const oldUrls = extractChromeUrls(oldText);
+            const newUrls = extractChromeUrls(newText);
+            
+            // Find new and removed URLs
+            const newUniqueUrls = newUrls.filter(url => !oldUrls.includes(url));
+            const removedUrls = oldUrls.filter(url => !newUrls.includes(url));
+            
+            // Display new URLs
+            if (newUniqueUrls.length === 0) {
+                resultNewDiv.innerHTML = '<p>No new chrome:// URLs found.</p>';
+            } else {
+                resultNewDiv.innerHTML = '<h2>New Chrome URLs:</h2>';
+                newUniqueUrls.forEach(url => {
+                    resultNewDiv.innerHTML += `<div class="new-url">${url}</div>`;
+                });
+            }
+            
+            // Display removed URLs
+            if (removedUrls.length === 0) {
+                resultRemovedDiv.innerHTML = '<p>No removed chrome:// URLs found.</p>';
+            } else {
+                resultRemovedDiv.innerHTML = '<h2>Removed Chrome URLs:</h2>';
+                removedUrls.forEach(url => {
+                    resultRemovedDiv.innerHTML += `<div class="removed-url">${url}</div>`;
+                });
+            }
+        }
+        
+        function extractChromeUrls(text) {
+            // Regular expression to match chrome:// URLs
+            const chromeUrlRegex = /chrome:\/\/\S+/g;
+            
+            // Find and return all unique chrome:// URLs
+            return [...new Set(text.match(chromeUrlRegex) || [])];
+        }
+    </script>
+</body>
+</html>
