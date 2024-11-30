@@ -47,6 +47,15 @@
             border-radius: 12px;
             overflow: hidden;
         }
+        .url-cell {
+            cursor: pointer;
+            color: #90caf9;
+            text-decoration: underline;
+        }
+        .url-cell:hover {
+            text-decoration: none;
+            color: #42a5f5;
+        }
         .new-url {
             color: white;
             background-color: rgba(46, 125, 50, 0.7);
@@ -56,7 +65,7 @@
             background-color: rgba(46, 125, 50, 0.9);
         }
         .removed-url {
-        	color: white;
+            color: white;
             background-color: rgba(198, 40, 40, 0.7);
             transition: background-color 0.3s ease;
         }
@@ -167,7 +176,9 @@
             urls.forEach(url => {
                 table += `
                     <tr>
-                        <td class="${className} p-4 text-sm font-mono">${url}</td>
+                        <td class="${className} url-cell p-4 text-sm font-mono" onclick="copyToClipboard('${url}')">
+                            ${url}
+                        </td>
                     </tr>
                 `;
             });
@@ -177,6 +188,12 @@
                 </div>
             `;
             return table;
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert(`Copied to clipboard: ${text}`);
+            });
         }
     </script>
 </body>
