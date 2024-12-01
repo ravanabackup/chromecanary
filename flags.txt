@@ -1,10 +1,16 @@
 Experiments
-133.0.6868.0
+133.0.6870.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Fluent Overlay scrollbars.
-Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
+ Smooth Scrolling
+Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android, Lacros
 
-#fluent-overlay-scrollbars
+#smooth-scrolling
+
+Enabled
+ Overlay Scrollbars
+Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS, Lacros
+
+#overlay-scrollbars
 
 Enabled
  Fluent scrollbars.
@@ -13,16 +19,10 @@ Stylizes scrollbars with Microsoft Fluent design. – Windows, Linux
 #fluent-scrollbars
 
 Enabled
- Web Share
-Enables the Web Share (navigator.share) APIs on experimentally supported platforms. – Mac, Windows, ChromeOS
+ Connect to Cast devices on all IP addresses
+Have the Media Router connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses. – Mac, Windows, Linux, ChromeOS, Lacros
 
-#web-share
-
-Enabled
- Chrome Refresh Themed Realbox
-CR23 theming will be applied in Realbox when enabled. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#ntp-realbox-cr23-theming
+#media-router-cast-allow-all-ips
 
 Enabled
  Parallel downloading
@@ -31,28 +31,10 @@ Enable parallel downloading to accelerate download speed. – Mac, Windows, Linu
 #enable-parallel-downloading
 
 Enabled
- PDF Chrome Refresh 2023
-Use new CR23 icons and colors for the PDF Viewer. – Mac, Windows, Linux, ChromeOS, Lacros
+ Windows 11 Mica titlebar
+Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
 
-#pdf-cr23
-
-Enabled
- OOPIF for PDF Viewer
-Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#pdf-oopif
-
-Enabled
- Use Skia Renderer
-Use Skia as the PDF renderer. This flag will have no effect if the renderer choice is controlled by an enterprise policy. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#pdf-use-skia-renderer
-
-Enabled
- Reading Mode with images added via algorithm
-Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#read-anything-images-via-algorithm
+#windows11-mica-titlebar
 
 Enabled
  Support Tool Screenshot
@@ -67,76 +49,16 @@ Enables taking screenshots from the desktop sharing hub. – Mac, Windows, Linux
 #sharing-desktop-screenshots
 
 Enabled
- Make the text in PDF images interactable
-Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS, Lacros
+ Holding Esc to exit browser fullscreen
+Allows users to press and hold Esc key to exit browser fullscreen. – Mac, Windows, Linux, ChromeOS, Lacros
 
-#pdf-searchify
+#press-and-hold-esc-to-exit-browser-fullscreen
 
 Enabled
  Extensions Menu Access Control
 Enables a redesigned extensions menu that allows the user to control extensions site access. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #extensions-menu-access-control
-
-Enabled
- Customize Chrome Side Panel Extension Card
-If enabled, shows an extension card within the Customize Chrome Side Panel for access to the Chrome Web Store extensions. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#customize-chrome-side-panel-extensions-card
-
-Enabled
- Video picture-in-picture controls update 2024
-Displays an updated UI for video picture-in-picture controls from its 2024UI update – Mac, Windows, Linux, ChromeOS, Lacros
-
-#video-picture-in-picture-controls-update-2024
-
-Enabled
- Document Picture-in-Picture Animate Resize
-Use an animation when programmatically resizing a documentpicture-in-picture window – Mac, Windows, Linux, ChromeOS, Lacros
-
-#document-picture-in-picture-animate-resize
-
-Enabled
- Download Warning Improvements
-Enable UI improvements for downloads, download scanning, and download warnings. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#download-warning-improvements
-
-Enabled
- Camera and Mic Effects
-Enables effects for camera and mic streams. – Mac, Windows, Linux
-
-#camera-mic-effects
-
-Enabled
- Compact mode for the browser - Prototype
-This feature is a prototype. Reduces the height of the browser controls (tabstrip, toolbar, bookmarks bar, etc.) to allow more space for the web contents – Mac, Windows, Linux, ChromeOS, Lacros
-
-#compact-mode
-
-Enabled
- Multi Tab Organization
-Enables Auto Tab Groups suggestions for multiple tab groups at once. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#multi-tab-organization
-
-Enabled
- Task Manager Desktop Refresh
-Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#enable-task-manager-desktop-refresh
-
-Enabled
- AI settings page refresh
-Enables a revamp of the existing AI settings page. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#ai-settings-page-refresh
-
-Enabled
- More Lens overlay translate languages
-Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#enable-lens-overlay-translate-languages
 
 Enabled
 Temporarily unexpire M131 flags.
@@ -227,18 +149,6 @@ Backdrop Filter Mirror Edge
 When sampling being the backdrop edge for backdrop-filter, samples beyond the edge are mirrored back into the backdrop rather than duplicating the pixels at the edge. – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
 #backdrop-filter-mirror-edge
-
-Default
-Smooth Scrolling
-Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android, Lacros
-
-#smooth-scrolling
-
-Default
-Overlay Scrollbars
-Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS, Lacros
-
-#overlay-scrollbars
 
 Default
 Experimental QUIC protocol
@@ -389,6 +299,12 @@ Hardware Secure Decryption Fallback
 Allows automatically disabling hardware secure Content Decryption Module (CDM) after failures or crashes. Subsequent playback may use software secure CDMs. If this feature is disabled, the fallback will never happen and users could be stuck with playback failures. – Windows
 
 #enable-hardware-secure-decryption-fallback
+
+Default
+Fluent Overlay scrollbars.
+Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
+
+#fluent-overlay-scrollbars
 
 Default
 Enable Zero-Copy Video Capture
@@ -553,12 +469,6 @@ Connects to the testing server for Chrome Sync. – Mac, Windows, Linux, ChromeO
 #use-sync-sandbox
 
 Disabled
-Connect to Cast devices on all IP addresses
-Have the Media Router connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#media-router-cast-allow-all-ips
-
-Default
 Media Remoting without videos in fullscreen mode
 Starts Media Remoting from Global Media Controls without making the videos fullscreen. – Mac, Windows, Linux, ChromeOS, Lacros
 
@@ -647,6 +557,12 @@ HiDPI tab capture support for Cast Streaming
 Enables HiDPI tab capture during Cast Streaming mirroring sessions. May reduce performance on some platforms and also improve quality of video frames. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #enable-cast-streaming-with-hidpi
+
+Default
+Web Share
+Enables the Web Share (navigator.share) APIs on experimentally supported platforms. – Mac, Windows, ChromeOS
+
+#web-share
 
 Default
 WebXR Hand Input
@@ -1159,6 +1075,12 @@ Shows the Outlook Calendar module on the New Tab Page. – Mac, Windows, Linux, 
 #ntp-outlook-calendar-module
 
 Default
+Chrome Refresh Themed Realbox
+CR23 theming will be applied in Realbox when enabled. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ntp-realbox-cr23-theming
+
+Default
 NTP Sharepoint Module
 Shows the Sharepoint module on the New Tab Page. – Mac, Windows, Linux, ChromeOS, Lacros
 
@@ -1201,10 +1123,28 @@ Enable zero-copy content tab for getDisplayMedia() APIs. – Mac, Windows, Chrom
 #zero-copy-tab-capture
 
 Default
+PDF Chrome Refresh 2023
+Use new CR23 icons and colors for the PDF Viewer. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-cr23
+
+Default
+OOPIF for PDF Viewer
+Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-oopif
+
+Default
 PDF portfolio
 Enable PDF portfolio feature. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #pdf-portfolio
+
+Default
+Use Skia Renderer
+Use Skia as the PDF renderer. This flag will have no effect if the renderer choice is controlled by an enterprise policy. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-use-skia-renderer
 
 Default
 PDF Ink Signatures
@@ -1229,12 +1169,6 @@ Use XPS for printing from PDF
 When enabled, use XPS printing API instead of the GDI print API when printing PDF documents. – Windows
 
 #use-xps-for-printing-from-pdf
-
-Default
-Windows 11 Mica titlebar
-Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
-
-#windows11-mica-titlebar
 
 Default
 Insecure origins treated as secure
@@ -1271,6 +1205,12 @@ Reading Mode Read Aloud Phrase Highlighting
 Enables the experimental Reading Mode feature that highlights by phrases when reading aloud, when the phrase option is selected from the highlight menu. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #read-anything-read-aloud-phrase-highlighting
+
+Default
+Reading Mode with images added via algorithm
+Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#read-anything-images-via-algorithm
 
 Default
 Reading Mode Google Docs Integration
@@ -1489,12 +1429,6 @@ Requesting to use the keyboard or pointer lock API causes a permissionprompt to 
 #keyboard-and-pointer-lock-prompt
 
 Default
-Holding Esc to exit browser fullscreen
-Allows users to press and hold Esc key to exit browser fullscreen. – Mac, Windows, Linux, ChromeOS, Lacros
-
-#press-and-hold-esc-to-exit-browser-fullscreen
-
-Default
 Enables Out-of-Process Printer Drivers
 Enables printing interactions with the operating system to be performed out-of-process. – Mac, Windows, Linux, ChromeOS, Lacros
 
@@ -1553,6 +1487,12 @@ Warm up compositor on prerendering
 Enables compositor warming up on paticular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
 #prerender2-warm-up-compositor
+
+Default
+Make the text in PDF images interactable
+Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#pdf-searchify
 
 Default
 PDF XFA support
@@ -1813,6 +1753,12 @@ When enabled, the audio indicators in the tab strip double as tab audio mute con
 #enable-tab-audio-muting
 
 Default
+Customize Chrome Side Panel Extension Card
+If enabled, shows an extension card within the Customize Chrome Side Panel for access to the Chrome Web Store extensions. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#customize-chrome-side-panel-extensions-card
+
+Default
 Enable delegated compositing
 When enabled and applicable, the act of compositing is delegated to the system compositor. – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
@@ -1843,6 +1789,18 @@ Enables auto picture in picture for video playback. Requires chrome://flags/#aut
 #auto-picture-in-picture-for-video-playback
 
 Default
+Video picture-in-picture controls update 2024
+Displays an updated UI for video picture-in-picture controls from its 2024UI update – Mac, Windows, Linux, ChromeOS, Lacros
+
+#video-picture-in-picture-controls-update-2024
+
+Default
+Document Picture-in-Picture Animate Resize
+Use an animation when programmatically resizing a documentpicture-in-picture window – Mac, Windows, Linux, ChromeOS, Lacros
+
+#document-picture-in-picture-animate-resize
+
+Default
 Main Node Annotations
 Uses Screen2x main content extractor to annotate the accessibility tree with the main landmark on the node identified as main. – Mac, Windows, Linux, ChromeOS, Lacros
 
@@ -1859,6 +1817,12 @@ Isolated sandboxed iframes
 When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #enable-isolated-sandboxed-iframes
+
+Default
+Download Warning Improvements
+Enable UI improvements for downloads, download scanning, and download warnings. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#download-warning-improvements
 
 Default
 Reduce Accept-Language request header
@@ -2033,6 +1997,12 @@ Enable ProcessPerSite up to main frame threshold
 Proactively reuses same-site renderer processes to host multiple main frames, up to a certain threshold. – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
 #enable-process-per-site-up-to-main-frame-threshold
+
+Default
+Camera and Mic Effects
+Enables effects for camera and mic streams. – Mac, Windows, Linux
+
+#camera-mic-effects
 
 Default
 Camera and Mic Preview
@@ -2261,6 +2231,12 @@ Show permission grants from Related Website Sets
 Shows permission grants created by Related Website Sets in Chrome Settings UI and Page Info Bubble, default is hidden – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
 #related-website-sets-permission-grants
+
+Default
+Compact mode for the browser - Prototype
+This feature is a prototype. Reduces the height of the browser controls (tabstrip, toolbar, bookmarks bar, etc.) to allow more space for the web contents – Mac, Windows, Linux, ChromeOS, Lacros
+
+#compact-mode
 
 Default
 Tear Off Web App Tab
@@ -2523,6 +2499,12 @@ Shows Tab Organization in the settings UI – Mac, Windows, Linux, ChromeOS, Lac
 #tab-organization-settings-visibility
 
 Default
+Multi Tab Organization
+Enables Auto Tab Groups suggestions for multiple tab groups at once. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#multi-tab-organization
+
+Default
 Tab Reorganization
 Enables Auto Tab Groups suggestions for adding tabs to existing groups – Mac, Windows, Linux, ChromeOS, Lacros
 
@@ -2667,6 +2649,12 @@ Use the Permission Predictions Service V3 to surface permission requests using a
 #permission-predictions-v3
 
 Default
+Task Manager Desktop Refresh
+Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-task-manager-desktop-refresh
+
+Default
 Network Time for Certificate Verification
 Use time fetched from the network for certificate verification decisions. If certificate verification fails with the network time, it will fall back to system time. – Mac, Windows, Linux, Android
 
@@ -2769,6 +2757,12 @@ Enables offering credentials coming from grouped domains for filling – Mac, Wi
 #password-form-grouped-affiliations
 
 Default
+AI settings page refresh
+Enables a revamp of the existing AI settings page. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#ai-settings-page-refresh
+
+Default
 Clientside password form classifier.
 Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android, Lacros
 
@@ -2827,6 +2821,12 @@ Allow legacy extension manifest versions
 Allows extensions with legacy (unsupported) manifest versions to be loaded as unpacked extensions. This should only be used for maintaining legacy extensions and will be removed in the future. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #allow-legacy-mv2-extensions
+
+Default
+More Lens overlay translate languages
+Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, ChromeOS, Lacros
+
+#enable-lens-overlay-translate-languages
 
 Default
 Glic
