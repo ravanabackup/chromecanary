@@ -36,6 +36,7 @@
                         <thead class="text-xs text-gray-300 uppercase bg-gray-700">
                             <tr>
                                 <th scope="col" class="px-6 py-3">Platform</th>
+                                <th scope="col" class="px-6 py-3">canary_asan</th>
                                 <th scope="col" class="px-6 py-3">Canary</th>
                                 <th scope="col" class="px-6 py-3">Dev</th>
                                 <th scope="col" class="px-6 py-3">Beta</th>
@@ -119,7 +120,7 @@
                 'lacros_arm32', 'win_arm64', 'mac_arm64'
             ];
 
-            const channels = ['canary', 'dev', 'beta', 'stable', 'extended'];
+            const channels = ['canary_asan', 'canary', 'dev', 'beta', 'stable', 'extended'];
 
             try {
                 // Fetch versions for each platform and channel
@@ -145,6 +146,9 @@
                     <tr class="bg-gray-800 border-b border-gray-700 platform-row">
                         <td class="px-6 py-4 font-medium text-white">
                             ${PLATFORM_NAMES[platform.platform] || platform.platform}
+                        </td>
+                        <td class="px-6 py-4 text-gray-300">
+                            ${platform.channelVersions.canary_asan.version}
                         </td>
                         <td class="px-6 py-4 text-gray-300">
                             ${platform.channelVersions.canary.version}
