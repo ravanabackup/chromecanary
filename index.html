@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Canary Utilities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Dark mode toggle functionality
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            htmlElement.classList.toggle('dark');
+            localStorage.theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+        }
+
+        // Check for saved theme preference or system preference
+        function initTheme() {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div class="container mx-auto px-4 py-16 max-w-6xl">
+        <div class="absolute top-4 right-4">
+            <button 
+                onclick="toggleDarkMode()"
+                class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
+            >
+                <span id="themeToggle">🌙</span>
+            </button>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-bold text-center mb-8 
+        bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
+        bg-clip-text text-transparent">
+            Chrome Canary Utilities
+        </h1>
+        
+        <p class="text-center max-w-2xl mx-auto mb-12 
+        text-gray-600 dark:text-gray-300 text-lg">
+            Powerful tools and utilities for Chrome Canary, 
+            providing deep insights and advanced configuration options.
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <a 
+                href="https://ravanabackup.github.io/chromecanary/flags.html"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-6 rounded-xl shadow-lg transform transition-all duration-300 
+                hover:scale-105 hover:shadow-2xl
+                bg-gray-100 dark:bg-gray-800 
+                hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+                <div class="flex items-center mb-4">
+                    <div class="mr-4 p-3 rounded-full 
+                    bg-blue-100 dark:bg-blue-900 
+                    text-blue-600 dark:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16l-3 7H7z"></path>
+                            <circle cx="10" cy="20.5" r="1.5"></circle>
+                            <circle cx="17" cy="20.5" r="1.5"></circle>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold">Flags</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Advanced Chrome Configuration
+                </p>
+            </a>
+
+            <a 
+                href="https://ravanabackup.github.io/chromecanary/about.html"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-6 rounded-xl shadow-lg transform transition-all duration-300 
+                hover:scale-105 hover:shadow-2xl
+                bg-gray-100 dark:bg-gray-800 
+                hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+                <div class="flex items-center mb-4">
+                    <div class="mr-4 p-3 rounded-full 
+                    bg-blue-100 dark:bg-blue-900 
+                    text-blue-600 dark:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold">About</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Browser Information
+                </p>
+            </a>
+
+            <a 
+                href="https://ravanabackup.github.io/chromecanary/download.html"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-6 rounded-xl shadow-lg transform transition-all duration-300 
+                hover:scale-105 hover:shadow-2xl
+                bg-gray-100 dark:bg-gray-800 
+                hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+                <div class="flex items-center mb-4">
+                    <div class="mr-4 p-3 rounded-full 
+                    bg-blue-100 dark:bg-blue-900 
+                    text-blue-600 dark:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold">Download</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Get Latest Version
+                </p>
+            </a>
+
+            <a 
+                href="https://ravanabackup.github.io/chromecanary/version.html"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-6 rounded-xl shadow-lg transform transition-all duration-300 
+                hover:scale-105 hover:shadow-2xl
+                bg-gray-100 dark:bg-gray-800 
+                hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+                <div class="flex items-center mb-4">
+                    <div class="mr-4 p-3 rounded-full 
+                    bg-blue-100 dark:bg-blue-900 
+                    text-blue-600 dark:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold">Version Details</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Current Browser Version
+                </p>
+            </a>
+
+            <a 
+                href="https://ravanabackup.github.io/chromecanary/allversion.html"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-6 rounded-xl shadow-lg transform transition-all duration-300 
+                hover:scale-105 hover:shadow-2xl
+                bg-gray-100 dark:bg-gray-800 
+                hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+                <div class="flex items-center mb-4">
+                    <div class="mr-4 p-3 rounded-full 
+                    bg-blue-100 dark:bg-blue-900 
+                    text-blue-600 dark:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <path d="M3 6h.01"></path>
+                            <path d="M3 12h.01"></path>
+                            <path d="M3 18h.01"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold">All Versions</h2>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Complete Version History
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Update theme toggle icon based on current mode
+        function updateThemeToggleIcon() {
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('themeToggle').textContent = isDark ? '☀️' : '🌙';
+        }
+
+        // Run on page load and after toggling
+        document.addEventListener('DOMContentLoaded', updateThemeToggleIcon);
+        document.querySelector('button[onclick="toggleDarkMode()"]').addEventListener('click', updateThemeToggleIcon);
+    </script>
+</body>
+</html>
