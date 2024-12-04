@@ -22,7 +22,7 @@
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
     <div class="container mx-auto px-4 py-8 flex-grow">
-        <div class="max-w-6xl mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <div class="max-w-7xl mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden">
             <div class="bg-blue-800 text-white py-4 px-6">
                 <h1 class="text-3xl font-bold">Chrome Versions</h1>
                 <div id="latestVersionSummary" class="mt-2 text-sm text-blue-200">
@@ -40,6 +40,8 @@
                                 <th scope="col" class="px-6 py-3">Latest Release Time</th>
                                 <th scope="col" class="px-6 py-3">Previous Version</th>
                                 <th scope="col" class="px-6 py-3">Previous Release Time</th>
+                                <th scope="col" class="px-6 py-3">Time Since Update</th>
+                                <th scope="col" class="px-6 py-3">Release Interval</th>
                             </tr>
                         </thead>
                         <tbody id="platformVersions">
@@ -74,6 +76,29 @@
             'mac_arm64': 'macOS ARM64',
             'adlrvp': 'Chrome OS Dev'
         };
+
+        // Function to calculate human-readable time difference
+        function getTimeDifference(dateString, endDateString = null) {
+            const startDate = new Date(dateString);
+            const endDate = endDateString ? new Date(endDateString) : new Date();
+            const differenceInMs = endDate - startDate;
+
+            // Convert to different time units
+            const seconds = Math.abs(Math.floor(differenceInMs / 1000));
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+            const months = Math.floor(days / 30);
+            const years = Math.floor(months / 12);
+
+            // Return the most appropriate time unit
+            if (years > 0) return `${years} year${years > 1 ? 's' : ''}`;
+            if (months > 0) return `${months} month${months > 1 ? 's' : ''}`;
+            if (days > 0) return `${days} day${days > 1 ? 's' : ''}`;
+            if (hours > 0) return `${hours} hour${hours > 1 ? 's' : ''}`;
+            if (minutes > 0) return `${minutes} minute${minutes > 1 ? 's' : ''}`;
+            return `${seconds} second${seconds !== 1 ? 's' : ''}`;
+        }
 
         function formatReleaseTime(dateString) {
             const date = new Date(dateString);
@@ -169,7 +194,13 @@
 
                 // Populate the table
                 const platformVersionsTable = document.getElementById('platformVersions');
-                platformVersionsTable.innerHTML = validPlatformVersions.map(platform => `
+                platformVersionsTable.innerHTML = validPlatformVersions.map(platform => {
+                    // Calculate release interval
+                    const releaseInterval = platform.previousReleaseTime 
+                        ? getTimeDifference(platform.previousReleaseTime, platform.latestReleaseTime)
+                        : 'N/A';
+
+                    return `
                     <tr class="bg-gray-800 border-b border-gray-700 platform-row">
                         <td class="px-6 py-4 font-medium text-white">
                             ${PLATFORM_NAMES[platform.platform] || platform.platform}
@@ -186,8 +217,14 @@
                         <td class="px-6 py-4 text-gray-400">
                             ${platform.previousReleaseTime ? formatReleaseTime(platform.previousReleaseTime) : 'N/A'}
                         </td>
+                        <td class="px-6 py-4 text-gray-400">
+                            ${getTimeDifference(platform.latestReleaseTime)} ago
+                        </td>
+                        <td class="px-6 py-4 text-gray-400">
+                            ${releaseInterval}
+                        </td>
                     </tr>
-                `).join('');
+                `}).join('');
 
                 // Return the latest version data for comparison in periodic refresh
                 return latestVersion;
@@ -196,7 +233,7 @@
                 console.error('Error fetching platform versions:', error);
                 document.getElementById('platformVersions').innerHTML = `
                     <tr>
-                        <td colspan="5" class="text-center text-red-500 py-4">
+                        <td colspan="7" class="text-center text-red-500 py-4">
                             Failed to load platform versions. Please try again later.
                         </td>
                     </tr>
