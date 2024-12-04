@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome All Versions Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f2937;
+            color: #ff4f6;
+        }
+        .platform-row:hover {
+            background-color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-8 flex-grow">
+        <div class="max-w-7xl mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+            <div class="bg-blue-800 text-white py-4 px-6">
+                <h1 class="text-3xl font-bold">Chrome All Versions Tracker</h1>
+                <div id="latestVersionSummary" class="mt-2 text-sm text-blue-200">
+                    Loading latest versions across each versions...
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-400">
+                        <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">Platform</th>
+                                <th scope="col" class="px-6 py-3">Canary</th>
+                                <th scope="col" class="px-6 py-3">Dev</th>
+                                <th scope="col" class="px-6 py-3">Beta</th>
+                                <th scope="col" class="px-6 py-3">Stable</th>
+                                <th scope="col" class="px-6 py-3">Extended</th>
+                            </tr>
+                        </thead>
+                        <tbody id="platformVersions">
+                            <!-- Versions will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="bg-gray-700 text-center py-4 text-sm text-gray-300">
+                <p>Version information from official Google sources</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mapping of platform codes to human-readable names
+        const PLATFORM_NAMES = {
+            'webview': 'WebView',
+            'lacros_arm64': 'Lacros ARM64',
+            'linux': 'Linux',
+            'win': 'Windows',
+            'android': 'Android',
+            'win64': 'Windows 64-bit',
+            'lacros': 'Lacros',
+            'ios': 'iOS',
+            'fuchsia': 'Fuchsia',
+            'mac': 'macOS',
+            'lacros_arm32': 'Lacros ARM32',
+            'win_arm64': 'Windows ARM64',
+            'mac_arm64': 'macOS ARM64'
+        };
+
+        // Function to format release time
+        function formatReleaseTime(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleString('en-IN', {
+                timeZone: 'Asia/Kolkata',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        // Function to fetch version for a specific platform and channel
+        async function fetchPlatformVersion(platform, channel) {
+            try {
+                const url = `https://versionhistory.googleapis.com/v1/chrome/platforms/${platform}/channels/${channel}/versions/all/releases`;
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                // Sort releases by start time (most recent first)
+                const sortedReleases = data.releases.sort((a, b) => 
+                    new Date(b.serving.startTime) - new Date(a.serving.startTime)
+                );
+                
+                // Get latest release
+                const latestRelease = sortedReleases[0];
+
+                return {
+                    version: latestRelease.version,
+                    releaseTime: formatReleaseTime(latestRelease.serving.startTime)
+                };
+            } catch (error) {
+                console.error(`Error fetching ${channel} version for ${platform}:`, error);
+                return { version: 'N/A', releaseTime: 'N/A' };
+            }
+        }
+
+        // Fetch versions for all platforms and channels
+        async function fetchAllPlatformVersions() {
+            const platforms = [
+                'webview', 'lacros_arm64', 'linux', 'win', 'android', 
+                'win64', 'lacros', 'ios', 'fuchsia', 'mac', 
+                'lacros_arm32', 'win_arm64', 'mac_arm64'
+            ];
+
+            const channels = ['canary', 'dev', 'beta', 'stable', 'extended'];
+
+            try {
+                // Fetch versions for each platform and channel
+                const platformVersionPromises = platforms.map(async (platform) => {
+                    const channelVersions = await Promise.all(
+                        channels.map(channel => fetchPlatformVersion(platform, channel))
+                    );
+
+                    return {
+                        platform: platform,
+                        channelVersions: Object.fromEntries(
+                            channels.map((channel, index) => [channel, channelVersions[index]])
+                        )
+                    };
+                });
+
+                // Wait for all platform version fetches
+                const platformVersions = await Promise.all(platformVersionPromises);
+
+                // Populate the table
+                const platformVersionsTable = document.getElementById('platformVersions');
+                platformVersionsTable.innerHTML = platformVersions.map(platform => `
+                    <tr class="bg-gray-800 border-b border-gray-700 platform-row">
+                        <td class="px-6 py-4 font-medium text-white">
+                            ${PLATFORM_NAMES[platform.platform] || platform.platform}
+                        </td>
+                        <td class="px-6 py-4 text-gray-300">
+                            ${platform.channelVersions.canary.version}
+                        </td>
+                        <td class="px-6 py-4 text-gray-300">
+                            ${platform.channelVersions.dev.version}
+                        </td>
+                        <td class="px-6 py-4 text-gray-300">
+                            ${platform.channelVersions.beta.version}
+                        </td>
+                        <td class="px-6 py-4 text-gray-300">
+                            ${platform.channelVersions.stable.version}
+                        </td>
+                        <td class="px-6 py-4 text-gray-300">
+                            ${platform.channelVersions.extended.version}
+                        </td>
+                    </tr>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error fetching platform versions:', error);
+                document.getElementById('platformVersions').innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-center text-red-500 py-4">
+                            Failed to load platform versions. Please try again later.
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+
+        // Function to periodically refresh the table
+        function startPeriodicRefresh() {
+            // Initial fetch
+            fetchAllPlatformVersions();
+
+            // Set up periodic refresh every 5 minutes
+            setInterval(fetchAllPlatformVersions, 5 * 60 * 1000);
+        }
+
+        // Call the periodic refresh function when page loads
+        startPeriodicRefresh();
+    </script>
+</body>
+</html>
