@@ -126,11 +126,9 @@ chrome://webrtc-logs
 chrome://webui-gallery
 chrome://webuijserror
 chrome://webxr-internals
-chrome://welcome
 chrome://whats-new
 chrome-untrusted://compose
 chrome-untrusted://data-sharing
-chrome-untrusted://hats
 chrome-untrusted://lens
 chrome-untrusted://lens-overlay
 chrome-untrusted://ntp-microsoft-auth
