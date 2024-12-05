@@ -1,5 +1,5 @@
 Experiments
-133.0.6877.0
+133.0.6878.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
@@ -2303,6 +2303,12 @@ Link Preview
 When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS, Lacros
 
 #link-preview
+
+Default
+Send tab to self iOS push notifications
+Feature to allow users to send tabs to their iOS device through a system push notitification. – Mac, Windows, Linux, ChromeOS, Android, Lacros
+
+#send-tab-ios-push-notifications
 
 Default
 Enable showing card benefits for American Express cards
