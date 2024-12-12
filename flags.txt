@@ -1,5 +1,5 @@
 Experiments
-133.0.6888.0
+133.0.6888.2
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
