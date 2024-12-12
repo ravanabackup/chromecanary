@@ -1,5 +1,5 @@
 Experiments
-133.0.6888.2
+133.0.6890.4
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
@@ -2413,6 +2413,12 @@ If this client is a Google-internal dogfood client, overrides enterprise policy 
 #optimization-guide-enable-dogfood-logging
 
 Disabled
+Use passkey from another device in the context menu
+Hides the "Use a passkey" entry from the autofill popup for conditional WebAuthn requests. Moves the entry point to the context menu. – Mac, Windows, Linux, ChromeOS
+
+#hybrid-passkeys-in-context-menu
+
+Default
 Enable automatic passkey upgrades in Google Password Manager
 Enable the WebAuthn Conditional Create feature and let websites automatically create passkeys in GPM if there is a matching password credential for the same user. – Mac, Windows, Linux, ChromeOS
 
