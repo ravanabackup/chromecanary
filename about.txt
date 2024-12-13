@@ -118,6 +118,7 @@ chrome://translate-internals
 chrome://ukm
 chrome://usb-internals
 chrome://user-actions
+chrome://user-education-internals
 chrome://version
 chrome://view-cert
 chrome://web-app-internals
@@ -135,7 +136,6 @@ chrome-untrusted://ntp-microsoft-auth
 chrome-untrusted://print
 chrome-untrusted://privacy-sandbox-dialog
 chrome-untrusted://read-anything-side-panel.top-chrome
-List of chrome://internals pages
 chrome://internals/session-service
 For Debug
 The following pages are for debugging purposes only. Because they crash or hang the renderer, they're not linked directly; you can type them into the address bar if you need them.
