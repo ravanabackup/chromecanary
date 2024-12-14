@@ -1,5 +1,5 @@
 Experiments
-133.0.6893.0
+133.0.6895.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Smooth Scrolling
 Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
@@ -572,7 +572,7 @@ When enabled, the media base VideoEncoder implementation is used instead of the 
 
 Default
 Toggle a performance metrics overlay while Cast Streaming
-When enabled, a text overlay is rendered on top of each frame sent while Cast Streaming that includes frame duration, resolution, timestamp, low latency mode, capture duration, target playout delay, target bitrate, and encoder utilitization. – Mac, Windows, Linux, ChromeOS
+When enabled, a text overlay is rendered on top of each frame sent while Cast Streaming that includes frame duration, resolution, timestamp, low latency mode, capture duration, target playout delay, target bitrate, and encoder utilization. – Mac, Windows, Linux, ChromeOS
 
 #cast-streaming-performance-overlay
 
@@ -842,19 +842,19 @@ Specifies how to blend URL ML scores and search traditional scores. – Mac, Win
 
 Default
 Omnibox URL Scoring Model
-Enables ML scoring model for Omnibox URL sugestions. – Mac, Windows, Linux, ChromeOS, Android
+Enables ML scoring model for Omnibox URL suggestions. – Mac, Windows, Linux, ChromeOS, Android
 
 #omnibox-ml-url-scoring-model
 
 Default
 Omnibox on device head suggestions (non-incognito only)
-Google head non personalized search suggestions provided by a compact on device model for non-incognito. Turn off this feature if you have other apps running which affects local file access (e.g. anti-virus software) and are experiencing searchbox typing lags. – Windows
+Google head non personalized search suggestions provided by a compact on device model for non-incognito. Turn off this feature if you have other apps running which affects local file access (e.g. anti-virus software) and are experiencing searchbox typing lag. – Windows
 
 #omnibox-on-device-head-suggestions
 
 Default
 Omnibox on device head suggestions (incognito only)
-Google head non personalized search suggestions provided by a compact on device model for incognito. Turn off this feature if you have other apps running which affects local file access (e.g. anti-virus software) and are experiencing searchbox typing lags. – Windows
+Google head non personalized search suggestions provided by a compact on device model for incognito. Turn off this feature if you have other apps running which affects local file access (e.g. anti-virus software) and are experiencing searchbox typing lag. – Windows
 
 #omnibox-on-device-head-suggestions-incognito
 
@@ -1544,7 +1544,7 @@ Allows compositor to start warming up on certain signals – Mac, Windows, Linux
 
 Default
 Warm up compositor on prerendering
-Enables compositor warming up on paticular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android
+Enables compositor warming up on particular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android
 
 #prerender2-warm-up-compositor
 
@@ -2023,7 +2023,7 @@ When this is enabled, Chromium can use stored shared dictionaries even when the 
 #enable-compression-dictionary-transport-allow-http2
 
 Default
-Compression dictionary transport require knwon root cert
+Compression dictionary transport require known root cert
 When this is enabled, Chromium can use stored shared dictionaries only when the connection is using a well known root cert or when the server is a localhost. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-compression-dictionary-transport-require-known-root-cert
@@ -2168,7 +2168,7 @@ Enables Protected Audience Consented Debugging with the provided token. Protecte
 
 Disabled
 Deprecate the unload event
-Controls the default for Permissions-Policy unload. If enabled, unload handlers are deprecated and will not receive the unload event unless a Permissions-Policy to enable them has been explicitly set. If disabled, unload handlers will continue to receive the unload event unless explicity disabled by Permissions-Policy, even during the gradual rollout of their deprecation. – Mac, Windows, Linux, ChromeOS, Android
+Controls the default for Permissions-Policy unload. If enabled, unload handlers are deprecated and will not receive the unload event unless a Permissions-Policy to enable them has been explicitly set. If disabled, unload handlers will continue to receive the unload event unless explicitly disabled by Permissions-Policy, even during the gradual rollout of their deprecation. – Mac, Windows, Linux, ChromeOS, Android
 
 #deprecate-unload
 
@@ -2222,7 +2222,7 @@ Enables Google session credentials binding to cryptographic keys. – Mac, Windo
 
 Default
 Device Bound Session Credentials with software keys
-Enables mock software-backed cryptographic keys for Google session credentials binding (not secure). This is intented to be used for manual testing only. – Mac, Windows, Linux
+Enables mock software-backed cryptographic keys for Google session credentials binding and Chrome refresh tokens binding (not secure). This is intended to be used for manual testing only. – Mac, Windows, Linux
 
 #enable-bound-session-credentials-software-keys-for-manual-testing
 
@@ -2270,7 +2270,7 @@ Uses polite announcements to alert the user that a compose popup is available to
 
 Default
 Compose Segmentation Promotion
-Enables the segmentation platfrom for the Compose proactive nudge – Mac, Windows, Linux, ChromeOS
+Enables the segmentation platform for the Compose proactive nudge – Mac, Windows, Linux, ChromeOS
 
 #compose-segmentation-promotion
 
@@ -2330,7 +2330,7 @@ When enabled, Link Preview feature gets to be available to preview a linked page
 
 Default
 Send tab to self iOS push notifications
-Feature to allow users to send tabs to their iOS device through a system push notitification. – Mac, Windows, Linux, ChromeOS, Android
+Feature to allow users to send tabs to their iOS device through a system push notification. – Mac, Windows, Linux, ChromeOS, Android
 
 #send-tab-ios-push-notifications
 
@@ -2384,7 +2384,7 @@ Enables session persistence for the official version of Device Bound Session Cre
 
 Default
 Removes passwords that can no longer be decrypted
-If enabled local passwords that current encyrption key cannot decrypt, will be deleted to restore the full functionality of password manager. – Mac, Windows, Linux, ChromeOS, Android
+If enabled local passwords that current encryption key cannot decrypt, will be deleted to restore the full functionality of password manager. – Mac, Windows, Linux, ChromeOS, Android
 
 #clear-undecryptable-passwords
 
@@ -2405,6 +2405,12 @@ Cert Management V2 UI Write features
 Enables the Cert Management V2 UI write features, using a chrome managed DB to store user added certs. This is new functionality for Windows and Mac. For Linux and ChromeOS, this is a change as previously user-added certs would be written to the platform cert store. The UI is accessible at chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
 
 #cert-management-v2-ui-write
+
+Default
+Cert Management V2 UI Edit Certs
+Enables the ability to edit trust and constraints on the cert viewer for user-added certs that are added via chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
+
+#cert-management-v2-ui-edit-certs
 
 Default
 Password leak toggle move
@@ -2485,12 +2491,6 @@ Storage Access Headers
 Enables HTTP headers related to the Storage Access API. – Mac, Windows, Linux, ChromeOS, Android
 
 #storage-access-headers
-
-Default
-Credit card upload save UI treatment
-When enabled, shows different text and images in the UI of the credit card upload save bubble. – Mac, Windows, Linux, ChromeOS
-
-#autofill-upstream-updated-ui
 
 Default
 Enable performance intervention suggestions.
@@ -2866,7 +2866,7 @@ When enabled, local credit card migration flows will not be offered, both from c
 
 Default
 Predictable Reported Quota
-Enables reporting of a predictable quota from the StorageManager's estimate API. This flag is intended only for validating if this change caused an unforseen bug. – Mac, Windows, Linux, ChromeOS, Android
+Enables reporting of a predictable quota from the StorageManager's estimate API. This flag is intended only for validating if this change caused an unforeseen bug. – Mac, Windows, Linux, ChromeOS, Android
 
 #predictable-reported-quota
 
@@ -2929,3 +2929,17 @@ Privacy Sandbox Ads API UX Enhancements
 Enables UI and text updates to the Privacy Sandbox Ads APIs Notice and Consent UX, and settings pages to improve user comprehension – Mac, Windows, Linux, ChromeOS, Android
 
 #privacy-sandbox-ads-api-ux-enhancements
+
+Default
+Create Safety Hub services on start up
+When enabled, Safety Hub services are created on start up enabling its checks to start right away. – Mac, Windows, Linux, ChromeOS
+
+#safety-hub-services-on-start-up
+
+Default
+Chrome Refresh Token Binding
+Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
+
+#enable-chrome-refresh-token-binding
+
+Default
