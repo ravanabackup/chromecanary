@@ -1,5 +1,5 @@
 Experiments
-133.0.6896.0
+133.0.6897.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Smooth Scrolling
 Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
@@ -2941,5 +2941,3 @@ Chrome Refresh Token Binding
 Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
 
 #enable-chrome-refresh-token-binding
-
-Default
