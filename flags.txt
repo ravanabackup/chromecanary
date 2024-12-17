@@ -1,5 +1,5 @@
 Experiments
-133.0.6900.0
+133.0.6901.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
@@ -377,6 +377,12 @@ Top Chrome Toasts
 Enables the use of toasts to present confirmation of user actions. – Mac, Windows, Linux, ChromeOS
 
 #top-chrome-toasts
+
+Default
+Top Chrome Toast Refinements
+Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
+
+#top-chrome-toast-refinements
 
 Default
 Hardware-accelerated video decode
@@ -2377,10 +2383,16 @@ When enabled, Chrome will display grayed out virtual card suggestions on merchan
 #autofill-enable-vcn-gray-out-for-merchant-opt-out
 
 Default
-Enable Fingerprinting Protection Blocklist
-Enable Fingerprinting Protection which may block fingerprinting resources from loading in a 3p context. – Mac, Windows, Linux, ChromeOS, Android
+Enable Fingerprinting Protection Blocklist In Regular Browsing
+Enable Fingerprinting Protection which may block fingerprinting resources from loading in a 3p context. This flag applies only outside of Incognito mode. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-fingerprinting-protection-blocklist
+
+Default
+Enable Fingerprinting Protection Blocklist In Incognito
+Enable Fingerprinting Protection which may block fingerprinting resources from loading in a 3p context. This flag applies only in Incognito mode. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-fingerprinting-protection-blocklist-incognito
 
 Default
 Device Bound Session Credentials (Standard)
