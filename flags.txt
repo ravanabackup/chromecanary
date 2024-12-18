@@ -1,6 +1,12 @@
 Experiments
-133.0.6901.0
+133.0.6902.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
+ Top Chrome Toast Refinements
+Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
+
+#top-chrome-toast-refinements
+
+Enabled
  Fluent Overlay scrollbars.
 Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
 
@@ -377,12 +383,6 @@ Top Chrome Toasts
 Enables the use of toasts to present confirmation of user actions. – Mac, Windows, Linux, ChromeOS
 
 #top-chrome-toasts
-
-Default
-Top Chrome Toast Refinements
-Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
-
-#top-chrome-toast-refinements
 
 Default
 Hardware-accelerated video decode
@@ -1631,6 +1631,12 @@ FedCmButtonMode
 Enables RPs specify whether they want to trigger the FedCM widget flow or the button flow. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-button-mode
+
+Default
+FedCM with delegation support
+Enables IdPs to delegate presentation to the browser. – Mac, Windows, Linux, ChromeOS, Android
+
+#fedcm-delegation
 
 Default
 FedCM with IdP Registration support
