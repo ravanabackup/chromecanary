@@ -1,5 +1,5 @@
 Experiments
-133.0.6903.0
+133.0.6932.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -539,12 +539,6 @@ Enable audio descriptions.
 When enabled, HTML5 video elements with a 'descriptions' WebVTT track will speak the audio descriptions aloud as the video plays. – Mac, Windows, Linux, ChromeOS, Android
 
 #text-based-audio-descriptions
-
-Default
-Bypass user engagement checks
-Bypasses user engagement checks for displaying app banners, such as requiring that users have visited the site before and that the banner hasn't been shown recently. This allows developers to test that other eligibility requirements for showing app banners, such as having a manifest, are met. – Mac, Windows, Linux, ChromeOS, Android
-
-#bypass-app-banner-engagement-checks
 
 Default
 Desktop PWA Sub Apps
@@ -1915,6 +1909,12 @@ Enables origin-keyed process isolation for most pages (i.e., those assigned to a
 #origin-keyed-processes-by-default
 
 Default
+Collaboration Messaging
+Enables the messaging framework within the collaboration feature, including features such as recent activity, dirty dots, and description action chips. – Mac, Windows, Linux, ChromeOS, Android
+
+#collaboration-messaging
+
+Default
 Isolated sandboxed iframes
 When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site. – Mac, Windows, Linux, ChromeOS
 
@@ -2577,6 +2577,18 @@ When enabled, sets a client-side timeout on the Autofill credit card unmask requ
 #autofill-unmask-card-request-timeout
 
 Default
+Freeze CPU intensive background tabs on Energy Saver
+When Energy Saver is active, freeze eligible background tabs that use a lot of CPU. A tab is eligible if it's silent, doesn't provide audio- or video- conference functionality and doesn't use WebUSB or Web Bluetooth. – Mac, Windows, Linux, ChromeOS
+
+#freezing-on-energy-saver
+
+Default
+Freeze CPU intensive background tabs on Energy Saver - Testing Mode
+Similar to #freezing-on-energy-saver, with changes to facilitate testing: 1) pretend that Energy Saver is active even when it's not and 2) pretend that all tabs use a lot of CPU. – Mac, Windows, Linux, ChromeOS
+
+#freezing-on-energy-saver-testing
+
+Default
 Adjust feature reports received with WebHID
 Enable/Disable a fix for a bug that caused feature reports to be offset by one byte when received from devices that do not use numbered reports. – Windows
 
@@ -2617,6 +2629,12 @@ Tab Declutter
 Enables the Tab Declutter feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
 
 #tabstrip-declutter
+
+Default
+Tab Deduplication
+Enables the Tab Deduplication feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
+
+#tabstrip-dedupe
 
 Default
 Remove "Show cards from your Google Account" dropdown
@@ -2971,6 +2989,18 @@ Chrome Refresh Token Binding
 Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
 
 #enable-chrome-refresh-token-binding
+
+Default
+throttle-main-thread-to-60hz
+Throttle main thread updates to 60fps, even when VSync rate is higher. – Mac, Windows, Linux, ChromeOS, Android
+
+#throttle-main-thread-to-60hz
+
+Default
+Client Side Detection Brand and Intent for Scam Detection
+Enables on device LLM output on pages to inquire for brand and intent of the page. – Mac, Windows, Linux
+
+#client-side-detection-brand-and-page-intent
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
