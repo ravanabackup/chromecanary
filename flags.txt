@@ -1,5 +1,5 @@
 Experiments
-133.0.6933.0
+133.0.6937.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Smooth Scrolling
 Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
@@ -443,6 +443,12 @@ Enable Isolated Web Apps
 Enables experimental support for Isolated Web Apps. See https://github.com/reillyeon/isolated-web-apps for more information. – Mac, Windows, Linux, ChromeOS
 
 #enable-isolated-web-apps
+
+Default
+Enable automatic updates of Isolated Web Apps
+Enables experimental support for automatically updating Isolated Web Apps. – Mac, Windows, Linux, ChromeOS
+
+#enable-isolated-web-app-automatic-updates
 
 Default
 Enable Isolated Web App Developer Mode
@@ -1013,12 +1019,6 @@ Tab Group Sync Service Desktop Migration
 Enables use of the TabGroupSyncService. This is a backend only change. – Mac, Windows, Linux, ChromeOS
 
 #tab-group-sync-service-desktop-migration
-
-Default
-Tab Groups Save UI Update
-Enables saved tab group pinning, everything menu and bookmarks bar change – Mac, Windows, Linux, ChromeOS
-
-#tab-groups-save-ui-update
 
 Default
 Tab Scrolling
@@ -2125,6 +2125,12 @@ When enabled, Chrome checks and fetches metadata for installed extensions more f
 #cws-info-fast-check
 
 Default
+Extension Disable Unsupported Developer
+When enabled, disable unpacked extensions if developer mode is off. – Mac, Windows, Linux, ChromeOS
+
+#extension-disable-unsupported-developer-mode-extensions
+
+Default
 Extension Telemetry for Enterprise
 When enabled, the extension telemetry service collects signals and generates reports to send for enterprise. – Mac, Windows, Linux, ChromeOS
 
@@ -2725,6 +2731,12 @@ Outline Silhouette Icon
 Enables the improved silhouette icon for signed out profiles – Mac, Windows, Linux
 
 #outline-silhouette-icon
+
+Default
+Improved settings UI
+Enables redesign of signin settings and better signin errors in chrome://settings. – Mac, Windows, Linux
+
+#improved-settings-ui-on-desktop
 
 Default
 Discounts on navigation
