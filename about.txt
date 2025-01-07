@@ -47,7 +47,6 @@ chrome://histograms
 chrome://history
 chrome://history-clusters-internals
 chrome://history-clusters-side-panel.top-chrome
-chrome://identity-internals
 chrome://indexeddb-internals
 chrome://inspect
 chrome://internals
