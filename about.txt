@@ -100,7 +100,6 @@ chrome://signin-dice-web-intercept.top-chrome
 chrome://signin-email-confirmation
 chrome://signin-error
 chrome://signin-internals
-chrome://signin-reauth
 chrome://site-engagement
 chrome://suggest-internals
 chrome://support-tool
