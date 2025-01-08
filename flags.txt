@@ -1,16 +1,16 @@
 Experiments
-133.0.6943.0
+134.0.6944.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Top Chrome Toast Refinements
-Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
+ Smooth Scrolling
+Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
 
-#top-chrome-toast-refinements
+#smooth-scrolling
 
 Enabled
- Fluent Overlay scrollbars.
-Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
+ Overlay Scrollbars
+Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS
 
-#fluent-overlay-scrollbars
+#overlay-scrollbars
 
 Enabled
  Fluent scrollbars.
@@ -19,16 +19,16 @@ Stylizes scrollbars with Microsoft Fluent design. – Windows, Linux
 #fluent-scrollbars
 
 Enabled
- Web Share
-Enables the Web Share (navigator.share) APIs on experimentally supported platforms. – Mac, Windows, ChromeOS
+ Connect to Cast devices on all IP addresses
+Have the Media Router connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses. – Mac, Windows, Linux, ChromeOS
 
-#web-share
+#media-router-cast-allow-all-ips
 
 Enabled
- Chrome Refresh Themed Realbox
-CR23 theming will be applied in Realbox when enabled. – Mac, Windows, Linux, ChromeOS
+ Comparison table management from main Compare UI
+Enable showing the comparison tables list in the Compare UI and enable the new "Comparison tables" context menu under "Bookmarks and Lists". – Mac, Windows, Linux, ChromeOS
 
-#ntp-realbox-cr23-theming
+#compare-management-interface
 
 Enabled
  Parallel downloading
@@ -37,28 +37,10 @@ Enable parallel downloading to accelerate download speed. – Mac, Windows, Linu
 #enable-parallel-downloading
 
 Enabled
- PDF Chrome Refresh 2023
-Use new CR23 icons and colors for the PDF Viewer. – Mac, Windows, Linux, ChromeOS
+ Windows 11 Mica titlebar
+Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
 
-#pdf-cr23
-
-Enabled
- OOPIF for PDF Viewer
-Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS
-
-#pdf-oopif
-
-Enabled
- Use Skia Renderer
-Use Skia as the PDF renderer. This flag will have no effect if the renderer choice is controlled by an enterprise policy. – Mac, Windows, Linux, ChromeOS
-
-#pdf-use-skia-renderer
-
-Enabled
- Reading Mode with images added via algorithm
-Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS
-
-#read-anything-images-via-algorithm
+#windows11-mica-titlebar
 
 Enabled
  Support Tool Screenshot
@@ -73,10 +55,10 @@ Enables taking screenshots from the desktop sharing hub. – Mac, Windows, Linux
 #sharing-desktop-screenshots
 
 Enabled
- Make the text in PDF images interactable
-Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
+ Holding Esc to exit browser fullscreen
+Allows users to press and hold Esc key to exit browser fullscreen. – Mac, Windows, Linux, ChromeOS
 
-#pdf-searchify
+#press-and-hold-esc-to-exit-browser-fullscreen
 
 Enabled
  Extensions Menu Access Control
@@ -85,40 +67,10 @@ Enables a redesigned extensions menu that allows the user to control extensions 
 #extensions-menu-access-control
 
 Enabled
- Customize Chrome Side Panel Extension Card
-If enabled, shows an extension card within the Customize Chrome Side Panel for access to the Chrome Web Store extensions. – Mac, Windows, Linux, ChromeOS
+ Tab Organization
+Enables the Auto Tab Groups feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
 
-#customize-chrome-side-panel-extensions-card
-
-Enabled
- Video picture-in-picture controls update 2024
-Displays an updated UI for video picture-in-picture controls from its 2024UI update – Mac, Windows, Linux, ChromeOS
-
-#video-picture-in-picture-controls-update-2024
-
-Enabled
- Document Picture-in-Picture Animate Resize
-Use an animation when programmatically resizing a documentpicture-in-picture window – Mac, Windows, Linux, ChromeOS
-
-#document-picture-in-picture-animate-resize
-
-Enabled
- Download Warning Improvements
-Enable UI improvements for downloads, download scanning, and download warnings. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS
-
-#download-warning-improvements
-
-Enabled
- Camera and Mic Effects
-Enables effects for camera and mic streams. – Mac, Windows, Linux
-
-#camera-mic-effects
-
-Enabled
- Compact mode for the browser - Prototype
-This feature is a prototype. Reduces the height of the browser controls (tabstrip, toolbar, bookmarks bar, etc.) to allow more space for the web contents – Mac, Windows, Linux, ChromeOS
-
-#compact-mode
+#tab-organization
 
 Enabled
  Multi Tab Organization
@@ -127,34 +79,34 @@ Enables Auto Tab Groups suggestions for multiple tab groups at once. – Mac, Wi
 #multi-tab-organization
 
 Enabled
- Task Manager Desktop Refresh
-Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
+ Tab Reorganization
+Enables Auto Tab Groups suggestions for adding tabs to existing groups – Mac, Windows, Linux, ChromeOS
 
-#enable-task-manager-desktop-refresh
-
-Enabled
- AI settings page refresh
-Enables a revamp of the existing AI settings page. – Mac, Windows, Linux, ChromeOS
-
-#ai-settings-page-refresh
+#tab-reorganization
 
 Enabled
- More Lens overlay translate languages
-Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, ChromeOS
+ Tab Declutter
+Enables the Tab Declutter feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
 
-#enable-lens-overlay-translate-languages
+#tabstrip-declutter
+
+Enabled Quick Mode
+ Improved settings UI
+Enables redesign of signin settings and better signin errors in chrome://settings. – Mac, Windows, Linux
+
+#improved-settings-ui-on-desktop
 
 Enabled
-Temporarily unexpire M131 flags.
-Temporarily unexpire flags that expired as of M131. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m131
-
-Default
 Temporarily unexpire M132 flags.
 Temporarily unexpire flags that expired as of M132. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m132
+
+Default
+Temporarily unexpire M133 flags.
+Temporarily unexpire flags that expired as of M133. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m133
 
 Default
 Enable benchmarking
@@ -245,18 +197,6 @@ Backdrop Filter Mirror Edge
 When sampling being the backdrop edge for backdrop-filter, samples beyond the edge are mirrored back into the backdrop rather than duplicating the pixels at the edge. – Mac, Windows, Linux, ChromeOS, Android
 
 #backdrop-filter-mirror-edge
-
-Default
-Smooth Scrolling
-Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
-
-#smooth-scrolling
-
-Default
-Overlay Scrollbars
-Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS
-
-#overlay-scrollbars
 
 Default
 Enable lazy load image for invisible page
@@ -385,6 +325,12 @@ Enables the use of toasts to present confirmation of user actions. – Mac, Wind
 #top-chrome-toasts
 
 Default
+Top Chrome Toast Refinements
+Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
+
+#top-chrome-toast-refinements
+
+Default
 Hardware-accelerated video decode
 Hardware-accelerated video decode where available. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -413,6 +359,12 @@ Hardware Secure Decryption Fallback
 Allows automatically disabling hardware secure Content Decryption Module (CDM) after failures or crashes. Subsequent playback may use software secure CDMs. If this feature is disabled, the fallback will never happen and users could be stuck with playback failures. – Windows
 
 #enable-hardware-secure-decryption-fallback
+
+Default
+Fluent Overlay scrollbars.
+Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
+
+#fluent-overlay-scrollbars
 
 Default
 Enable Zero-Copy Video Capture
@@ -589,12 +541,6 @@ Connects to the testing server for Chrome Sync. – Mac, Windows, Linux, ChromeO
 #use-sync-sandbox
 
 Disabled
-Connect to Cast devices on all IP addresses
-Have the Media Router connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses. – Mac, Windows, Linux, ChromeOS
-
-#media-router-cast-allow-all-ips
-
-Default
 Media Remoting without videos in fullscreen mode
 Starts Media Remoting from Global Media Controls without making the videos fullscreen. – Mac, Windows, Linux, ChromeOS
 
@@ -683,6 +629,12 @@ HiDPI tab capture support for Cast Streaming
 Enables HiDPI tab capture during Cast Streaming mirroring sessions. May reduce performance on some platforms and also improve quality of video frames. – Mac, Windows, Linux, ChromeOS
 
 #enable-cast-streaming-with-hidpi
+
+Default
+Web Share
+Enables the Web Share (navigator.share) APIs on experimentally supported platforms. – Mac, Windows, ChromeOS
+
+#web-share
 
 Default
 WebXR Hand Input
@@ -1135,12 +1087,6 @@ Enable to show the added to set confirmation in a toast. – Mac, Windows, Linux
 #compare-confirmation-toast
 
 Default
-Comparison table management from main Compare UI
-Enable showing the comparison tables list in the Compare UI and enable the new "Comparison tables" context menu under "Bookmarks and Lists". – Mac, Windows, Linux, ChromeOS
-
-#compare-management-interface
-
-Default
 Price Tracking Subscription Service Local Key
 Enable the locale key for price tracking subscription service – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1207,6 +1153,12 @@ Shows the Outlook Calendar module on the New Tab Page. – Mac, Windows, Linux, 
 #ntp-outlook-calendar-module
 
 Default
+Chrome Refresh Themed Realbox
+CR23 theming will be applied in Realbox when enabled. – Mac, Windows, Linux, ChromeOS
+
+#ntp-realbox-cr23-theming
+
+Default
 NTP Sharepoint Module
 Shows the Sharepoint module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
@@ -1225,12 +1177,6 @@ Run WebRTC capture audio processing in the audio process instead of the renderer
 #chrome-wide-echo-cancellation
 
 Default
-Tab Search Position Setting
-Whether to show the tab search position options in the settings page. – Windows, Linux, ChromeOS
-
-#tab-search-position-setting
-
-Default
 Enable network logging to file
 Enables network logging to a file named netlog.json in the user data directory. The file can be imported into chrome://net-internals. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1247,6 +1193,18 @@ Zero-copy tab capture
 Enable zero-copy content tab for getDisplayMedia() APIs. – Mac, Windows, ChromeOS
 
 #zero-copy-tab-capture
+
+Default
+PDF Chrome Refresh 2023
+Use new CR23 icons and colors for the PDF Viewer. – Mac, Windows, Linux, ChromeOS
+
+#pdf-cr23
+
+Default
+OOPIF for PDF Viewer
+Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS
+
+#pdf-oopif
 
 Default
 PDF portfolio
@@ -1277,12 +1235,6 @@ Use XPS for printing from PDF
 When enabled, use XPS printing API instead of the GDI print API when printing PDF documents. – Windows
 
 #use-xps-for-printing-from-pdf
-
-Default
-Windows 11 Mica titlebar
-Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
-
-#windows11-mica-titlebar
 
 Default
 Insecure origins treated as secure
@@ -1319,6 +1271,12 @@ Reading Mode Read Aloud Phrase Highlighting
 Enables the experimental Reading Mode feature that highlights by phrases when reading aloud, when the phrase option is selected from the highlight menu. – Mac, Windows, Linux, ChromeOS
 
 #read-anything-read-aloud-phrase-highlighting
+
+Default
+Reading Mode with images added via algorithm
+Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS
+
+#read-anything-images-via-algorithm
 
 Default
 Reading Mode Google Docs Integration
@@ -1379,12 +1337,6 @@ AVIF gainmap HDR image rendering
 If enabled, Chrome uses the gainmap (if present) in AVIF images to render the HDR version on HDR displays and the SDR version on SDR displays. – Mac, Windows, Linux, ChromeOS, Android
 
 #avif-gainmap-hdr-images
-
-Default
-CrabbyAvif for decoding AVIF images
-If enabled, CrabbyAvif will be used instead of libavif for decoding AVIF images – Mac, Windows, Linux, ChromeOS, Android
-
-#crabbyavif
 
 Default
 FileSystemObserver
@@ -1537,12 +1489,6 @@ Requesting to use the keyboard or pointer lock API causes a permissionprompt to 
 #keyboard-and-pointer-lock-prompt
 
 Default
-Holding Esc to exit browser fullscreen
-Allows users to press and hold Esc key to exit browser fullscreen. – Mac, Windows, Linux, ChromeOS
-
-#press-and-hold-esc-to-exit-browser-fullscreen
-
-Default
 Enables Out-of-Process Printer Drivers
 Enables printing interactions with the operating system to be performed out-of-process. – Mac, Windows, Linux, ChromeOS
 
@@ -1553,12 +1499,6 @@ Privacy Sandbox Internals Page
 Enables the chrome://privacy-sandbox-internals debugging page. – Mac, Windows, Linux, ChromeOS, Android
 
 #privacy-sandbox-internals
-
-Default
-Privacy Sandbox Privacy Guide Ad Topics
-Enables the Ad Topics card in the Privacy Guide to be displayed, subject to regional availability. – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-privacy-guide-ad-topics
 
 Default
 Private State Tokens Dev UI
@@ -1601,6 +1541,12 @@ Warm up compositor on prerendering
 Enables compositor warming up on particular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android
 
 #prerender2-warm-up-compositor
+
+Default
+Make the text in PDF images interactable
+Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
+
+#pdf-searchify
 
 Default
 PDF XFA support
@@ -1747,54 +1693,6 @@ Provides a control for enabling/disabling Third-Party Cookie Deprecation Metadat
 #tpcd-metadata-grants
 
 Default
-Third-Party Cookie Deprecation Trial Grants for Testing
-Controls creation of cookie access grants for the Third-Party Cookies Deprecation Trial. Please note that, even if enabled, this will still require #tracking-protection-3pcd to be enabled and a pref to be set, for it to have an effect. See https://developer.chrome.com/blog/cookie-countdown-2023oct/ for more details. – Mac, Windows, Linux, ChromeOS, Android
-
-#third-party-cookie-deprecation-trial
-
-Default
-Top-Level Third-Party Cookie Deprecation Trial Grants for Testing
-Controls creation of cookie access grants for the Top-Level Third-Party Cookies Deprecation Trial. Please note that, even if enabled, this will still require #tracking-protection-3pcd to be enabled and a pref to be set, for it to have an effect. See https://developer.chrome.com/blog/cookie-countdown-2023oct/ for more details. – Mac, Windows, Linux, ChromeOS, Android
-
-#top-level-third-party-cookie-deprecation-trial
-
-Default
-Allow enabling Balanced Mode for HTTPS-First Mode.
-Enable tri-state HTTPS-First Mode setting in chrome://settings/security. – Mac, Windows, Linux, ChromeOS, Android
-
-#https-first-balanced-mode
-
-Default
-Dialog UI for HTTPS-First Modes
-Use a dialog-based UI for HFM – Mac, Windows, Linux, ChromeOS
-
-#https-first-dialog-ui
-
-Default
-Use the new interstitial for HTTPS-First Modes
-Use the new interstitial with updated text and icons for HTTPS-First Modes – Mac, Windows, Linux, ChromeOS, Android
-
-#https-first-mode-interstitial-august2024-refresh
-
-Default
-HTTPS-First Mode V2 For Engaged Sites
-Enable Site-Engagement based HTTPS-First Mode. Shows HTTPS-First Mode interstitial on sites whose HTTPS URLs have high Site Engagement scores. Requires #https-upgrades feature to be enabled – Mac, Windows, Linux, ChromeOS, Android
-
-#https-first-mode-v2-for-engaged-sites
-
-Default
-HTTPS-First Mode in Incognito new Settings UI
-Enable new HTTPS-First Mode settings UI for HTTPS-First Mode in Incognito. Must also enable #https-first-mode-incognito. – Mac, Windows, Linux, ChromeOS, Android
-
-#https-first-mode-incognito-new-settings
-
-Default
-HTTPS-First Mode For Typically Secure Users
-Automatically enables HTTPS-First Mode if the user has a typically secure browsing pattern. – Mac, Windows, Linux, ChromeOS, Android
-
-#https-first-mode-for-typically-secure-users
-
-Default
 Enable extension permission omnibox.directInput
 Allows extensions to request permission omnibox.directInput, which enables unscoped mode in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -1817,18 +1715,6 @@ IPH Extensions Request Access Button Feature
 Enables In-Product-Help that appears when at least one extension is requesting access to the current page. This feature is gated by extensions-menu-access-control. – Mac, Windows, Linux, ChromeOS
 
 #iph-extensions-request-access-button-feature
-
-Default
-Extension Manifest V2 Deprecation Warning Stage
-Displays a warning that affected MV2 extensions may no longer be supported due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS
-
-#extension-manifest-v2-deprecation-warning
-
-Default
-Extension Manifest V2 Deprecation Disabled Stage
-Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS
-
-#extension-manifest-v2-deprecation-disabled
 
 Default
 Extension Manifest V2 Deprecation Unsupported Stage
@@ -1873,6 +1759,12 @@ When enabled, the audio indicators in the tab strip double as tab audio mute con
 #enable-tab-audio-muting
 
 Default
+Customize Chrome Side Panel Extension Card
+If enabled, shows an extension card within the Customize Chrome Side Panel for access to the Chrome Web Store extensions. – Mac, Windows, Linux, ChromeOS
+
+#customize-chrome-side-panel-extensions-card
+
+Default
 Enable delegated compositing
 When enabled and applicable, the act of compositing is delegated to the system compositor. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1903,6 +1795,18 @@ Enables auto picture in picture for video playback. Requires chrome://flags/#aut
 #auto-picture-in-picture-for-video-playback
 
 Default
+Video picture-in-picture controls update 2024
+Displays an updated UI for video picture-in-picture controls from its 2024UI update – Mac, Windows, Linux, ChromeOS
+
+#video-picture-in-picture-controls-update-2024
+
+Default
+Document Picture-in-Picture Animate Resize
+Use an animation when programmatically resizing a documentpicture-in-picture window – Mac, Windows, Linux, ChromeOS
+
+#document-picture-in-picture-animate-resize
+
+Default
 Main Node Annotations
 Uses Screen2x main content extractor to annotate the accessibility tree with the main landmark on the node identified as main. – Mac, Windows, Linux, ChromeOS
 
@@ -1925,6 +1829,12 @@ Isolated sandboxed iframes
 When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site. – Mac, Windows, Linux, ChromeOS
 
 #enable-isolated-sandboxed-iframes
+
+Default
+Download Warning Improvements
+Enable UI improvements for downloads, download scanning, and download warnings. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS
+
+#download-warning-improvements
 
 Default
 Reduce Accept-Language request header
@@ -1993,12 +1903,6 @@ When enabled, Autofill will attempt to find standalone CVC fields for VCN card o
 #autofill-parse-vcn-card-on-file-standalone-cvc-fields
 
 Default
-Background Resource Fetch
-Process resource requests in a background thread inside Blink. – Mac, Windows, Linux, ChromeOS, Android
-
-#background-resource-fetch
-
-Default
 WebUI Omnibox Popup
 If enabled, shows the omnibox suggestions popup in WebUI. – Mac, Windows, Linux, ChromeOS
 
@@ -2041,36 +1945,6 @@ When enabled, the Contextual Chrome for iOS promo will be shown tothe eligible u
 #ios-promo-payment-bubble
 
 Default
-Compression dictionary transport
-Enables compression dictionary transport features. Requires chrome://flags/#enable-compression-dictionary-transport-backend to be enabled. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compression-dictionary-transport
-
-Default
-Compression dictionary transport backend
-Enables the backend of compression dictionary transport features. Requires chrome://flags/#enable-compression-dictionary-transport to be enabled for testing the feature. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compression-dictionary-transport-backend
-
-Default
-Compression dictionary transport over HTTP/1
-When this is enabled, Chromium can use stored shared dictionaries even when the connection is using HTTP/1 for non-localhost requests. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compression-dictionary-transport-allow-http1
-
-Default
-Compression dictionary transport over HTTP/2
-When this is enabled, Chromium can use stored shared dictionaries even when the connection is using HTTP/2 for non-localhost requests. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compression-dictionary-transport-allow-http2
-
-Default
-Compression dictionary transport require known root cert
-When this is enabled, Chromium can use stored shared dictionaries only when the connection is using a well known root cert or when the server is a localhost. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compression-dictionary-transport-require-known-root-cert
-
-Default
 Enable mitigation algorithm for rate obfuscation in compute pressure
 Rate Obfuscation Mitigation is used to avoid fingerprinting attacks. Its usage introduces some timing penalties to the compute pressure results.This mitigation might introduce slight precision errors.When disabled this helps to test how predictable and accurate compute pressure is, but the Compute Pressure API can be susceptible to fingerprinting attacks. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2099,6 +1973,12 @@ Enable ProcessPerSite up to main frame threshold
 Proactively reuses same-site renderer processes to host multiple main frames, up to a certain threshold. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-process-per-site-up-to-main-frame-threshold
+
+Default
+Camera and Mic Effects
+Enables effects for camera and mic streams. – Mac, Windows, Linux
+
+#camera-mic-effects
 
 Default
 Camera and Mic Preview
@@ -2141,12 +2021,6 @@ Extension Disable Unsupported Developer
 When enabled, disable unpacked extensions if developer mode is off. – Mac, Windows, Linux, ChromeOS
 
 #extension-disable-unsupported-developer-mode-extensions
-
-Default
-Extension Telemetry for Enterprise
-When enabled, the extension telemetry service collects signals and generates reports to send for enterprise. – Mac, Windows, Linux, ChromeOS
-
-#extension-telemetry-for-enterprise
 
 Default
 Enable CVC storage and filling for payments autofill
@@ -2333,6 +2207,12 @@ Show permission grants from Related Website Sets
 Shows permission grants created by Related Website Sets in Chrome Settings UI and Page Info Bubble, default is hidden – Mac, Windows, Linux, ChromeOS, Android
 
 #related-website-sets-permission-grants
+
+Default
+Compact mode for the browser - Prototype
+This feature is a prototype. Reduces the height of the browser controls (tabstrip, toolbar, bookmarks bar, etc.) to allow more space for the web contents – Mac, Windows, Linux, ChromeOS
+
+#compact-mode
 
 Default
 Tear Off Web App Tab
@@ -2535,28 +2415,16 @@ Enables HTTP headers related to the Storage Access API. – Mac, Windows, Linux,
 #storage-access-headers
 
 Default
-Enable performance intervention suggestions.
-When enabled, performance intervention UI will automatically pop up and suggest tabs to take action on during times of poor performance. – Mac, Windows, Linux, ChromeOS
+Storage Access API follows Same Origin Policy
+Modifies the Storage Access API to follow the Same Origin Policy with respect to security. – Mac, Windows, Linux, ChromeOS, Android
 
-#performance-intervention-ui
-
-Default
-Enable performance intervention demo mode.
-When enabled, CPU thresholds and rate limiting will be ignored so performance intervention UI may be easily triggered through natural browser usage or force triggered in chrome://discards. All suggested actionable tabs will meet the normal discard criteria except for needing to stay in the background for a set minimum time. Requires chrome://flags/#performance-intervention-ui to be enabled. – Mac, Windows, Linux, ChromeOS
-
-#performance-intervention-demo-mode
+#storage-access-api-follows-same-origin-policy
 
 Default
 Enable bookmarks in transport mode
 Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linux
 
 #sync-enable-bookmarks-in-transport-mode
-
-Default
-Enable visited URL aggregates visibility score based filtering
-Enables filtering of visited URL aggregates based on history URL visibility scores. – Mac, Windows, Linux, ChromeOS, Android
-
-#visited-url-ranking-service-history-visibility-score-filter
 
 Default
 Defer Renderer Tasks After Input
@@ -2607,40 +2475,16 @@ Enable/Disable a fix for a bug that caused feature reports to be offset by one b
 #hid-get-feature-report-fix
 
 Default
-Translate Open Settings
-Add an option to the translate bubble menu to open language settings. – Mac, Windows, Linux, ChromeOS
-
-#translate-open-settings
-
-Default
-Tab Organization
-Enables the Auto Tab Groups feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
-
-#tab-organization
-
-Default
 Tab Organization Settings Visibility
 Shows Tab Organization in the settings UI – Mac, Windows, Linux, ChromeOS
 
 #tab-organization-settings-visibility
 
 Default
-Tab Reorganization
-Enables Auto Tab Groups suggestions for adding tabs to existing groups – Mac, Windows, Linux, ChromeOS
-
-#tab-reorganization
-
-Default
 Tab Reorganization Divider
 Shows a divider in Auto Tab Groups suggestions for existing groups, indicating which tabs in the group are new. – Mac, Windows, Linux, ChromeOS
 
 #tab-reorganization-divider
-
-Default
-Tab Declutter
-Enables the Tab Declutter feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
-
-#tabstrip-declutter
 
 Default
 Tab Deduplication
@@ -2659,42 +2503,6 @@ Language detection web platform API
 When enabled, JS can use the web platform's language detection API – Mac, Windows, Linux, ChromeOS, Android
 
 #language-detection-api
-
-Default
-Supervised Profile Hide Guest
-Hides Guest Profile entry points for supervised users – Mac, Windows, Linux
-
-#supervised-profile-hide-guest
-
-Default
-Supervised Profile SafeSearch
-Enables SafeSearch in Google Search for supervised users in the pending state. – Mac, Windows, Linux
-
-#supervised-profile-safe-search
-
-Default
-Supervised Profile YouTube reauth
-Ask supervised users to re-authenticate when attempting to access YouTube in the pending state. – Mac, Windows, Linux
-
-#supervised-profile-youtube-reauth
-
-Default
-Supervised Profile blocked site reauth
-Ask supervised users to re-authenticate when attempting to navigate to a site blocked by parental controls. – Mac, Windows, Linux
-
-#supervised-profile-blocked-site-reauth
-
-Default
-Supervised Profile reauth in subframes
-If "Supervised Profile YouTube reauth" or "Supervised Profile blocked site reauth" is enabled, require supervised users to re-authenticate before accessing embedded YouTube videos or blocked sites in subframes, respectively. – Mac, Windows, Linux
-
-#supervised-profile-subframe-reauth
-
-Default
-Supervised Profile filtering fallback
-Applies website filters for supervised users in the pending state, if the Family Link website filtering setting is set to block explicit sites. If the Family Link website filtering setting is set to another value, it is applied in the pending regardless of this flag. – Mac, Windows, Linux
-
-#supervised-profile-filtering-fallback
 
 Default
 Supervised Profile custom strings
@@ -2757,12 +2565,6 @@ Enables the improved silhouette icon for signed out profiles – Mac, Windows, L
 #outline-silhouette-icon
 
 Default
-Improved settings UI
-Enables redesign of signin settings and better signin errors in chrome://settings. – Mac, Windows, Linux
-
-#improved-settings-ui-on-desktop
-
-Default
 Discounts on navigation
 Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
 
@@ -2779,6 +2581,12 @@ Permission Predictions V3
 Use the Permission Predictions Service V3 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires and `Safe Browsing` to be enabled. – Mac, Windows, Linux, ChromeOS, Android
 
 #permission-predictions-v3
+
+Default
+Task Manager Desktop Refresh
+Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
+
+#enable-task-manager-desktop-refresh
 
 Default
 Network Time for Certificate Verification
@@ -2889,6 +2697,12 @@ Enables offering credentials coming from grouped domains for filling – Mac, Wi
 #password-form-grouped-affiliations
 
 Default
+AI settings page refresh
+Enables a revamp of the existing AI settings page. – Mac, Windows, Linux, ChromeOS
+
+#ai-settings-page-refresh
+
+Default
 Clientside password form classifier.
 Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2947,6 +2761,12 @@ Allow legacy extension manifest versions
 Allows extensions with legacy (unsupported) manifest versions to be loaded as unpacked extensions. This should only be used for maintaining legacy extensions and will be removed in the future. – Mac, Windows, Linux, ChromeOS
 
 #allow-legacy-mv2-extensions
+
+Default
+More Lens overlay translate languages
+Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-translate-languages
 
 Default
 Glic
@@ -3019,6 +2839,12 @@ Client Side Detection Brand and Intent for Scam Detection
 Enables on device LLM output on pages to inquire for brand and intent of the page. – Mac, Windows, Linux
 
 #client-side-detection-brand-and-page-intent
+
+Default
+Enable showing card benefits for BMO cards
+When enabled, card benefits offered by BMO will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-card-benefits-for-bmo
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
