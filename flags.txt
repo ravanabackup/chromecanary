@@ -1,5 +1,5 @@
 Experiments
-134.0.6945.2
+134.0.6955.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -107,12 +107,6 @@ Enabled
 Enables effects for camera and mic streams. – Mac, Windows, Linux
 
 #camera-mic-effects
-
-Enabled
- Compact mode for the browser - Prototype
-This feature is a prototype. Reduces the height of the browser controls (tabstrip, toolbar, bookmarks bar, etc.) to allow more space for the web contents – Mac, Windows, Linux, ChromeOS
-
-#compact-mode
 
 Enabled
  Multi Tab Organization
@@ -1117,12 +1111,6 @@ Enable the Product Specifications feature. – Mac, Windows, Linux, ChromeOS
 #product-specifications
 
 Default
-Product Specifications Multi Specifics
-Enable the Product Specifications backed by the sync multi specifics representation. – Mac, Windows, Linux, ChromeOS
-
-#product-specifications-multi-specifics
-
-Default
 Added to set confirmation toast
 Enable to show the added to set confirmation in a toast. – Mac, Windows, Linux, ChromeOS
 
@@ -1487,6 +1475,12 @@ One time permission
 Enables experimental one time permissions for Geolocation, Microphone and Camera. – Mac, Windows, Linux, ChromeOS, Android
 
 #one-time-permission
+
+Default
+Page embedded permission control (permission element)
+Enables the Page Embedded Permission Control feature, which allows the use of the HTML 'permission' element. – Mac, Windows, Linux, ChromeOS, Android
+
+#permission-element
 
 Default
 Left-hand side activity indicators
@@ -2251,12 +2245,6 @@ When enabled, card benefits offered by American Express will be shown in Autofil
 #autofill-enable-card-benefits-for-american-express
 
 Default
-Enable showing card benefits for Capital One cards
-When enabled, card benefits offered by Capital One will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-enable-card-benefits-for-capital-one
-
-Default
 Enable syncing card benefits
 When enabled, card benefits offered by issuers will be synced from the Payments server. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2845,6 +2833,12 @@ Enable showing card benefits for BMO cards
 When enabled, card benefits offered by BMO will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-card-benefits-for-bmo
+
+Default
+System tracing
+When enabled, the system tracing service is started along with Chrome's tracing service (if the system tracing service is registered). – Windows
+
+#windows-system-tracing
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
