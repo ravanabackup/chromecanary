@@ -1,5 +1,5 @@
 Experiments
-134.0.6957.0
+134.0.6958.1
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -485,12 +485,6 @@ Enable Isolated Web Apps
 Enables experimental support for Isolated Web Apps. See https://github.com/reillyeon/isolated-web-apps for more information. – Mac, Windows, Linux, ChromeOS
 
 #enable-isolated-web-apps
-
-Default
-Enable automatic updates of Isolated Web Apps
-Enables experimental support for automatically updating Isolated Web Apps. – Mac, Windows, Linux, ChromeOS
-
-#enable-isolated-web-app-automatic-updates
 
 Default
 Enable Isolated Web App Developer Mode
@@ -1205,6 +1199,12 @@ Chrome-wide echo cancellation
 Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
 
 #chrome-wide-echo-cancellation
+
+Default
+DCHECKs are fatal
+By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
+
+#dcheck-is-fatal
 
 Default
 Enable network logging to file
@@ -2589,6 +2589,12 @@ Use the Permission Predictions Service V3 to surface permission requests using a
 #permission-predictions-v3
 
 Default
+PermissionsAI
+Use the Permission Predictions Service and Gemini Nano v2 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires and `Safe Browsing` to be enabled. – Mac, Windows, Linux, ChromeOS
+
+#permissions-ai-v1
+
+Default
 Network Time for Certificate Verification
 Use time fetched from the network for certificate verification decisions. If certificate verification fails with the network time, it will fall back to system time. – Mac, Windows, Linux, Android
 
@@ -2839,6 +2845,12 @@ System tracing
 When enabled, the system tracing service is started along with Chrome's tracing service (if the system tracing service is registered). – Windows
 
 #windows-system-tracing
+
+Default
+Privacy Sandbox Equalized Prompt Buttons
+Enables equalized styling for the dismissal buttons on the Privacy Sandbox Prompt. – Mac, Windows, Linux, ChromeOS, Android
+
+#privacy-sandbox-equalized-prompt-buttons
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
