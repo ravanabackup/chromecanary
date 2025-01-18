@@ -1,5 +1,5 @@
 Experiments
-134.0.6958.1
+134.0.6963.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -107,12 +107,6 @@ Enabled
 Enables effects for camera and mic streams. – Mac, Windows, Linux
 
 #camera-mic-effects
-
-Enabled
- Multi Tab Organization
-Enables Auto Tab Groups suggestions for multiple tab groups at once. – Mac, Windows, Linux, ChromeOS
-
-#multi-tab-organization
 
 Enabled
  Task Manager Desktop Refresh
@@ -1177,6 +1171,12 @@ Shows the device icon instead of device name on Most Relevant Tab Resumption Mod
 #ntp-most-relevant-tab-resumption-module-device-icon
 
 Default
+NTP OneGoogleBar Async Bar Parts
+NTP OneGoogleBar Async Bar Parts – Mac, Windows, Linux, ChromeOS
+
+#ntp-ogb-async-bar-parts
+
+Default
 NTP Outlook Calendar Module
 Shows the Outlook Calendar module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
@@ -1199,12 +1199,6 @@ Chrome-wide echo cancellation
 Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
 
 #chrome-wide-echo-cancellation
-
-Default
-DCHECKs are fatal
-By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
-
-#dcheck-is-fatal
 
 Default
 Enable network logging to file
@@ -1813,6 +1807,12 @@ Enables auto picture in picture for video playback. Requires chrome://flags/#aut
 #auto-picture-in-picture-for-video-playback
 
 Default
+Audio Ducking
+Allows Chrome to duck (attenuate) audio from other tabs. – Mac, Windows, Linux, ChromeOS
+
+#audio-ducking
+
+Default
 Main Node Annotations
 Uses Screen2x main content extractor to annotate the accessibility tree with the main landmark on the node identified as main. – Mac, Windows, Linux, ChromeOS
 
@@ -2119,6 +2119,12 @@ Enables profiles reordering in the Profile Picker main view by drag and dropping
 #profiles-reordering
 
 Default
+Profile Picker Glic Testing
+Allows testing the Glic version of the Profile Picker. – Mac, Windows, Linux, ChromeOS
+
+#profile-picker-glic-testing
+
+Default
 Batch Upload Desktop
 Enables the Batch Upload feature for Desktop. This allows to upload local data to the account data when signed in. Currently only supports Passwords and Addresses – Mac, Windows, Linux
 
@@ -2409,6 +2415,12 @@ Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linu
 #sync-enable-bookmarks-in-transport-mode
 
 Default
+Visited URL ranking deduplication strategy
+Enables visited url ranking service to use one of various deduplication strategies. – Mac, Windows, Linux, ChromeOS, Android
+
+#visited-url-ranking-service-domain-deduplication
+
+Default
 Defer Renderer Tasks After Input
 If enabled, tasks in the renderer will be deferred after discrete input events, e.g. keypress, until after the subsequent frame. The associated policy controls which tasks types can be deferred. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2469,18 +2481,6 @@ Shows Tab Organization in the settings UI – Mac, Windows, Linux, ChromeOS
 #tab-organization-settings-visibility
 
 Default
-Tab Reorganization
-Enables Auto Tab Groups suggestions for adding tabs to existing groups – Mac, Windows, Linux, ChromeOS
-
-#tab-reorganization
-
-Default
-Tab Reorganization Divider
-Shows a divider in Auto Tab Groups suggestions for existing groups, indicating which tabs in the group are new. – Mac, Windows, Linux, ChromeOS
-
-#tab-reorganization-divider
-
-Default
 Tab Declutter
 Enables the Tab Declutter feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
 
@@ -2521,6 +2521,12 @@ Supervised Profile show kite badge
 Shows a kite badge on the profile avatar for supervised users. – Mac, Windows, Linux
 
 #supervised-profile-kite-badging
+
+Default
+Enable local web approvals feature
+Enables parents to approve blocked websites on a child's device. – Mac, Windows, Linux
+
+#supervised-user-local-web-approvals
 
 Default
 Use rewritten display FrameIntervalDecider
@@ -2851,6 +2857,12 @@ Privacy Sandbox Equalized Prompt Buttons
 Enables equalized styling for the dismissal buttons on the Privacy Sandbox Prompt. – Mac, Windows, Linux, ChromeOS, Android
 
 #privacy-sandbox-equalized-prompt-buttons
+
+Default
+Move theme prefs to ThemeSpecifics
+Uses new fields in ThemeSpecifics for theme attributes which were previously synced using preferences, thereby putting syncing of all the theme attributes behind the Themes sync toggle. – Mac, Windows, Linux, ChromeOS
+
+#move-theme-prefs-to-specifics
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
