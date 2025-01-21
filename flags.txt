@@ -1,5 +1,5 @@
 Experiments
-134.0.6963.0
+134.0.6970.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -176,7 +176,7 @@ Visualize overdraw by color-coding elements based on if they have other elements
 
 Disabled
 Feedback include variations
-In Chrome feedback report, include commandline variations. – Mac, Windows, Linux
+In Chrome feedback report, include commandline variations. – Mac, Windows, Linux, Android
 
 #feedback-include-variations
 
@@ -1247,6 +1247,12 @@ Use XPS for printing from PDF
 When enabled, use XPS printing API instead of the GDI print API when printing PDF documents. – Windows
 
 #use-xps-for-printing-from-pdf
+
+Default
+Enable Windows.Gaming.Input
+Enable Windows.Gaming.Input by default to provide game controller support on Windows 10 desktop. – Windows
+
+#enable-windows-gaming-input-data-fetcher
 
 Default
 Windows 11 Mica titlebar
@@ -2707,6 +2713,12 @@ Grouped affiliation password suggestions
 Enables offering credentials coming from grouped domains for filling – Mac, Windows, Linux, ChromeOS, Android
 
 #password-form-grouped-affiliations
+
+Default
+AI settings in Privacy Guide
+Enables the AI settings linkout in the Privacy Guide completion card. – Mac, Windows, Linux, ChromeOS
+
+#privacy-guide-ai-settings
 
 Default
 Clientside password form classifier.
