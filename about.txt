@@ -91,6 +91,7 @@ chrome://read-later.top-chrome
 chrome://reset-password
 chrome://safe-browsing
 chrome://sandbox
+chrome://saved-tab-groups-unsupported
 chrome://search-engine-choice
 chrome://segmentation-internals
 chrome://serviceworker-internals
