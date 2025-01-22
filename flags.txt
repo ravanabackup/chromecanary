@@ -1,5 +1,5 @@
 Experiments
-134.0.6970.0
+134.0.6971.2
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -47,6 +47,12 @@ Enabled
 Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS
 
 #pdf-oopif
+
+Enabled
+ Windows 11 Mica titlebar
+Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
+
+#windows11-mica-titlebar
 
 Enabled
  Reading Mode with images added via algorithm
@@ -1253,12 +1259,6 @@ Enable Windows.Gaming.Input
 Enable Windows.Gaming.Input by default to provide game controller support on Windows 10 desktop. – Windows
 
 #enable-windows-gaming-input-data-fetcher
-
-Default
-Windows 11 Mica titlebar
-Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
-
-#windows11-mica-titlebar
 
 Default
 Insecure origins treated as secure
@@ -2596,13 +2596,13 @@ Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Win
 
 Default
 Permission Predictions V3
-Use the Permission Predictions Service V3 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires and `Safe Browsing` to be enabled. – Mac, Windows, Linux, ChromeOS, Android
+Use the Permission Predictions Service V3 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS, Android
 
 #permission-predictions-v3
 
 Default
 PermissionsAI
-Use the Permission Predictions Service and Gemini Nano v2 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires and `Safe Browsing` to be enabled. – Mac, Windows, Linux, ChromeOS
+Use the Permission Predictions Service and Gemini Nano v2 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
 
 #permissions-ai-v1
 
