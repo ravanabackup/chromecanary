@@ -1,5 +1,5 @@
 Experiments
-134.0.6971.2
+134.0.6972.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -2595,12 +2595,6 @@ Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Win
 #devtools-privacy-ui
 
 Default
-Permission Predictions V3
-Use the Permission Predictions Service V3 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS, Android
-
-#permission-predictions-v3
-
-Default
 PermissionsAI
 Use the Permission Predictions Service and Gemini Nano v2 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
 
@@ -2875,6 +2869,12 @@ Move theme prefs to ThemeSpecifics
 Uses new fields in ThemeSpecifics for theme attributes which were previously synced using preferences, thereby putting syncing of all the theme attributes behind the Themes sync toggle. – Mac, Windows, Linux, ChromeOS
 
 #move-theme-prefs-to-specifics
+
+Default
+Top Chrome Bookmarks Tree View
+Show the bookmarks side panel in a tree view while in compact mode. – Mac, Windows, Linux, ChromeOS
+
+#bookmarks-tree-view
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
