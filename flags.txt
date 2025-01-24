@@ -1,5 +1,5 @@
 Experiments
-134.0.6972.0
+134.0.6975.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -527,6 +527,12 @@ Enable audio descriptions.
 When enabled, HTML5 video elements with a 'descriptions' WebVTT track will speak the audio descriptions aloud as the video plays. – Mac, Windows, Linux, ChromeOS, Android
 
 #text-based-audio-descriptions
+
+Default
+Desktop PWA tab strips
+Tabbed application mode - enables the `tabbed` display mode which allows web apps to add a tab strip to their app. – Mac, Windows, Linux, ChromeOS
+
+#enable-desktop-pwas-tab-strip
 
 Default
 Desktop PWA Sub Apps
