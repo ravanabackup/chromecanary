@@ -1,5 +1,5 @@
 Experiments
-134.0.6990.2
+135.0.6999.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Smooth Scrolling
 Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
@@ -49,22 +49,16 @@ Enables the Support Tool to capture and include a screenshot in the exported pac
 #support-tool-screenshot
 
 Enabled
- Desktop Screenshots
-Enables taking screenshots from the desktop sharing hub. – Mac, Windows, Linux, ChromeOS
-
-#sharing-desktop-screenshots
-
-Enabled
- Holding Esc to exit browser fullscreen
-Allows users to press and hold Esc key to exit browser fullscreen. – Mac, Windows, Linux, ChromeOS
-
-#press-and-hold-esc-to-exit-browser-fullscreen
-
-Enabled
  Extensions Menu Access Control
 Enables a redesigned extensions menu that allows the user to control extensions site access. – Mac, Windows, Linux, ChromeOS
 
 #extensions-menu-access-control
+
+Enabled
+ Enable visited URL aggregates visibility score based filtering
+Enables filtering of visited URL aggregates based on history URL visibility scores. – Mac, Windows, Linux, ChromeOS, Android
+
+#visited-url-ranking-service-history-visibility-score-filter
 
 Enabled
  Tab Organization
@@ -85,16 +79,16 @@ Enables redesign of signin settings and better signin errors in chrome://setting
 #improved-settings-ui-on-desktop
 
 Enabled
-Temporarily unexpire M132 flags.
-Temporarily unexpire flags that expired as of M132. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m132
-
-Default
 Temporarily unexpire M133 flags.
 Temporarily unexpire flags that expired as of M133. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m133
+
+Default
+Temporarily unexpire M134 flags.
+Temporarily unexpire flags that expired as of M134. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m134
 
 Default
 Enable benchmarking
@@ -485,6 +479,12 @@ Desktop PWA tab strips
 Tabbed application mode - enables the `tabbed` display mode which allows web apps to add a tab strip to their app. – Mac, Windows, Linux, ChromeOS
 
 #enable-desktop-pwas-tab-strip
+
+Default
+Desktop PWA tab strip customizations
+Enable PWAs to customize their tab strip when in tabbed mode by adding the `tab_strip` manifest field. – Mac, Windows, Linux, ChromeOS
+
+#enable-desktop-pwas-tab-strip-customizations
 
 Default
 Desktop PWA Sub Apps
@@ -1105,18 +1105,6 @@ Shows six files in the NTP Drive module, instead of three. – Mac, Windows, Lin
 #ntp-drive-module-show-six-files
 
 Default
-NTP Mobile Promo
-NTP Mobile Promo – Mac, Windows, Linux, ChromeOS
-
-#ntp-mobile-promo
-
-Default
-Force NTP Mobile Promo
-Force NTP Mobile Promo – Mac, Windows, Linux, ChromeOS
-
-#force-ntp-mobile-promo
-
-Disabled
 NTP Most Relevant Tab Resumption Module
 Shows the Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
@@ -1345,12 +1333,6 @@ If enabled, Chrome uses the gainmap (if present) in AVIF images to render the HD
 #avif-gainmap-hdr-images
 
 Default
-FileSystemObserver
-Enables the FileSystemObserver interface, which allows websites to be notified of changes to the file system. See https://github.com/whatwg/fs/blob/main/proposals/FileSystemObserver.md for more information. – Mac, Windows, Linux, ChromeOS, Android
-
-#file-system-observer
-
-Default
 Strict-Origin-Isolation
 Experimental security mode that strengthens the site isolation policy. Controls whether site isolation should use origins instead of scheme and eTLD+1. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1507,24 +1489,6 @@ Enables printing interactions with the operating system to be performed out-of-p
 #enable-oop-print-drivers
 
 Default
-Privacy Sandbox Internals Page
-Enables the chrome://privacy-sandbox-internals debugging page. – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-internals
-
-Default
-Private State Tokens Dev UI
-Enables the chrome://privacy-sandbox-internals/private-state-tokens page.Relies on privacy-sandbox-internals also being enabled – Mac, Windows, Linux, ChromeOS
-
-#private-state-tokens-dev-ui
-
-Default
-Related Website Sets Dev UI
-Enables the chrome://privacy-sandbox-internals/related-website-sets page. Relies on privacy-sandbox-internals also being enabled. – Mac, Windows, Linux, ChromeOS
-
-#related-website-sets-dev-ui
-
-Default
 Align SurfaceLayerImpls to pixel grid
 Align SurfaceLayerImpl compositor textures to pixel grid. This is important when an iframe is rendered cross-process to its parent, and fails to align with the pixel grid (e.g. when the parent frame has a non-integral scale factor). Failure to align to the pixel grid can result in the iframe's text becoming blurry. SurfaceLayerImpl also is used for <canvas>, which may also benefit from the alignment. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1633,12 +1597,6 @@ Enables the "Use a different account" button on the FedCM account chooser to log
 #fedcm-use-other-account
 
 Default
-FedCmWithStorageAccessAPI
-Allows Storage Access API to auto-resolve if the user has allowed a FedCM connection. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-with-storage-access-api
-
-Default
 FedCmWithoutWellKnownEnforcement
 Supports configURL that's not in the IdP's .well-known file. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1729,12 +1687,6 @@ Enables In-Product-Help that appears when at least one extension is requesting a
 #iph-extensions-request-access-button-feature
 
 Default
-Extension Manifest V2 Deprecation Unsupported Stage
-Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation and cannot be re-enabled. – Mac, Windows, Linux, ChromeOS
-
-#extension-manifest-v2-deprecation-unsupported
-
-Default
 Force Native Host Executables to Launch Directly
 Force Native Host executables to launch directly via CreateProcess. – Windows
 
@@ -1769,12 +1721,6 @@ Tab audio muting UI control
 When enabled, the audio indicators in the tab strip double as tab audio mute controls. – Mac, Windows, Linux, ChromeOS
 
 #enable-tab-audio-muting
-
-Default
-Customize Chrome Side Panel Extension Card
-If enabled, shows an extension card within the Customize Chrome Side Panel for access to the Chrome Web Store extensions. – Mac, Windows, Linux, ChromeOS
-
-#customize-chrome-side-panel-extensions-card
 
 Default
 Enable delegated compositing
@@ -1867,12 +1813,6 @@ Strictly conform the Fetch spec to omit TLS client certificates if credential mo
 #omit-cors-client-cert
 
 Default
-Safe Browsing Local Lists use v5 API
-Fetch and check local lists using the Safe Browsing v5 API instead of the v4 Update API. – Mac, Windows, Linux, ChromeOS, Android
-
-#safe-browsing-local-lists-use-sbv5
-
-Default
 Permission Module for unused sites in Safety Check
 When enabled, adds the unused sites permission module to Safety Check on desktop. The module will be shown depending on the browser state. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1913,12 +1853,6 @@ Web Bluetooth confirm pairing support
 Enable confirm-only and confirm-pin pairing mode support for Web Bluetooth – Mac, Windows, Linux, ChromeOS
 
 #enable-web-bluetooth-confirm-pairing-support
-
-Default
-Parse standalone CVC fields for VCN card on file in forms
-When enabled, Autofill will attempt to find standalone CVC fields for VCN card on file when parsing forms. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-parse-vcn-card-on-file-standalone-cvc-fields
 
 Default
 WebUI Omnibox Popup
@@ -2053,12 +1987,6 @@ When enabled, we will store CVC for both local and server credit cards. This wil
 #autofill-enable-cvc-storage-and-filling
 
 Default
-Privacy Sandbox Enrollment Overrides
-Allows a list of sites to use Privacy Sandbox features without them being enrolled and attested into the Privacy Sandbox experiment. See: https://developer.chrome.com/en/docs/privacy-sandbox/enroll/ – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-enrollment-overrides
-
-Disabled
 Third party profile management
 Enables profile management triggered by third-party sign-ins. – Mac, Windows, Linux
 
@@ -2143,18 +2071,6 @@ Enables profiles reordering in the Profile Picker main view by drag and dropping
 #profiles-reordering
 
 Default
-Profile Picker Glic Testing
-Allows testing the Glic version of the Profile Picker. – Mac, Windows, Linux, ChromeOS
-
-#profile-picker-glic-testing
-
-Default
-Batch Upload Desktop
-Enables the Batch Upload feature for Desktop. This allows to upload local data to the account data when signed in. Currently only supports Passwords and Addresses – Mac, Windows, Linux
-
-#batch-upload-desktop
-
-Default
 Device Bound Session Credentials
 Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
 
@@ -2201,12 +2117,6 @@ Compose Nudge At Cursor
 Shows the Compose proactive nudge at the cursor location – Mac, Windows, Linux, ChromeOS
 
 #compose-nudge-display-at-cursor
-
-Default
-Compose Polite a11y announcement
-Uses polite announcements to alert the user that a compose popup is available to interact with. – Mac, Windows, Linux, ChromeOS
-
-#compose-polite-nudge
 
 Default
 Compose Segmentation Promotion
@@ -2279,12 +2189,6 @@ Enable syncing card benefits
 When enabled, card benefits offered by issuers will be synced from the Payments server. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-card-benefits-sync
-
-Default
-Linked Services Setting
-Add Linked Services Setting to the Sync Settings page. – Mac, Windows, Linux, ChromeOS, Android
-
-#linked-services-setting
 
 Default
 Enable virtual card suggestion graying out for opted-out merchants
@@ -2391,6 +2295,14 @@ https://policies.google.com/terms/generative-ai/use-policy
 #prompt-api-for-gemini-nano
 
 Default
+Prompt API for Gemini Nano with Multimodal Input
+Extends the exploratory Prompt API with image and audio input types. Allows you to supplement natural language instructions for a built-in large language model (Gemini Nano in Chrome) with image and audio inputs. Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API enhancement is primarily intended for natural language processing tasks associated with visual and auditory data, such as generating rough descriptions of pictures and sounds. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#prompt-api-for-gemini-nano-multimodal-input
+
+Default
 Summarization API for Gemini Nano
 Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2445,12 +2357,6 @@ Enables visited url ranking service to use one of various deduplication strategi
 #visited-url-ranking-service-domain-deduplication
 
 Default
-Enable visited URL aggregates visibility score based filtering
-Enables filtering of visited URL aggregates based on history URL visibility scores. – Mac, Windows, Linux, ChromeOS, Android
-
-#visited-url-ranking-service-history-visibility-score-filter
-
-Default
 Defer Renderer Tasks After Input
 If enabled, tasks in the renderer will be deferred after discrete input events, e.g. keypress, until after the subsequent frame. The associated policy controls which tasks types can be deferred. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2479,18 +2385,6 @@ Timeout for the credit card unmask request
 When enabled, sets a client-side timeout on the Autofill credit card unmask request. Upon timeout, the client will terminate the current unmask server call, which may or may not terminate the ongoing unmask UI. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-unmask-card-request-timeout
-
-Default
-Freeze CPU intensive background tabs on Energy Saver
-When Energy Saver is active, freeze eligible background tabs that use a lot of CPU. A tab is eligible if it's silent, doesn't provide audio- or video- conference functionality and doesn't use WebUSB or Web Bluetooth. – Mac, Windows, Linux, ChromeOS
-
-#freezing-on-energy-saver
-
-Default
-Freeze CPU intensive background tabs on Energy Saver - Testing Mode
-Similar to #freezing-on-energy-saver, with changes to facilitate testing: 1) pretend that Energy Saver is active even when it's not and 2) pretend that all tabs use a lot of CPU. – Mac, Windows, Linux, ChromeOS
-
-#freezing-on-energy-saver-testing
 
 Default
 Adjust feature reports received with WebHID
@@ -2589,12 +2483,6 @@ Enables the improved silhouette icon for signed out profiles – Mac, Windows, L
 #outline-silhouette-icon
 
 Default
-Discounts on navigation
-Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
-
-#discount-on-navigation
-
-Default
 DevTools Privacy UI
 Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2611,12 +2499,6 @@ Task Manager Desktop Refresh
 Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
 
 #enable-task-manager-desktop-refresh
-
-Default
-Network Time for Certificate Verification
-Use time fetched from the network for certificate verification decisions. If certificate verification fails with the network time, it will fall back to system time. – Mac, Windows, Linux, Android
-
-#cert-verification-network-time
 
 Default
 Lens overlay translate button
@@ -2877,6 +2759,12 @@ Enables on device LLM output on pages to inquire for brand and intent of the pag
 #client-side-detection-brand-and-page-intent
 
 Default
+Client Side Detection Show Scam Verdict Warning
+Show warnings based on the scam verdict field in Client Side Detection response. – Mac, Windows, Linux
+
+#client-side-detection-show-scam-verdict-warning
+
+Default
 Enable showing card benefits for BMO cards
 When enabled, card benefits offered by BMO will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2893,12 +2781,6 @@ Privacy Sandbox Equalized Prompt Buttons
 Enables equalized styling for the dismissal buttons on the Privacy Sandbox Prompt. – Mac, Windows, Linux, ChromeOS, Android
 
 #privacy-sandbox-equalized-prompt-buttons
-
-Default
-Move theme prefs to ThemeSpecifics
-Uses new fields in ThemeSpecifics for theme attributes which were previously synced using preferences, thereby putting syncing of all the theme attributes behind the Themes sync toggle. – Mac, Windows, Linux, ChromeOS
-
-#move-theme-prefs-to-specifics
 
 Default
 Top Chrome Bookmarks Tree View
@@ -2929,6 +2811,30 @@ Snackbar for settings
 Enables a snack bar that is shown to users after they save the setting that controls whether a user gets signed in to Chrome when signing in to Google Services. – Mac, Windows, Linux
 
 #enable-snackbar-in-settings
+
+Default
+Lens overlay side panel open in new tab
+Enables open in new tab in the Lens overlay side panel. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-side-panel-open-in-new-tab
+
+Default
+Enable System Audio Echo Cancellation (AEC)
+Enables usage of system AEC on Windows and Mac. The goal is to ensure that audio which is played out from from external (non-Chrome) applications does not leak into microphone signals and thereby causing echo. On Windows, Windows 11 24H2 (build 26100) and above is required. – Mac, Windows
+
+#enforce-system-echo-cancellation
+
+Default
+Improved password change service
+Experimental feature, which offers automatic password change to the user when they sign in with a credential known to be leaked. – Mac, Windows, Linux, ChromeOS
+
+#improved-password-change-service
+
+Default
+Mark all credential as leaked
+Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service – Mac, Windows, Linux, ChromeOS
+
+#mark-all-credentials-as-leaked
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
