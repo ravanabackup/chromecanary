@@ -1,5 +1,5 @@
 Experiments
-135.0.7000.0
+135.0.7016.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -89,12 +89,6 @@ Enabled
 Use an animation when programmatically resizing a documentpicture-in-picture window – Mac, Windows, Linux, ChromeOS
 
 #document-picture-in-picture-animate-resize
-
-Enabled
- Download Warning Improvements
-Enable UI improvements for downloads, download scanning, and download warnings. The enabled features are subject to change at any time. – Mac, Windows, Linux, ChromeOS
-
-#download-warning-improvements
 
 Enabled
  Camera and Mic Effects
@@ -319,12 +313,6 @@ Enables tiered compilation of WebAssembly (will tier up to TurboFan if #enable-w
 #enable-webassembly-tiering
 
 Default
-WebAssembly Memory64
-Enables 64-bit memory indices on WebAssembly operations – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-webassembly-memory64
-
-Default
 Future V8 VM features
 This enables upcoming and experimental V8 VM features. This flag does not enable experimental JavaScript features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -467,6 +455,18 @@ Enable Isolated Web Apps
 Enables experimental support for Isolated Web Apps. See https://github.com/reillyeon/isolated-web-apps for more information. – Mac, Windows, Linux, ChromeOS
 
 #enable-isolated-web-apps
+
+Default
+Direct Sockets API in Service Workers
+Enables access to the Direct Sockets API in service workers. See https://github.com/WICG/direct-sockets for details. – Mac, Windows, Linux, ChromeOS
+
+#direct-sockets-in-service-workers
+
+Default
+Direct Sockets API in Shared Workers
+Enables access to the Direct Sockets API in shared workers. See https://github.com/WICG/direct-sockets for details. – Mac, Windows, Linux, ChromeOS
+
+#direct-sockets-in-shared-workers
 
 Default
 Enable Isolated Web App Developer Mode
@@ -811,12 +811,6 @@ Allow the passing in and display of card network and issuer icons for the Secure
 #enable-network-and-issuer-icons-for-secure-payment-confirmation
 
 Default
-Enable (deprecated) synchronous mutation events
-Mutation Events are a deprecated set of events which cause performance issues. Disabling this feature turns off Mutation Events. NOTE: Disabling these events can cause breakage on some sites that are still reliant on these deprecated features. – Mac, Windows, Linux, ChromeOS, Android
-
-#mutation-events
-
-Default
 Enables keyboard focusable scrollers
 Scrollers without focusable children are keyboard-focusable by default. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1003,42 +997,6 @@ Enables fetching of page load metadata to be persisted on-device. – Mac, Windo
 #page-content-annotations-remote-page-metadata
 
 Default
-Block insecure private network requests.
-Prevents non-secure contexts from making subresource requests to more-private IP addresses. See also: https://developer.chrome.com/blog/private-network-access-update/ – Mac, Windows, Linux, ChromeOS, Android
-
-#block-insecure-private-network-requests
-
-Default
-Respect the result of Private Network Access preflights
-Enables sending Private Network Access preflights ahead of requests to more-private IP addresses. These preflight requests must succeed in order for the request to proceed. See also: https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android
-
-#private-network-access-respect-preflight-results
-
-Default
-Reduce waiting time for Private Network Access preflights response
-Reduce the waiting time for Private Network Access preflights to 200 milliseconds. The default timeout period for requests is 5 minutes. See also: https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android
-
-#private-network-access-preflight-short-timeout
-
-Default
-Enable Permission Prompt for Private Network Access
-Enable Permission Prompt for HTTPS public websites accessing HTTP more-private devices. Require to set a fetch option `targetAddressSpace` on the request to relax mixed content check. See also: https://developer.chrome.com/blog/private-network-access-update-2023-02-02/ – Mac, Windows, Linux, ChromeOS
-
-#private-network-access-permission-prompt
-
-Default
-Ignore Private Network Access errors for worker-related requests
-Ignore Private Network Access errors for worker-related requests, including worker script fetches, and fetches initiated in a worker. Instead of blocking the requests, the errors will be shown as an issue in DevTools. See also: https://developer.chrome.com/blog/private-network-access-update/ and https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android
-
-#private-network-access-ignore-worker-errors
-
-Default
-Ignore Private Network Access errors for navigation-related requests
-Ignore Private Network Access errors for navigation-related requests, including iframes and popups. Instead of blocking the requests, the errorswill be shown as an issue in DevTools. See also: https://developer.chrome.com/blog/private-network-access-update/ and https://developer.chrome.com/blog/private-network-access-preflight/ – Mac, Windows, Linux, ChromeOS, Android
-
-#private-network-access-ignore-navigation-errors
-
-Default
 Tab Groups Defer Remote Navigations
 Prevents remote navigations from being performed when a tab is backgrounded in a group – Mac, Windows, Linux, ChromeOS
 
@@ -1147,6 +1105,24 @@ Shows six files in the NTP Drive module, instead of three. – Mac, Windows, Lin
 #ntp-drive-module-show-six-files
 
 Default
+NTP Footer
+Adds footer to New Tab Page that encapsulates customize buttons and background/theme attributions. – Mac, Windows, Linux, ChromeOS
+
+#ntp-footer
+
+Default
+NTP Mobile Promo
+NTP Mobile Promo – Mac, Windows, Linux, ChromeOS
+
+#ntp-mobile-promo
+
+Default
+Force NTP Mobile Promo
+Force NTP Mobile Promo – Mac, Windows, Linux, ChromeOS
+
+#force-ntp-mobile-promo
+
+Disabled
 NTP Most Relevant Tab Resumption Module
 Shows the Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
@@ -1303,12 +1279,6 @@ Enable updating the wasm TTS extension resource files through the Component Upda
 #wasm-tts-component-updater-enabled
 
 Default
-Drop Input Events Before First Paint
-Before the user can see the first paint of a new page they cannot intentionally interact with elements on that page. By dropping the events we prevent accidental interaction with a page the user has not seen yet. – Mac, Windows, Linux, ChromeOS, Android
-
-#drop-input-events-before-first-paint
-
-Default
 Boundary Event Dispatch Tracks Node Removal
 Mouse and Pointer boundary event dispatch (i.e. dispatch of enter, leave, over, out events) tracks DOM node removal to fix event pairing on ancestor nodes. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1379,6 +1349,12 @@ Global Media Controls updated UI
 Show updated UI for Global Media Controls in all the non-CrOS desktop platforms. – Mac, Windows, Linux
 
 #global-media-controls-updated-ui
+
+Default
+Sync point graph validation
+When enabled, replaces synchronous GPU sync point validation with graph based validation – Mac, Windows, Linux, ChromeOS, Android
+
+#sync-point-graph-validation
 
 Default
 Elastic Overscroll
@@ -1459,6 +1435,12 @@ Enables additional, experimental features in Web Machine Learning Neural Network
 #experimental-web-machine-learning-neural-network
 
 Default
+DirectML backend for WebNN
+Enables using DirectML for GPU and NPU inference with the WebNN API. Disabling this flag enables a fallback to TFLite. – Windows
+
+#webnn-directml
+
+Default
 One time permission
 Enables experimental one time permissions for Geolocation, Microphone and Camera. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1505,6 +1487,12 @@ Enables Out-of-Process Printer Drivers
 Enables printing interactions with the operating system to be performed out-of-process. – Mac, Windows, Linux, ChromeOS
 
 #enable-oop-print-drivers
+
+Default
+Privacy Sandbox Internals Page
+Enables the chrome://privacy-sandbox-internals debugging page. – Mac, Windows, Linux, ChromeOS, Android
+
+#privacy-sandbox-internals
 
 Default
 Align SurfaceLayerImpls to pixel grid
@@ -1699,6 +1687,24 @@ Enables In-Product-Help that appears when at least one extension is requesting a
 #iph-extensions-request-access-button-feature
 
 Default
+Extension Manifest V2 Deprecation Warning Stage
+Displays a warning that affected MV2 extensions may no longer be supported due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS
+
+#extension-manifest-v2-deprecation-warning
+
+Default
+Extension Manifest V2 Deprecation Disabled Stage
+Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS
+
+#extension-manifest-v2-deprecation-disabled
+
+Default
+Extension Manifest V2 Deprecation Unsupported Stage
+Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation and cannot be re-enabled. – Mac, Windows, Linux, ChromeOS
+
+#extension-manifest-v2-deprecation-unsupported
+
+Default
 Force Native Host Executables to Launch Directly
 Force Native Host executables to launch directly via CreateProcess. – Windows
 
@@ -1753,14 +1759,8 @@ Enables the 'enterpictureinpicture' MediaSessionAction to allow websites to regi
 #media-session-enter-picture-in-picture
 
 Default
-Auto picture in picture video heuristics
-Enables the use of video heuristics for tracking HTMLVideoElement visibility. – Mac, Windows, Linux, ChromeOS
-
-#auto-picture-in-picture-video-heuristics
-
-Default
 Auto picture in picture for video playback
-Enables auto picture in picture for video playback. Requires chrome://flags/#auto-picture-in-picture-video-heuristics to be enabled. – Mac, Windows, Linux, ChromeOS
+Enables auto picture in picture for video playback – Mac, Windows, Linux, ChromeOS
 
 #auto-picture-in-picture-for-video-playback
 
@@ -1819,12 +1819,6 @@ When enabled, Safety Check v2 will be visible in settings. – Mac, Windows, Lin
 #safety-hub
 
 Default
-Plus address full form filling
-When enabled, the email on address profile suggestions is replaced with the user's plus address for the current domain – Mac, Windows, Linux, ChromeOS, Android
-
-#plus-address-full-form-fill
-
-Default
 Permission radio buttons in Site Settings
 Enables radio buttons for permissions in SiteSettings – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1861,34 +1855,10 @@ When enabled, allows syncing of the autofill wallet credential data type. – Ma
 #sync-autofill-wallet-credential-data
 
 Default
-Sync Autofill Wallet Usage Data
-When enabled, allows syncing of the autofill wallet usage data type. – Mac, Windows, Linux, ChromeOS, Android
-
-#sync-autofill-wallet-usage-data
-
-Default
 Enable the account data storage for preferences for syncing users
 Enables storing preferences in a second, Gaia-account-scoped storage for syncing users – Mac, Windows, Linux, ChromeOS
 
 #enable-preferences-account-storage
-
-Default
-Chrome for iOS promo : passwords
-When enabled, the new Contextual Chrome for iOS promo will be shown tothe eligible users when they save/update their passwords. – Mac, Windows, Linux, ChromeOS
-
-#ios-promo-refreshed-password-bubble
-
-Default
-Chrome for iOS promo : addresses
-When enabled, the Contextual Chrome for iOS promo will be shown tothe eligible users when they save/update their address. – Mac, Windows, Linux, ChromeOS
-
-#ios-promo-address-bubble
-
-Default
-Chrome for iOS promo : payments
-When enabled, the Contextual Chrome for iOS promo will be shown tothe eligible users when they save/update their payments. – Mac, Windows, Linux, ChromeOS
-
-#ios-promo-payment-bubble
 
 Default
 Enable mitigation algorithm for rate obfuscation in compute pressure
@@ -1973,6 +1943,18 @@ Enable CVC storage and filling for payments autofill
 When enabled, we will store CVC for both local and server credit cards. This will also allow the users to autofill their CVCs on checkout pages. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-cvc-storage-and-filling
+
+Default
+Privacy Sandbox Enrollment Overrides
+Allows a list of sites to use Privacy Sandbox features without them being enrolled and attested into the Privacy Sandbox experiment. See: https://developer.chrome.com/en/docs/privacy-sandbox/enroll/ – Mac, Windows, Linux, ChromeOS, Android
+
+#privacy-sandbox-enrollment-overrides
+
+Disabled
+Enable prefetching of risk data during payments autofill retrieval
+When enabled, risk data is prefetched during payments autofill flows to reduce user-perceived latency. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-prefetching-risk-data-for-retrieval
 
 Default
 Third party profile management
@@ -2507,6 +2489,12 @@ Use the Permission Predictions Service and Gemini Nano v2 to surface permission 
 #permissions-ai-v1
 
 Default
+Lens overlay simplified selection
+Enables simplified selection in the Lens overlay. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-simplified-selection
+
+Default
 Lens overlay translate button
 Enables translate button via the Lens overlay. – Mac, Windows, Linux, ChromeOS
 
@@ -2777,6 +2765,12 @@ Enables equalized styling for the dismissal buttons on the Privacy Sandbox Promp
 #privacy-sandbox-equalized-prompt-buttons
 
 Default
+Move theme prefs to ThemeSpecifics
+Uses new fields in ThemeSpecifics for theme attributes which were previously synced using preferences, thereby putting syncing of all the theme attributes behind the Themes sync toggle. – Mac, Windows, Linux, ChromeOS
+
+#move-theme-prefs-to-specifics
+
+Default
 Top Chrome Bookmarks Tree View
 Show the bookmarks side panel in a tree view while in compact mode. – Mac, Windows, Linux, ChromeOS
 
@@ -2829,6 +2823,30 @@ Mark all credential as leaked
 Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service – Mac, Windows, Linux, ChromeOS
 
 #mark-all-credentials-as-leaked
+
+Default
+Enables new design for guest and incognito profile menu
+The design is in line with the regular profiles. The illustration is removed. – Mac, Windows, Linux
+
+#enable-improved-guest-profile-menu
+
+Default
+Account storage of preferences, themes and search engines
+When enabled, keeps account preferences, themes and search-engines separate from the local data. If the user signs out or sync is turned off, only the account data is removed while the pre-existing/local data is left behind. – Mac, Windows, Linux, ChromeOS
+
+#account-storage-prefs-themes-search-engines
+
+Default
+Enable checkout amount extraction on Chrome desktop
+When enabled, Chrome will extract the checkout amount from the checkout page of the allowlisted merchant websites. – Mac, Windows, Linux, ChromeOS
+
+#autofill-enable-amount-extraction-desktop
+
+Default
+AXTree Fixing
+When enabled, allows Chrome to dynamically fix the AXTree of sites. This is experimental and may cause breaking changes to users of assistive technology. – Mac, Windows, Linux, ChromeOS
+
+#enable-ax-tree-fixing
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
