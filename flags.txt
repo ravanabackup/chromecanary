@@ -1,5 +1,5 @@
 Experiments
-135.0.7016.0
+135.0.7019.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -383,12 +383,6 @@ Predictions on Username first flow with intermediate values
 New single username predictions based on voting from Username First Flow with intermediate values. – Mac, Windows, Linux, ChromeOS, Android
 
 #username-first-flow-with-intermediate-values-predictions
-
-Default
-Username first flow with intermediate values voting
-Support voting on username first flow with intermediate values. Username first flow is login/sign-up flow where a user has to type username first on one page and then password on another page. Intermediate fields are usually an OTP field or CAPTCHA. – Mac, Windows, Linux, ChromeOS, Android
-
-#username-first-flow-with-intermediate-values-voting
 
 Default
 Show autofill signatures.
@@ -1051,6 +1045,12 @@ Allows users to resize the side panel and persist the width across browser sessi
 #side-panel-resizing
 
 Default
+By Date History in Side Panel
+If enabled, shows the 'By Date' History in Side Panel – Mac, Windows, Linux, ChromeOS
+
+#by-date-history-in-side-panel
+
+Default
 Product Specifications
 Enable the Product Specifications feature. – Mac, Windows, Linux, ChromeOS
 
@@ -1201,6 +1201,18 @@ Enables the ability to annotate PDFs using a new ink library. – Mac, Windows, 
 #pdf-ink2
 
 Default
+Print with PostScript Type 42 fonts
+When using PostScript level 3 printing, render text with Type 42 fonts if possible. – Windows
+
+#print-with-postscript-type42-fonts
+
+Default
+Print with reduced rasterization
+When using GDI printing, avoid rasterization if possible. – Windows
+
+#print-with-reduced-rasterization
+
+Default
 Read printer capabilities with XPS
 When enabled, utilize XPS interface to read printer capabilities. – Windows
 
@@ -1337,6 +1349,12 @@ Unsafe WebGPU Support
 Convenience flag for WebGPU development. Enables best-effort WebGPU support on unsupported configurations and more! Note that this flag could expose security issues to websites so only use it for your own development. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-unsafe-webgpu
+
+Disabled
+Force High Performance GPU
+Forces use of high performance GPU if available. Warning: this flag may increase power consumption leading to shorter battery time. – Windows
+
+#force-high-performance-gpu
 
 Disabled
 WebGPU Developer Features
@@ -2059,12 +2077,6 @@ A reactive programming primitive for ergonomically handling streams of async dat
 #observable-api
 
 Default
-Atomic DOM move (Node.moveBefore)
-Introduces a state-preserving atomic move primitive to the DOM, by calling Node.moveBefore. See https://github.com/whatwg/dom/issues/1255. – Mac, Windows, Linux, ChromeOS, Android
-
-#atomic-move
-
-Default
 Web App System Media Controls
 Enable instanced system media controls for web apps – Mac, Windows
 
@@ -2111,6 +2123,12 @@ Show permission grants from Related Website Sets
 Shows permission grants created by Related Website Sets in Chrome Settings UI and Page Info Bubble, default is hidden – Mac, Windows, Linux, ChromeOS, Android
 
 #related-website-sets-permission-grants
+
+Default
+Enable Autofill support for filling loyalty cards
+When enabled, Autofill will offer support for filling the user's loyalty cards stored in Google Wallet. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-loyalty-cards-filling
 
 Default
 Tear Off Web App Tab
@@ -2367,30 +2385,6 @@ Adjust feature reports received with WebHID
 Enable/Disable a fix for a bug that caused feature reports to be offset by one byte when received from devices that do not use numbered reports. – Windows
 
 #hid-get-feature-report-fix
-
-Default
-Tab Organization
-Enables the Auto Tab Groups feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
-
-#tab-organization
-
-Default
-Tab Organization Settings Visibility
-Shows Tab Organization in the settings UI – Mac, Windows, Linux, ChromeOS
-
-#tab-organization-settings-visibility
-
-Default
-Tab Declutter
-Enables the Tab Declutter feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
-
-#tabstrip-declutter
-
-Default
-Tab Deduplication
-Enables the Tab Deduplication feature, which can be found within the Tab Search bubble. – Mac, Windows, Linux, ChromeOS
-
-#tabstrip-dedupe
 
 Default
 Remove "Show cards from your Google Account" dropdown
@@ -2847,6 +2841,18 @@ AXTree Fixing
 When enabled, allows Chrome to dynamically fix the AXTree of sites. This is experimental and may cause breaking changes to users of assistive technology. – Mac, Windows, Linux, ChromeOS
 
 #enable-ax-tree-fixing
+
+Default
+Clipboard contentsId API
+Enables the API for getting a unique token of the system clipboard's current state. For details, see https://github.com/explainers-by-googlers/clipboard-contents-id – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-clipboard-contents-id
+
+Default
+Enable loading and querying the checkout amount extraction allowlist on Chrome Desktop
+When enabled, Chrome will have the ability to load and query the allowlist for checkout amount extraction, which will be used to check if the current URL is eligible for products that use the checkout amount extraction algorithm. – Mac, Windows, Linux, ChromeOS
+
+#autofill-enable-amount-extraction-allowlist-desktop
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
