@@ -1,5 +1,5 @@
 Experiments
-135.0.7019.0
+135.0.7024.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -2478,7 +2478,7 @@ Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Win
 
 Default
 PermissionsAI
-Use the Permission Predictions Service and Gemini Nano v2 to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+Use the Permission Predictions Service and the AIv1 model to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
 
 #permissions-ai-v1
 
@@ -2853,6 +2853,24 @@ Enable loading and querying the checkout amount extraction allowlist on Chrome D
 When enabled, Chrome will have the ability to load and query the allowlist for checkout amount extraction, which will be used to check if the current URL is eligible for products that use the checkout amount extraction algorithm. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-amount-extraction-allowlist-desktop
+
+Default
+DevTools Automatic Workspace Folders
+When this and the DevTools Project Settings flags are turned on, DevTools will automatically add workspace folders based on a workspace configuration in the project settings. – Mac, Windows, Linux, ChromeOS
+
+#devtools-project-settings
+
+Default
+DevTools Project Settings
+If enabled, DevTools will try to fetch project settings in the form of a `com.chrome.devtools.json` file from a well-known URI on local debugging targets. – Mac, Windows, Linux, ChromeOS
+
+#devtools-automatic-workspace-folders
+
+Default
+Revamped Delete Browsing Data dialog
+Enables a revamped Delete Browsing Data dialog on Desktop. This includes UI changes and removal of the bulk password deletion option from the dialog. – Mac, Windows, Linux, ChromeOS
+
+#dbd-revamp-desktop
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
