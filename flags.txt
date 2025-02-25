@@ -1,5 +1,5 @@
 Experiments
-135.0.7024.0
+135.0.7035.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -115,6 +115,12 @@ Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, C
 #enable-lens-overlay-translate-languages
 
 Enabled
+ Revamped Delete Browsing Data dialog
+Enables a revamped Delete Browsing Data dialog on Desktop. This includes UI changes and removal of the bulk password deletion option from the dialog. – Mac, Windows, Linux, ChromeOS
+
+#dbd-revamp-desktop
+
+Enabled
 Temporarily unexpire M133 flags.
 Temporarily unexpire flags that expired as of M133. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -209,6 +215,12 @@ Show Autofill predictions
 Annotates web forms with Autofill field type predictions as placeholder text. – Mac, Windows, Linux, ChromeOS, Android
 
 #show-autofill-type-predictions
+
+Default
+Swap credit card suggestions
+When enabled, swapping autofilled payment suggestions would resultin overriding all of the payments fields with the swapped profile data – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-payments-field-swapping
 
 Default
 Backdrop Filter Mirror Edge
@@ -1387,6 +1399,12 @@ Enables Element Capture - an API allowing the mutation of a tab-capture media tr
 #element-capture
 
 Default
+Element Capture cross-tab
+Allows the Element Capture API to be used cross-tab. (Only has an effect if Element Capture is generally enabled.) – Mac, Windows, Linux, ChromeOS
+
+#element-capture-cross-tab
+
+Default
 Device Posture API
 Enables Device Posture API (foldable devices) – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1415,6 +1433,12 @@ Run video capture service in browser
 Run the video capture service in the browser process. – Windows, ChromeOS
 
 #run-video-capture-service-in-browser
+
+Default
+Block TPCs Incognito
+Blocks TPCs in Incognito – Mac, Windows, Linux, ChromeOS, Android
+
+#block-tpcs-incognito
 
 Default
 Tracking Protection for 3PCD
@@ -1547,6 +1571,12 @@ PDF XFA support
 Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support. – Mac, Windows, Linux, ChromeOS
 
 #pdf-xfa-forms
+
+Default
+Clear window name in top-level cross-site cross-browsing-context-group navigation
+Clear the preserved window.name property when it's a top-level cross-site navigation that swaps BrowsingContextGroup. – Mac, Windows, Linux, ChromeOS, Android
+
+#clear-cross-site-cross-browsing-context-group-window-name
 
 Default
 Debugging tools for UI
@@ -1739,6 +1769,12 @@ Captured Surface Control
 Enables an API that allows an application to control scroll and zoom on the tab which it is capturing. – Mac, Windows, Linux, ChromeOS
 
 #captured-surface-control
+
+Default
+Region Capture cross-tab
+Allows the Region Capture API to be used cross-tab. (Only has an effect if Region Capture is generally enabled.) – Mac, Windows, Linux, ChromeOS
+
+#region-capture-cross-tab
 
 Default
 Skia Graphite
@@ -2198,13 +2234,13 @@ Enable Fingerprinting Protection which may block fingerprinting resources from l
 
 Default
 Device Bound Session Credentials (Standard)
-Enables the official version of Device Bound Session Credentials. For more information see https://github.com/WICG/dbsc. – Windows
+Enables the official version of Device Bound Session Credentials. For more information see https://github.com/WICG/dbsc. – Mac, Windows, Linux
 
 #enable-standard-device-bound-session-credentials
 
 Default
 Device Bound Session Credentials (Standard) Persistence
-Enables session persistence for the official version of Device Bound Session Credentials. – Windows
+Enables session persistence for the official version of Device Bound Session Credentials. – Mac, Windows, Linux
 
 #enable-standard-device-bound-session-persistence
 
@@ -2441,6 +2477,12 @@ Enabled Data Sharing Joining flow related UI and features. – Mac, Windows, Lin
 #data-sharing-join-only
 
 Default
+Data Sharing server environment
+Sets data sharing server environment. – Mac, Windows, Linux, ChromeOS, Android
+
+#data-sharing-non-production-environment
+
+Default
 History Sync Alternative Illustration
 Enables history sync alternative illustration. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2471,6 +2513,12 @@ Enables redesign of signin settings and better signin errors in chrome://setting
 #improved-settings-ui-on-desktop
 
 Default
+Discounts on navigation
+Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
+
+#discount-on-navigation
+
+Default
 DevTools Privacy UI
 Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2495,12 +2543,6 @@ Enables translate button via the Lens overlay. – Mac, Windows, Linux, ChromeOS
 #enable-lens-overlay-translate-button
 
 Default
-Lens overlay contextual search box
-Enables contextual search box in the Lens overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-contextual-search-box
-
-Default
 Lens overlay latency optimizations
 Enables latency optimizations for the Lens overlay. – Mac, Windows, Linux, ChromeOS
 
@@ -2519,16 +2561,10 @@ When enabled, a form event will log to all of the parsed forms of the same type 
 #autofill-enable-log-form-events-to-all-parsed-form-types
 
 Default
-Enable buy now pay later on Autofill for Affirm
-When enabled, users will have the option to pay with buy now pay later with Affirm on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
+Enable buy now pay later on Autofill
+When enabled, users will have the option to pay with buy now pay later on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
 
-#autofill-enable-buy-now-pay-later-for-affirm
-
-Default
-Enable buy now pay later on Autofill for Zip
-When enabled, users will have the option to pay with buy now pay later with Zip on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
-
-#autofill-enable-buy-now-pay-later-for-zip
+#autofill-enable-buy-now-pay-later
 
 Default
 Enable syncing buy now pay later user data.
@@ -2867,10 +2903,22 @@ If enabled, DevTools will try to fetch project settings in the form of a `com.ch
 #devtools-automatic-workspace-folders
 
 Default
-Revamped Delete Browsing Data dialog
-Enables a revamped Delete Browsing Data dialog on Desktop. This includes UI changes and removal of the bulk password deletion option from the dialog. – Mac, Windows, Linux, ChromeOS
+Privacy Sandbox Ad Topics Content Parity
+Enables the Ad Topics card in the Privacy Guide to be displayed. This flag also updates UI and text of the Ad Topics settings page and Topics Consent Dialog. All of these changes are subject to regional availability. – Mac, Windows, Linux, ChromeOS, Android
 
-#dbd-revamp-desktop
+#privacy-sandbox-ad-topics-content-parity
+
+Default
+Enable 'expired' text for expired cards.
+When enabled, cards that have expired will display 'expired' instead of 'expires' text. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-card-expired-text
+
+Default
+Web Authentication Align Error Type for 'payment' credentials
+Throw a 'NotAllowedError' instead of 'SecurityError' when creating 'payment' credentials in a cross-origin iframe without user activation. See https://crbug.com/41484826 – Mac, Windows, Linux, ChromeOS, Android
+
+#web-authentication-align-error-type-for-payment-credential-create
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
