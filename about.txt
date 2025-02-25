@@ -28,7 +28,6 @@ chrome://credits
 chrome://customize-chrome-side-panel.top-chrome
 chrome://device-log
 chrome://dino
-chrome://download-internals
 chrome://downloads
 chrome://extensions
 chrome://extensions-internals
@@ -36,6 +35,7 @@ chrome://feedback
 chrome://flags
 chrome://gcm-internals
 chrome://glic
+chrome://glic-fre
 chrome://gpu
 chrome://histograms
 chrome://history
@@ -44,7 +44,6 @@ chrome://indexeddb-internals
 chrome://inspect
 chrome://internals
 chrome://intro
-chrome://local-state
 chrome://managed-user-profile-notice
 chrome://management
 chrome://media-engagement
@@ -95,10 +94,7 @@ chrome://tab-search.top-chrome
 chrome://tab-strip.top-chrome
 chrome://terms
 chrome://topics-internals
-chrome://traces-internals
-chrome://tracing
 chrome://translate-internals
-chrome://ukm
 chrome://usb-internals
 chrome://user-education-internals
 chrome://version
@@ -120,9 +116,11 @@ Internal debugging pages are currently enabled.
 chrome://commerce-internals
 chrome://data-sharing-internals
 chrome://discards
+chrome://download-internals
 chrome://family-link-user-internals
 chrome://history-clusters-internals
 chrome://interstitials
+chrome://local-state
 chrome://location-internals
 chrome://media-router-internals
 chrome://memory-internals
@@ -132,6 +130,9 @@ chrome://on-device-internals
 chrome://optimization-guide-internals
 chrome://profile-internals
 chrome://safe-browsing
+chrome://traces-internals
+chrome://tracing
+chrome://ukm
 chrome://user-actions
 chrome://webrtc-logs
 chrome://webui-gallery
