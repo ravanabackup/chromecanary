@@ -1,5 +1,5 @@
 Experiments
-135.0.7035.0
+135.0.7039.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -2095,6 +2095,12 @@ Enables profiles reordering in the Profile Picker main view by drag and dropping
 #profiles-reordering
 
 Default
+Enable Extensions Explicit Sign In
+Enables users to perform an explicit signin upon installing an extension. After this, syncing for extensions will be enabled when in transport mode (when a user is signed in but has not turned on full sync). – Mac, Windows, Linux, ChromeOS
+
+#enable-extensions-explicit-browser-signin
+
+Default
 Device Bound Session Credentials
 Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
 
@@ -2891,14 +2897,20 @@ When enabled, Chrome will have the ability to load and query the allowlist for c
 #autofill-enable-amount-extraction-allowlist-desktop
 
 Default
-DevTools Automatic Workspace Folders
-When this and the DevTools Project Settings flags are turned on, DevTools will automatically add workspace folders based on a workspace configuration in the project settings. – Mac, Windows, Linux, ChromeOS
+DevTools Project Settings
+If enabled, DevTools will try to fetch project settings in the form of a `com.chrome.devtools.json` file from a well-known URI on local debugging targets. – Mac, Windows, Linux, ChromeOS
 
 #devtools-project-settings
 
 Default
-DevTools Project Settings
-If enabled, DevTools will try to fetch project settings in the form of a `com.chrome.devtools.json` file from a well-known URI on local debugging targets. – Mac, Windows, Linux, ChromeOS
+DevTools CSS Value Tracing
+Enables the CSS Value Tracing UI in the elements panel. – Mac, Windows, Linux, ChromeOS
+
+#devtools-css-value-tracing
+
+Default
+DevTools Automatic Workspace Folders
+When this and the DevTools Project Settings flags are turned on, DevTools will automatically add workspace folders based on a workspace configuration in the project settings. – Mac, Windows, Linux, ChromeOS
 
 #devtools-automatic-workspace-folders
 
