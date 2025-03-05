@@ -1,5 +1,5 @@
 Experiments
-135.0.7039.0
+135.0.7049.1
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Top Chrome Toast Refinements
 Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
@@ -481,12 +481,6 @@ Enables the installation of unverified Isolated Web Apps – Mac, Windows, Linux
 #enable-isolated-web-app-dev-mode
 
 Default
-Enable the Iwa Key Distribution component
-Enables the Iwa Key Distribution component that supplies key rotation data for Isolated Web Apps. – Mac, Windows, Linux, ChromeOS
-
-#enable-iwa-key-distribution-component
-
-Default
 Experimental cohort for the Iwa Key Distribution component
 Specifies the experimental cohort for the Iwa Key Distribution component. – Mac, Windows, Linux, ChromeOS
 
@@ -673,8 +667,14 @@ Enables access to articulated hand tracking sensor input in WebXR. – Mac, Wind
 #webxr-hand-input
 
 Default
+WebXR Projection Layers
+Enables use of XRProjectionLayers. – Windows, Android
+
+#webxr-projection-layers
+
+Default
 WebXR/WebGPU Binding
-Enables rendering with WebGPU for WebXR sessions. – Windows, Android
+Enables rendering with WebGPU for WebXR sessions. WebXR Projection Layers must be also be enabled to use this feature. – Windows, Android
 
 #webxr-webgpu-binding
 
@@ -713,18 +713,6 @@ Block scripts loaded via document.write
 Disallows fetches for third-party parser-blocking scripts inserted into the main frame via document.write. – Mac, Windows, Linux, ChromeOS, Android
 
 #disallow-doc-written-script-loads
-
-Default
-CSS view transition layered capture
-Controls the way view transition elements are captured. When enabled, view transition borders, backgrounds, effects etc. are captured as style instead of being baked into the image. – Mac, Windows, Linux, ChromeOS, Android
-
-#view-transition-layered-capture
-
-Default
-CSS view transitions: compute visual overflow from surfaces
-Changes the underlying mechanism to compute the view transition live element geometry. This shouldn't have web-observable effects, but exposing as a flag for easy triage. – Mac, Windows, Linux, ChromeOS, Android
-
-#view-transition-overflow-rect-from-surface
 
 Default
 Use Windows Runtime MIDI API
@@ -1045,12 +1033,6 @@ Choices for overflow indicators shown when the tabstrip is in scrolling mode. �
 #scrollable-tabstrip-overflow
 
 Default
-Toolbar pinning
-Enables the ability to pin features to the toolbar via the Customize Chrome side panel. – Mac, Windows, Linux, ChromeOS
-
-#toolbar-pinning
-
-Default
 Side Panel Resizing
 Allows users to resize the side panel and persist the width across browser sessions. – Mac, Windows, Linux, ChromeOS
 
@@ -1175,6 +1157,12 @@ Chrome-wide echo cancellation
 Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
 
 #chrome-wide-echo-cancellation
+
+Default
+DCHECKs are fatal
+By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
+
+#dcheck-is-fatal
 
 Default
 Enable network logging to file
@@ -1759,12 +1747,6 @@ Force Native Host executables to launch directly via CreateProcess. – Windows
 #launch-windows-native-hosts-directly
 
 Default
-Out-of-process 2D canvas rasterization.
-The rasterization of 2d canvas contents is performed in the GPU process. Requires that out-of-process rasterization be enabled. – Mac, Windows, Linux, ChromeOS
-
-#canvas-oop-rasterization
-
-Default
 Captured Surface Control
 Enables an API that allows an application to control scroll and zoom on the tab which it is capturing. – Mac, Windows, Linux, ChromeOS
 
@@ -1849,10 +1831,16 @@ When enabled, applies process isolation to iframes with the 'sandbox' attribute 
 #enable-isolated-sandboxed-iframes
 
 Default
-Reduce Accept-Language request header
-Reduce the amount of information available in the Accept-Language request header. See https://github.com/Tanych/accept-language for more info. – Mac, Windows, Linux, ChromeOS, Android
+Reduce Accept-Language request header and JavaScript navigator.languages.
+Reduce the amount of information in the Accept-Language request header and JavaScript navigator.languages. Enabling this flag overrides the behavior of chrome://flags/#reduce-accept-language-http, which by itself only reduces the Accept-Language request header when enabled. For more information, see https://github.com/explainers-by-googlers/reduce-accept-language. – Mac, Windows, Linux, ChromeOS, Android
 
 #reduce-accept-language
+
+Default
+Reduce Accept-Language request header only
+Reduce the amount of information available in the Accept-Language request header only. chrome://flags/#reduce-accept-language overrides this flag, and if enabled, the changes will take effect for Javascript as well. See https://github.com/explainers-by-googlers/reduce-accept-language for more information. – Mac, Windows, Linux, ChromeOS, Android
+
+#reduce-accept-language-http
 
 Default
 Omit TLS client certificates if credential mode disallows
@@ -2209,6 +2197,12 @@ Feature to allow users to send tabs to their iOS device through a system push no
 #send-tab-ios-push-notifications
 
 Default
+Enable data sharing debug logs
+Enables the data sharing infrastructure to log and save debug messages that can be shown in the internals page. – Mac, Windows, Linux, ChromeOS, Android
+
+#data-sharing-debug-logs
+
+Disabled
 Enable showing card benefits for American Express cards
 When enabled, card benefits offered by American Express will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2931,6 +2925,12 @@ Web Authentication Align Error Type for 'payment' credentials
 Throw a 'NotAllowedError' instead of 'SecurityError' when creating 'payment' credentials in a cross-origin iframe without user activation. See https://crbug.com/41484826 – Mac, Windows, Linux, ChromeOS, Android
 
 #web-authentication-align-error-type-for-payment-credential-create
+
+Default
+Enterprise File Obfuscation
+Enables temporary file obfuscation during download for enterprise users. Downloaded files remain obfuscated on disk while WebProtect performs deep scanning, preventing access before verification is complete. – Mac, Windows, Linux, ChromeOS
+
+#enterprise-file-obfuscation
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
