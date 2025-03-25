@@ -40,6 +40,7 @@ chrome://gpu
 chrome://histograms
 chrome://history
 chrome://history-clusters-side-panel.top-chrome
+chrome://history-side-panel.top-chrome
 chrome://indexeddb-internals
 chrome://inspect
 chrome://internals
@@ -96,7 +97,6 @@ chrome://terms
 chrome://topics-internals
 chrome://translate-internals
 chrome://usb-internals
-chrome://user-education-internals
 chrome://version
 chrome://view-cert
 chrome://web-app-internals
@@ -111,7 +111,7 @@ chrome-untrusted://print
 chrome-untrusted://privacy-sandbox-dialog
 chrome-untrusted://read-anything-side-panel.top-chrome
 Internal Debugging Page URLs
-Internal debugging pages are currently enabled.
+Internal debugging pages are currently disabled.
 
 chrome://commerce-internals
 chrome://data-sharing-internals
@@ -134,6 +134,7 @@ chrome://traces-internals
 chrome://tracing
 chrome://ukm
 chrome://user-actions
+chrome://user-education-internals
 chrome://webrtc-logs
 chrome://webui-gallery
 chrome://webuijserror
