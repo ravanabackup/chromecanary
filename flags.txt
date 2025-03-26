@@ -1,5 +1,5 @@
 Experiments
-136.0.7089.0
+136.0.7090.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M134 flags.
 Temporarily unexpire flags that expired as of M134. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -691,10 +691,22 @@ Enables the use of a request debouncer to throttle the volume of ZPS prefetch re
 #omnibox-zero-suggest-prefetch-debouncing
 
 Default
+Omnibox Zero Prefix Suggestion Prefetching on NTP
+Enables prefetching of the zero prefix suggestions for eligible users on the New Tab page. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-zero-suggest-prefetching
+
+Default
 Omnibox Zero Prefix Suggestion Prefetching on SRP
 Enables prefetching of the zero prefix suggestions for eligible users on the Search Results page. – Mac, Windows, Linux, ChromeOS, Android
 
 #omnibox-zero-suggest-prefetching-on-srp
+
+Default
+Omnibox Zero Prefix Suggestion Prefetching on the Web
+Enables prefetching of the zero prefix suggestions for eligible users on the Web (i.e. non-NTP and non-SRP URLs). – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-zero-suggest-prefetching-on-web
 
 Default
 Log Omnibox URL Scoring Signals
@@ -2451,12 +2463,6 @@ Partition the Visited Link Database, including 'self-links'
 Style links as visited only if they have been clicked from this top-level site and frame origin before. Additionally, style links pointing to the same URL as the page it is displayed on, which have been :visited from any top-level site and frame origin, if they are displayed in a top-level frame or same-origin subframe. – Mac, Windows, Linux, ChromeOS, Android
 
 #partition-visited-link-database-with-self-links
-
-Default
-Disable bulk local credit card migration flows
-When enabled, local credit card migration flows will not be offered, both from checkout flows and from the payment methods settings page. – Mac, Windows, Linux, ChromeOS
-
-#autofill-disable-local-card-migration
 
 Default
 Predictable Reported Quota
