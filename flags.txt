@@ -1,5 +1,5 @@
 Experiments
-136.0.7090.0
+136.0.7094.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M134 flags.
 Temporarily unexpire flags that expired as of M134. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -487,6 +487,18 @@ Enables logging of all messages exchanged between websites, Chrome, and Cast rec
 #cast-message-logging
 
 Default
+Toggle hardware accelerated H.264 video encoding for Cast Streaming
+The default is to allow hardware H.264 encoding when recommended for the platform. If enabled, hardware H.264 encoding will always be allowed when supported by the platform. If disabled, hardware H.264 encoding will never be used. – Mac, Windows, Linux, ChromeOS
+
+#cast-streaming-hardware-h264
+
+Default
+Toggle hardware accelerated VP8 video encoding for Cast Streaming
+The default is to allow hardware VP8 encoding when recommended for the platform. If enabled, hardware VP8 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP8 encoding will never be used. – Mac, Windows, Linux, ChromeOS
+
+#cast-streaming-hardware-vp8
+
+Default
 Toggle hardware accelerated VP9 video encoding for Cast Streaming
 The default is to allow hardware VP9 encoding when recommended for the platform. If enabled, hardware VP9 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP9 encoding will never be used. – Mac, Windows, Linux, ChromeOS
 
@@ -505,6 +517,12 @@ When enabled, a text overlay is rendered on top of each frame sent while Cast St
 #cast-streaming-performance-overlay
 
 Default
+Enable AV1 video encoding for Cast Streaming
+Offers the AV1 video codec when negotiating Cast Streaming, and uses AV1 if selected for the session. – Mac, Windows, Linux, ChromeOS
+
+#enable-cast-streaming-av1
+
+Default
 Enable hardware H264 video encoding on for Cast Streaming on Windows
 Offers the H264 video codec when negotiating Cast Streaming, and uses hardware-accelerated H264 encoding if selected for the session – Windows
 
@@ -515,6 +533,18 @@ Enable VP8 video encoding for Cast Streaming
 Offers the VP8 video codec when negotiating Cast Streaming, and uses VP8 if selected for the session. If true, software VP8 encoding will be offered and hardware VP8 encoding may be offered if enabled and available on this platform. If false, software VP8 will not be offered and hardware VP8 will only be offered if #cast-streaming-hardware-vp8 is explicitly set to true. – Mac, Windows, Linux, ChromeOS
 
 #enable-cast-streaming-vp8
+
+Default
+Enable VP9 video encoding for Cast Streaming
+Offers the VP9 video codec when negotiating Cast Streaming, and uses VP9 if selected for the session. – Mac, Windows, Linux, ChromeOS
+
+#enable-cast-streaming-vp9
+
+Default
+HiDPI tab capture support for Cast Streaming
+Enables HiDPI tab capture during Cast Streaming mirroring sessions. May reduce performance on some platforms and also improve quality of video frames. – Mac, Windows, Linux, ChromeOS
+
+#enable-cast-streaming-with-hidpi
 
 Default
 WebXR Projection Layers
@@ -743,6 +773,12 @@ Omnibox URL Scoring Model
 Enables ML scoring model for Omnibox URL suggestions. – Mac, Windows, Linux, ChromeOS, Android
 
 #omnibox-ml-url-scoring-model
+
+Default
+Omnibox Rich Autocompletion Promising Combinations
+Allow autocompletion for titles and non-prefixes. Suggestions whose titles or URLs contain the user input as a continuous chunk, but not necessarily a prefix, can be the default suggestion. Otherwise, only suggestions whose URLs are prefixed by the user input can be. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-rich-autocompletion-promising
 
 Default
 Omnibox on-focus suggestions on web and SRP
@@ -1465,6 +1501,12 @@ Enables additional keyboard shortcuts to help debugging. – Mac, Windows, Linux
 #ui-debug-tools
 
 Default
+FedCmAlternativeIdentifiers
+Supports usernames and phone numbers as account identifiers. – Mac, Windows, Linux, ChromeOS, Android
+
+#fedcm-alternative-identifiers
+
+Default
 FedCmAuthz
 Enables RPs to request authorization for custom IdP scopes. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1535,6 +1577,12 @@ FedCmWithoutWellKnownEnforcement
 Supports configURL that's not in the IdP's .well-known file. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-without-well-known-enforcement
+
+Default
+FedCmSegmentationPlatform
+Enables the segmentation platform service to provide UI volume recommendations to FedCM. – Mac, Windows, Linux, ChromeOS, Android
+
+#fedcm-segmentation-platform
 
 Default
 DigitalCredentials
@@ -2213,6 +2261,12 @@ Enables canvas hibernation for 2D canvas. – Mac, Windows, Linux, ChromeOS, And
 #canvas-2d-hibernation
 
 Default
+History Sync Opt-in
+Enables the History Sync Opt-in screen on Desktop platforms. The screen is shown after the user has signed in (in the profile picker or in the dialog) instead of the Sync Confirmation screen. – Mac, Windows, Linux
+
+#enable-history-sync-optin
+
+Default
 Enable bookmarks in transport mode
 Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linux
 
@@ -2769,12 +2823,6 @@ Adjust CanCreateCanvas2DResourceProvider()
 Changes CanvasRenderingContxt2D::CanCreateCanvas2DResourceProvider() to check for provider recreation rather than bridge recreation – Mac, Windows, Linux, ChromeOS, Android
 
 #adjust-can-create-canvas2d-resource-provider
-
-Default
-Adjust GetOrCreateCanvasResourceProvider() for Canvas2D
-Moves HTMLCanvasElement::GetOrCreateCanvasResourceProvider() away from calling GetOrCreateCanvas2DLayerBridge() for Canvas2D – Mac, Windows, Linux, ChromeOS, Android
-
-#adjust-get-or-create-2dcanvas-provider
 
 Default
 CanvasRenderingContext2D::IsPaintable() adjustment
