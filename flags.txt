@@ -1,5 +1,5 @@
 Experiments
-136.0.7094.0
+136.0.7097.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M134 flags.
 Temporarily unexpire flags that expired as of M134. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -371,6 +371,12 @@ Direct Sockets API in Shared Workers
 Enables access to the Direct Sockets API in shared workers. See https://github.com/WICG/direct-sockets for details. – Mac, Windows, Linux, ChromeOS
 
 #direct-sockets-in-shared-workers
+
+Default
+Enable an allowlist for Isolated Web Apps
+Enables an allowlist for Isolated Web Apps, restricting installation and updates to only those apps that are allowlisted. – Mac, Windows, Linux, ChromeOS
+
+#enable-isolated-web-app-allowlist
 
 Default
 Enable Isolated Web App Developer Mode
@@ -2243,6 +2249,12 @@ Enable experimental CSS text-box-trim property. – Mac, Windows, Linux, ChromeO
 #text-box-trim
 
 Default
+CSS Masonry Layout
+Enable experimental CSS Masonry Layout implementation. Simple layouts with masonry in the block direction are supported. Subgrid, fragmentation, and out-of-flow items are not supported yet. The syntax to use CSS Masonry is `display: masonry` and masonry-specific properties must be used (i.e. `masonry-template-tracks`, `masonry-track-start`, `masonry-track-end`). More details on masonry syntax can be found at https://tabatkins.github.io/specs/css-masonry/#masonry-model. – Mac, Windows, Linux, ChromeOS, Android
+
+#css-masonry-layout
+
+Default
 Storage Access Headers
 Enables HTTP headers related to the Storage Access API. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2484,9 +2496,15 @@ Enable usage of new password form classifier on the client. – Mac, Windows, Li
 
 Default
 Contextual cueing
-Enables the contextual cueing system to support showing actions – Mac, Windows, Linux
+Enables the contextual cueing system to support showing actions. – Mac, Windows, Linux
 
 #contextual-cueing
+
+Default
+Glic zero state suggestions
+Enables zero state suggestions in Glic. – Mac, Windows, Linux
+
+#glic-zero-state-suggestions
 
 Default
 Partitioned Popins
@@ -2541,12 +2559,6 @@ Glic
 Enables glic – Mac, Windows, Linux
 
 #glic
-
-Default
-Glic Detached Mode
-Enables glic detached mode – Mac, Windows, Linux
-
-#glic-detached
 
 Default
 Glic User Resize
@@ -2847,6 +2859,18 @@ Local Network Access Checks
 Enables Local Network Access checks. See: https://chromestatus.com/feature/5152728072060928 – Mac, Windows, Linux, ChromeOS
 
 #local-network-access-check
+
+Default
+Enable noise for canvas readbacks in Incognito
+Enable noising pixels when the contents of a canvas are read back by a script. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-canvas-noise
+
+Default
+Navigation links in the tab-sharing bar
+Enables quick-navigation links to the captured and capturing tab in the tab-sharing bar. – Mac, Windows, Linux, ChromeOS
+
+#tab-capture-infobar-links
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
