@@ -41,6 +41,7 @@ chrome://histograms
 chrome://history
 chrome://history-clusters-side-panel.top-chrome
 chrome://history-side-panel.top-chrome
+chrome://history-sync-optin
 chrome://indexeddb-internals
 chrome://inspect
 chrome://internals
@@ -111,7 +112,7 @@ chrome-untrusted://print
 chrome-untrusted://privacy-sandbox-dialog
 chrome-untrusted://read-anything-side-panel.top-chrome
 Internal Debugging Page URLs
-Internal debugging pages are currently disabled.
+Internal debugging pages are currently enabled.
 
 chrome://commerce-internals
 chrome://data-sharing-internals
@@ -130,6 +131,7 @@ chrome://on-device-internals
 chrome://optimization-guide-internals
 chrome://profile-internals
 chrome://safe-browsing
+chrome://traces
 chrome://traces-internals
 chrome://tracing
 chrome://ukm
