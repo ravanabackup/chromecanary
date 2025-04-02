@@ -1,5 +1,5 @@
 Experiments
-136.0.7102.0
+136.0.7103.3
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M134 flags.
 Temporarily unexpire flags that expired as of M134. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -2301,12 +2301,6 @@ Adjust feature reports received with WebHID
 Enable/Disable a fix for a bug that caused feature reports to be offset by one byte when received from devices that do not use numbered reports. – Windows
 
 #hid-get-feature-report-fix
-
-Default
-Remove "Show cards from your Google Account" dropdown
-When enabled, the "Show cards from your Google Account" Autofill suggestion will not be displayed, and Autofill will work as if it had been selected. – Mac, Windows, Linux, ChromeOS
-
-#autofill-remove-payments-butter-dropdown
 
 Default
 Language detection web platform API
