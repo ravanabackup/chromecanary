@@ -1,16 +1,22 @@
 Experiments
-136.0.7103.15
+137.0.7105.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
-Temporarily unexpire M134 flags.
-Temporarily unexpire flags that expired as of M134. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+ Make the text in PDF images interactable
+Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
 
-#temporary-unexpire-flags-m134
+#pdf-searchify
 
-Default
+Disabled
 Temporarily unexpire M135 flags.
 Temporarily unexpire flags that expired as of M135. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m135
+
+Default
+Temporarily unexpire M136 flags.
+Temporarily unexpire flags that expired as of M136. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m136
 
 Default
 Enable benchmarking
@@ -215,12 +221,6 @@ GPU rasterization
 Use GPU to rasterize web content. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-gpu-rasterization
-
-Default
-Enable Fontations font backend
-If enabled, the Fontations font backend will be used for web fonts where otherwise FreeType would have been used. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-fontations-backend
 
 Default
 Experimental Web Platform features
@@ -679,12 +679,6 @@ App-store purchases (e.g., Google Play Store) within a TWA can be requested usin
 #enable-debug-for-store-billing
 
 Default
-Secure Payment Confirmation Debug Mode
-This flag removes the restriction that PaymentCredential in WebAuthn and secure payment confirmation in PaymentRequest API must use user verifying platform authenticators. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-debug-for-secure-payment-confirmation
-
-Default
 Secure Payment Confirmation Network and Issuer Icons
 Allow the passing in and display of card network and issuer icons for the Secure Payment Confirmation Web API. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -701,12 +695,6 @@ Fill passwords on account selection
 Filling of passwords when an account is explicitly selected by the user rather than autofilling credentials on page load. – Mac, Windows, Linux, ChromeOS, Android
 
 #fill-on-account-select
-
-Default
-Generic Sensor Extra Classes
-Enables an extra set of sensor classes based on Generic Sensor API, which expose previously unavailable platform features, i.e. AmbientLightSensor and Magnetometer interfaces. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-generic-sensor-extra-classes
 
 Default
 Most Visited Tile: New scoring function
@@ -997,18 +985,6 @@ Adds footer to New Tab Page that encapsulates customize buttons and background/t
 #ntp-footer
 
 Default
-NTP Mobile Promo
-NTP Mobile Promo – Mac, Windows, Linux, ChromeOS
-
-#ntp-mobile-promo
-
-Default
-Force NTP Mobile Promo
-Force NTP Mobile Promo – Mac, Windows, Linux, ChromeOS
-
-#force-ntp-mobile-promo
-
-Disabled
 NTP Most Relevant Tab Resumption Module
 Shows the Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
@@ -1199,12 +1175,6 @@ Reading Mode Read Aloud Phrase Highlighting
 Enables the experimental Reading Mode feature that highlights by phrases when reading aloud, when the phrase option is selected from the highlight menu. – Mac, Windows, Linux, ChromeOS
 
 #read-anything-read-aloud-phrase-highlighting
-
-Default
-Reading Mode with images added via algorithm
-Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS
-
-#read-anything-images-via-algorithm
 
 Default
 Reading Mode Google Docs Integration
@@ -1417,12 +1387,6 @@ Enables using DirectML for GPU and NPU inference with the WebNN API. Disabling t
 #webnn-directml
 
 Default
-One time permission
-Enables experimental one time permissions for Geolocation, Microphone and Camera. – Mac, Windows, Linux, ChromeOS, Android
-
-#one-time-permission
-
-Default
 Page embedded permission control (permission element)
 Enables the Page Embedded Permission Control feature, which allows the use of the HTML 'permission' element. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1487,12 +1451,6 @@ Warm up compositor on prerendering
 Enables compositor warming up on particular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android
 
 #prerender2-warm-up-compositor
-
-Default
-Make the text in PDF images interactable
-Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
-
-#pdf-searchify
 
 Default
 Clear window name in top-level cross-site cross-browsing-context-group navigation
@@ -1795,28 +1753,10 @@ Strictly conform the Fetch spec to omit TLS client certificates if credential mo
 #omit-cors-client-cert
 
 Default
-Permission Module for unused sites in Safety Check
-When enabled, adds the unused sites permission module to Safety Check on desktop. The module will be shown depending on the browser state. – Mac, Windows, Linux, ChromeOS, Android
-
-#safety-check-unused-site-permissions
-
-Default
-Safety Check v2
-When enabled, Safety Check v2 will be visible in settings. – Mac, Windows, Linux, ChromeOS, Android
-
-#safety-hub
-
-Default
 Permission radio buttons in Site Settings
 Enables radio buttons for permissions in SiteSettings – Mac, Windows, Linux, ChromeOS, Android
 
 #permission-site-settings-radio-button
-
-Default
-HaTS for Safety Check v2 on Desktop
-Enables one-off HaTS surveys for Safety Check v2 on Desktop. – Mac, Windows, Linux, ChromeOS
-
-#safety-hub-one-off-survey
 
 Default
 On device notification content detection model
@@ -1999,18 +1939,6 @@ When enabled, server card retrieval will begin with a risk-based check instead o
 #autofill-enable-fpan-risk-based-authentication
 
 Default
-Builtin HLS player
-Enables chrome's builtin HLS player instead of Android's MediaPlayer – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-builtin-hls
-
-Default
-Profiles Reordering
-Enables profiles reordering in the Profile Picker main view by drag and dropping the Profile Tiles. The order is saved when changed and persisted. – Mac, Windows, Linux, ChromeOS
-
-#profiles-reordering
-
-Default
 Enable Extensions Explicit Sign In
 Enables users to perform an explicit signin upon installing an extension. After this, syncing for extensions will be enabled when in transport mode (when a user is signed in but has not turned on full sync). – Mac, Windows, Linux, ChromeOS
 
@@ -2027,36 +1955,6 @@ Device Bound Session Credentials with software keys
 Enables mock software-backed cryptographic keys for Google session credentials binding and Chrome refresh tokens binding (not secure). This is intended to be used for manual testing only. – Mac, Windows, Linux
 
 #enable-bound-session-credentials-software-keys-for-manual-testing
-
-Default
-CCO Edits
-Enables CCO editing feature – Mac, Windows, Linux, ChromeOS
-
-#CCO
-
-Default
-Compose Proactive Nudge
-Enables proactive nudging for Compose – Mac, Windows, Linux, ChromeOS
-
-#compose-proactive-nudge
-
-Default
-Compose Nudge At Cursor
-Shows the Compose proactive nudge at the cursor location – Mac, Windows, Linux, ChromeOS
-
-#compose-nudge-display-at-cursor
-
-Default
-Compose Segmentation Promotion
-Enables the segmentation platform for the Compose proactive nudge – Mac, Windows, Linux, ChromeOS
-
-#compose-segmentation-promotion
-
-Default
-Compose Selection Nudge
-Enables nudge on selection for Compose – Mac, Windows, Linux, ChromeOS
-
-#compose-selection-nudge
 
 Default
 Compose Upfront Input Modes
@@ -2191,12 +2089,6 @@ Hides the "Use a passkey" entry from the autofill popup for conditional WebAuthn
 #hybrid-passkeys-in-context-menu
 
 Default
-Enable automatic passkey upgrades in Google Password Manager
-Enable the WebAuthn Conditional Create feature and let websites automatically create passkeys in GPM if there is a matching password credential for the same user. – Mac, Windows, Linux, ChromeOS
-
-#web-authentication-passkey-upgrade
-
-Default
 Short ruby heuristics
 When enabled, line breaking doesn't happen inside <ruby>s with shorter contents even if `text-wrap: nowrap` is not specified. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2273,16 +2165,16 @@ Enables canvas hibernation for 2D canvas. – Mac, Windows, Linux, ChromeOS, And
 #canvas-2d-hibernation
 
 Default
+History Sync Opt-in Expansion Pill
+Enables the History Sync Opt-in expansion pill on Desktop platforms. – Mac, Windows, Linux
+
+#enable-history-sync-optin-expansion-pill
+
+Default
 History Sync Opt-in
 Enables the History Sync Opt-in screen on Desktop platforms. The screen is shown after the user has signed in (in the profile picker or in the dialog) instead of the Sync Confirmation screen. – Mac, Windows, Linux
 
 #enable-history-sync-optin
-
-Default
-Enable bookmarks in transport mode
-Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linux
-
-#sync-enable-bookmarks-in-transport-mode
 
 Default
 Visited URL ranking deduplication strategy
@@ -2345,24 +2237,6 @@ Enables history sync alternative illustration. – Mac, Windows, Linux, ChromeOS
 #history-sync-alternative-illustration
 
 Default
-Improved signin UI
-Enables redesign of profile menu and signin settings ; new signin promos and better signin errors. – Mac, Windows, Linux
-
-#improved-signin-ui-on-desktop
-
-Default
-Outline Silhouette Icon
-Enables the improved silhouette icon for signed out profiles – Mac, Windows, Linux
-
-#outline-silhouette-icon
-
-Default
-Improved settings UI
-Enables redesign of signin settings and better signin errors in chrome://settings. – Mac, Windows, Linux
-
-#improved-settings-ui-on-desktop
-
-Default
 Discounts on navigation
 Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
 
@@ -2393,24 +2267,6 @@ Enables simplified selection in the Lens overlay. – Mac, Windows, Linux, Chrom
 #enable-lens-overlay-simplified-selection
 
 Default
-Lens overlay latency optimizations
-Enables latency optimizations for the Lens overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-latency-optimizations
-
-Default
-Lens overlay image context menu actions
-Enables image context menu actions in the Lens overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-image-context-menu-actions
-
-Default
-Enable logging form events to all parsed form on a web page.
-When enabled, a form event will log to all of the parsed forms of the same type on a webpage. This means credit card form events will log to all credit card form types and address form events will log to all address form types. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-enable-log-form-events-to-all-parsed-form-types
-
-Default
 Enable buy now pay later on Autofill
 When enabled, users will have the option to pay with buy now pay later on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
 
@@ -2423,12 +2279,6 @@ When enabled, Chrome will sync user data related to buy now pay later. – Mac, 
 #autofill-enable-buy-now-pay-later-syncing
 
 Default
-Enable bookmarks selected type on sign-in for testing
-Test-only flag to help with the development of sync-enable-bookmarks-in-transport-mode. Enables the bookmarks UserSelectableType upon sign-in – Mac, Windows, Linux, ChromeOS
-
-#enable-bookmarks-selected-type-on-signin-for-testing
-
-Default
 Separate local and account themes
 Keeps the local and the account theme separate. If the user signs out or sync is turned off, only the account theme is removed and the pre-existing local theme is restored. – Mac, Windows, Linux, ChromeOS
 
@@ -2439,12 +2289,6 @@ Enable showing in-process help UI for card benefits
 When enabled, in-process help UI will be shown for Autofill card suggestions with benefits. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-card-benefits-iph
-
-Default
-Privacy Sandbox Privacy Policy
-Enables the Privacy Policy link to be displayed on the Privacy Sandbox Consent dialog, subject to regional availability. – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-privacy-policy
 
 Default
 Rust-based PNG image handling
@@ -2543,12 +2387,6 @@ Allows extensions with legacy (unsupported) manifest versions to be loaded as un
 #allow-legacy-mv2-extensions
 
 Default
-More Lens overlay translate languages
-Enables more translate languages in the Lens Overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-translate-languages
-
-Default
 Glic
 Enables glic – Mac, Windows, Linux
 
@@ -2645,18 +2483,6 @@ When enabled, the system tracing service is started along with Chrome's tracing 
 #windows-system-tracing
 
 Default
-Privacy Sandbox Equalized Prompt Buttons
-Enables equalized styling for the dismissal buttons on the Privacy Sandbox Prompt. – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-equalized-prompt-buttons
-
-Default
-Move theme prefs to ThemeSpecifics
-Uses new fields in ThemeSpecifics for theme attributes which were previously synced using preferences, thereby putting syncing of all the theme attributes behind the Themes sync toggle. – Mac, Windows, Linux, ChromeOS
-
-#move-theme-prefs-to-specifics
-
-Default
 Top Chrome Bookmarks Tree View
 Show the bookmarks side panel in a tree view while in compact mode. – Mac, Windows, Linux, ChromeOS
 
@@ -2667,12 +2493,6 @@ isSecurePaymentConfirmationAvailable API
 Enables the PaymentRequest.isSecurePaymentConfirmationAvailable web API, which allows for more ergonomic feature detection of Secure Payment Confirmation – Mac, Windows, Linux, ChromeOS, Android
 
 #is-secure-payment-confirmation-available-api
-
-Default
-Copy image filename to clipboard.
-Whether to write filename to the clipboard when copying image downloads. – Mac, Windows, Linux, ChromeOS, Android
-
-#copy-image-filename-to-clipboard
 
 Default
 Enable allowlist for showing category benefits for BMO cards
