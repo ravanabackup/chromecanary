@@ -1,5 +1,5 @@
 Experiments
-137.0.7105.0
+137.0.7107.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -1615,6 +1615,12 @@ Enables an extension API to allow specific extensions to collect data from brows
 #enable-extension-ai-data-collection
 
 Disabled
+Collapse Extensions Submenu
+Enables a mode where if the current profile has no extensions, the extensions submenu in the application menu is replaced by a single item, e.g. "Explore Extensions". – Mac, Windows, Linux, ChromeOS
+
+#extensions-collapse-main-menu
+
+Default
 Extensions Menu Access Control
 Enables a redesigned extensions menu that allows the user to control extensions site access. – Mac, Windows, Linux, ChromeOS
 
@@ -1775,6 +1781,12 @@ Renderer-side content decoding
 Enables renderer-side content decoding (decompression). When enabled, the network service sends compressed HTTP response bodies to the renderer process. – Mac, Windows, Linux, ChromeOS, Android
 
 #renderer-side-content-decoding
+
+Default
+Reduce device bound session access observer IPC
+Enables the optimization of reducing unnecessary IPC for cloning DeviceBoundSessionAccessObserver. – Mac, Windows, Linux, ChromeOS, Android
+
+#device-bound-session-access-observer-shared-remote
 
 Default
 WebUI Omnibox Popup
@@ -2177,6 +2189,12 @@ Enables the History Sync Opt-in screen on Desktop platforms. The screen is shown
 #enable-history-sync-optin
 
 Default
+Enable bookmarks in transport mode
+Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linux
+
+#sync-enable-bookmarks-in-transport-mode
+
+Default
 Visited URL ranking deduplication strategy
 Enables visited url ranking service to use one of various deduplication strategies. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2277,6 +2295,12 @@ Enable syncing buy now pay later user data.
 When enabled, Chrome will sync user data related to buy now pay later. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-buy-now-pay-later-syncing
+
+Default
+Enable bookmarks selected type on sign-in for testing
+Test-only flag to help with the development of sync-enable-bookmarks-in-transport-mode. Enables the bookmarks UserSelectableType upon sign-in – Mac, Windows, Linux, ChromeOS
+
+#enable-bookmarks-selected-type-on-signin-for-testing
 
 Default
 Separate local and account themes
@@ -2397,6 +2421,12 @@ Glic User Resize
 Enables resizing the glic panel by dragging – Mac, Windows, Linux
 
 #glic-user-resize
+
+Default
+Glic Z Order Changes
+Enables glic z order changing – Mac, Windows, Linux
+
+#glic-z-order-changes
 
 Default
 ServiceWorkerAutoPreload
@@ -2645,12 +2675,6 @@ Enables logging of the result of checkout amount extraction on desktop. This fla
 #autofill-enable-amount-extraction-desktop-logging
 
 Default
-Adjust CanCreateCanvas2DResourceProvider()
-Changes CanvasRenderingContxt2D::CanCreateCanvas2DResourceProvider() to check for provider recreation rather than bridge recreation – Mac, Windows, Linux, ChromeOS, Android
-
-#adjust-can-create-canvas2d-resource-provider
-
-Default
 CanvasRenderingContext2D::IsPaintable() adjustment
 Has CanvasRenderingContext2D::IsPaintable() check for the existence of the resource provider rather than the bridge – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2685,6 +2709,12 @@ Navigation links in the tab-sharing bar
 Enables quick-navigation links to the captured and capturing tab in the tab-sharing bar. – Mac, Windows, Linux, ChromeOS
 
 #tab-capture-infobar-links
+
+Default
+Zero-copy partial raster with GPU compositor
+Has zero-copy raster do partial raster when used with the GPU compositor – Mac, Windows, Linux, ChromeOS, Android
+
+#zero-copy-rbp-partial-raster-with-gpu-compositor
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
