@@ -1,5 +1,5 @@
 Experiments
-137.0.7113.0
+137.0.7114.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -2057,12 +2057,6 @@ Device Bound Session Credentials (Standard) Refresh Quota
 In production, standard Device Bound Session Credentials will feature a maximum rate of refreshes. This flag disables that quota in order to simplify manual testing. – Mac, Windows, Linux
 
 #enable-standard-device-bound-sesssion-refresh-quota
-
-Default
-Enable autofill support for Verve cards
-When enabled, Verve-branded card art will be shown for Verve cards. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-enable-verve-card-support
 
 Default
 Cert Management V2 UI
