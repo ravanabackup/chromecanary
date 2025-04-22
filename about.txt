@@ -56,6 +56,7 @@ chrome://net-internals
 chrome://new-tab-page
 chrome://new-tab-page-third-party
 chrome://newtab
+chrome://newtab-footer
 chrome://ntp-tiles-internals
 chrome://omnibox-popup.top-chrome
 chrome://on-device-translation-internals
@@ -64,6 +65,7 @@ chrome://password-manager-internals
 chrome://policy
 chrome://predictors
 chrome://print
+chrome://privacy-sandbox-base-dialog
 chrome://privacy-sandbox-dialog
 chrome://privacy-sandbox-internals
 chrome://private-aggregation-internals
