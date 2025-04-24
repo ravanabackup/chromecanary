@@ -1,5 +1,5 @@
 Experiments
-137.0.7139.0
+137.0.7142.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -1013,6 +1013,12 @@ NTP Most Relevant Tab Resumption Module
 Shows the Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
 #ntp-most-relevant-tab-resumption-module
+
+Default
+NTP Most Relevant Tab Resumption Module uses fallback to host for favicon
+Shows the host fallback icon instead of server fallback on Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
+
+#ntp-most-relevant-tab-resumption-module-fallback-to-host
 
 Default
 NTP OneGoogleBar Async Bar Parts
@@ -2775,6 +2781,18 @@ Tab Group Keyboard Shortcuts
 Adds a few keyboard shortcuts for some tab group interactions. – Mac, Windows, Linux, ChromeOS
 
 #tab-group-shortcuts
+
+Default
+Bundled Security Settings
+Enables new Bundled Security Settings UI on chrome://settings/security. This new UI bundles all security settings into either an enhanced or standard bundle which should simplify the security settings page and also help simplify the user's decision. – Mac, Windows, Linux, ChromeOS
+
+#bundled-security-settings
+
+Default
+Invalidate search engine choice after the install detects it has been transferred to a new device
+When enabled, search engine choices made on what we assume was a different device will not be considered valid, leading to the choice screen potentially retriggering. – Mac, Windows, Linux, ChromeOS, Android
+
+#invalidate-search-engine-choice-on-device-restore-detection
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
