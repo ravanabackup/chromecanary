@@ -1,5 +1,5 @@
 Experiments
-137.0.7143.0
+137.0.7144.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -2805,6 +2805,12 @@ Block Cross Partition Blob URL Fetching
 Blocks fetching of cross-partitioned Blob URL. – Mac, Windows, Linux, ChromeOS, Android
 
 #block-cross-partition-blob-url-fetching
+
+Default
+Enable immediate mediation for WebAuthn get requests
+Enables immediate mediation for WebAuthn and passwords for a navigator.credentials.get() request. This will return a NotAllowedError if there are no credentials for a given get request. The request can also request passwords. – Mac, Windows, Linux, ChromeOS, Android
+
+#web-authentication-immediate-get
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
