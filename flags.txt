@@ -1,5 +1,5 @@
 Experiments
-137.0.7142.0
+137.0.7143.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -31,6 +31,12 @@ Overrides the built-in software rendering list and enables GPU-acceleration on u
 #ignore-gpu-blocklist
 
 Disabled
+On-Screen Only Accessibility Nodes
+Enable experimental accessibility mode to improve performance which allows assistive technologies to access only accessibility nodes that are on-screen – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-accessibility-on-screen-mode
+
+Default
 Accelerated 2D canvas
 Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2189,12 +2195,6 @@ Enable experimental CSS Masonry Layout implementation. Simple layouts with mason
 #css-masonry-layout
 
 Default
-Storage Access Headers
-Enables HTTP headers related to the Storage Access API. – Mac, Windows, Linux, ChromeOS, Android
-
-#storage-access-headers
-
-Default
 Storage Access API follows Same Origin Policy
 Modifies the Storage Access API to follow the Same Origin Policy with respect to security. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2271,6 +2271,12 @@ Collaboration Entreprise V2
 Enables the collaboration feature for entreprise users within the same domain. – Mac, Windows, Linux, ChromeOS, Android
 
 #collaboration-entreprise-v2
+
+Default
+Shared Tab Group messaging sync
+Enable the messaging sync backend for shared tab groups. – Mac, Windows, Linux, ChromeOS, Android
+
+#collaboration-shared-tab-group-account-data
 
 Default
 Data Sharing Join Only
@@ -2793,6 +2799,12 @@ Invalidate search engine choice after the install detects it has been transferre
 When enabled, search engine choices made on what we assume was a different device will not be considered valid, leading to the choice screen potentially retriggering. – Mac, Windows, Linux, ChromeOS, Android
 
 #invalidate-search-engine-choice-on-device-restore-detection
+
+Default
+Block Cross Partition Blob URL Fetching
+Blocks fetching of cross-partitioned Blob URL. – Mac, Windows, Linux, ChromeOS, Android
+
+#block-cross-partition-blob-url-fetching
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
