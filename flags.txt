@@ -1,5 +1,5 @@
 Experiments
-137.0.7144.0
+137.0.7148.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -629,6 +629,12 @@ Use Windows WGC API for window capture
 Use Windows.Graphics.Capture API based windows capturer in combination with the WebRTC based Web API getDisplayMedia. Requires Windows 10, version 1803 or higher. Adds a thin yellow border around the captured window area. The GDI API is used as window capture API when this flag is disabled. – Windows
 
 #webrtc-allow-wgc-window-capturer
+
+Default
+Border around WGC captures
+When using WGC to capture a window or a screen, draw a border around the captured surface. – Windows
+
+#webrtc-wgc-require-border
 
 Default
 Enable offering upload of Autofilled credit cards
@@ -2811,6 +2817,12 @@ Enable immediate mediation for WebAuthn get requests
 Enables immediate mediation for WebAuthn and passwords for a navigator.credentials.get() request. This will return a NotAllowedError if there are no credentials for a given get request. The request can also request passwords. – Mac, Windows, Linux, ChromeOS, Android
 
 #web-authentication-immediate-get
+
+Default
+media-playback-while-not-visible permission policy
+Enables the media-playback-while-not-visible permission policy. This permission policy will pause any media being played by any disallowed iframes which are not currently rendered. Seehttps://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/IframeMediaPause/iframe_media_pausing.md for more information. – Mac, Windows, Linux, ChromeOS, Android
+
+#media-playback-while-not-visible-permission-policy
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
