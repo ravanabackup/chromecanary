@@ -1,5 +1,5 @@
 Experiments
-137.0.7151.5
+138.0.7152.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -7,16 +7,22 @@ Enables a feature which runs OCR on PDF images and makes the recognized text sea
 #pdf-searchify
 
 Disabled
-Temporarily unexpire M135 flags.
-Temporarily unexpire flags that expired as of M135. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+ Split View
+Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
 
-#temporary-unexpire-flags-m135
+#side-by-side
 
-Default
+Enabled
 Temporarily unexpire M136 flags.
 Temporarily unexpire flags that expired as of M136. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m136
+
+Default
+Temporarily unexpire M137 flags.
+Temporarily unexpire flags that expired as of M137. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m137
 
 Default
 Enable benchmarking
@@ -239,12 +245,6 @@ Touch UI Layout
 Enables touch UI layout in the browser's top chrome. – Mac, Windows, Linux, ChromeOS
 
 #top-chrome-touch-ui
-
-Default
-Top Chrome Toast Refinements
-Enables the use of options to control which toasts appear. – Mac, Windows, Linux, ChromeOS
-
-#top-chrome-toast-refinements
 
 Default
 Hardware-accelerated video decode
@@ -865,12 +865,6 @@ Forces Chrome to use a specific color profile instead of the color of the window
 #force-color-profile
 
 Default
-Forced Colors
-Enables forced colors mode for web content. – Mac, Windows, Linux, ChromeOS, Android
-
-#forced-colors
-
-Default
 Chrome heap profiler start mode.
 Starts heap profiling service that records sampled memory allocation profile having each sample attributed with a callstack. The sampling resolution is controlled with --memlog-sampling-rate flag. Recorded heap dumps can be obtained at chrome://tracing [category:memory-infra] and chrome://memory-internals. This setting controls which processes will be profiled since their start. To profile any given process at a later time use chrome://memory-internals page. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1079,12 +1073,6 @@ Parallel downloading
 Enable parallel downloading to accelerate download speed. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-parallel-downloading
-
-Default
-Tab Search Position Setting
-Whether to show the tab search position options in the settings page. – Windows, Linux, ChromeOS
-
-#tab-search-position-setting
 
 Default
 Enable network logging to file
@@ -1375,12 +1363,6 @@ Run the video capture service in the browser process. – Windows, ChromeOS
 #run-video-capture-service-in-browser
 
 Default
-Block TPCs Incognito
-Blocks TPCs in Incognito – Mac, Windows, Linux, ChromeOS, Android
-
-#block-tpcs-incognito
-
-Default
 RWS V2 UI
 Updated RWS UI – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1513,22 +1495,10 @@ Supports usernames and phone numbers as account identifiers. – Mac, Windows, L
 #fedcm-alternative-identifiers
 
 Default
-FedCmAuthz
-Enables RPs to request authorization for custom IdP scopes. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-authz
-
-Default
 FedCmAutofill
 Allows RPs to enhance autofill with FedCM. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-autofill
-
-Default
-FedCmButtonMode
-Enables RPs specify whether they want to trigger the FedCM widget flow or the button flow. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-button-mode
 
 Default
 FedCmCooldownOnIgnore
@@ -1571,18 +1541,6 @@ FedCmSelectiveDisclosure
 Allows a relying party to selectively request a set of identity attributes to be disclosed. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-selective-disclosure
-
-Default
-FedCmShowFilteredAccounts
-Allows the FedCM API to show filtered accounts greyed out. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-show-filtered-accounts
-
-Default
-FedCmUseOtherAccount
-Enables the "Use a different account" button on the FedCM account chooser to log in to another IdP account, for IdPs who have opted in. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-use-other-account
 
 Default
 FedCmWithoutWellKnownEnforcement
@@ -1633,24 +1591,6 @@ Enable to test third-party cookie phaseout. Learn more: https://goo.gle/3pcd-fla
 #test-third-party-cookie-phaseout
 
 Disabled
-Third-party Cookie Phase Out Facilitated Testing
-Enables third-party cookie phase out for facilitated testing described in https://developer.chrome.com/en/docs/privacy-sandbox/chrome-testing/ – Mac, Windows, Linux, ChromeOS, Android
-
-#tpc-phase-out-facilitated-testing
-
-Default
-Third-party Cookie Grants Heuristics Testing
-Enables temporary storage access grants for certain user behavior heuristics. See https://github.com/amaliev/3pcd-exemption-heuristics/blob/main/explainer.md for more details. – Mac, Windows, Linux, ChromeOS, Android
-
-#tpcd-heuristics-grants
-
-Default
-Third-Party Cookie Deprecation Metadata Grants for Testing
-Provides a control for enabling/disabling Third-Party Cookie Deprecation Metadata Grants (WRT its default state) for testing. – Mac, Windows, Linux, ChromeOS, Android
-
-#tpcd-metadata-grants
-
-Default
 Enable extension permission omnibox.directInput
 Allows extensions to request permission omnibox.directInput, which enables unscoped mode in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -1685,24 +1625,6 @@ IPH Extensions Request Access Button Feature
 Enables In-Product-Help that appears when at least one extension is requesting access to the current page. This feature is gated by extensions-menu-access-control. – Mac, Windows, Linux, ChromeOS
 
 #iph-extensions-request-access-button-feature
-
-Default
-Extension Manifest V2 Deprecation Warning Stage
-Displays a warning that affected MV2 extensions may no longer be supported due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS
-
-#extension-manifest-v2-deprecation-warning
-
-Default
-Extension Manifest V2 Deprecation Disabled Stage
-Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation. – Mac, Windows, Linux, ChromeOS
-
-#extension-manifest-v2-deprecation-disabled
-
-Default
-Extension Manifest V2 Deprecation Unsupported Stage
-Displays a warning that affected MV2 extensions were turned off due to the Manifest V2 deprecation and cannot be re-enabled. – Mac, Windows, Linux, ChromeOS
-
-#extension-manifest-v2-deprecation-unsupported
 
 Default
 Captured Surface Control
@@ -1813,12 +1735,6 @@ Enables radio buttons for permissions in SiteSettings – Mac, Windows, Linux, C
 #permission-site-settings-radio-button
 
 Default
-On device notification content detection model
-Enables checking the on-device notification content detection model for verdicts on how suspicious the notification content looks and logging metrics based on the response. – Mac, Windows, Linux, ChromeOS, Android
-
-#on-device-notification-content-detection-model
-
-Default
 Web Bluetooth confirm pairing support
 Enable confirm-only and confirm-pin pairing mode support for Web Bluetooth – Mac, Windows, Linux, ChromeOS
 
@@ -1853,12 +1769,6 @@ Sync Autofill Wallet Credential Data
 When enabled, allows syncing of the autofill wallet credential data type. – Mac, Windows, Linux, ChromeOS, Android
 
 #sync-autofill-wallet-credential-data
-
-Default
-Enable the account data storage for preferences for syncing users
-Enables storing preferences in a second, Gaia-account-scoped storage for syncing users – Mac, Windows, Linux, ChromeOS
-
-#enable-preferences-account-storage
 
 Default
 Enable mitigation algorithm for rate obfuscation in compute pressure
@@ -1957,18 +1867,6 @@ When enabled, risk data is prefetched during payments autofill flows to reduce u
 #autofill-enable-prefetching-risk-data-for-retrieval
 
 Default
-OIDC profile management
-Enables profile management triggered by OIDC authentications. – Mac, Windows, Linux
-
-#oidc-auth-profile-management
-
-Default
-Enable generic OIDC profile management
-Enables profile management triggered by generic OIDC authentications. – Mac, Windows, Linux
-
-#enable-generic-oidc-auth-profile-management
-
-Default
 Desktop PWA Link Capturing
 Enables opening links from Chrome in an installed PWA. Currently under reimplementation. – Mac, Windows, Linux, ChromeOS
 
@@ -2047,6 +1945,12 @@ Enables triggering password suggestions through the context menu – Mac, Window
 #password-manual-fallback-available
 
 Default
+Save Password Contextual UI
+Improved page action indicator and dialog UI when the user has blocklisted the current site for password saving. – Mac, Windows, Linux, ChromeOS
+
+#save-passwords-contextual-ui
+
+Default
 Enable Isolated Web Apps to bypass USB restrictions
 When enabled, allows Isolated Web Apps to access blocklisted devices and protected interfaces through WebUSB API. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2063,12 +1967,6 @@ Link Preview
 When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS
 
 #link-preview
-
-Default
-Send tab to self iOS push notifications
-Feature to allow users to send tabs to their iOS device through a system push notification. – Mac, Windows, Linux, ChromeOS, Android
-
-#send-tab-ios-push-notifications
 
 Default
 Enable data sharing debug logs
@@ -2363,12 +2261,6 @@ Test-only flag to help with the development of sync-enable-bookmarks-in-transpor
 #enable-bookmarks-selected-type-on-signin-for-testing
 
 Default
-Separate local and account themes
-Keeps the local and the account theme separate. If the user signs out or sync is turned off, only the account theme is removed and the pre-existing local theme is restored. – Mac, Windows, Linux, ChromeOS
-
-#separate-local-and-account-themes
-
-Default
 Enable showing in-process help UI for card benefits
 When enabled, in-process help UI will be shown for Autofill card suggestions with benefits. – Mac, Windows, Linux, ChromeOS
 
@@ -2411,12 +2303,6 @@ Enables settings UI for AI features that are disabled by enterprise policy. – 
 #ai-settings-enterprise-disabled-ui
 
 Default
-Clientside password form classifier.
-Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android
-
-#password-form-clientside-classifier
-
-Default
 Contextual cueing
 Enables the contextual cueing system to support showing actions. – Mac, Windows, Linux
 
@@ -2433,12 +2319,6 @@ Partitioned Popins
 Allows Partitioned Popins to be opened. – Mac, Windows, Linux, ChromeOS
 
 #partitioned-popins
-
-Default
-Separate local and account search engines
-Keeps the local and the account search engines separate. If the user signs out or sync is turned off, the account search engines are removed while the pre-existing/local search engines are left behind. – Mac, Windows, Linux, ChromeOS
-
-#separate-local-and-account-search-engines
 
 Default
 PartitionAlloc with Advanced Checks
@@ -2471,24 +2351,6 @@ Allows extensions with legacy (unsupported) manifest versions to be loaded as un
 #allow-legacy-mv2-extensions
 
 Default
-Glic
-Enables glic – Mac, Windows, Linux
-
-#glic
-
-Default
-Glic User Resize
-Enables resizing the glic panel by dragging – Mac, Windows, Linux
-
-#glic-user-resize
-
-Default
-Glic Z Order Changes
-Enables glic z order changing – Mac, Windows, Linux
-
-#glic-z-order-changes
-
-Default
 ServiceWorkerAutoPreload
 Dispatches a preload request for navigation before starting the service worker. See https://github.com/explainers-by-googlers/service-worker-auto-preload – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2519,18 +2381,6 @@ Enables signature-based integrity checks, as proposed in https://wicg.github.io/
 #signature-based-sri
 
 Default
-Enable Policy Promotion Banner
-Enables showing the policy promotion banner on chrome://policy page. – Mac, Windows, Linux, ChromeOS
-
-#policy-promotion-banner-flag
-
-Default
-Privacy Sandbox Ads API UX Enhancements
-Enables UI and text updates to the Privacy Sandbox Ads APIs Notice and Consent UX, and settings pages to improve user comprehension – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-ads-api-ux-enhancements
-
-Default
 Create Safety Hub services on start up
 When enabled, Safety Hub services are created on start up enabling its checks to start right away. – Mac, Windows, Linux, ChromeOS
 
@@ -2541,12 +2391,6 @@ Chrome Refresh Token Binding
 Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
 
 #enable-chrome-refresh-token-binding
-
-Default
-throttle-main-thread-to-60hz
-Throttle main thread updates to 60fps, even when VSync rate is higher. – Mac, Windows, Linux, ChromeOS, Android
-
-#throttle-main-thread-to-60hz
 
 Default
 Client Side Detection Brand and Intent for Scam Detection
@@ -2625,12 +2469,6 @@ Mark all credential as leaked
 Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service – Mac, Windows, Linux, ChromeOS
 
 #mark-all-credentials-as-leaked
-
-Default
-Enables new design for guest and incognito profile menu
-The design is in line with the regular profiles. The illustration is removed. – Mac, Windows, Linux
-
-#enable-improved-guest-profile-menu
 
 Default
 Account storage of preferences, themes and search engines
