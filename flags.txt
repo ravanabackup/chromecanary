@@ -1,5 +1,5 @@
 Experiments
-138.0.7152.0
+138.0.7161.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -511,6 +511,12 @@ The default is to allow hardware H.264 encoding when recommended for the platfor
 #cast-streaming-hardware-h264
 
 Default
+Toggle hardware accelerated HEVC video encoding for Cast Streaming
+The default is to allow hardware HEVC encoding when recommended for the platform. If enabled, hardware HEVC encoding will always be allowed when supported by the platform. If disabled, hardware HEVC encoding will never be used. – Mac, Windows, Linux, ChromeOS
+
+#cast-streaming-hardware-hevc
+
+Default
 Toggle hardware accelerated VP8 video encoding for Cast Streaming
 The default is to allow hardware VP8 encoding when recommended for the platform. If enabled, hardware VP8 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP8 encoding will never be used. – Mac, Windows, Linux, ChromeOS
 
@@ -659,18 +665,6 @@ TLS 1.3 Early Data
 This option enables TLS 1.3 Early Data, allowing GET requests to be sent during the handshake when resuming a connection to a compatible TLS 1.3 server. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-tls13-early-data
-
-Default
-TLS 1.3 post-quantum key agreement
-This option enables a post-quantum key agreement in TLS 1.3. The #use-ml-kem flag controls whether ML-KEM or Kyber is used. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-tls13-kyber
-
-Default
-Use ML-KEM in TLS 1.3
-This option uses the ML-KEM standard as the post-quantum key agreement in TLS 1.3, instead of the Kyber draft standard. Post-quantum key agreement must be enabled (see #enable-tls13-kyber) for this option to have an effect. – Mac, Windows, Linux, ChromeOS, Android
-
-#use-ml-kem
 
 Default
 Auto Dark Mode for Web Contents
@@ -2351,6 +2345,24 @@ Allows extensions with legacy (unsupported) manifest versions to be loaded as un
 #allow-legacy-mv2-extensions
 
 Default
+Glic
+Enables glic – Mac, Windows, Linux
+
+#glic
+
+Default
+Glic User Resize
+Enables resizing the glic panel by dragging – Mac, Windows, Linux
+
+#glic-user-resize
+
+Default
+Glic Z Order Changes
+Enables glic z order changing – Mac, Windows, Linux
+
+#glic-z-order-changes
+
+Default
 ServiceWorkerAutoPreload
 Dispatches a preload request for navigation before starting the service worker. See https://github.com/explainers-by-googlers/service-worker-auto-preload – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2667,6 +2679,12 @@ media-playback-while-not-visible permission policy
 Enables the media-playback-while-not-visible permission policy. This permission policy will pause any media being played by any disallowed iframes which are not currently rendered. Seehttps://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/IframeMediaPause/iframe_media_pausing.md for more information. – Mac, Windows, Linux, ChromeOS, Android
 
 #media-playback-while-not-visible-permission-policy
+
+Default
+Secure Payment Confirmation Fallback UX
+Enable the fallback experience in Secure Payment Confirmation, where a transaction dialog-like UX is shown even if no credentials match. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-secure-payment-confirmation-fallback-ux
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
