@@ -1,5 +1,5 @@
 Experiments
-138.0.7165.0
+138.0.7166.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -863,6 +863,12 @@ Force color profile
 Forces Chrome to use a specific color profile instead of the color of the window's current monitor, as specified by the operating system. – Mac, Windows, Linux, ChromeOS, Android
 
 #force-color-profile
+
+Default
+Adaptive global tone mapping
+Enables parsing and rendering of adaptive global tone mapping (AGTM) aka SMTPE ST 2094-50 HDR metadata – Mac, Windows, Linux, ChromeOS, Android
+
+#hdr-agtm
 
 Default
 Chrome heap profiler start mode.
@@ -2409,6 +2415,12 @@ Chrome Refresh Token Binding
 Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
 
 #enable-chrome-refresh-token-binding
+
+Default
+Three Button Password Save Dialog
+Provides a 'not now' button alongside the 'never' button on the save password dialog. – Mac, Windows, Linux, ChromeOS
+
+#three-button-password-save-dialog
 
 Default
 Client Side Detection Brand and Intent for Scam Detection
