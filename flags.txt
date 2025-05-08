@@ -1,5 +1,5 @@
 Experiments
-138.0.7167.0
+138.0.7168.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -425,6 +425,12 @@ Desktop PWA tab strips
 Tabbed application mode - enables the `tabbed` display mode which allows web apps to add a tab strip to their app. – Mac, Windows, Linux, ChromeOS
 
 #enable-desktop-pwas-tab-strip
+
+Default
+Desktop PWA tab strips settings
+Experimental UI for selecting whether a PWA should open in tabbed mode. – Mac, Windows, Linux, ChromeOS
+
+#enable-desktop-pwas-tab-strip-settings
 
 Default
 Desktop PWA tab strip customizations
@@ -1483,6 +1489,12 @@ Enables compositor warming up on particular loading events of prerender initial 
 #prerender2-warm-up-compositor
 
 Default
+PDF XFA support
+Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support. – Mac, Windows, Linux, ChromeOS
+
+#pdf-xfa-forms
+
+Default
 Clear window name in top-level cross-site cross-browsing-context-group navigation
 Clear the preserved window.name property when it's a top-level cross-site navigation that swaps BrowsingContextGroup. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1712,7 +1724,7 @@ Enables origin-keyed process isolation for most pages (i.e., those assigned to a
 
 Default
 Isolated sandboxed iframes
-When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site. – Mac, Windows, Linux, ChromeOS
+When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-isolated-sandboxed-iframes
 
@@ -2703,6 +2715,12 @@ Secure Payment Confirmation Fallback UX
 Enable the fallback experience in Secure Payment Confirmation, where a transaction dialog-like UX is shown even if no credentials match. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-secure-payment-confirmation-fallback-ux
+
+Default
+Tab Group Home
+Home surface for a tab group. – Mac, Windows, Linux, ChromeOS
+
+#tab-group-home
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
