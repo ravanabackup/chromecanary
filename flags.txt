@@ -1,5 +1,5 @@
 Experiments
-138.0.7168.0
+138.0.7170.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -1477,16 +1477,10 @@ Allows prerendering pages to execute more lifecycle updates, such as prepaint, b
 #prerender-early-document-lifecycle-update
 
 Default
-Warm up compositor
-Allows compositor to start warming up on certain signals – Mac, Windows, Linux, ChromeOS, Android
+Trees in viz
+Enables the renderer to send a CC LayerTree to the viz/gpu process instead of a CompositorFrame. This allows viz to generate and submit the CompositorFrame directly. – Mac, Windows, Linux, ChromeOS, Android
 
-#warm-up-compositor
-
-Default
-Warm up compositor on prerendering
-Enables compositor warming up on particular loading events of prerender initial navigation. Requires chrome://flags/#compositor-warm-up to be enabled – Mac, Windows, Linux, ChromeOS, Android
-
-#prerender2-warm-up-compositor
+#trees-in-viz
 
 Default
 PDF XFA support
@@ -2723,4 +2717,16 @@ Home surface for a tab group. – Mac, Windows, Linux, ChromeOS
 #tab-group-home
 
 Default
-Your changes will take effect the next time you relaunch Chrome.
+Pinned Tab Toast On Close
+Enable to show a confirmation toast that displays when a pinned tab is closed via the keyboard shortcut. – Mac, Windows, Linux, ChromeOS
+
+#pinned-tab-toast-on-close
+
+Default
+Discount Autofill
+Enable discount autofill experiment. – Mac, Windows, Linux, ChromeOS
+
+#discount-autofill
+
+Default
+Your changes will take effect the next time you relaunch Chrome.*
