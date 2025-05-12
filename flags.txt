@@ -1,5 +1,5 @@
 Experiments
-138.0.7170.0
+138.0.7174.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -1247,6 +1247,12 @@ Boundary Event Dispatch Tracks Node Removal
 Mouse and Pointer boundary event dispatch (i.e. dispatch of enter, leave, over, out events) tracks DOM node removal to fix event pairing on ancestor nodes. – Mac, Windows, Linux, ChromeOS, Android
 
 #boundary-event-dispatch-tracks-node-removal
+
+Default
+Enable experimental prediction for scroll events
+Predicts the scroll amount after the vsync time to more closely match when the frame is visible. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-resampling-scroll-events-experimental-prediction
 
 Default
 Happiness Tracking Surveys Demo
@@ -2729,4 +2735,4 @@ Enable discount autofill experiment. – Mac, Windows, Linux, ChromeOS
 #discount-autofill
 
 Default
-Your changes will take effect the next time you relaunch Chrome.*
+Your changes will take effect the next time you relaunch Chrome.
