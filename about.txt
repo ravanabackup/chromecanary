@@ -94,6 +94,7 @@ chrome://support-tool
 chrome://sync-confirmation
 chrome://sync-internals
 chrome://system
+chrome://tab-group-home
 chrome://tab-search.top-chrome
 chrome://tab-strip.top-chrome
 chrome://terms
