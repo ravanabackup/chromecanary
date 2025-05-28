@@ -26,11 +26,13 @@ chrome://connectors-internals
 chrome://crashes
 chrome://credits
 chrome://customize-chrome-side-panel.top-chrome
+chrome://debug-webuis-disabled
 chrome://device-log
 chrome://dino
 chrome://downloads
 chrome://extensions
 chrome://extensions-internals
+chrome://extensions-zero-state
 chrome://feedback
 chrome://flags
 chrome://gcm-internals
@@ -123,6 +125,7 @@ chrome://discards
 chrome://download-internals
 chrome://family-link-user-internals
 chrome://history-clusters-internals
+chrome://infobar-internals
 chrome://interstitials
 chrome://local-state
 chrome://location-internals
