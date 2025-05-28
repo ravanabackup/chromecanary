@@ -1,5 +1,5 @@
 Experiments
-138.0.7175.0
+138.0.7204.4
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -175,22 +175,10 @@ Enable enterprise profile badging on the toolbar avatar – Mac, Windows, Linux
 #enable-enterprise-profile-badging-for-avatar
 
 Default
-Enable enterprise profile badging in the profile menu
-Enable enterprise profile badging in the profile menu. This includes showing the enterprise logo and the management disclaimer under the email – Mac, Windows, Linux
-
-#enable-enterprise-profile-badging-for-menu
-
-Default
 Enable enterprise badging on the New Tab Page
 Enable enterprise profile badging in the footer on the New Tab Page. This includes showing the enterprise logo and the management disclaimer – Mac, Windows, Linux
 
 #enable-enterprise-badging-for-ntp-footer
-
-Default
-Enable enterprise updated profile creation screens
-Enable enterprise updated profile creation screens in the profile picker and forced profile creation. – Mac, Windows, Linux
-
-#enable-enterprise-updated-profile-creation-screen
 
 Default
 Experimental WebAssembly
@@ -245,6 +233,12 @@ Touch UI Layout
 Enables touch UI layout in the browser's top chrome. – Mac, Windows, Linux, ChromeOS
 
 #top-chrome-touch-ui
+
+Default
+WebUI tab strip
+When enabled makes use of a WebUI-based tab strip. – Mac, Windows, Linux, ChromeOS
+
+#webui-tab-strip
 
 Default
 Hardware-accelerated video decode
@@ -721,6 +715,12 @@ When showing MV tiles, use a new scoring function to compute the score of each s
 #most-visited-tiles-new-scoring
 
 Default
+Most Visited Tile: Visual deduplication filter
+When computing MV Tiles, remove tiles that are visual duplicates (i.e., have the same title and the same hostname) of another tile with higher score. – Mac, Windows, Linux, ChromeOS, Android
+
+#most-visited-tiles-visual-deduplication
+
+Default
 Allow local history zero-prefix suggestions beyond NTP
 Enables local history zero-prefix suggestions in every context in which the remote zero-prefix suggestions are enabled. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -793,10 +793,16 @@ Enables the contextual search box to use the ContextualSearchProvider instead of
 #contextual-search-box-uses-contextual-search-provider
 
 Default
-Omnibox contextual search actions at top
-Enables overriding the placement of contextual search actions in the omnibox popup. – Mac, Windows, Linux, ChromeOS
+Contextual search open Lens action uses thumbnail
+Enables web content thumbnail image to override the Lens icon for the omnibox entry point action match. – Mac, Windows, Linux, ChromeOS
 
-#omnibox-contextual-search-actions-at-top
+#contextual-search-open-lens-action-uses-thumbnail
+
+Default
+Contextual suggestions ablate others when present
+Makes contextual search suggestions exclusive in zero suggest. – Mac, Windows, Linux, ChromeOS
+
+#contextual-suggestions-ablate-others-when-present
 
 Default
 Omnibox contextual search on focus suggestions
@@ -805,16 +811,16 @@ Enables omnibox contextual search suggestions in zero prefix suggest. – Mac, W
 #omnibox-contextual-search-on-focus-suggestions
 
 Default
-Omnibox contextual search single lens action
-Enables single action UX for contextual search in the omnibox popup – Mac, Windows, Linux, ChromeOS
-
-#omnibox-contextual-search-single-lens-action
-
-Default
 Omnibox contextual suggestions
 Enables omnibox contextual suggestions. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-contextual-suggestions
+
+Default
+Lens Overlay Omnibox entrypoint
+Enables icon button for Lens entrypoint in the Omnibox. – Mac, Windows, Linux, ChromeOS
+
+#lens-overlay-omnibox-entry-point
 
 Default
 Omnibox Rich Autocompletion Promising Combinations
@@ -845,6 +851,12 @@ Omnibox search aggregator
 Enables omnibox suggestions from the search aggregator provider – Mac, Windows, Linux, ChromeOS
 
 #omnibox-enterprise-search-aggregator
+
+Default
+Adjust Indentation for Omnibox Text and Suggestions
+Adjusts the indentation of the omnibox and the suggestions to eliminate the visual shift when the popup opens. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-adjust-indentation
 
 Default
 Omnibox on device head suggestions (non-incognito only)
@@ -901,6 +913,12 @@ The maximum number of URL matches to show, unless there are no replacements. –
 #omnibox-max-url-matches
 
 Default
+Omnibox Mia ZPS on NTP
+Enables Mia ZPS suggestions in NTP omnibox – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-mia-zps
+
+Default
 Enable optimization guide debug logs
 Enables the optimization guide to log and save debug messages that can be shown in the internals page. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -943,6 +961,12 @@ Enables the PageImageService fetching images from the Optimization Guide Salient
 #page-image-service-optimization-guide-salient-images
 
 Default
+Page content annotations
+Enables page content to be annotated on-device. – Mac, Windows, Linux, ChromeOS, Android
+
+#page-content-annotations
+
+Default
 Page content annotations - Remote page metadata
 Enables fetching of page load metadata to be persisted on-device. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -967,8 +991,14 @@ Scrolls the tabstrip while dragging tabs towards the end of the visible view. �
 #scrollable-tabstrip-with-dragging
 
 Default
+Tab Search Toolbar Button
+Enables tab search button to be in toolbar area. Might require enabling the tab strip combo button configuration to also match to toolbar in specific regions. – Mac, Windows, Linux, ChromeOS
+
+#tabsearch-toolbar-button
+
+Default
 Tabstrip Combo Button
-Combines tab search and the new tab button into a single combo button. – Mac, Windows, Linux, ChromeOS
+Combines tab search and the new tab button into a single combo button. Might require tab search toolbar flag to be disabled to take effect in specific regions. – Mac, Windows, Linux, ChromeOS
 
 #tabstrip-combo-button
 
@@ -995,12 +1025,6 @@ Product Specifications
 Enable the Product Specifications feature. – Mac, Windows, Linux, ChromeOS
 
 #product-specifications
-
-Default
-Comparison table management from main Compare UI
-Enable showing the comparison tables list in the Compare UI and enable the new "Comparison tables" context menu under "Bookmarks and Lists". – Mac, Windows, Linux, ChromeOS
-
-#compare-management-interface
 
 Default
 NTP Alpha Background Collections
@@ -1285,12 +1309,6 @@ Enables using media keys to control the active media session. This requires Medi
 #hardware-media-key-handling
 
 Default
-AVIF gainmap HDR image rendering
-If enabled, Chrome uses the gainmap (if present) in AVIF images to render the HDR version on HDR displays and the SDR version on SDR displays. – Mac, Windows, Linux, ChromeOS, Android
-
-#avif-gainmap-hdr-images
-
-Default
 Strict-Origin-Isolation
 Experimental security mode that strengthens the site isolation policy. Controls whether site isolation should use origins instead of scheme and eTLD+1. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1429,6 +1447,12 @@ Enables using DirectML for GPU and NPU inference with the WebNN API. Disabling t
 #webnn-directml
 
 Default
+ONNX Runtime backend for WebNN
+Enables using ONNX Runtime for CPU, GPU and NPU inference with the WebNN API. Disabling this flag enables a fallback to DirectML or TFLite. – Windows
+
+#webnn-onnxruntime
+
+Default
 Page embedded permission control (permission element)
 Enables the Page Embedded Permission Control feature, which allows the use of the HTML 'permission' element. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1489,6 +1513,18 @@ Enables the renderer to send a CC LayerTree to the viz/gpu process instead of a 
 #trees-in-viz
 
 Default
+Omnibox prefetch Search
+Allows omnibox to prefetch likely search suggestions provided by the Default Search Engine – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-search-prefetch
+
+Default
+Omnibox client prefetch Search
+Allows omnibox to prefetch search suggestions provided by the Default Search Engine that the client thinks are likely to be navigated. Requires chrome://flags/#omnibox-search-prefetch – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-search-client-prefetch
+
+Default
 PDF XFA support
 Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support. – Mac, Windows, Linux, ChromeOS
 
@@ -1537,6 +1573,12 @@ Enables RPs to get identity credentials from registered IdPs. – Mac, Windows, 
 #fedcm-idp-registration
 
 Default
+FedCmIframeOrigin
+Allows showing iframe origins in the FedCM UI, if requested by the IDP. – Mac, Windows, Linux, ChromeOS
+
+#fedcm-iframe-origin
+
+Default
 FedCmLightweightMode
 Enables IdPs to store user profile information using the login status API. – Mac, Windows, Linux, ChromeOS
 
@@ -1553,12 +1595,6 @@ FedCmMultiIdp
 Allows the FedCM API to request multiple identity providers simultaneously. Requires FedCM to be enabled as well. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-multi-idp
-
-Default
-FedCmSelectiveDisclosure
-Allows a relying party to selectively request a set of identity attributes to be disclosed. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-selective-disclosure
 
 Default
 FedCmWithoutWellKnownEnforcement
@@ -1585,6 +1621,12 @@ Enables the Digital Credentials Creation API. – Mac, Windows, Linux, ChromeOS,
 #web-identity-digital-credentials-creation
 
 Default
+Lens overlay
+Enables Lens search via an overlay on any page. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay
+
+Default
 Bind cookies to their setting origin's port
 If enabled, cookies will only be accessible by origins with the same port as the one that originally set the cookie. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1597,6 +1639,12 @@ If enabled, cookies will only be accessible by origins with the same scheme as t
 #bind-cookies-to-scheme
 
 Default
+Enable unsafe SwiftShader fallback
+Allow SwiftShader to be used as a fallback for software WebGL. Using this flag is unsafe and should only be used for local development. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-unsafe-swiftshader
+
+Disabled
 Prerendering
 If enabled, browser features and the speculation rules API can trigger prerendering. If disabled, all prerendering APIs still exist, but a prerender will never successfully take place. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2029,24 +2077,6 @@ In production, standard Device Bound Session Credentials will feature a maximum 
 #enable-standard-device-bound-sesssion-refresh-quota
 
 Default
-Cert Management V2 UI
-Enables the Cert Management V2 UI; accessible at chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
-
-#cert-management-v2-ui
-
-Default
-Cert Management V2 UI Write features
-Enables the Cert Management V2 UI write features, using a chrome managed DB to store user added certs. This is new functionality for Windows and Mac. For Linux and ChromeOS, this is a change as previously user-added certs would be written to the platform cert store. The UI is accessible at chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
-
-#cert-management-v2-ui-write
-
-Default
-Cert Management V2 UI Edit Certs
-Enables the ability to edit trust and constraints on the cert viewer for user-added certs that are added via chrome://certificate-manager – Mac, Windows, Linux, ChromeOS
-
-#cert-management-v2-ui-edit-certs
-
-Default
 Showing password suggestions on autofocused password forms
 Enables showing password suggestions without requiring the user to click on the already focused field if the field was autofocused on the page load. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2147,6 +2177,12 @@ Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linu
 #sync-enable-bookmarks-in-transport-mode
 
 Default
+Enable reading list in transport mode
+Enables account reading list for signed-in non-syncing users – Mac, Windows, Linux
+
+#reading-list-enable-sync-transport-mode-upon-sign-in
+
+Default
 Visited URL ranking deduplication strategy
 Enables visited url ranking service to use one of various deduplication strategies. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2157,6 +2193,18 @@ Enable visited URL aggregates visibility score based filtering
 Enables filtering of visited URL aggregates based on history URL visibility scores. – Mac, Windows, Linux, ChromeOS, Android
 
 #visited-url-ranking-service-history-visibility-score-filter
+
+Default
+Infinite Tabs Freezing
+Freezes eligible tabs which are not in the 5 most recently used ones, to preserve Chrome speed as new tabs are created. Tabs providing background functionality (e.g. playing audio, handling a video call) are not eligible for freezing. – Mac, Windows, Linux, ChromeOS
+
+#infinite-tabs-freezing
+
+Default
+Memory Purge on Freeze Limit
+Do not purge memory in renderers with frozen pages more than once per backgrounded interval, to minimize overhead when pages are periodically unfrozen. To be enabled with memory-purge-on-freeze-limit. – Mac, Windows, Linux, ChromeOS
+
+#memory-purge-on-freeze-limit
 
 Default
 Adjust feature reports received with WebHID
@@ -2244,9 +2292,15 @@ Use the Permission Predictions Service and the AIv1 model to surface permission 
 
 Default
 PermissionsAIv3
-Use the Permission Predictions Service and the AIv3 model to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+Use the Permission Predictions Service and the AIv3 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
 
 #permissions-ai-v3
+
+Default
+PermissionsAIv3Geolocation
+Use the Permission Predictions Service and the AIv3 model to surface permission geolocation requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+
+#permissions-ai-v3-geolocation
 
 Default
 Task Manager Desktop Refresh
@@ -2303,12 +2357,6 @@ Enables the on-device language translation API. See https://github.com/WICG/tran
 #translation-api
 
 Default
-AI settings page refresh
-Enables a revamp of the existing AI settings page. – Mac, Windows, Linux, ChromeOS
-
-#ai-settings-page-refresh
-
-Default
 AI settings in Privacy Guide
 Enables the AI settings linkout in the Privacy Guide completion card. – Mac, Windows, Linux, ChromeOS
 
@@ -2319,6 +2367,12 @@ AI settings page enterprise disabled UI
 Enables settings UI for AI features that are disabled by enterprise policy. – Mac, Windows, Linux, ChromeOS
 
 #ai-settings-enterprise-disabled-ui
+
+Default
+Clientside password form classifier.
+Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android
+
+#password-form-clientside-classifier
 
 Default
 Contextual cueing
@@ -2375,16 +2429,16 @@ Enables glic – Mac, Windows, Linux
 #glic
 
 Default
-Glic User Resize
-Enables resizing the glic panel by dragging – Mac, Windows, Linux
-
-#glic-user-resize
-
-Default
 Glic Z Order Changes
 Enables glic z order changing – Mac, Windows, Linux
 
 #glic-z-order-changes
+
+Default
+Glic actor
+Enables the Glic actor. – Mac, Windows, Linux
+
+#glic-actor
 
 Default
 ServiceWorkerAutoPreload
@@ -2433,6 +2487,12 @@ Three Button Password Save Dialog
 Provides a 'not now' button alongside the 'never' button on the save password dialog. – Mac, Windows, Linux, ChromeOS
 
 #three-button-password-save-dialog
+
+Default
+throttle-main-thread-to-60hz
+Throttle main thread updates to 60fps, even when VSync rate is higher. – Mac, Windows, Linux, ChromeOS, Android
+
+#throttle-main-thread-to-60hz
 
 Default
 Client Side Detection Brand and Intent for Scam Detection
@@ -2733,6 +2793,36 @@ Discount Autofill
 Enable discount autofill experiment. – Mac, Windows, Linux, ChromeOS
 
 #discount-autofill
+
+Default
+UI Automation
+Enables native support of the UI Automation provider. – Windows
+
+#ui-automation-provider
+
+Default
+Enable allow_user_override field for SiteSearchSettings policy
+Enable the field that allows organizations to set a Site Search engine that can be overridden by the user. – Mac, Windows, Linux, ChromeOS
+
+#enable-site-search-allow-user-override-policy
+
+Default
+Change scrolling scheduling to reduce checkerboarding
+If enabled, scrolling that would generate blank frames will now prioritize the new content over scrolling with the intention of decreasing the amount of checkerboarded frames. – Mac, Windows, Linux, ChromeOS, Android
+
+#new-content-for-checkerboarded-scrolls
+
+Default
+Enable multiple server request support for virtual card downstream enrollment
+When enabled, Chrome will be able to send preflight call for enrollment earlier in the flow with the multiple server request support. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-multiple-request-in-virtual-card-downstream-enrollment
+
+Default
+Page actions migration
+Enables a new internal framework for driving page actions behavior. – Mac, Windows, Linux, ChromeOS
+
+#page-actions-migration
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
