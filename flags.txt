@@ -1,5 +1,5 @@
 Experiments
-138.0.7204.5
+139.0.7206.2
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Make the text in PDF images interactable
 Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
@@ -13,16 +13,16 @@ Allows users to view two tabs simultaneously in a split view. – Mac, Windows, 
 #side-by-side
 
 Enabled
-Temporarily unexpire M136 flags.
-Temporarily unexpire flags that expired as of M136. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m136
-
-Default
 Temporarily unexpire M137 flags.
 Temporarily unexpire flags that expired as of M137. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m137
+
+Default
+Temporarily unexpire M138 flags.
+Temporarily unexpire flags that expired as of M138. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m138
 
 Default
 Enable benchmarking
@@ -113,12 +113,6 @@ Show Autofill predictions
 Annotates web forms with Autofill field type predictions as placeholder text. – Mac, Windows, Linux, ChromeOS, Android
 
 #show-autofill-type-predictions
-
-Default
-Swap credit card suggestions
-When enabled, swapping autofilled payment suggestions would resultin overriding all of the payments fields with the swapped profile data – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-payments-field-swapping
 
 Default
 Backdrop Filter Mirror Edge
@@ -409,12 +403,6 @@ Disables site isolation (SitePerProcess, IsolateOrigins, etc). Intended for diag
 #site-isolation-trial-opt-out
 
 Default
-Enable audio descriptions.
-When enabled, HTML5 video elements with a 'descriptions' WebVTT track will speak the audio descriptions aloud as the video plays. – Mac, Windows, Linux, ChromeOS, Android
-
-#text-based-audio-descriptions
-
-Default
 Desktop PWA tab strips
 Tabbed application mode - enables the `tabbed` display mode which allows web apps to add a tab strip to their app. – Mac, Windows, Linux, ChromeOS
 
@@ -437,12 +425,6 @@ Desktop PWA Sub Apps
 Enable installed PWAs to create shortcuts by installing their sub apps. Prototype implementation of: https://github.com/ivansandrk/multi-apps/blob/main/explainer.md – Mac, Windows, Linux, ChromeOS
 
 #enable-desktop-pwas-sub-apps
-
-Default
-Desktop PWA Scope Extensions
-Enable web app manifests to declare scope extensions to extend app scope to other origins. Prototype implementation of: https://github.com/WICG/manifest-incubations/blob/gh-pages/scope_extensions-explainer.md – Mac, Windows, Linux, ChromeOS
-
-#enable-desktop-pwas-scope-extensions
 
 Default
 Desktop PWA Borderless
@@ -697,12 +679,6 @@ Allow the passing in and display of card network and issuer icons for the Secure
 #enable-network-and-issuer-icons-for-secure-payment-confirmation
 
 Default
-Enables keyboard focusable scrollers
-Scrollers without focusable children are keyboard-focusable by default. – Mac, Windows, Linux, ChromeOS, Android
-
-#keyboard-focusable-scrollers
-
-Default
 Fill passwords on account selection
 Filling of passwords when an account is explicitly selected by the user rather than autofilling credentials on page load. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -833,6 +809,12 @@ Omnibox on-focus suggestions on web and SRP
 Enables zero-prefix suggestions on web and SRP when the omnibox is focused, subject to the same conditions and restrictions as on-clobber suggestions. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-focus-triggers-web-and-srp-zero-suggest
+
+Default
+Show omnibox suggestions popup on mouse released
+Enables delaying presentation of the omnibox suggestions popup until the mouse is released. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-show-popup-on-mouse-released
 
 Default
 Hide suggestion group headers in the Omnibox popup
@@ -1675,24 +1657,6 @@ Enables a mode where if the current profile has no extensions, the extensions su
 #extensions-collapse-main-menu
 
 Default
-Extensions Menu Access Control
-Enables a redesigned extensions menu that allows the user to control extensions site access. – Mac, Windows, Linux, ChromeOS
-
-#extensions-menu-access-control
-
-Default
-IPH Extensions Menu
-Enables In-Product-Help that appears when at least one extension has access to the current page. This feature is gated by extensions-menu-access-control. – Mac, Windows, Linux, ChromeOS
-
-#iph-extensions-menu-feature
-
-Default
-IPH Extensions Request Access Button Feature
-Enables In-Product-Help that appears when at least one extension is requesting access to the current page. This feature is gated by extensions-menu-access-control. – Mac, Windows, Linux, ChromeOS
-
-#iph-extensions-request-access-button-feature
-
-Default
 Captured Surface Control
 Enables an API that allows an application to control scroll and zoom on the tab which it is capturing. – Mac, Windows, Linux, ChromeOS
 
@@ -1751,6 +1715,24 @@ Browser initiated automatic picture in picture
 When enabled, allows the browser to automatically enter picture in picture when a series of conditions are met. – Mac, Windows, Linux, ChromeOS
 
 #browser-initiated-automatic-picture-in-picture
+
+Default
+Default Search Engine preload 2
+Enables new DSE preload instead of existing one, which uses //content prefetch – Mac, Windows, Linux, ChromeOS, Android
+
+#dse-preload2
+
+Default
+Default Search Engine preload 2, on-press triggers
+Enables on-press triggers of DsePreload2 – Mac, Windows, Linux, ChromeOS, Android
+
+#dse-preload2-on-press
+
+Default
+No Vary Search in Disk Cache
+Enables the No-Vary-Search header in the disk cache – Mac, Windows, Linux, ChromeOS, Android
+
+#http-cache-no-vary-search
 
 Default
 Audio Ducking
@@ -2005,12 +1987,6 @@ When enabled, Autofill will offer support for filling the user's loyalty cards s
 #autofill-enable-loyalty-cards-filling
 
 Default
-Password manual fallback
-Enables triggering password suggestions through the context menu – Mac, Windows, Linux, ChromeOS
-
-#password-manual-fallback-available
-
-Default
 Save Password Contextual UI
 Improved page action indicator and dialog UI when the user has blocklisted the current site for password saving. – Mac, Windows, Linux, ChromeOS
 
@@ -2059,24 +2035,6 @@ Enable Fingerprinting Protection which may block fingerprinting resources from l
 #enable-fingerprinting-protection-blocklist-incognito
 
 Default
-Device Bound Session Credentials (Standard)
-Enables the official version of Device Bound Session Credentials. For more information see https://github.com/WICG/dbsc. – Mac, Windows, Linux
-
-#enable-standard-device-bound-session-credentials
-
-Default
-Device Bound Session Credentials (Standard) Persistence
-Enables session persistence for the official version of Device Bound Session Credentials. – Mac, Windows, Linux
-
-#enable-standard-device-bound-session-persistence
-
-Default
-Device Bound Session Credentials (Standard) Refresh Quota
-In production, standard Device Bound Session Credentials will feature a maximum rate of refreshes. This flag disables that quota in order to simplify manual testing. – Mac, Windows, Linux
-
-#enable-standard-device-bound-sesssion-refresh-quota
-
-Default
 Showing password suggestions on autofocused password forms
 Enables showing password suggestions without requiring the user to click on the already focused field if the field was autofocused on the page load. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2089,18 +2047,6 @@ If this client is a Google-internal dogfood client, overrides enterprise policy 
 #optimization-guide-enable-dogfood-logging
 
 Disabled
-Use passkey from another device in the context menu
-Hides the "Use a passkey" entry from the autofill popup for conditional WebAuthn requests. Moves the entry point to the context menu. – Mac, Windows, Linux, ChromeOS
-
-#hybrid-passkeys-in-context-menu
-
-Default
-Short ruby heuristics
-When enabled, line breaking doesn't happen inside <ruby>s with shorter contents even if `text-wrap: nowrap` is not specified. – Mac, Windows, Linux, ChromeOS, Android
-
-#ruby-short-heuristics
-
-Default
 Prompt API for Gemini Nano
 Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2141,12 +2087,6 @@ https://policies.google.com/terms/generative-ai/use-policy
 #rewriter-api-for-gemini-nano
 
 Default
-CSS text-box-trim
-Enable experimental CSS text-box-trim property. – Mac, Windows, Linux, ChromeOS, Android
-
-#text-box-trim
-
-Default
 CSS Masonry Layout
 Enable experimental CSS Masonry Layout implementation. Simple layouts with masonry in the block direction are supported. Subgrid, fragmentation, and out-of-flow items are not supported yet. The syntax to use CSS Masonry is `display: masonry` together with grid properties (i.e. `grid-column`, `grid-row`, etc.). More details on masonry syntax can be found at https://www.w3.org/TR/css-grid-3/#masonry-model. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2157,12 +2097,6 @@ Storage Access API follows Same Origin Policy
 Modifies the Storage Access API to follow the Same Origin Policy with respect to security. – Mac, Windows, Linux, ChromeOS, Android
 
 #storage-access-api-follows-same-origin-policy
-
-Default
-Hibernation for 2D canvas
-Enables canvas hibernation for 2D canvas. – Mac, Windows, Linux, ChromeOS, Android
-
-#canvas-2d-hibernation
 
 Default
 History Sync Opt-in
@@ -2225,12 +2159,6 @@ Enables parents to approve blocked websites on a child's device. – Mac, Window
 #supervised-user-local-web-approvals
 
 Default
-Use rewritten display FrameIntervalDecider
-Rewrite is meant to preserve existing behavior and enable new features. – Mac, Windows, Linux, ChromeOS, Android
-
-#use-frame-interval-decider
-
-Default
 Data Sharing
 Enabled all Data Sharing related UI and features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2271,12 +2199,6 @@ History Sync Alternative Illustration
 Enables history sync alternative illustration. – Mac, Windows, Linux, ChromeOS, Android
 
 #history-sync-alternative-illustration
-
-Default
-Discounts on navigation
-Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
-
-#discount-on-navigation
 
 Default
 DevTools Privacy UI
@@ -2385,12 +2307,6 @@ Glic zero state suggestions
 Enables zero state suggestions in Glic. – Mac, Windows, Linux
 
 #glic-zero-state-suggestions
-
-Default
-Partitioned Popins
-Allows Partitioned Popins to be opened. – Mac, Windows, Linux, ChromeOS
-
-#partitioned-popins
 
 Default
 PartitionAlloc with Advanced Checks
@@ -2537,18 +2453,6 @@ When enabled, card category benefits offered by BMO will be shown in Autofill su
 #autofill-enable-allowlist-for-bmo-card-category-benefits
 
 Default
-Snackbar for settings
-Enables a snack bar that is shown to users after they save the setting that controls whether a user gets signed in to Chrome when signing in to Google Services. – Mac, Windows, Linux
-
-#enable-snackbar-in-settings
-
-Default
-Pending Mode Passwords Promo
-Enables an autofill promo on passwords when the user is is pending state. The promo prompts the user to signin to access passwords saved in their account – Mac, Windows, Linux
-
-#enable-pending-mode-passwords-promo
-
-Default
 Lens overlay side panel open in new tab
 Enables open in new tab in the Lens overlay side panel. – Mac, Windows, Linux, ChromeOS
 
@@ -2571,12 +2475,6 @@ Mark all credential as leaked
 Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service – Mac, Windows, Linux, ChromeOS
 
 #mark-all-credentials-as-leaked
-
-Default
-Account storage of preferences, themes and search engines
-When enabled, keeps account preferences, themes and search-engines separate from the local data. If the user signs out or sync is turned off, only the account data is removed while the pre-existing/local data is left behind. – Mac, Windows, Linux, ChromeOS
-
-#account-storage-prefs-themes-search-engines
 
 Default
 Enable checkout amount extraction on Chrome desktop
@@ -2621,16 +2519,16 @@ When this and the DevTools Project Settings flags are turned on, DevTools will a
 #devtools-automatic-workspace-folders
 
 Default
+Drop input events while paint-holding is active
+Drop input events at the browser process until the process receives the first signal that the renderer has sent a frame to GPU. This prevents accidental interaction with a page the user has not seen yet. – Mac, Windows, Linux, ChromeOS, Android
+
+#drop-input-events-while-paint-holding
+
+Default
 Revamped Delete Browsing Data dialog
 Enables a revamped Delete Browsing Data dialog on Desktop. This includes UI changes and removal of the bulk password deletion option from the dialog. – Mac, Windows, Linux, ChromeOS
 
 #dbd-revamp-desktop
-
-Default
-Privacy Sandbox Ad Topics Content Parity
-Enables the Ad Topics card in the Privacy Guide to be displayed. This flag also updates UI and text of the Ad Topics settings page and Topics Consent Dialog. All of these changes are subject to regional availability. – Mac, Windows, Linux, ChromeOS, Android
-
-#privacy-sandbox-ad-topics-content-parity
 
 Default
 Web Authentication Align Error Type for 'payment' credentials
@@ -2673,12 +2571,6 @@ Enable amount extraction logging on Chrome desktop
 Enables logging of the result of checkout amount extraction on desktop. This flag will allow amount extraction to run on any website when a CC form is clicked. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-amount-extraction-desktop-logging
-
-Default
-CanvasRenderingContext2D::IsPaintable() adjustment
-Has CanvasRenderingContext2D::IsPaintable() check for the existence of the resource provider rather than the bridge – Mac, Windows, Linux, ChromeOS, Android
-
-#is-paintable-checks-resource-provider
 
 Default
 Enable update token parsing
@@ -2823,6 +2715,12 @@ Page actions migration
 Enables a new internal framework for driving page actions behavior. – Mac, Windows, Linux, ChromeOS
 
 #page-actions-migration
+
+Default
+Enable caching field classification predictions
+When enabled, the field classification model uses runtime caching to not run models on the same inputs multiple times. – Mac, Windows, Linux, ChromeOS, Android
+
+#field-classification-model-caching
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
