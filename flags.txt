@@ -1,12 +1,6 @@
 Experiments
-139.0.7206.2
+139.0.7210.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Make the text in PDF images interactable
-Enables a feature which runs OCR on PDF images and makes the recognized text searchable and editable. – Mac, Windows, Linux, ChromeOS
-
-#pdf-searchify
-
-Disabled
  Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
 
@@ -1073,6 +1067,12 @@ NTP Sharepoint Module
 Shows the Sharepoint module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
 #ntp-sharepoint-module
+
+Default
+NTP Compose Box
+Shows the Compose button on the New Tab Page Searchbox. – Mac, Windows, Linux, ChromeOS
+
+#ntp-show-compose-button
 
 Default
 NTP Microsoft Authentication Module
