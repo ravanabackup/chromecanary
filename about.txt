@@ -119,6 +119,7 @@ chrome-untrusted://read-anything-side-panel.top-chrome
 Internal Debugging Page URLs
 Internal debugging pages are currently enabled.
 
+chrome://actor-internals
 chrome://commerce-internals
 chrome://data-sharing-internals
 chrome://discards
