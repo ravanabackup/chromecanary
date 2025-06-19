@@ -1,5 +1,5 @@
 Experiments
-139.0.7245.0
+139.0.7247.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
@@ -2177,6 +2177,14 @@ https://policies.google.com/terms/generative-ai/use-policy
 #rewriter-api-for-gemini-nano
 
 Default
+Proofreader API for Gemini Nano
+Enables the Proofreader API, allowing you to proofread a piece of textwith a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#proofreader-api-for-gemini-nano
+
+Default
 CSS Masonry Layout
 Enable experimental CSS Masonry Layout implementation. Simple layouts with masonry in the block direction are supported. Subgrid, fragmentation, and out-of-flow items are not supported yet. The syntax to use CSS Masonry is `display: masonry` together with grid properties (i.e. `grid-column`, `grid-row`, etc.). More details on masonry syntax can be found at https://www.w3.org/TR/css-grid-3/#masonry-model. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2877,6 +2885,12 @@ Enable syncing buy now pay later user data for Klarna
 When enabled, Chrome will sync user data related to buy now pay later for Klarna. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-buy-now-pay-later-syncing-for-klarna
+
+Default
+Lens overlay permission bubble alt appearance
+Enables Lens overlay permission bubble alt appearance. – Mac, Windows, Linux, ChromeOS
+
+#lens-overlay-permission-bubble-alt
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
