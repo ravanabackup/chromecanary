@@ -1,5 +1,5 @@
 Experiments
-139.0.7247.0
+139.0.7250.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
@@ -101,6 +101,12 @@ Extensions on chrome:// URLs
 Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
 #extensions-on-chrome-urls
+
+Disabled
+Extensions on chrome-extension:// URLs
+Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+
+#extensions-on-extension-urls
 
 Disabled
 Show Autofill predictions
@@ -2891,6 +2897,30 @@ Lens overlay permission bubble alt appearance
 Enables Lens overlay permission bubble alt appearance. – Mac, Windows, Linux, ChromeOS
 
 #lens-overlay-permission-bubble-alt
+
+Default
+Web Signin leads To implicitly signed-in state
+When enabled, web sign-in will implicitly sign the user in. – Mac, Windows, Linux, ChromeOS
+
+#web-signin-leads-to-implicitly-signed-in-state
+
+Default
+Enable showing in-product help UI for downstream card awareness
+When enabled, in-product help UI will be shown the first time a card added outside of Chrome appears in Autofill card suggestions. – Mac, Windows, Linux, ChromeOS
+
+#autofill-enable-downstream-card-awareness-iph
+
+Default
+Lens overlay back to page
+Enables the back to live page functionality in the Lens overlay. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-back-to-page
+
+Default
+Enable new tab page browser feature suggestions
+Shows suggestions to explore browser capabilities (eg. signing in) on the new tab page. – Mac, Windows, Linux, ChromeOS
+
+#enable-ntp-browser-promos
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
