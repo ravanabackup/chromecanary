@@ -1,5 +1,5 @@
 Experiments
-139.0.7257.0
+139.0.7258.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
@@ -2695,8 +2695,8 @@ Enables URL filter interstitial V3 for Family Link users. – Mac, Windows, Linu
 #supervised-user-block-interstitial-v3
 
 Default
-Enable amount extraction testing on Chrome desktop
-Enables testing of the result of checkout amount extraction on desktop. This flag will allow amount extraction to run on any website when a CC form is clicked. – Mac, Windows, Linux, ChromeOS
+Enable amount extraction testing on Chrome desktop and Clank
+Enables testing of the result of checkout amount extraction on Chrome desktop and Clank. This flag will allow amount extraction to run on any website when a CC form is clicked. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-amount-extraction-testing
 
@@ -2714,7 +2714,7 @@ If enabled makes the root scrollbar follow the browser's theme color. – Window
 
 Default
 Local Network Access Checks
-Enables Local Network Access checks. See: https://chromestatus.com/feature/5152728072060928 – Mac, Windows, Linux, ChromeOS
+Enables Local Network Access checks. See: https://chromestatus.com/feature/5152728072060928 – Mac, Windows, Linux, ChromeOS, Android
 
 #local-network-access-check
 
