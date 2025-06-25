@@ -1,5 +1,5 @@
 Experiments
-139.0.7258.0
+140.0.7259.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
@@ -7,16 +7,16 @@ Allows users to view two tabs simultaneously in a split view. – Mac, Windows, 
 #side-by-side
 
 Enabled
-Temporarily unexpire M137 flags.
-Temporarily unexpire flags that expired as of M137. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m137
-
-Default
 Temporarily unexpire M138 flags.
 Temporarily unexpire flags that expired as of M138. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m138
+
+Default
+Temporarily unexpire M139 flags.
+Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m139
 
 Default
 Enable benchmarking
@@ -175,18 +175,6 @@ Enable web pages to use experimental JavaScript features. – Mac, Windows, Linu
 #enable-javascript-harmony
 
 Disabled
-Enable enterprise profile badging on the avatar
-Enable enterprise profile badging on the toolbar avatar – Mac, Windows, Linux
-
-#enable-enterprise-profile-badging-for-avatar
-
-Default
-Enable enterprise badging on the New Tab Page
-Enable enterprise profile badging in the footer on the New Tab Page. This includes showing the enterprise logo and the management disclaimer – Mac, Windows, Linux
-
-#enable-enterprise-badging-for-ntp-footer
-
-Default
 Experimental WebAssembly
 Enable web pages to use experimental WebAssembly features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -619,18 +607,6 @@ Use Windows Runtime MIDI API for WebMIDI (effective only on Windows 10 or later)
 #use-winrt-midi-api
 
 Default
-Use Windows WGC API for screen capture
-Use Windows.Graphics.Capture API based screen capturer in combination with the WebRTC based Web API getDisplayMedia. Requires Windows 10, version 1803 or higher. Adds a thin yellow border around the captured screen area. The DXGI API is used as screen capture API when this flag is disabled. – Windows
-
-#webrtc-allow-wgc-screen-capturer
-
-Default
-Use Windows WGC API for window capture
-Use Windows.Graphics.Capture API based windows capturer in combination with the WebRTC based Web API getDisplayMedia. Requires Windows 10, version 1803 or higher. Adds a thin yellow border around the captured window area. The GDI API is used as window capture API when this flag is disabled. – Windows
-
-#webrtc-allow-wgc-window-capturer
-
-Default
 Border around WGC captures
 When using WGC to capture a window or a screen, draw a border around the captured surface. – Windows
 
@@ -881,6 +857,12 @@ Omnibox on device tail suggestions
 Google tail non personalized search suggestions provided by a compact on device model. – Mac, Windows, Linux, ChromeOS, Android
 
 #omnibox-on-device-tail-suggestions
+
+Default
+Omnibox Restore Invisible Focus Only
+Only restore omnibox ofucs if invisible focus is used. Implemented for Split View (#side-by-side). – Mac, Windows, Linux, ChromeOS
+
+#omnibox-restore-invisible-focus-only
 
 Default
 Force color profile
@@ -1627,12 +1609,6 @@ Allows the FedCM API to send performance measurement to the metrics endpoint on 
 #fedcm-metrics-endpoint
 
 Default
-FedCmMultiIdp
-Allows the FedCM API to request multiple identity providers simultaneously. Requires FedCM to be enabled as well. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-multi-idp
-
-Default
 FedCmWithoutWellKnownEnforcement
 Supports configURL that's not in the IdP's .well-known file. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1787,6 +1763,12 @@ Browser initiated automatic picture in picture
 When enabled, allows the browser to automatically enter picture in picture when a series of conditions are met. – Mac, Windows, Linux, ChromeOS
 
 #browser-initiated-automatic-picture-in-picture
+
+Default
+Picture-in-Picture show window animation
+When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
+
+#picture-in-picture-show-window-animation
 
 Default
 Default Search Engine preload 2
@@ -1951,12 +1933,6 @@ Enable swapping RenderFrameHosts on same-site navigations – Mac, Windows, Linu
 #render-document
 
 Default
-SiteInstanceGroups for data: URLs
-Put data: URL subframes in a separate SiteInstance from the initiator, but in the same SiteInstanceGroup, and thus the same process. – Mac, Windows, Linux, ChromeOS, Android
-
-#site-instance-groups-for-data-urls
-
-Default
 Default SiteInstanceGroups
 Put sites that don't need isolation in their own SiteInstance in a defaultSiteInstanceGroup (per BrowsingContextGroup) instead of in a default SiteInstance. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2033,18 +2009,6 @@ Enable Extensions Explicit Sign In
 Enables users to perform an explicit signin upon installing an extension. After this, syncing for extensions will be enabled when in transport mode (when a user is signed in but has not turned on full sync). – Mac, Windows, Linux, ChromeOS
 
 #enable-extensions-explicit-browser-signin
-
-Default
-Device Bound Session Credentials
-Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
-
-#enable-bound-session-credentials
-
-Default
-Device Bound Session Credentials with software keys
-Enables mock software-backed cryptographic keys for Google session credentials binding and Chrome refresh tokens binding (not secure). This is intended to be used for manual testing only. – Mac, Windows, Linux
-
-#enable-bound-session-credentials-software-keys-for-manual-testing
 
 Default
 Menu Elements
@@ -2135,12 +2099,6 @@ Device Bound Session Credentials (Standard) Refresh Quota
 In production, standard Device Bound Session Credentials will feature a maximum rate of refreshes. This flag disables that quota in order to simplify manual testing. – Mac, Windows, Linux
 
 #enable-standard-device-bound-sesssion-refresh-quota
-
-Default
-Showing password suggestions on autofocused password forms
-Enables showing password suggestions without requiring the user to click on the already focused field if the field was autofocused on the page load. – Mac, Windows, Linux, ChromeOS, Android
-
-#pwm-show-suggestions-on-autofocus
 
 Default
 Enable optimization guide dogfood logging
@@ -2335,12 +2293,6 @@ Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, W
 #enable-task-manager-desktop-refresh
 
 Default
-Lens overlay simplified selection
-Enables simplified selection in the Lens overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-simplified-selection
-
-Default
 Lens overlay updated visuals
 Enables updated visuals in the Lens selection overlay. – Mac, Windows, Linux, ChromeOS
 
@@ -2389,18 +2341,6 @@ Enables the on-device language translation API. See https://github.com/WICG/tran
 #translation-api
 
 Default
-AI settings in Privacy Guide
-Enables the AI settings linkout in the Privacy Guide completion card. – Mac, Windows, Linux, ChromeOS
-
-#privacy-guide-ai-settings
-
-Default
-AI settings page enterprise disabled UI
-Enables settings UI for AI features that are disabled by enterprise policy. – Mac, Windows, Linux, ChromeOS
-
-#ai-settings-enterprise-disabled-ui
-
-Default
 Clientside password form classifier.
 Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2411,12 +2351,6 @@ Contextual cueing
 Enables the contextual cueing system to support showing actions. – Mac, Windows, Linux
 
 #contextual-cueing
-
-Default
-Glic zero state suggestions
-Enables zero state suggestions in Glic. – Mac, Windows, Linux
-
-#glic-zero-state-suggestions
 
 Default
 PartitionAlloc with Advanced Checks
@@ -2435,12 +2369,6 @@ Predictable Reported Quota
 Enables reporting of a predictable quota from the StorageManager's estimate API. This flag is intended only for validating if this change caused an unforeseen bug. – Mac, Windows, Linux, ChromeOS, Android
 
 #predictable-reported-quota
-
-Default
-Allow legacy extension manifest versions
-Allows extensions with legacy (unsupported) manifest versions to be loaded as unpacked extensions. This should only be used for maintaining legacy extensions and will be removed in the future. – Mac, Windows, Linux, ChromeOS
-
-#allow-legacy-mv2-extensions
 
 Default
 Glic
@@ -2515,22 +2443,10 @@ Enables signature-based integrity checks, as proposed in https://wicg.github.io/
 #signature-based-sri
 
 Default
-Enable Policy Promotion Banner
-Enables showing the policy promotion banner on chrome://policy page. – Mac, Windows, Linux, ChromeOS
-
-#policy-promotion-banner-flag
-
-Default
 Create Safety Hub services on start up
 When enabled, Safety Hub services are created on start up enabling its checks to start right away. – Mac, Windows, Linux, ChromeOS
 
 #safety-hub-services-on-start-up
-
-Default
-Chrome Refresh Token Binding
-Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
-
-#enable-chrome-refresh-token-binding
 
 Default
 Three Button Password Save Dialog
@@ -2543,12 +2459,6 @@ throttle-main-thread-to-60hz
 Throttle main thread updates to 60fps, even when VSync rate is higher. – Mac, Windows, Linux, ChromeOS, Android
 
 #throttle-main-thread-to-60hz
-
-Default
-Client Side Detection Brand and Intent for Scam Detection
-Enables on device LLM output on pages to inquire for brand and intent of the page. – Mac, Windows, Linux
-
-#client-side-detection-brand-and-page-intent
 
 Default
 Client Side Detection Show Scam Verdict Warning
@@ -2585,12 +2495,6 @@ Enable allowlist for showing category benefits for BMO cards
 When enabled, card category benefits offered by BMO will be shown in Autofill suggestions on the allowlisted merchant websites. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-allowlist-for-bmo-card-category-benefits
-
-Default
-Lens overlay side panel open in new tab
-Enables open in new tab in the Lens overlay side panel. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-side-panel-open-in-new-tab
 
 Default
 Enable System Audio Echo Cancellation (AEC)
@@ -2819,12 +2723,6 @@ UI Automation
 Enables native support of the UI Automation provider. – Windows
 
 #ui-automation-provider
-
-Default
-Enable allow_user_override field for SiteSearchSettings policy
-Enable the field that allows organizations to set a Site Search engine that can be overridden by the user. – Mac, Windows, Linux, ChromeOS
-
-#enable-site-search-allow-user-override-policy
 
 Default
 Change scrolling scheduling to reduce checkerboarding
