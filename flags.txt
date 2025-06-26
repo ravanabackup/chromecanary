@@ -1,6 +1,12 @@
 Experiments
-140.0.7259.0
+140.0.7260.1
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
+ Picture-in-Picture show window animation
+When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
+
+#picture-in-picture-show-window-animation
+
+Enabled
  Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
 
@@ -1117,6 +1123,12 @@ Run WebRTC capture audio processing in the audio process instead of the renderer
 #chrome-wide-echo-cancellation
 
 Default
+DCHECKs are fatal
+By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
+
+#dcheck-is-fatal
+
+Default
 Parallel downloading
 Enable parallel downloading to accelerate download speed. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1763,12 +1775,6 @@ Browser initiated automatic picture in picture
 When enabled, allows the browser to automatically enter picture in picture when a series of conditions are met. – Mac, Windows, Linux, ChromeOS
 
 #browser-initiated-automatic-picture-in-picture
-
-Default
-Picture-in-Picture show window animation
-When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
-
-#picture-in-picture-show-window-animation
 
 Default
 Default Search Engine preload 2
