@@ -1,5 +1,5 @@
 Experiments
-140.0.7260.1
+140.0.7263.1
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Picture-in-Picture show window animation
 When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
@@ -181,6 +181,12 @@ Enable web pages to use experimental JavaScript features. – Mac, Windows, Linu
 #enable-javascript-harmony
 
 Disabled
+Enable enterprise badging on the New Tab Page
+Enable enterprise profile badging in the footer on the New Tab Page. This includes showing the enterprise logo and the management disclaimer – Mac, Windows, Linux
+
+#enable-enterprise-badging-for-ntp-footer
+
+Default
 Experimental WebAssembly
 Enable web pages to use experimental WebAssembly features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1183,12 +1189,6 @@ Enables the ability to save PDFs to Google Drive. – Mac, Windows, Linux
 #pdf-save-to-drive
 
 Default
-Use faster method for printer enumeration
-When enumerating printers, use a faster method to acquire the basic information for each printer. – Windows
-
-#fast-enumerate-printers
-
-Default
 Print with PostScript Type 42 fonts
 When using PostScript level 3 printing, render text with Type 42 fonts if possible. – Windows
 
@@ -1273,6 +1273,12 @@ Enables the experimental Reading Mode feature that highlights by phrases when re
 #read-anything-read-aloud-phrase-highlighting
 
 Default
+Reading Mode with images added via algorithm
+Have Reading Mode use a local rules based algorithm to include images from webpages. – Mac, Windows, Linux, ChromeOS
+
+#read-anything-images-via-algorithm
+
+Default
 Reading Mode Google Docs Integration
 Allows Reading Mode to work on Google Docs. – Mac, Windows, Linux, ChromeOS
 
@@ -1289,12 +1295,6 @@ Support Tool Screenshot
 Enables the Support Tool to capture and include a screenshot in the exported packet. – Mac, Windows, Linux, ChromeOS
 
 #support-tool-screenshot
-
-Default
-Enable Wasm TTS Extension Component
-Enable updating the wasm TTS extension resource files through the Component Updater. – Mac, Windows, Linux, ChromeOS
-
-#wasm-tts-component-updater-enabled
 
 Default
 Boundary Event Dispatch Tracks Node Removal
@@ -1427,12 +1427,6 @@ Run video capture service in browser
 Run the video capture service in the browser process. – Windows, ChromeOS
 
 #run-video-capture-service-in-browser
-
-Default
-RWS V2 UI
-Updated RWS UI – Mac, Windows, Linux, ChromeOS, Android
-
-#rws-v2-ui
 
 Default
 Tracking Protection for 3PCD
@@ -2107,6 +2101,12 @@ In production, standard Device Bound Session Credentials will feature a maximum 
 #enable-standard-device-bound-sesssion-refresh-quota
 
 Default
+Showing password suggestions on autofocused password forms
+Enables showing password suggestions without requiring the user to click on the already focused field if the field was autofocused on the page load. – Mac, Windows, Linux, ChromeOS, Android
+
+#pwm-show-suggestions-on-autofocus
+
+Default
 Enable optimization guide dogfood logging
 If this client is a Google-internal dogfood client, overrides enterprise policy to enable model quality logs. Googlers: See go/chrome-mqls-debug-logging for details. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2267,6 +2267,12 @@ Data Sharing server environment
 Sets data sharing server environment. – Mac, Windows, Linux, ChromeOS, Android
 
 #data-sharing-non-production-environment
+
+Default
+Data Sharing Versioning Test Scenarios
+Testing multiple scenarios for versioning. – Mac, Windows, Linux, ChromeOS, Android
+
+#shared-data-types-kill-switch
 
 Default
 History Sync Alternative Illustration
