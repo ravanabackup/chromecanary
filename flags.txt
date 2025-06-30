@@ -1,5 +1,5 @@
 Experiments
-140.0.7263.1
+140.0.7269.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Picture-in-Picture show window animation
 When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
@@ -872,7 +872,7 @@ Google tail non personalized search suggestions provided by a compact on device 
 
 Default
 Omnibox Restore Invisible Focus Only
-Only restore omnibox ofucs if invisible focus is used. Implemented for Split View (#side-by-side). – Mac, Windows, Linux, ChromeOS
+Only restore omnibox focus if invisible focus is used. Implemented for Split View (#side-by-side). – Mac, Windows, Linux, ChromeOS
 
 #omnibox-restore-invisible-focus-only
 
@@ -1127,12 +1127,6 @@ Chrome-wide echo cancellation
 Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
 
 #chrome-wide-echo-cancellation
-
-Default
-DCHECKs are fatal
-By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
-
-#dcheck-is-fatal
 
 Default
 Parallel downloading
@@ -2017,16 +2011,22 @@ A suite of new HTML elements that support customizable, accessible menus. See ht
 #menu-elements
 
 Default
-Compose Upfront Input Modes
-Enables upfront input modes in the Compose dialog – Mac, Windows, Linux, ChromeOS
+Compose Selection Nudge
+Enables nudge on selection for Compose – Mac, Windows, Linux, ChromeOS
 
-#compose-upfront-input-modes
+#compose-selection-nudge
 
 Default
 Show permission grants from Related Website Sets
 Shows permission grants created by Related Website Sets in Chrome Settings UI and Page Info Bubble, default is hidden – Mac, Windows, Linux, ChromeOS, Android
 
 #related-website-sets-permission-grants
+
+Default
+Enable Autofill support for filling email or loyalty card fields
+When enabled, Autofill will offer support for filling the user's loyalty cards on email or loyalty card fields. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-email-or-loyalty-cards-filling
 
 Default
 Enable Autofill support for filling loyalty cards
@@ -2633,6 +2633,12 @@ Local Network Access Checks
 Enables Local Network Access checks. See: https://chromestatus.com/feature/5152728072060928 – Mac, Windows, Linux, ChromeOS, Android
 
 #local-network-access-check
+
+Default
+Local Network Access Checks for WebRTC
+Enable Local Network Access checks for WebRTC. Requires the #local-network-access-check flag to also be enabled See: https://chromestatus.com/feature/5065884686876672 – Mac, Windows, Linux, ChromeOS, Android
+
+#local-network-access-check-webrtc
 
 Default
 Enable noise for canvas readbacks in Incognito
