@@ -1,5 +1,5 @@
 Experiments
-140.0.7269.0
+140.0.7273.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Picture-in-Picture show window animation
 When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
@@ -197,6 +197,12 @@ Experimental WebAssembly JavaScript Promise Integration (JSPI)
 Enable web pages to use experimental WebAssembly JavaScript Promise Integration (JSPI) API. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-experimental-webassembly-jspi
+
+Default
+Experimental WebAssembly Shared-Everything Threads
+Enable web pages to use the experimental WebAssembly Shared-Everything Threads feature. Note that this only covers a subset of the proposal. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-experimental-webassembly-shared-everything
 
 Default
 WebAssembly baseline compiler
@@ -1867,22 +1873,10 @@ When enabled, allows syncing of the autofill wallet credential data type. – Ma
 #sync-autofill-wallet-credential-data
 
 Default
-Enable mitigation algorithm for rate obfuscation in compute pressure
-Rate Obfuscation Mitigation is used to avoid fingerprinting attacks. Its usage introduces some timing penalties to the compute pressure results.This mitigation might introduce slight precision errors.When disabled this helps to test how predictable and accurate compute pressure is, but the Compute Pressure API can be susceptible to fingerprinting attacks. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compute-pressure-rate-obfuscation-mitigation
-
-Default
 Enables the container-type property to have no layout containment
 The container-type property was recently changed to not add layout containment, this allows users to temporarily disable this change. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-container-type-no-layout-containment
-
-Default
-Enable mitigation algorithm to break calibration attempt in compute pressure
-In a calibration process an attacker tries to manipulate the CPU so that Compute Pressure API would report a transition into a certain pressure state with the highest probability in response to the pressure exerted by the fabricated workload.Break Calibration Mitigation is used to avoid calibration attempts by introducing some randomness in the result of the platform collector.This mitigation might introduce slight precision errors.When disabled this helps to test how predictable and accurate compute pressure is, but the Compute Pressure API can be susceptible to calibration attempts. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-compute-pressure-break-calibration-mitigation
 
 Default
 Changes the target playout delay for Cast mirroring.
@@ -2005,6 +1999,12 @@ Enables users to perform an explicit signin upon installing an extension. After 
 #enable-extensions-explicit-browser-signin
 
 Default
+Enable direct playback of HLS manifests
+Enables built-in HLS player for adaptive playback and live streams. – Mac, Windows, Linux, ChromeOS
+
+#enable-hls-playback
+
+Default
 Menu Elements
 A suite of new HTML elements that support customizable, accessible menus. See https://open-ui.org/components/menu.explainer/. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2033,6 +2033,12 @@ Enable Autofill support for filling loyalty cards
 When enabled, Autofill will offer support for filling the user's loyalty cards stored in Google Wallet. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-loyalty-cards-filling
+
+Default
+Sync Autofill Loyalty Cards
+When enabled, allows syncing of Google Wallet loyalty cards. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-syncing-of-loyalty-cards
 
 Default
 Save Password Contextual UI
@@ -2237,12 +2243,6 @@ Data Sharing
 Enabled all Data Sharing related UI and features. – Mac, Windows, Linux, ChromeOS, Android
 
 #data-sharing
-
-Default
-Collaboration Automotive
-Enable the collaboration feature on automotive platforms. – Mac, Windows, Linux, ChromeOS, Android
-
-#collaboration-automotive
 
 Default
 Collaboration Entreprise V2
@@ -2557,18 +2557,6 @@ If enabled, DevTools will try to fetch project settings in the form of a `com.ch
 #devtools-project-settings
 
 Default
-DevTools CSS Value Tracing
-Enables the CSS Value Tracing UI in the elements panel. – Mac, Windows, Linux, ChromeOS
-
-#devtools-css-value-tracing
-
-Default
-DevTools Automatic Workspace Folders
-When this and the DevTools Project Settings flags are turned on, DevTools will automatically add workspace folders based on a workspace configuration in the project settings. – Mac, Windows, Linux, ChromeOS
-
-#devtools-automatic-workspace-folders
-
-Default
 Drop input events while paint-holding is active
 Drop input events at the browser process until the process receives the first signal that the renderer has sent a frame to GPU. This prevents accidental interaction with a page the user has not seen yet. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2843,6 +2831,24 @@ Enable new tab page browser feature suggestions
 Shows suggestions to explore browser capabilities (eg. signing in) on the new tab page. – Mac, Windows, Linux, ChromeOS
 
 #enable-ntp-browser-promos
+
+Default
+Extensibility API support for deep-links within DevTools
+Extends console.timestamp to support adding deep-links into the DevTools Performance Panel, which (when clicked) call into a DevTools extension – Mac, Windows, Linux, ChromeOS
+
+#enable-devtools-deep-link-via-extensibility-api
+
+Default
+Offer migration to Dice users
+When enabled, offers the implicitly signed-in users a dialog to migrate to explicitly signed-in state. – Mac, Windows, Linux, ChromeOS
+
+#offer-migration-to-dice-users
+
+Default
+Enable buy now pay later for externally linked Klarna
+When enabled, users will have the option to pay with buy now pay later with externally linked Klarna on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
+
+#autofill-enable-buy-now-pay-later-for-externally-linked-klarna
 
 Default
 Your changes will take effect the next time you relaunch Chrome.
