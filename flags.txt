@@ -1,5 +1,5 @@
 Experiments
-140.0.7273.0
+140.0.7274.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Picture-in-Picture show window animation
 When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
@@ -2639,12 +2639,6 @@ Navigation links in the tab-sharing bar
 Enables quick-navigation links to the captured and capturing tab in the tab-sharing bar. – Mac, Windows, Linux, ChromeOS
 
 #tab-capture-infobar-links
-
-Default
-Zero-copy partial raster with GPU compositor
-Has zero-copy raster do partial raster when used with the GPU compositor – Mac, Windows, Linux, ChromeOS, Android
-
-#zero-copy-rbp-partial-raster-with-gpu-compositor
 
 Default
 Lens side panel new feedback
