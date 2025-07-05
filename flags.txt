@@ -1,5 +1,5 @@
 Experiments
-140.0.7276.0
+140.0.7277.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Picture-in-Picture show window animation
 When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
