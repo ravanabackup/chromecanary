@@ -1,5 +1,5 @@
 Experiments
-139.1.82.106
+139.1.82.110
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -13,6 +13,12 @@ Enabled
 Disables download warnings for files which are considered dangerous when Safe Browsing is disabled. Use at your own risks. Not recommended. – Mac, Windows, Linux
 
 #brave-override-download-danger-level
+
+Enabled
+ Use rounded corners on main content areas
+Renders the main content area and sidebar panel with rounded corners, padding, and a drop shadow – Mac, Windows, Linux
+
+#brave-web-view-rounded-corners
 
 Enabled
  Enable split view
@@ -33,10 +39,64 @@ Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Andr
 #smooth-scrolling
 
 Enabled
+ Overlay Scrollbars
+Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS
+
+#overlay-scrollbars
+
+Enabled
+ Experimental QUIC protocol
+Enable experimental QUIC protocol support. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-quic
+
+Enabled
+ Touch UI Layout
+Enables touch UI layout in the browser's top chrome. – Mac, Windows, Linux, ChromeOS
+
+#top-chrome-touch-ui
+
+Disabled
+ Fluent Overlay scrollbars.
+Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
+
+#fluent-overlay-scrollbars
+
+Enabled
+ Contextual search open Lens action uses thumbnail
+Enables web content thumbnail image to override the Lens icon for the omnibox entry point action match. – Mac, Windows, Linux, ChromeOS
+
+#contextual-search-open-lens-action-uses-thumbnail
+
+Enabled
+ Parallel downloading
+Enable parallel downloading to accelerate download speed. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-parallel-downloading
+
+Enabled
  Windows 11 Mica titlebar
 Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
 
 #windows11-mica-titlebar
+
+Enabled
+ Lens overlay
+Enables Lens search via an overlay on any page. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay
+
+Enabled
+ Link Preview
+When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS
+
+#link-preview
+
+Enabled
+ Lens side panel new feedback
+Enables a new feedback entry point in the Lens side panel. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-search-side-panel-new-feedback
 
 Enabled
 Use dev updater url
@@ -367,12 +427,6 @@ Allow feature exceptions for webcompat
 Disables Brave features for specific websites when they break website functionality. – Mac, Windows, Linux, ChromeOS, Android
 
 #brave-webcompat-exceptions-service
-
-Default (Enabled*)
-Use rounded corners on main content areas
-Renders the main content area and sidebar panel with rounded corners, padding, and a drop shadow – Mac, Windows, Linux
-
-#brave-web-view-rounded-corners
 
 Default (Enabled*)
 Override Brave Sync server URL
@@ -736,12 +790,6 @@ When sampling being the backdrop edge for backdrop-filter, samples beyond the ed
 #backdrop-filter-mirror-edge
 
 Default (Enabled)
-Overlay Scrollbars
-Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS
-
-#overlay-scrollbars
-
-Default (Disabled)
 Enable lazy load image for invisible page
 Respect the loading = lazy attribute for images even on invisible pages. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -754,12 +802,6 @@ Enables the soft navigation heuristics, including support for PerformanceObserve
 #soft-navigation-heuristics
 
 Default (Disabled)
-Experimental QUIC protocol
-Enable experimental QUIC protocol support. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-quic
-
-Default
 WebTransport Developer Mode
 When enabled, removes the requirement that all certificates used for WebTransport over HTTP/3 are issued by a known certificate root. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -838,12 +880,6 @@ Enables experimental Web Platform features that are in development. – Mac, Win
 #enable-experimental-web-platform-features
 
 Disabled
-Touch UI Layout
-Enables touch UI layout in the browser's top chrome. – Mac, Windows, Linux, ChromeOS
-
-#top-chrome-touch-ui
-
-Default
 WebUI tab strip
 When enabled makes use of a WebUI-based tab strip. – Mac, Windows, Linux, ChromeOS
 
@@ -886,12 +922,6 @@ Enables the use of Media Foundation for camera usage monitoring. This allows det
 #enable-media-foundation-camera-usage-monitoring
 
 Default (Enabled)
-Fluent Overlay scrollbars.
-Stylizes scrollbars with Microsoft Fluent design and makes them overlay over the web's content. – Windows, Linux
-
-#fluent-overlay-scrollbars
-
-Default (Disabled)
 Fluent scrollbars.
 Stylizes scrollbars with Microsoft Fluent design. – Windows, Linux
 
@@ -1384,12 +1414,6 @@ Enables the contextual search box to use the ContextualSearchProvider instead of
 #contextual-search-box-uses-contextual-search-provider
 
 Default (Enabled)
-Contextual search open Lens action uses thumbnail
-Enables web content thumbnail image to override the Lens icon for the omnibox entry point action match. – Mac, Windows, Linux, ChromeOS
-
-#contextual-search-open-lens-action-uses-thumbnail
-
-Default (Disabled)
 Contextual suggestions ablate others when present
 Makes contextual search suggestions exclusive in zero suggest. – Mac, Windows, Linux, ChromeOS
 
@@ -1744,12 +1768,6 @@ Run WebRTC capture audio processing in the audio process instead of the renderer
 #chrome-wide-echo-cancellation
 
 Default (Enabled)
-Parallel downloading
-Enable parallel downloading to accelerate download speed. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-parallel-downloading
-
-Default (Disabled)
 Enable network logging to file
 Enables network logging to a file named netlog.json in the user data directory. The file can be imported into chrome://net-internals. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2260,12 +2278,6 @@ Enables the Digital Credentials Creation API. – Mac, Windows, Linux, ChromeOS,
 #web-identity-digital-credentials-creation
 
 Default (Disabled)
-Lens overlay
-Enables Lens search via an overlay on any page. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay
-
-Default (Disabled)
 Bind cookies to their setting origin's port
 If enabled, cookies will only be accessible by origins with the same port as the one that originally set the cookie. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2690,12 +2702,6 @@ Enable 3DS authentication for virtual cards
 When enabled, Chrome will trigger 3DS authentication during a virtual card retrieval if a challenge is required, 3DS authentication is available for the card, and FIDO is not. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-vcn-3ds-authentication
-
-Default (Disabled)
-Link Preview
-When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS
-
-#link-preview
 
 Default (Disabled)
 Enable data sharing debug logs
@@ -3304,12 +3310,6 @@ Has zero-copy raster do partial raster when used with the GPU compositor – Mac
 #zero-copy-rbp-partial-raster-with-gpu-compositor
 
 Default (Enabled)
-Lens side panel new feedback
-Enables a new feedback entry point in the Lens side panel. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-search-side-panel-new-feedback
-
-Default (Disabled)
 Expiry duration for VCN enrollment strikes
 When enabled, changes the amount of time required for VCN enrollment prompt strikes to expire. – Mac, Windows, Linux, ChromeOS, Android
 
