@@ -1,5 +1,5 @@
 Experiments
-139.1.82.110
+139.1.82.114
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -225,12 +225,6 @@ Enable permissioning access to localhost connections – Mac, Windows, Linux, Ch
 #brave-localhost-access-permission
 
 Default (Enabled*)
-Enable PSST (Privacy Site Settings Tool) feature
-Enable PSST feature – Mac, Windows, Linux, ChromeOS, Android
-
-#brave-psst
-
-Default (Disabled)
 Enable extension network blocking
 Enable blocking for network requests initiated by extensions – Mac, Windows, Linux, ChromeOS, Android
 
@@ -398,7 +392,7 @@ Sanitize URLs in the clipboard when they are added via the JS API (share/copy bu
 
 #brave-clean-link-js-api
 
-Default (Disabled)
+Default (Enabled*)
 Enable Global Privacy Control
 Enable the Sec-GPC request header and the navigator.globalPrivacyControl JS API – Mac, Windows, Linux, ChromeOS, Android
 
@@ -598,6 +592,12 @@ Enables AI Chat History persistence and management – Mac, Windows, Linux, Andr
 #brave-ai-chat-history
 
 Default (Enabled)
+Brave AI Chat Tools
+Conversations can provide Tools to the AI to perform more specific actions. – Mac, Windows, Linux, Android
+
+#brave-ai-chat-tools
+
+Default (Disabled)
 Brave AI Host-Specific Distillation
 Enables support for host-specific distillation scripts – Mac, Windows, Linux, Android
 
@@ -668,6 +668,12 @@ Show getting started pages
 Show a getting started page after completing the Welcome UX. – Mac, Windows, Linux, ChromeOS
 
 #brave-show-getting-started-page
+
+Default (Disabled)
+Enable PSST (Privacy Site Settings Tool) feature
+Enable PSST feature – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-psst
 
 Default (Disabled)
 Temporarily unexpire M137 flags.
