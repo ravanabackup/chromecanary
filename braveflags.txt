@@ -1,5 +1,5 @@
 Experiments
-139.1.82.114
+139.1.82.122
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -19,6 +19,12 @@ Enabled
 Renders the main content area and sidebar panel with rounded corners, padding, and a drop shadow – Mac, Windows, Linux
 
 #brave-web-view-rounded-corners
+
+Enabled
+ Brave Commands
+Enable experimental page for viewing and executing commands in Brave – Mac, Windows, Linux
+
+#brave-commands
 
 Enabled
  Enable split view
@@ -181,6 +187,12 @@ Enable debug logging for scriptlet injections
 Enable console debugging for scriptlets injected by cosmetic filtering, exposing additional information that can be useful for filter authors. – Mac, Windows, Linux, ChromeOS
 
 #brave-adblock-scriptlet-debug-logs
+
+Default (Disabled)
+Show hidden adblock filter list components
+Reveals adblock filter list components in brave://settings/shields/filters that would normally be hidden. – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-adblock-show-hidden-components
 
 Default (Disabled)
 Enable dark mode blocking fingerprinting protection
@@ -514,12 +526,6 @@ Use fake UA for playlist – Mac, Windows, Linux, Android
 #playlist-fake-ua
 
 Default (Disabled)
-Brave Commands
-Enable experimental page for viewing and executing commands in Brave – Mac, Windows, Linux
-
-#brave-commands
-
-Default (Enabled)
 Brave Commands in Omnibox
 Enable quick commands in the omnibox – Mac, Windows, Linux
 
