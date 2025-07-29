@@ -126,7 +126,7 @@
         async function fetchOriginalData() {
             const oldText = document.getElementById('oldText');
             try {
-                const response = await fetch('https://raw.githubusercontent.com/ravanabackup/chromecanary/refs/heads/main/braveabout.txt');
+                const response = await fetch('https://raw.githubusercontent.com/ravanabackup/chromecanary/refs/heads/main/cometabout.txt');
                 if (response.ok) {
                     const data = await response.text();
                     oldText.value = data;
