@@ -1,18 +1,6 @@
 Experiments
-140.0.7281.0
+140.0.7328.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Picture-in-Picture show window animation
-When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
-
-#picture-in-picture-show-window-animation
-
-Enabled
- Split View
-Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
-
-#side-by-side
-
-Enabled
 Temporarily unexpire M138 flags.
 Temporarily unexpire flags that expired as of M138. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -679,12 +667,6 @@ App-store purchases (e.g., Google Play Store) within a TWA can be requested usin
 #enable-debug-for-store-billing
 
 Default
-Secure Payment Confirmation Network and Issuer Icons
-Allow the passing in and display of card network and issuer icons for the Secure Payment Confirmation Web API. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-network-and-issuer-icons-for-secure-payment-confirmation
-
-Default
 Fill passwords on account selection
 Filling of passwords when an account is explicitly selected by the user rather than autofilling credentials on page load. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -887,6 +869,12 @@ Force color profile
 Forces Chrome to use a specific color profile instead of the color of the window's current monitor, as specified by the operating system. – Mac, Windows, Linux, ChromeOS, Android
 
 #force-color-profile
+
+Default
+Forced Colors
+Enables forced colors mode for web content. – Mac, Windows, Linux, ChromeOS, Android
+
+#forced-colors
 
 Default
 Adaptive global tone mapping
@@ -1100,7 +1088,7 @@ Shows the host fallback icon instead of server fallback on Most Relevant Tab Res
 
 Default
 NTP OneGoogleBar Async Bar Parts
-NTP OneGoogleBar Async Bar Parts – Mac, Windows, Linux, ChromeOS
+Enables the OneGoogleBar async bar parts API on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
 #ntp-ogb-async-bar-parts
 
@@ -1121,6 +1109,12 @@ NTP Sharepoint Module
 Shows the Sharepoint module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
 #ntp-sharepoint-module
+
+Default
+NTP Tab Groups Module
+Shows the Tab Groups module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
+
+#ntp-tab-groups-module
 
 Default
 NTP Microsoft Authentication Module
@@ -1249,6 +1243,12 @@ Enable thresholds for subframe process reuse. When out-of-process iframes attemp
 #subframe-process-reuse-thresholds
 
 Default
+Stylus Handwriting for Windows.
+Enables an experimental feature that lets users handwrite into text fields using a compatible stylus. Only supported on Windows builds greater than or equal to 26100.3624 – Windows
+
+#stylus-handwriting-win
+
+Default
 Multilingual Live Caption
 Enables the multilingual Live Caption Feature which allows for many language choices and automated language choices. – Mac, Windows, Linux, ChromeOS
 
@@ -1259,6 +1259,12 @@ Headless Live Captions
 Enable features related to headless captions exploration. These are very likely unstable. – Mac, Windows, Linux, ChromeOS
 
 #enable-headless-live-caption
+
+Default
+Media Link Helpers
+Enable customized per-site media link processing. – Mac, Windows, Linux, ChromeOS
+
+#enable-media-link-helpers
 
 Default
 Reading Mode Read Aloud
@@ -1429,6 +1435,12 @@ Run the video capture service in the browser process. – Windows, ChromeOS
 #run-video-capture-service-in-browser
 
 Default
+ACT Features
+Enable ACT features – Mac, Windows, Linux, ChromeOS, Android
+
+#act-features
+
+Default
 Tracking Protection for 3PCD
 Enables the tracking protection UI + prefs that will be used for the 3PCD 1%. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1481,6 +1493,18 @@ Page embedded permission control (permission element)
 Enables the Page Embedded Permission Control feature, which allows the use of the HTML 'permission' element. – Mac, Windows, Linux, ChromeOS, Android
 
 #permission-element
+
+Default
+Geolocation permission control (geolocation element)
+Enables the Geolocation Permission Control feature, which allows the use of the HTML 'geolocation' element. – Mac, Windows, Linux
+
+#geolocation-element
+
+Default
+PermissionPromiseLifetimeModulation
+Modulates the lifetime of a permission promise based on the prompt's UI treatment. When the prompt is non-prominent, the promise settlement is expedited to synchronize with the request manager state. – Mac, Windows, Linux, ChromeOS
+
+#permission-promise-lifetime-modulation
 
 Default
 Merchant Trust
@@ -1669,6 +1693,12 @@ If enabled, browser features and the speculation rules API can trigger prerender
 #prerender2
 
 Default
+Prerender Reuse Host
+If enabled, the browser will reuse the prerender host and the underlyingprocess for future prerendered pages when possible. – Mac, Windows, Linux, ChromeOS, Android
+
+#prerender2-reuse-host
+
+Default
 Test Third Party Cookie Phaseout
 Enable to test third-party cookie phaseout. Learn more: https://goo.gle/3pcd-flags – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1771,6 +1801,18 @@ When enabled, allows the browser to automatically enter picture in picture when 
 #browser-initiated-automatic-picture-in-picture
 
 Default
+Picture-in-Picture show window animation
+When enabled, Picture-in-Picture windows will use a fade-in show animation. On Windows OS this is a no-op. – Mac, Windows, Linux, ChromeOS
+
+#picture-in-picture-show-window-animation
+
+Default
+Document patching
+Allow out-of-order streaming of HTML content using <template patchfor> and node.patchSelf(). See https://github.com/WICG/declarative-partial-updates – Mac, Windows, Linux, ChromeOS, Android
+
+#document-patching
+
+Default
 Default Search Engine preload 2
 Enables new DSE preload instead of existing one, which uses //content prefetch – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1787,6 +1829,12 @@ No Vary Search in Disk Cache
 Enables the No-Vary-Search header in the disk cache – Mac, Windows, Linux, ChromeOS, Android
 
 #http-cache-no-vary-search
+
+Default
+Use custom disk cache backend for HTTP Cache
+Enables the experimental disk cache backend for HTTP Cache – Mac, Windows, Linux, ChromeOS, Android
+
+#http-cache-custom-backend
 
 Default
 Audio Ducking
@@ -1957,6 +2005,12 @@ When enabled, risk data is prefetched during payments autofill flows to reduce u
 #autofill-enable-prefetching-risk-data-for-retrieval
 
 Default
+Dynamic Profile Country
+When enabled, Chrome updates the country associated with the profile on open – Mac, Windows, Linux, ChromeOS, Android
+
+#rcaps-dynamic-profile-country
+
+Default
 Desktop PWA Link Capturing
 Enables opening links from Chrome in an installed PWA. Currently under reimplementation. – Mac, Windows, Linux, ChromeOS
 
@@ -1987,6 +2041,12 @@ When enabled, server card retrieval will begin with a risk-based check instead o
 #autofill-enable-fpan-risk-based-authentication
 
 Default
+Ack On Surface Activation When Interactive
+If enabled, immediately send acks to clients when a viz surface activates and when that surface is a dependency of an interactive frame (i.e., when there is an active scroll or a touch interaction). This effectively removes back-pressure in this case. This can result in wasted work and contention, but should regularize the timing of client rendering. – Mac, Windows, Linux, ChromeOS, Android
+
+#ack-on-surface-activation-when-interactive
+
+Default
 History Sync Opt-in Expansion Pill
 Enables the History Sync Opt-in expansion pill on Desktop platforms. – Mac, Windows, Linux
 
@@ -2003,6 +2063,18 @@ Enable direct playback of HLS manifests
 Enables built-in HLS player for adaptive playback and live streams. – Mac, Windows, Linux, ChromeOS
 
 #enable-hls-playback
+
+Default
+Device Bound Session Credentials
+Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
+
+#enable-bound-session-credentials
+
+Default
+Device Bound Session Credentials with software keys
+Enables mock software-backed cryptographic keys for Google session credentials binding and Chrome refresh tokens binding (not secure). This is intended to be used for manual testing only. – Mac, Windows, Linux
+
+#enable-bound-session-credentials-software-keys-for-manual-testing
 
 Default
 Menu Elements
@@ -2126,7 +2198,7 @@ If this client is a Google-internal dogfood client, overrides enterprise policy 
 
 Disabled
 Prompt API for Gemini Nano
-Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
 https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
@@ -2134,7 +2206,7 @@ https://policies.google.com/terms/generative-ai/use-policy
 
 Default
 Prompt API for Gemini Nano with Multimodal Input
-Extends the exploratory Prompt API with image and audio input types. Allows you to supplement natural language instructions for a built-in large language model (Gemini Nano in Chrome) with image and audio inputs. Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API enhancement is primarily intended for natural language processing tasks associated with visual and auditory data, such as generating rough descriptions of pictures and sounds. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+Extends the exploratory Prompt API with image and audio input types. Allows you to supplement natural language instructions for a built-in large language model (Gemini Nano in Chrome) with image and audio inputs. Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API enhancement is primarily intended for natural language processing tasks associated with visual and auditory data, such as generating rough descriptions of pictures and sounds. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
 https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
@@ -2142,7 +2214,7 @@ https://policies.google.com/terms/generative-ai/use-policy
 
 Default
 Summarization API for Gemini Nano
-Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
 https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
@@ -2150,7 +2222,7 @@ https://policies.google.com/terms/generative-ai/use-policy
 
 Default
 Writer API for Gemini Nano
-Enables the Writer API, allowing you to write a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+Enables the Writer API, allowing you to write a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
 https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
@@ -2158,7 +2230,7 @@ https://policies.google.com/terms/generative-ai/use-policy
 
 Default
 Rewriter API for Gemini Nano
-Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
 https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
@@ -2166,7 +2238,7 @@ https://policies.google.com/terms/generative-ai/use-policy
 
 Default
 Proofreader API for Gemini Nano
-Enables the Proofreader API, allowing you to proofread a piece of textwith a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux
+Enables the Proofreader API, allowing you to proofread a piece of textwith a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
 https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
@@ -2174,7 +2246,7 @@ https://policies.google.com/terms/generative-ai/use-policy
 
 Default
 CSS Masonry Layout
-Enable experimental CSS Masonry Layout implementation. Simple layouts with masonry in the block direction are supported. Subgrid, fragmentation, and out-of-flow items are not supported yet. The syntax to use CSS Masonry is `display: masonry` together with grid properties (i.e. `grid-column`, `grid-row`, etc.). More details on masonry syntax can be found at https://www.w3.org/TR/css-grid-3/#masonry-model. – Mac, Windows, Linux, ChromeOS, Android
+Enable experimental CSS Masonry Layout implementation. Simple layouts with masonry are supported. Subgrid, fragmentation, and out-of-flow items are not supported yet. The syntax to use CSS Masonry is `display: masonry` together with grid properties (i.e. `grid-column`, `grid-row`, etc.). More details on masonry syntax can be found at https://www.w3.org/TR/css-grid-3/#masonry-model. – Mac, Windows, Linux, ChromeOS, Android
 
 #css-masonry-layout
 
@@ -2305,6 +2377,12 @@ Use the Permission Predictions Service and the AIv3 model to surface permission 
 #permissions-ai-v3
 
 Default
+PermissionsAIv4
+Use the Permission Predictions Service and the AIv4 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+
+#permissions-ai-v4
+
+Default
 Task Manager Desktop Refresh
 Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
 
@@ -2315,6 +2393,12 @@ Lens overlay updated visuals
 Enables updated visuals in the Lens selection overlay. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay-updated-visuals
+
+Default
+Enables AIM in Lens side panel.
+Enables AIM follow ups with the Lens overlay results side panel. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-search-aim-m3
 
 Default
 Enable buy now pay later on Autofill
@@ -2431,6 +2515,18 @@ Enables resetting the panel position after a session timeout. – Mac, Windows, 
 #glic-panel-reset-on-session-timeout
 
 Default
+Glic Pre-Warming
+Enables the pre-warming of the Glic panel's web client. – Mac, Windows, Linux
+
+#glic-pre-warming
+
+Default
+Glic FRE Pre-Warming
+Enables the pre-warming of Glic's FRE web page. – Mac, Windows, Linux
+
+#glic-fre-pre-warming
+
+Default
 ServiceWorkerAutoPreload
 Dispatches a preload request for navigation before starting the service worker. See https://github.com/explainers-by-googlers/service-worker-auto-preload – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2461,10 +2557,22 @@ Enables signature-based integrity checks, as proposed in https://wicg.github.io/
 #signature-based-sri
 
 Default
+Enable Management Promotion Banner
+Enables showing the management promotion banner on chrome://management page. – Mac, Windows, Linux, ChromeOS
+
+#management-promotion-banner-flag
+
+Default
 Create Safety Hub services on start up
 When enabled, Safety Hub services are created on start up enabling its checks to start right away. – Mac, Windows, Linux, ChromeOS
 
 #safety-hub-services-on-start-up
+
+Default
+Chrome Refresh Token Binding
+Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
+
+#enable-chrome-refresh-token-binding
 
 Default
 Three Button Password Save Dialog
@@ -2545,10 +2653,10 @@ When enabled, allows Chrome to dynamically fix the AXTree of sites. This is expe
 #enable-ax-tree-fixing
 
 Default
-Clipboard contentsId API
-Enables the API for getting a unique token of the system clipboard's current state. For details, see https://github.com/explainers-by-googlers/clipboard-contents-id – Mac, Windows, Linux, ChromeOS, Android
+ClipboardChangeEvent
+Enables the `clipboardchange` event API. See: https://chromestatus.com/feature/5085102657503232 – Mac, Windows, Linux, ChromeOS, Android
 
-#enable-clipboard-contents-id
+#enable-clipboardchange-event
 
 Default
 Enable loading and querying the checkout amount extraction allowlist on Chrome Desktop
@@ -2611,10 +2719,10 @@ Enables testing of the result of checkout amount extraction on Chrome desktop an
 #autofill-enable-amount-extraction-testing
 
 Default
-Enable update token parsing
-Enables app updates to be detected through a change in the update token field in the manifest – Mac, Windows, Linux, ChromeOS, Android
+Enable predictable app updating for PWAs
+Enables PWA updates to be more predictable by considering changes in icon urls specified in the manifest – Mac, Windows, Linux, ChromeOS, Android
 
-#enable-web-app-update-token-parsing
+#enable-web-app-predictable-app-updating
 
 Default
 Make scrollbar follow theme
@@ -2701,6 +2809,18 @@ Enables the media-playback-while-not-visible permission policy. This permission 
 #media-playback-while-not-visible-permission-policy
 
 Default
+Split View
+Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
+
+#side-by-side
+
+Default
+Split View Session Restore
+Allows users to restore tabs in split view from previous session when the browser restarts. – Mac, Windows, Linux, ChromeOS
+
+#side-by-side-session-restore
+
+Default
 Secure Payment Confirmation Fallback UX
 Enable the fallback experience in Secure Payment Confirmation, where a transaction dialog-like UX is shown even if no credentials match. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2755,12 +2875,6 @@ When enabled, the field classification model uses runtime caching to not run mod
 #field-classification-model-caching
 
 Default
-Drop names with invalid characters for credit card upload
-When enabled, cardholder and address names considered during the credit card upload flow will be cleared out if they contain characters considered invalid by Google Payments, such as numbers or various punctuation marks. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-drop-names-with-invalid-characters-for-card-upload
-
-Default
 Require CVC for possible card update on upload save
 When enabled, if credit card upload save encounters a card with the same four digits as an existing server card but a different expiration date, it requires that CVC was found in the flow before offering to save/update the card. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2774,7 +2888,7 @@ When enabled, the Autofill strike system will not block a feature from being off
 
 Default
 Web App Installation API
-Enables the Web App Installation API which allows web apps to be installed programmatically using navigator.install(). – Mac, Windows, Linux, ChromeOS, Android
+Enables the Web App Installation API which allows web apps to be installed programmatically using navigator.install(). – Mac, Windows, Linux, ChromeOS
 
 #web-app-installation-api
 
@@ -2797,10 +2911,10 @@ When enabled, users will have the option to pay with buy now pay later with Klar
 #autofill-enable-buy-now-pay-later-for-klarna
 
 Default
-Enable syncing buy now pay later user data for Klarna
-When enabled, Chrome will sync user data related to buy now pay later for Klarna. – Mac, Windows, Linux, ChromeOS
+Customize tab group color palette
+Enables parsing of the `tab_group_color_palette` key in the manifest.json file, which allows customization of the tab group color palette. Disabling this flag will cause the key to be ignored. – Mac, Windows, Linux, ChromeOS
 
-#autofill-enable-buy-now-pay-later-syncing-for-klarna
+#customize-tab-group-color-palette
 
 Default
 Lens overlay permission bubble alt appearance
@@ -2851,4 +2965,40 @@ When enabled, users will have the option to pay with buy now pay later with exte
 #autofill-enable-buy-now-pay-later-for-externally-linked-klarna
 
 Default
-Your changes will take effect the next time you relaunch Chrome.
+Lens Overlay EDU action chip
+Enables Lens Overlay EDU action chip. Intended for testing the chip itself, not its triggering criteria. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-edu-action-chip
+
+Default
+Lens overlay entrypoint label
+Replaces the string used for the Lens overlay entrypoint label. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-entrypoint-label-alt
+
+Default
+Safety Hub - Disruptive notification revocation
+Enables autorevoking notifications with high volume and low site engagement score – Mac, Windows, Linux, ChromeOS, Android
+
+#safety-hub-disruptive-notification-revocation
+
+Default
+Bookmark and tab group conversion
+Enable conversion between bookmark and tab group – Mac, Windows, Linux, ChromeOS
+
+#bookmark-tab-group-conversion
+
+Default
+Lens overlay straight to SRP
+Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-straight-to-srp
+
+Default
+Default search engine prewarm
+Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
+
+#default-search-engine-prewarm
+
+Default
+Your changes will take effect the next time that you relaunch Chrome.
