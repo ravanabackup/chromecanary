@@ -1,5 +1,5 @@
 Experiments
-139.1.82.122
+139.1.83.6
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -7,6 +7,12 @@ Warning: Experimental features ahead! By enabling these features, you could lose
 Enables the refreshed version of the New Tab Page – Mac, Windows, Linux, ChromeOS
 
 #brave-ntp-refresh-enabled
+
+Enabled
+ Show hidden adblock filter list components
+Reveals adblock filter list components in brave://settings/shields/filters that would normally be hidden. – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-adblock-show-hidden-components
 
 Enabled
  Override download danger level
@@ -187,12 +193,6 @@ Enable debug logging for scriptlet injections
 Enable console debugging for scriptlets injected by cosmetic filtering, exposing additional information that can be useful for filter authors. – Mac, Windows, Linux, ChromeOS
 
 #brave-adblock-scriptlet-debug-logs
-
-Default (Disabled)
-Show hidden adblock filter list components
-Reveals adblock filter list components in brave://settings/shields/filters that would normally be hidden. – Mac, Windows, Linux, ChromeOS, Android
-
-#brave-adblock-show-hidden-components
 
 Default (Disabled)
 Enable dark mode blocking fingerprinting protection
@@ -3339,7 +3339,7 @@ Adds a few keyboard shortcuts for some tab group interactions. – Mac, Windows,
 
 #tab-group-shortcuts
 
-Default (Disabled)
+Default (Enabled)
 Bundled Security Settings
 Enables new Bundled Security Settings UI on chrome://settings/security. This new UI bundles all security settings into either an enhanced or standard bundle which should simplify the security settings page and also help simplify the user's decision. – Mac, Windows, Linux, ChromeOS
 
