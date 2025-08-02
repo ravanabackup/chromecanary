@@ -110,6 +110,7 @@ chrome://view-cert
 chrome://watermark
 chrome://web-app-internals
 chrome://webrtc-internals
+chrome://webui-browser
 chrome://whats-new
 chrome-untrusted://compose
 chrome-untrusted://data-sharing
