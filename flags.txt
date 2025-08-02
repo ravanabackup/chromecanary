@@ -1,5 +1,5 @@
 Experiments
-140.0.7330.0
+140.0.7332.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M138 flags.
 Temporarily unexpire flags that expired as of M138. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -2053,6 +2053,12 @@ Enables the History Sync Opt-in expansion pill on Desktop platforms. – Mac, Wi
 #enable-history-sync-optin-expansion-pill
 
 Default
+Avatar Sync Promo
+Enables the avatar button sync promo for eligible users. Only available on Windows. – Windows
+
+#avatar-button-sync-promo
+
+Default
 Enable Extensions Explicit Sign In
 Enables users to perform an explicit signin upon installing an extension. After this, syncing for extensions will be enabled when in transport mode (when a user is signed in but has not turned on full sync). – Mac, Windows, Linux, ChromeOS
 
@@ -2999,6 +3005,18 @@ Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
 #default-search-engine-prewarm
+
+Default
+Apply clientside model predictions for password forms.
+Enable using clientside model predictions to fill password forms. – Mac, Windows, Linux, ChromeOS, Android
+
+#apply-clientside-model-predictions-for-password-types
+
+Default
+Apply clientside model predictions for OTPs.
+Enable using clientside model predictions to fill OTP forms. – Mac, Windows, Linux, ChromeOS, Android
+
+#apply-clientside-model-predictions-for-otps
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
