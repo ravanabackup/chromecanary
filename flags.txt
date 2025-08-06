@@ -1,5 +1,5 @@
 Experiments
-140.0.7332.0
+140.0.7339.5
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M138 flags.
 Temporarily unexpire flags that expired as of M138. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -113,6 +113,18 @@ Show Autofill predictions
 Annotates web forms with Autofill field type predictions as placeholder text. – Mac, Windows, Linux, ChromeOS, Android
 
 #show-autofill-type-predictions
+
+Default
+Swap credit card suggestions
+When enabled, swapping autofilled payment suggestions would resultin overriding all of the payments fields with the swapped profile data – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-payments-field-swapping
+
+Default
+Show bubbles based on priorities
+When enabled, the autofill and the password manager bubbles would beshown based on their respective priorities compared to each other – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-show-bubbles-based-on-priorities
 
 Default
 Backdrop Filter Mirror Edge
@@ -787,6 +799,12 @@ Enables icon button for Lens entrypoint in the Omnibox. – Mac, Windows, Linux,
 #lens-overlay-omnibox-entry-point
 
 Default
+AI Mode Omnibox entrypoint
+Enables icon button for AI Mode entrypoint in the Omnibox. – Mac, Windows, Linux, ChromeOS
+
+#ai-mode-omnibox-entry-point
+
+Default
 Omnibox toolbelt
 Adds a row of buttons at the bottom of the omnibox. – Mac, Windows, Linux, ChromeOS
 
@@ -1433,12 +1451,6 @@ Run video capture service in browser
 Run the video capture service in the browser process. – Windows, ChromeOS
 
 #run-video-capture-service-in-browser
-
-Default
-ACT Features
-Enable ACT features – Mac, Windows, Linux, ChromeOS, Android
-
-#act-features
 
 Default
 Tracking Protection for 3PCD
@@ -2521,6 +2533,12 @@ Enables resetting the panel position after a session timeout. – Mac, Windows, 
 #glic-panel-reset-on-session-timeout
 
 Default
+Glic Panel Reset Size and Location
+Enables resetting the panel size and position on every open. – Mac, Windows, Linux
+
+#glic-panel-reset-size-and-location-on-open
+
+Default
 Glic Pre-Warming
 Enables the pre-warming of the Glic panel's web client. – Mac, Windows, Linux
 
@@ -2965,10 +2983,10 @@ When enabled, offers the implicitly signed-in users a dialog to migrate to expli
 #offer-migration-to-dice-users
 
 Default
-Enable buy now pay later for externally linked Klarna
-When enabled, users will have the option to pay with buy now pay later with externally linked Klarna on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
+Enable buy now pay later for externally linked BNPL issuer
+When enabled, users will have the option to pay with buy now pay later with externally linked issuer on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
 
-#autofill-enable-buy-now-pay-later-for-externally-linked-klarna
+#autofill-enable-buy-now-pay-later-for-externally-linked
 
 Default
 Lens Overlay EDU action chip
@@ -3017,6 +3035,12 @@ Apply clientside model predictions for OTPs.
 Enable using clientside model predictions to fill OTP forms. – Mac, Windows, Linux, ChromeOS, Android
 
 #apply-clientside-model-predictions-for-otps
+
+Default
+HTML-in-Canvas
+Enables the Canvas 2D drawElement API and the WebGL texElement2D API for drawing HTML content into a canvas. See: https://github.com/WICG/html-in-canvas – Mac, Windows, Linux, ChromeOS, Android
+
+#canvas-draw-element
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
