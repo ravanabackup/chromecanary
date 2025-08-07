@@ -1,16 +1,16 @@
 Experiments
-140.0.7339.6
+141.0.7342.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
-Temporarily unexpire M138 flags.
-Temporarily unexpire flags that expired as of M138. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m138
-
-Default
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m139
+
+Default
+Temporarily unexpire M140 flags.
+Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m140
 
 Default
 Enable benchmarking
@@ -127,12 +127,6 @@ When enabled, the autofill and the password manager bubbles would beshown based 
 #autofill-show-bubbles-based-on-priorities
 
 Default
-Backdrop Filter Mirror Edge
-When sampling being the backdrop edge for backdrop-filter, samples beyond the edge are mirrored back into the backdrop rather than duplicating the pixels at the edge. – Mac, Windows, Linux, ChromeOS, Android
-
-#backdrop-filter-mirror-edge
-
-Default
 Smooth Scrolling
 Animate smoothly when scrolling page content. – Windows, Linux, ChromeOS, Android
 
@@ -193,12 +187,6 @@ Enable web pages to use experimental WebAssembly features. – Mac, Windows, Lin
 #enable-experimental-webassembly-features
 
 Disabled
-Experimental WebAssembly JavaScript Promise Integration (JSPI)
-Enable web pages to use experimental WebAssembly JavaScript Promise Integration (JSPI) API. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-experimental-webassembly-jspi
-
-Default
 Experimental WebAssembly Shared-Everything Threads
 Enable web pages to use the experimental WebAssembly Shared-Everything Threads feature. Note that this only covers a subset of the proposal. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -245,12 +233,6 @@ Touch UI Layout
 Enables touch UI layout in the browser's top chrome. – Mac, Windows, Linux, ChromeOS
 
 #top-chrome-touch-ui
-
-Default
-WebUI tab strip
-When enabled makes use of a WebUI-based tab strip. – Mac, Windows, Linux, ChromeOS
-
-#webui-tab-strip
 
 Default
 Hardware-accelerated video decode
@@ -403,12 +385,6 @@ Specifies the experimental cohort for the Iwa Key Distribution component. – Ma
 #iwa-key-distribution-component-exp-cohort
 
 Disabled
-Enable Controlled Frame
-Enables experimental support for Controlled Frame. See https://github.com/WICG/controlled-frame/blob/main/EXPLAINER.md for more information. – Mac, Windows, Linux, ChromeOS
-
-#enable-controlled-frame
-
-Default
 Isolate additional origins
 Requires dedicated processes for an additional set of origins, specified as a comma-separated list. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -475,28 +451,10 @@ Have the Media Router connect to Cast devices on all IP addresses, not just RFC1
 #media-router-cast-allow-all-ips
 
 Default
-Media Remoting without videos in fullscreen mode
-Starts Media Remoting from Global Media Controls without making the videos fullscreen. – Mac, Windows, Linux, ChromeOS
-
-#media-remoting-without-fullscreen
-
-Default
 Allow all sites to initiate mirroring
 When enabled, allows all websites to request to initiate tab mirroring via Presentation API. Requires #cast-media-route-provider to also be enabled – Mac, Windows, Linux, ChromeOS
 
 #allow-all-sites-to-initiate-mirroring
-
-Default
-Delay media sink discovery until explicit user interaction with cast
-Delay the browser background discovery of Cast and DIAL devices until users have interacted with the Cast UI or visited a site supporting Cast SDK or Remote Playback API. – Mac, Windows, Linux, ChromeOS
-
-#delay-media-sink-discovery
-
-Default
-Show the permission rejected error message in the Cast/GMC UI.
-Show an error message in the Cast/GMC UI to inform users when the network permission is rejected and Chrome's Cast feature is disabled. – Mac, Windows, Linux, ChromeOS
-
-#show-cast-permission-rejected-error
 
 Default
 Enables logging of all Cast messages.
@@ -655,16 +613,16 @@ This option enables TLS 1.3 Early Data, allowing GET requests to be sent during 
 #enable-tls13-early-data
 
 Default
+TLS Trust Anchor IDs
+This option configures TLS Trust Anchor IDs, allowing compatible servers to select between available certificates issued by different CAs. – Mac, Windows, Linux, ChromeOS, Android
+
+#tls-trust-anchor-ids
+
+Default
 Auto Dark Mode for Web Contents
 Automatically render all web contents using a dark theme. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-force-dark
-
-Default
-Touch Text Editing Redesign
-Enables new touch text editing features. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-cros-touch-text-editing-redesign
 
 Default
 Experimental Web Payments API features
@@ -685,82 +643,10 @@ Filling of passwords when an account is explicitly selected by the user rather t
 #fill-on-account-select
 
 Default
-Most Visited Tile: New scoring function
-When showing MV tiles, use a new scoring function to compute the score of each segment. – Mac, Windows, Linux, ChromeOS, Android
-
-#most-visited-tiles-new-scoring
-
-Default
 Most Visited Tile: Visual deduplication filter
 When computing MV Tiles, remove tiles that are visual duplicates (i.e., have the same title and the same hostname) of another tile with higher score. – Mac, Windows, Linux, ChromeOS, Android
 
 #most-visited-tiles-visual-deduplication
-
-Default
-Allow local history zero-prefix suggestions beyond NTP
-Enables local history zero-prefix suggestions in every context in which the remote zero-prefix suggestions are enabled. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-local-history-zero-suggest-beyond-ntp
-
-Default
-Omnibox Zero Prefix Suggest Prefetch Request Debouncing
-Enables the use of a request debouncer to throttle the volume of ZPS prefetch requests issued to the remote Suggest service. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-zero-suggest-prefetch-debouncing
-
-Default
-Omnibox Zero Prefix Suggestion Prefetching on NTP
-Enables prefetching of the zero prefix suggestions for eligible users on the New Tab page. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-zero-suggest-prefetching
-
-Default
-Omnibox Zero Prefix Suggestion Prefetching on SRP
-Enables prefetching of the zero prefix suggestions for eligible users on the Search Results page. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-zero-suggest-prefetching-on-srp
-
-Default
-Omnibox Zero Prefix Suggestion Prefetching on the Web
-Enables prefetching of the zero prefix suggestions for eligible users on the Web (i.e. non-NTP and non-SRP URLs). – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-zero-suggest-prefetching-on-web
-
-Default
-Log Omnibox URL Scoring Signals
-Enables Omnibox to log scoring signals of URL suggestions. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-ml-log-url-scoring-signals
-
-Default
-Omnibox ML Scoring with Piecewise Score Mapping
-Specifies how to blend URL ML scores and search traditional scores using a piecewise ML score mapping function. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-ml-url-piecewise-mapped-search-blending
-
-Default
-Omnibox ML URL Score Caching
-Enables in-memory caching of ML URL scores. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-ml-url-score-caching
-
-Default
-Omnibox ML URL Scoring
-Enables ML-based relevance scoring for Omnibox URL Suggestions. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-ml-url-scoring
-
-Default
-Omnibox ML URL Search Blending
-Specifies how to blend URL ML scores and search traditional scores. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-ml-url-search-blending
-
-Default
-Omnibox URL Scoring Model
-Enables ML scoring model for Omnibox URL suggestions. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-ml-url-scoring-model
 
 Default
 Contextual search box uses contextual search provider
@@ -811,40 +697,10 @@ Adds a row of buttons at the bottom of the omnibox. – Mac, Windows, Linux, Chr
 #omnibox-toolbelt
 
 Default
-Omnibox Rich Autocompletion Promising Combinations
-Allow autocompletion for titles and non-prefixes. Suggestions whose titles or URLs contain the user input as a continuous chunk, but not necessarily a prefix, can be the default suggestion. Otherwise, only suggestions whose URLs are prefixed by the user input can be. – Mac, Windows, Linux, ChromeOS
-
-#omnibox-rich-autocompletion-promising
-
-Default
-Omnibox on-focus suggestions on web and SRP
-Enables zero-prefix suggestions on web and SRP when the omnibox is focused, subject to the same conditions and restrictions as on-clobber suggestions. – Mac, Windows, Linux, ChromeOS
-
-#omnibox-focus-triggers-web-and-srp-zero-suggest
-
-Default
 Show omnibox suggestions popup on mouse released
 Enables delaying presentation of the omnibox suggestions popup until the mouse is released. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-show-popup-on-mouse-released
-
-Default
-Hide suggestion group headers in the Omnibox popup
-If enabled, suggestion group headers will be hidden in the Omnibox popup (e.g. to minimize visual clutter in the zero-prefix state) – Mac, Windows, Linux, ChromeOS
-
-#omnibox-hide-suggestion-group-headers
-
-Default
-Omnibox on-focus URL suggestions on web and SRP
-Enables zero-prefix URL suggestions on web and SRP when the omnibox is focused. – Mac, Windows, Linux, ChromeOS
-
-#omnibox-url-suggestions-on-focus
-
-Default
-Omnibox suggestion limit for zero prefix suggestions
-Enables limits on the total number of suggestions, as well as separate limits for search and URL suggestions in the omnibox. – Mac, Windows, Linux, ChromeOS
-
-#omnibox-zps-suggestion-limit
 
 Default
 Omnibox search aggregator
@@ -967,12 +823,6 @@ When enabled, the history embeddings feature may answer some queries. Has no eff
 #history-embeddings-answers
 
 Default
-Page Image Service - Optimization Guide Salient Images
-Enables the PageImageService fetching images from the Optimization Guide Salient Images source. – Mac, Windows, Linux, ChromeOS, Android
-
-#page-image-service-optimization-guide-salient-images
-
-Default
 Page content annotations
 Enables page content to be annotated on-device. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1027,12 +877,6 @@ Allows users to resize the side panel and persist the width across browser sessi
 #side-panel-resizing
 
 Default
-By Date History in Side Panel
-If enabled, shows the 'By Date' History in Side Panel – Mac, Windows, Linux, ChromeOS
-
-#by-date-history-in-side-panel
-
-Default
 Product Specifications
 Enable the Product Specifications feature. – Mac, Windows, Linux, ChromeOS
 
@@ -1043,18 +887,6 @@ Alternate Shopping Server.
 Enable using the alternate shopping server for testing. – Mac, Windows, Linux, ChromeOS, Android
 
 #shopping-alternate-server
-
-Default
-NTP Alpha Background Collections
-Shows alpha NTP background collections in Customize Chrome. – Mac, Windows, Linux, ChromeOS
-
-#ntp-alpha-background-collections
-
-Default
-NTP Background Image Error Detection
-Checks NTP background image links for HTTP status errors. – Mac, Windows, Linux, ChromeOS
-
-#ntp-background-image-error-detection
 
 Default
 NTP Calendar Module
@@ -1081,46 +913,16 @@ Removes the requirement for Sync to be enabled for the Drive module on the New T
 #ntp-drive-module-no-sync-requirement
 
 Default
-NTP Footer
-Adds footer to New Tab Page that encapsulates customize buttons and background/theme attributions. – Mac, Windows, Linux, ChromeOS
-
-#ntp-footer
-
-Default
 NTP Modules Sign-in Requirement
 Makes NTP Sign-in Requirement per module, removing the requirement for Microsoft Modules – Mac, Windows, Linux, ChromeOS
 
 #ntp-module-sign-in-requirement
 
 Default
-NTP Most Relevant Tab Resumption Module
-Shows the Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
-
-#ntp-most-relevant-tab-resumption-module
-
-Default
-NTP Most Relevant Tab Resumption Module uses fallback to host for favicon
-Shows the host fallback icon instead of server fallback on Most Relevant Tab Resumption Module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
-
-#ntp-most-relevant-tab-resumption-module-fallback-to-host
-
-Default
-NTP OneGoogleBar Async Bar Parts
-Enables the OneGoogleBar async bar parts API on the New Tab Page. – Mac, Windows, Linux, ChromeOS
-
-#ntp-ogb-async-bar-parts
-
-Default
 NTP Outlook Calendar Module
 Shows the Outlook Calendar module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
 #ntp-outlook-calendar-module
-
-Default
-Chrome Refresh Themed Realbox
-CR23 theming will be applied in Realbox when enabled. – Mac, Windows, Linux, ChromeOS
-
-#ntp-realbox-cr23-theming
 
 Default
 NTP Sharepoint Module
@@ -1165,22 +967,10 @@ Permit a set of origins to request a uniquely identifying enterprise attestation
 #web-authentication-permit-enterprise-attestation
 
 Disabled
-Zero-copy tab capture
-Enable zero-copy content tab for getDisplayMedia() APIs. – Mac, Windows, ChromeOS
-
-#zero-copy-tab-capture
-
-Default
 OOPIF for PDF Viewer
 Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS
 
 #pdf-oopif
-
-Default
-PDF portfolio
-Enable PDF portfolio feature. – Mac, Windows, Linux, ChromeOS
-
-#pdf-portfolio
 
 Default
 Use Skia Renderer
@@ -1237,12 +1027,6 @@ Enable Windows.Gaming.Input by default to provide game controller support on Win
 #enable-windows-gaming-input-data-fetcher
 
 Default
-Windows 11 Mica titlebar
-Use the DWM system-drawn Mica titlebar on Windows 11, version 22H2 (build 22621) and above. – Windows
-
-#windows11-mica-titlebar
-
-Default
 Insecure origins treated as secure
 Treat given (insecure) origins as secure origins. Multiple origins can be supplied as a comma-separated list. Origins must have their protocol specified e.g. "http://example.com". For the definition of secure contexts, see https://w3c.github.io/webappsec-secure-contexts/ – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1265,12 +1049,6 @@ Stylus Handwriting for Windows.
 Enables an experimental feature that lets users handwrite into text fields using a compatible stylus. Only supported on Windows builds greater than or equal to 26100.3624 – Windows
 
 #stylus-handwriting-win
-
-Default
-Multilingual Live Caption
-Enables the multilingual Live Caption Feature which allows for many language choices and automated language choices. – Mac, Windows, Linux, ChromeOS
-
-#enable-live-caption-multilang
 
 Default
 Headless Live Captions
@@ -1315,28 +1093,10 @@ Adds a button to the end of the Reading Mode UI. When clicked, the main page scr
 #read-anything-docs-load-more-button
 
 Default
-Support Tool Screenshot
-Enables the Support Tool to capture and include a screenshot in the exported packet. – Mac, Windows, Linux, ChromeOS
-
-#support-tool-screenshot
-
-Default
 Boundary Event Dispatch Tracks Node Removal
 Mouse and Pointer boundary event dispatch (i.e. dispatch of enter, leave, over, out events) tracks DOM node removal to fix event pairing on ancestor nodes. – Mac, Windows, Linux, ChromeOS, Android
 
 #boundary-event-dispatch-tracks-node-removal
-
-Default
-Enable experimental prediction for scroll events
-Predicts the scroll amount after the vsync time to more closely match when the frame is visible. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-resampling-scroll-events-experimental-prediction
-
-Default
-Happiness Tracking Surveys Demo
-Enable showing Happiness Tracking Surveys Demo to users on Desktop – Mac, Windows, Linux, ChromeOS
-
-#happiness-tracking-surveys-for-desktop-demo
 
 Default
 Choose ANGLE graphics backend
@@ -1393,28 +1153,10 @@ Enables web applications to access WebGPU features intended only for use during 
 #enable-webgpu-developer-features
 
 Disabled
-Global Media Controls updated UI
-Show updated UI for Global Media Controls in all the non-CrOS desktop platforms. – Mac, Windows, Linux
-
-#global-media-controls-updated-ui
-
-Default
-Sync point graph validation
-When enabled, replaces synchronous GPU sync point validation with graph based validation – Mac, Windows, Linux, ChromeOS, Android
-
-#sync-point-graph-validation
-
-Default
 Elastic Overscroll
 Enables Elastic Overscrolling on touchscreens and precision touchpads. – Windows, Android
 
 #elastic-overscroll
-
-Default
-Element Capture
-Enables Element Capture - an API allowing the mutation of a tab-capture media track into a track capturing just a specific DOM element. – Mac, Windows, Linux, ChromeOS
-
-#element-capture
 
 Default
 Element Capture cross-tab
@@ -1423,28 +1165,10 @@ Allows the Element Capture API to be used cross-tab. (Only has an effect if Elem
 #element-capture-cross-tab
 
 Default
-Device Posture API
-Enables Device Posture API (foldable devices) – Mac, Windows, Linux, ChromeOS, Android
-
-#device-posture
-
-Default
-Viewport Segments API
-Enable the viewport segment API, giving information about the logical segments of the device (dual screen and foldable devices) – Mac, Windows, Linux, ChromeOS, Android
-
-#viewport-segments
-
-Default
 Enable location provider manager for Geolocation API
 Enables usage of the location provider manager to select between the operating system's location API or the network-based provider as the data source for Geolocation API. – Mac, Windows
 
 #enable-location-provider-manager
-
-Default
-Automatic Fullscreen Content Setting
-Enables a new Automatic Fullscreen content setting that lets allowlisted origins use the HTML Fullscreen API without transient activation. – Mac, Windows, Linux, ChromeOS
-
-#automatic-fullscreen-content-setting
 
 Default
 Run video capture service in browser
@@ -1531,18 +1255,6 @@ Enables the privacy policy insights UI in page info. – Mac, Windows, Linux, Ch
 #privacy-policy-insights
 
 Default
-Enable PWA install update dialog for icon changes
-Enable a confirmation dialog that shows up when a PWA changes its icon – Mac, Windows, Linux, ChromeOS, Android
-
-#pwa-update-dialog-for-icon
-
-Default
-Keyboard Lock prompt
-Requesting to use the keyboard lock API causes a permission prompt to be shown. – Mac, Windows, Linux, ChromeOS
-
-#keyboard-lock-prompt
-
-Default
 Enables Out-of-Process Printer Drivers
 Enables printing interactions with the operating system to be performed out-of-process. – Mac, Windows, Linux, ChromeOS
 
@@ -1559,12 +1271,6 @@ Align SurfaceLayerImpls to pixel grid
 Align SurfaceLayerImpl compositor textures to pixel grid. This is important when an iframe is rendered cross-process to its parent, and fails to align with the pixel grid (e.g. when the parent frame has a non-integral scale factor). Failure to align to the pixel grid can result in the iframe's text becoming blurry. SurfaceLayerImpl also is used for <canvas>, which may also benefit from the alignment. – Mac, Windows, Linux, ChromeOS, Android
 
 #align-surface-layer-impl-to-pixel-grid
-
-Default
-Prerender more document lifecycle phases
-Allows prerendering pages to execute more lifecycle updates, such as prepaint, before activation – Mac, Windows, Linux, ChromeOS, Android
-
-#prerender-early-document-lifecycle-update
 
 Default
 Trees in viz
@@ -1717,6 +1423,12 @@ Enable to test third-party cookie phaseout. Learn more: https://goo.gle/3pcd-fla
 #test-third-party-cookie-phaseout
 
 Disabled
+Dialog UI for HTTPS-First Modes
+Use a dialog-based UI for HFM – Mac, Windows, Linux, ChromeOS
+
+#https-first-dialog-ui
+
+Default
 Enable extension permission omnibox.directInput
 Allows extensions to request permission omnibox.directInput, which enables unscoped mode in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -1753,12 +1465,6 @@ Enables In-Product-Help that appears when at least one extension is requesting a
 #iph-extensions-request-access-button-feature
 
 Default
-Captured Surface Control
-Enables an API that allows an application to control scroll and zoom on the tab which it is capturing. – Mac, Windows, Linux, ChromeOS
-
-#captured-surface-control
-
-Default
 Region Capture cross-tab
 Allows the Region Capture API to be used cross-tab. (Only has an effect if Region Capture is generally enabled.) – Mac, Windows, Linux, ChromeOS
 
@@ -1781,12 +1487,6 @@ Enable delegated compositing
 When enabled and applicable, the act of compositing is delegated to the system compositor. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-delegated-compositing
-
-Default
-Media Session enterpictureinpicture action
-Enables the 'enterpictureinpicture' MediaSessionAction to allow websites to register an action handler for entering picture-in-picture. – Mac, Windows, Linux, ChromeOS
-
-#media-session-enter-picture-in-picture
 
 Default
 Auto picture in picture for video playback
@@ -1885,10 +1585,10 @@ Reduce the amount of information available in the Accept-Language request header
 #reduce-accept-language-http
 
 Default
-Omit TLS client certificates if credential mode disallows
-Strictly conform the Fetch spec to omit TLS client certificates if credential mode disallows. Without this flag enabled, Chrome will always try sending client certificates regardless of the credential mode. – Mac, Windows, Linux, ChromeOS, Android
+XSLT
+Toggles whether or not XSLT is supported by the browser. – Mac, Windows, Linux, ChromeOS, Android
 
-#omit-cors-client-cert
+#xslt
 
 Default
 Permission radio buttons in Site Settings
@@ -1915,28 +1615,10 @@ Enables the optimization of reducing unnecessary IPC for cloning DeviceBoundSess
 #device-bound-session-access-observer-shared-remote
 
 Default
-WebUI Omnibox Popup
-If enabled, shows the omnibox suggestions popup in WebUI. – Mac, Windows, Linux, ChromeOS
-
-#webui-omnibox-popup
-
-Default
 Group Promo Prototype
 Enables prototype for group promo. – Mac, Windows, Linux, ChromeOS, Android
 
 #group-promo-prototype
-
-Default
-Sync Autofill Wallet Credential Data
-When enabled, allows syncing of the autofill wallet credential data type. – Mac, Windows, Linux, ChromeOS, Android
-
-#sync-autofill-wallet-credential-data
-
-Default
-Enables the container-type property to have no layout containment
-The container-type property was recently changed to not add layout containment, this allows users to temporarily disable this change. – Mac, Windows, Linux, ChromeOS, Android
-
-#enable-container-type-no-layout-containment
 
 Default
 Changes the target playout delay for Cast mirroring.
@@ -1949,12 +1631,6 @@ Enable ProcessPerSite up to main frame threshold
 Proactively reuses same-site renderer processes to host multiple main frames, up to a certain threshold. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-process-per-site-up-to-main-frame-threshold
-
-Default
-Camera and Mic Effects
-Enables effects for camera and mic streams. – Mac, Windows, Linux
-
-#camera-mic-effects
 
 Default
 Camera and Mic Preview
@@ -1975,12 +1651,6 @@ Enables deferring device settings selection for getUserMedia until after the use
 #get-user-media-deferred-device-settings-selection
 
 Default
-Enable RenderDocument
-Enable swapping RenderFrameHosts on same-site navigations – Mac, Windows, Linux, ChromeOS, Android
-
-#render-document
-
-Default
 Default SiteInstanceGroups
 Put sites that don't need isolation in their own SiteInstance in a defaultSiteInstanceGroup (per BrowsingContextGroup) instead of in a default SiteInstance. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1997,12 +1667,6 @@ Extension Disable Unsupported Developer
 When enabled, disable unpacked extensions if developer mode is off. – Mac, Windows, Linux, ChromeOS
 
 #extension-disable-unsupported-developer-mode-extensions
-
-Default
-Enable CVC storage and filling for payments autofill
-When enabled, we will store CVC for both local and server credit cards. This will also allow the users to autofill their CVCs on checkout pages. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-enable-cvc-storage-and-filling
 
 Default
 Privacy Sandbox Enrollment Overrides
@@ -2041,22 +1705,16 @@ Enables Protected Audience Consented Debugging with the provided token. Protecte
 #protected-audience-debug-token
 
 Disabled
-Deprecate the unload event
-Controls the default for Permissions-Policy unload. If enabled, unload handlers are deprecated and will not receive the unload event unless a Permissions-Policy to enable them has been explicitly set. If disabled, unload handlers will continue to receive the unload event unless explicitly disabled by Permissions-Policy, even during the gradual rollout of their deprecation. – Mac, Windows, Linux, ChromeOS, Android
-
-#deprecate-unload
-
-Default
-Enable risk-based authentication for FPAN retrieval
-When enabled, server card retrieval will begin with a risk-based check instead of jumping straight to CVC or biometric auth. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-enable-fpan-risk-based-authentication
-
-Default
 Ack On Surface Activation When Interactive
 If enabled, immediately send acks to clients when a viz surface activates and when that surface is a dependency of an interactive frame (i.e., when there is an active scroll or a touch interaction). This effectively removes back-pressure in this case. This can result in wasted work and contention, but should regularize the timing of client rendering. – Mac, Windows, Linux, ChromeOS, Android
 
 #ack-on-surface-activation-when-interactive
+
+Default
+Profiles Reordering
+Enables profiles reordering in the Profile Picker main view by drag and dropping the Profile Tiles. The order is saved when changed and persisted. – Mac, Windows, Linux, ChromeOS
+
+#profiles-reordering
 
 Default
 History Sync Opt-in Expansion Pill
@@ -2149,12 +1807,6 @@ When enabled, Chrome will trigger 3DS authentication during a virtual card retri
 #autofill-enable-vcn-3ds-authentication
 
 Default
-Link Preview
-When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS
-
-#link-preview
-
-Default
 Enable data sharing debug logs
 Enables the data sharing infrastructure to log and save debug messages that can be shown in the internals page. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2215,46 +1867,6 @@ If this client is a Google-internal dogfood client, overrides enterprise policy 
 #optimization-guide-enable-dogfood-logging
 
 Disabled
-Prompt API for Gemini Nano
-Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
-
-https://goo.gle/chrome-ai-dev-preview
-https://policies.google.com/terms/generative-ai/use-policy
-#prompt-api-for-gemini-nano
-
-Default
-Prompt API for Gemini Nano with Multimodal Input
-Extends the exploratory Prompt API with image and audio input types. Allows you to supplement natural language instructions for a built-in large language model (Gemini Nano in Chrome) with image and audio inputs. Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API enhancement is primarily intended for natural language processing tasks associated with visual and auditory data, such as generating rough descriptions of pictures and sounds. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
-
-https://goo.gle/chrome-ai-dev-preview
-https://policies.google.com/terms/generative-ai/use-policy
-#prompt-api-for-gemini-nano-multimodal-input
-
-Default
-Summarization API for Gemini Nano
-Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
-
-https://goo.gle/chrome-ai-dev-preview
-https://policies.google.com/terms/generative-ai/use-policy
-#summarization-api-for-gemini-nano
-
-Default
-Writer API for Gemini Nano
-Enables the Writer API, allowing you to write a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
-
-https://goo.gle/chrome-ai-dev-preview
-https://policies.google.com/terms/generative-ai/use-policy
-#writer-api-for-gemini-nano
-
-Default
-Rewriter API for Gemini Nano
-Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
-
-https://goo.gle/chrome-ai-dev-preview
-https://policies.google.com/terms/generative-ai/use-policy
-#rewriter-api-for-gemini-nano
-
-Default
 Proofreader API for Gemini Nano
 Enables the Proofreader API, allowing you to proofread a piece of textwith a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -2293,18 +1905,6 @@ Enables account reading list for signed-in non-syncing users – Mac, Windows, L
 #reading-list-enable-sync-transport-mode-upon-sign-in
 
 Default
-Visited URL ranking deduplication strategy
-Enables visited url ranking service to use one of various deduplication strategies. – Mac, Windows, Linux, ChromeOS, Android
-
-#visited-url-ranking-service-domain-deduplication
-
-Default
-Enable visited URL aggregates visibility score based filtering
-Enables filtering of visited URL aggregates based on history URL visibility scores. – Mac, Windows, Linux, ChromeOS, Android
-
-#visited-url-ranking-service-history-visibility-score-filter
-
-Default
 Infinite Tabs Freezing
 Freezes eligible tabs which are not in the 5 most recently used ones, to preserve Chrome speed as new tabs are created. Tabs providing background functionality (e.g. playing audio, handling a video call) are not eligible for freezing. – Mac, Windows, Linux, ChromeOS
 
@@ -2323,12 +1923,6 @@ Enable/Disable a fix for a bug that caused feature reports to be offset by one b
 #hid-get-feature-report-fix
 
 Default
-Language detection web platform API
-When enabled, JS can use the web platform's language detection API – Mac, Windows, Linux, ChromeOS, Android
-
-#language-detection-api
-
-Default
 Enable local web approvals feature
 Enables parents to approve blocked websites on a child's device. – Mac, Windows, Linux
 
@@ -2339,12 +1933,6 @@ Data Sharing
 Enabled all Data Sharing related UI and features. – Mac, Windows, Linux, ChromeOS, Android
 
 #data-sharing
-
-Default
-Collaboration Entreprise V2
-Enables the collaboration feature for entreprise users within the same domain. – Mac, Windows, Linux, ChromeOS, Android
-
-#collaboration-entreprise-v2
 
 Default
 Shared Tab Group messaging sync
@@ -2359,22 +1947,10 @@ Enabled Data Sharing Joining flow related UI and features. – Mac, Windows, Lin
 #data-sharing-join-only
 
 Default
-Data Sharing server environment
-Sets data sharing server environment. – Mac, Windows, Linux, ChromeOS, Android
-
-#data-sharing-non-production-environment
-
-Default
 Data Sharing Versioning Test Scenarios
 Testing multiple scenarios for versioning. – Mac, Windows, Linux, ChromeOS, Android
 
 #shared-data-types-kill-switch
-
-Default
-History Sync Alternative Illustration
-Enables history sync alternative illustration. – Mac, Windows, Linux, ChromeOS, Android
-
-#history-sync-alternative-illustration
 
 Default
 DevTools Privacy UI
@@ -2405,12 +1981,6 @@ Task Manager Desktop Refresh
 Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
 
 #enable-task-manager-desktop-refresh
-
-Default
-Lens overlay updated visuals
-Enables updated visuals in the Lens selection overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-updated-visuals
 
 Default
 Enables AIM in Lens side panel.
@@ -2509,6 +2079,12 @@ Enables the Glic actor. – Mac, Windows, Linux
 #glic-actor
 
 Default
+Glic detached-only mode
+Detach only mode prevents any UI which drags along with an underlying window. – Mac, Windows, Linux
+
+#glic-detached
+
+Default
 Glic Panel Reset With Top Chrome Button
 Configure how the tab strip button can be used to reset the glic panel location. – Mac, Windows, Linux
 
@@ -2563,12 +2139,6 @@ When enabled, show an option to offer saving and filling a credit card with a si
 #autofill-enable-save-and-fill
 
 Default
-Autofill suggestions with improved labels
-When enabled, the autofill suggestion labels are more more descriptive and relevant. – Mac, Windows, Linux, ChromeOS
-
-#autofill-improved-labels
-
-Default
 Happy Eyeballs Version 3
 Enables the Happy Eyeballs Version 3 algorithm. See https://datatracker.ietf.org/doc/draft-pauly-v6ops-happy-eyeballs-v3/ – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2587,10 +2157,10 @@ Enables showing the management promotion banner on chrome://management page. –
 #management-promotion-banner-flag
 
 Default
-Create Safety Hub services on start up
-When enabled, Safety Hub services are created on start up enabling its checks to start right away. – Mac, Windows, Linux, ChromeOS
+Enable OAuthMultilogin Cookies Binding
+Enables binding of cookies returned from OAuthMultilogin to cryptographic keys. – Mac, Windows, Linux
 
-#safety-hub-services-on-start-up
+#enable-oauth-multilogin-cookies-binding
 
 Default
 Chrome Refresh Token Binding
@@ -2603,12 +2173,6 @@ Three Button Password Save Dialog
 Provides a 'not now' button alongside the 'never' button on the save password dialog. – Mac, Windows, Linux, ChromeOS
 
 #three-button-password-save-dialog
-
-Default
-throttle-main-thread-to-60hz
-Throttle main thread updates to 60fps, even when VSync rate is higher. – Mac, Windows, Linux, ChromeOS, Android
-
-#throttle-main-thread-to-60hz
 
 Default
 Client Side Detection Show Scam Verdict Warning
@@ -2653,18 +2217,6 @@ Enables usage of system AEC on Windows and Mac. The goal is to ensure that audio
 #enforce-system-echo-cancellation
 
 Default
-Improved password change service
-Experimental feature, which offers automatic password change to the user when they sign in with a credential known to be leaked. – Mac, Windows, Linux, ChromeOS
-
-#improved-password-change-service
-
-Default
-Mark all credential as leaked
-Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service – Mac, Windows, Linux, ChromeOS
-
-#mark-all-credentials-as-leaked
-
-Default
 Enable checkout amount extraction on Chrome desktop
 When enabled, Chrome will extract the checkout amount from the checkout page of the allowlisted merchant websites. – Mac, Windows, Linux, ChromeOS
 
@@ -2699,18 +2251,6 @@ Drop input events while paint-holding is active
 Drop input events at the browser process until the process receives the first signal that the renderer has sent a frame to GPU. This prevents accidental interaction with a page the user has not seen yet. – Mac, Windows, Linux, ChromeOS, Android
 
 #drop-input-events-while-paint-holding
-
-Default
-Revamped Delete Browsing Data dialog
-Enables a revamped Delete Browsing Data dialog on Desktop. This includes UI changes and removal of the bulk password deletion option from the dialog. – Mac, Windows, Linux, ChromeOS
-
-#dbd-revamp-desktop
-
-Default
-Enterprise File Obfuscation
-Enables temporary file obfuscation during download for enterprise users. Downloaded files remain obfuscated on disk while WebProtect performs deep scanning, preventing access before verification is complete. – Mac, Windows, Linux, ChromeOS
-
-#enterprise-file-obfuscation
 
 Default
 Enable Card Benefits in-product help bubble
@@ -2779,12 +2319,6 @@ Enables quick-navigation links to the captured and capturing tab in the tab-shar
 #tab-capture-infobar-links
 
 Default
-Lens side panel new feedback
-Enables a new feedback entry point in the Lens side panel. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-search-side-panel-new-feedback
-
-Default
 Expiry duration for VCN enrollment strikes
 When enabled, changes the amount of time required for VCN enrollment prompt strikes to expire. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2801,12 +2335,6 @@ Tab Group Keyboard Shortcuts
 Adds a few keyboard shortcuts for some tab group interactions. – Mac, Windows, Linux, ChromeOS
 
 #tab-group-shortcuts
-
-Default
-Bundled Security Settings
-Enables new Bundled Security Settings UI on chrome://settings/security. This new UI bundles all security settings into either an enhanced or standard bundle which should simplify the security settings page and also help simplify the user's decision. – Mac, Windows, Linux, ChromeOS
-
-#bundled-security-settings
 
 Default
 Invalidate search engine choice after the install detects it has been transferred to a new device
@@ -2915,12 +2443,6 @@ Web App Installation API
 Enables the Web App Installation API which allows web apps to be installed programmatically using navigator.install(). – Mac, Windows, Linux, ChromeOS
 
 #web-app-installation-api
-
-Default
-Lens search side panel default width change
-Enables changing the default width of the Lens search side panel. – Mac, Windows, Linux, ChromeOS
-
-#lens-search-side-panel-default-width-change
 
 Default
 TransferableResource pass alpha type directly
@@ -3041,6 +2563,18 @@ HTML-in-Canvas
 Enables the Canvas 2D drawElement API and the WebGL texElement2D API for drawing HTML content into a canvas. See: https://github.com/WICG/html-in-canvas – Mac, Windows, Linux, ChromeOS, Android
 
 #canvas-draw-element
+
+Default
+Enforce management disclaimer
+When enabled, all signed in profiles that never saw the management disclaimer will be shown the management disclaimer when they open Chrome. Every time the primary signed in account changes to a managed account, the management disclaimer will be shown. – Mac, Windows, Linux, ChromeOS
+
+#enforce-management-disclaimer
+
+Default
+Lens overlay force empty CSB query
+Forces Lens overlay to issue an empty CSB query on invocation. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-force-empty-csb-query
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
