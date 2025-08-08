@@ -1,5 +1,5 @@
 Experiments
-141.0.7342.0
+141.0.7343.1
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -949,6 +949,12 @@ Run WebRTC capture audio processing in the audio process instead of the renderer
 #chrome-wide-echo-cancellation
 
 Default
+DCHECKs are fatal
+By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
+
+#dcheck-is-fatal
+
+Default
 Parallel downloading
 Enable parallel downloading to accelerate download speed. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1705,6 +1711,12 @@ Enables Protected Audience Consented Debugging with the provided token. Protecte
 #protected-audience-debug-token
 
 Disabled
+Deprecate the unload event
+Controls the default for Permissions-Policy unload. If enabled, unload handlers are deprecated and will not receive the unload event unless a Permissions-Policy to enable them has been explicitly set. If disabled, unload handlers will continue to receive the unload event unless explicitly disabled by Permissions-Policy, even during the gradual rollout of their deprecation. – Mac, Windows, Linux, ChromeOS, Android
+
+#deprecate-unload
+
+Default
 Ack On Surface Activation When Interactive
 If enabled, immediately send acks to clients when a viz surface activates and when that surface is a dependency of an interactive frame (i.e., when there is an active scroll or a touch interaction). This effectively removes back-pressure in this case. This can result in wasted work and contention, but should regularize the timing of client rendering. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1867,6 +1879,46 @@ If this client is a Google-internal dogfood client, overrides enterprise policy 
 #optimization-guide-enable-dogfood-logging
 
 Disabled
+Prompt API for Gemini Nano
+Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#prompt-api-for-gemini-nano
+
+Default
+Prompt API for Gemini Nano with Multimodal Input
+Extends the exploratory Prompt API with image and audio input types. Allows you to supplement natural language instructions for a built-in large language model (Gemini Nano in Chrome) with image and audio inputs. Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API enhancement is primarily intended for natural language processing tasks associated with visual and auditory data, such as generating rough descriptions of pictures and sounds. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#prompt-api-for-gemini-nano-multimodal-input
+
+Default
+Summarization API for Gemini Nano
+Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#summarization-api-for-gemini-nano
+
+Default
+Writer API for Gemini Nano
+Enables the Writer API, allowing you to write a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#writer-api-for-gemini-nano
+
+Default
+Rewriter API for Gemini Nano
+Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
+
+https://goo.gle/chrome-ai-dev-preview
+https://policies.google.com/terms/generative-ai/use-policy
+#rewriter-api-for-gemini-nano
+
+Default
 Proofreader API for Gemini Nano
 Enables the Proofreader API, allowing you to proofread a piece of textwith a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -1921,6 +1973,12 @@ Adjust feature reports received with WebHID
 Enable/Disable a fix for a bug that caused feature reports to be offset by one byte when received from devices that do not use numbered reports. – Windows
 
 #hid-get-feature-report-fix
+
+Default
+Language detection web platform API
+When enabled, JS can use the web platform's language detection API – Mac, Windows, Linux, ChromeOS, Android
+
+#language-detection-api
 
 Default
 Enable local web approvals feature
