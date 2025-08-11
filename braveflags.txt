@@ -1,5 +1,5 @@
 Experiments
-139.1.83.15
+139.1.83.32
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -147,12 +147,6 @@ Enables the 'Easylist-Cookie List' regional list if its toggle in brave://adbloc
 #brave-adblock-cookie-list-default
 
 Default (Enabled)
-Show an opt-in bubble for the 'Easylist-Cookie List' filter
-When enabled, a bubble will be displayed inviting the user to enable the 'Easylist-Cookie List' filter for blocking cookie consent dialogs – Mac, Windows, Linux, ChromeOS, Android
-
-#brave-adblock-cookie-list-opt-in
-
-Default (Disabled)
 Enable cosmetic filtering
 Enable support for cosmetic filtering – Mac, Windows, Linux, ChromeOS, Android
 
@@ -314,7 +308,7 @@ Enables self-custody options to be selected in Brave Rewards. – Mac, Windows, 
 
 #brave-rewards-allow-self-custody-providers
 
-Default (Enabled*)
+Default (Enabled)
 Show an animated background on the Rewards UI
 Shows an animated background on the Rewards panel and page. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -602,6 +596,12 @@ Brave AI Chat Tools
 Conversations can provide Tools to the AI to perform more specific actions. – Mac, Windows, Linux, Android
 
 #brave-ai-chat-tools
+
+Default (Disabled)
+Brave AI Chat Agent Profile
+Enables Leo's content agent features and only in a separate built-in profile. – Mac, Windows, Linux
+
+#brave-ai-chat-agent-profile
 
 Default (Disabled)
 Brave AI Host-Specific Distillation
