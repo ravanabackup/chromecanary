@@ -1,5 +1,5 @@
 Experiments
-141.0.7343.1
+141.0.7350.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -947,12 +947,6 @@ Chrome-wide echo cancellation
 Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
 
 #chrome-wide-echo-cancellation
-
-Default
-DCHECKs are fatal
-By default Chrome will evaluate in this build, but only log failures, rather than crashing. If enabled, DCHECKs will crash the calling process. – Windows
-
-#dcheck-is-fatal
 
 Default
 Parallel downloading
