@@ -1,5 +1,5 @@
 Experiments
-141.0.7350.0
+141.0.7365.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -649,6 +649,54 @@ When computing MV Tiles, remove tiles that are visual duplicates (i.e., have the
 #most-visited-tiles-visual-deduplication
 
 Default
+Omnibox Zero Prefix Suggest Prefetch Request Debouncing
+Enables the use of a request debouncer to throttle the volume of ZPS prefetch requests issued to the remote Suggest service. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-zero-suggest-prefetch-debouncing
+
+Default
+Omnibox Zero Prefix Suggestion Prefetching on NTP
+Enables prefetching of the zero prefix suggestions for eligible users on the New Tab page. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-zero-suggest-prefetching
+
+Default
+Omnibox Zero Prefix Suggestion Prefetching on SRP
+Enables prefetching of the zero prefix suggestions for eligible users on the Search Results page. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-zero-suggest-prefetching-on-srp
+
+Default
+Omnibox Zero Prefix Suggestion Prefetching on the Web
+Enables prefetching of the zero prefix suggestions for eligible users on the Web (i.e. non-NTP and non-SRP URLs). – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-zero-suggest-prefetching-on-web
+
+Default
+Log Omnibox URL Scoring Signals
+Enables Omnibox to log scoring signals of URL suggestions. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-ml-log-url-scoring-signals
+
+Default
+Omnibox ML URL Score Caching
+Enables in-memory caching of ML URL scores. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-ml-url-score-caching
+
+Default
+Omnibox ML URL Scoring
+Enables ML-based relevance scoring for Omnibox URL Suggestions. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-ml-url-scoring
+
+Default
+Omnibox URL Scoring Model
+Enables ML scoring model for Omnibox URL suggestions. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-ml-url-scoring-model
+
+Default
 Contextual search box uses contextual search provider
 Enables the contextual search box to use the ContextualSearchProvider instead of the ZeroSuggestProvider as the source for suggestions. – Mac, Windows, Linux, ChromeOS
 
@@ -691,16 +739,52 @@ Enables icon button for AI Mode entrypoint in the Omnibox. – Mac, Windows, Lin
 #ai-mode-omnibox-entry-point
 
 Default
+AI Entrypoint Disabled on User Input
+Hide the Omnibox entrypoint for AI Mode while user is typing. – Mac, Windows, Linux, ChromeOS
+
+#hide-aim-omnibox-entrypoint-on-user-input
+
+Default
 Omnibox toolbelt
 Adds a row of buttons at the bottom of the omnibox. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-toolbelt
 
 Default
+Omnibox Allow AI Mode Matches
+Allow showing AI mode matches if returned from the search server. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-allow-ai-mode-matches
+
+Default
+Omnibox on-focus suggestions on web and SRP
+Enables zero-prefix suggestions on web and SRP when the omnibox is focused, subject to the same conditions and restrictions as on-clobber suggestions. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-focus-triggers-web-and-srp-zero-suggest
+
+Default
 Show omnibox suggestions popup on mouse released
 Enables delaying presentation of the omnibox suggestions popup until the mouse is released. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-show-popup-on-mouse-released
+
+Default
+Hide suggestion group headers in the Omnibox popup
+If enabled, suggestion group headers will be hidden in the Omnibox popup (e.g. to minimize visual clutter in the zero-prefix state) – Mac, Windows, Linux, ChromeOS
+
+#omnibox-hide-suggestion-group-headers
+
+Default
+Omnibox on-focus URL suggestions on web and SRP
+Enables zero-prefix URL suggestions on web and SRP when the omnibox is focused. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-url-suggestions-on-focus
+
+Default
+Omnibox suggestion limit for zero prefix suggestions
+Enables limits on the total number of suggestions, as well as separate limits for search and URL suggestions in the omnibox. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-zps-suggestion-limit
 
 Default
 Omnibox search aggregator
@@ -787,6 +871,12 @@ Enables Mia ZPS suggestions in NTP omnibox – Mac, Windows, Linux, ChromeOS, An
 #omnibox-mia-zps
 
 Default
+Omnibox Grouping Framework for Typed Suggestions
+Enables an alternative grouping implementation for omnibox autocompletion. – Mac, Windows, Linux, ChromeOS, Android
+
+#omnibox-grouping-framework-non-zps
+
+Default
 Enable optimization guide debug logs
 Enables the optimization guide to log and save debug messages that can be shown in the internals page. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -833,12 +923,6 @@ Page content annotations - Remote page metadata
 Enables fetching of page load metadata to be persisted on-device. – Mac, Windows, Linux, ChromeOS, Android
 
 #page-content-annotations-remote-page-metadata
-
-Default
-Tab Group Sync Service Desktop Migration
-Enables use of the TabGroupSyncService. This is a backend only change. – Mac, Windows, Linux, ChromeOS
-
-#tab-group-sync-service-desktop-migration
 
 Default
 Tab Scrolling
@@ -917,6 +1001,12 @@ NTP Modules Sign-in Requirement
 Makes NTP Sign-in Requirement per module, removing the requirement for Microsoft Modules – Mac, Windows, Linux, ChromeOS
 
 #ntp-module-sign-in-requirement
+
+Default
+NTP OneGoogleBar Async Bar Parts
+Enables the OneGoogleBar async bar parts API on the New Tab Page. – Mac, Windows, Linux, ChromeOS
+
+#ntp-ogb-async-bar-parts
 
 Default
 NTP Outlook Calendar Module
@@ -1321,12 +1411,6 @@ Allows RPs to enhance autofill with FedCM. – Mac, Windows, Linux, ChromeOS, An
 #fedcm-autofill
 
 Default
-FedCmCooldownOnIgnore
-Enables cooldown of the FedCM API in passive mode whenever the dialog is ignored by the user. – Mac, Windows, Linux, ChromeOS, Android
-
-#fedcm-cooldown-on-ignore
-
-Default
 FedCM with delegation support
 Enables IdPs to delegate presentation to the browser. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1585,6 +1669,12 @@ Reduce the amount of information available in the Accept-Language request header
 #reduce-accept-language-http
 
 Default
+Omit TLS client certificates if credential mode disallows
+Strictly conform the Fetch spec to omit TLS client certificates if credential mode disallows. Without this flag enabled, Chrome will always try sending client certificates regardless of the credential mode. – Mac, Windows, Linux, ChromeOS, Android
+
+#omit-cors-client-cert
+
+Default
 XSLT
 Toggles whether or not XSLT is supported by the browser. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1613,6 +1703,12 @@ Reduce device bound session access observer IPC
 Enables the optimization of reducing unnecessary IPC for cloning DeviceBoundSessionAccessObserver. – Mac, Windows, Linux, ChromeOS, Android
 
 #device-bound-session-access-observer-shared-remote
+
+Default
+WebUI Omnibox Popup
+If enabled, shows the omnibox suggestions popup in WebUI. – Mac, Windows, Linux, ChromeOS
+
+#webui-omnibox-popup
 
 Default
 Group Promo Prototype
@@ -1685,6 +1781,12 @@ Dynamic Profile Country
 When enabled, Chrome updates the country associated with the profile on open – Mac, Windows, Linux, ChromeOS, Android
 
 #rcaps-dynamic-profile-country
+
+Default
+Enable OIDC profile remote commands
+Enables remote commands for OIDC profiles. – Mac, Windows, Linux
+
+#enable-oidc-profile-remote-commands
 
 Default
 Desktop PWA Link Capturing
@@ -1813,6 +1915,12 @@ When enabled, Chrome will trigger 3DS authentication during a virtual card retri
 #autofill-enable-vcn-3ds-authentication
 
 Default
+Link Preview
+When enabled, Link Preview feature gets to be available to preview a linked page in a dedicated small window before navigating to the linked page. The feature can be triggered from a context menu item, or users' actions. We are evaluating multiple actions in our experiment to understand what's to be the best for users from the viewpoint of security, privacy, and usability. The feature might be unstable and unusable on some platforms, e.g. macOS or touch devices. – Mac, Windows, Linux, ChromeOS
+
+#link-preview
+
+Default
 Enable data sharing debug logs
 Enables the data sharing infrastructure to log and save debug messages that can be shown in the internals page. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1847,12 +1955,6 @@ Device Bound Session Credentials (Standard) Persistence
 Enables session persistence for the official version of Device Bound Session Credentials. – Mac, Windows, Linux
 
 #enable-standard-device-bound-session-persistence
-
-Default
-Device Bound Session Credentials (Standard) Refresh Quota
-In production, standard Device Bound Session Credentials will feature a maximum rate of refreshes. This flag disables that quota in order to simplify manual testing. – Mac, Windows, Linux
-
-#enable-standard-device-bound-sesssion-refresh-quota
 
 Default
 Replace all sync-related UI with sign-in ones
@@ -1999,6 +2101,12 @@ Enabled Data Sharing Joining flow related UI and features. – Mac, Windows, Lin
 #data-sharing-join-only
 
 Default
+Data Sharing server environment
+Sets data sharing server environment. – Mac, Windows, Linux, ChromeOS, Android
+
+#data-sharing-non-production-environment
+
+Default
 Data Sharing Versioning Test Scenarios
 Testing multiple scenarios for versioning. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2042,13 +2150,13 @@ Enables AIM follow ups with the Lens overlay results side panel. – Mac, Window
 
 Default
 Enable buy now pay later on Autofill
-When enabled, users will have the option to pay with buy now pay later on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
+When enabled, users will have the option to pay with buy now pay later on specific merchant webpages. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-buy-now-pay-later
 
 Default
 Enable syncing buy now pay later user data.
-When enabled, Chrome will sync user data related to buy now pay later. – Mac, Windows, Linux, ChromeOS
+When enabled, Chrome will sync user data related to buy now pay later. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-buy-now-pay-later-syncing
 
@@ -2269,8 +2377,20 @@ Enables usage of system AEC on Windows and Mac. The goal is to ensure that audio
 #enforce-system-echo-cancellation
 
 Default
-Enable checkout amount extraction on Chrome desktop
-When enabled, Chrome will extract the checkout amount from the checkout page of the allowlisted merchant websites. – Mac, Windows, Linux, ChromeOS
+Improved password change service
+Experimental feature, which offers automatic password change to the user when they sign in with a credential known to be leaked. – Mac, Windows, Linux, ChromeOS
+
+#improved-password-change-service
+
+Default
+Mark all credential as leaked
+Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service – Mac, Windows, Linux, ChromeOS
+
+#mark-all-credentials-as-leaked
+
+Default
+Enable checkout amount extraction on Chrome desktop and Clank. The suffix `desktop` is kept, it was an error in original naming that can not be updated due to ongoing gcl config experiments.
+When enabled, Chrome will extract the checkout amount from the checkout page of the allowlisted merchant websites. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-amount-extraction-desktop
 
@@ -2287,8 +2407,8 @@ Enables the `clipboardchange` event API. See: https://chromestatus.com/feature/5
 #enable-clipboardchange-event
 
 Default
-Enable loading and querying the checkout amount extraction allowlist on Chrome Desktop
-When enabled, Chrome will have the ability to load and query the allowlist for checkout amount extraction, which will be used to check if the current URL is eligible for products that use the checkout amount extraction algorithm. – Mac, Windows, Linux, ChromeOS
+Enable loading and querying the checkout amount extraction allowlist on Chrome Desktop and Clank. The suffix `desktop` is kept, it was an error in original naming that can not be updated due to ongoing gcl config experiments.
+When enabled, Chrome will have the ability to load and query the allowlist for checkout amount extraction, which will be used to check if the current URL is eligible for products that use the checkout amount extraction algorithm. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-amount-extraction-allowlist-desktop
 
@@ -2504,7 +2624,7 @@ Enables Transferableresource passing the SkAlphaType dierctly rather than flatte
 
 Default
 Enable buy now pay later on Autofill for Klarna
-When enabled, users will have the option to pay with buy now pay later with Klarna on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
+When enabled, users will have the option to pay with buy now pay later with Klarna on specific merchant webpages. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-buy-now-pay-later-for-klarna
 
@@ -2558,7 +2678,7 @@ When enabled, offers the implicitly signed-in users a dialog to migrate to expli
 
 Default
 Enable buy now pay later for externally linked BNPL issuer
-When enabled, users will have the option to pay with buy now pay later with externally linked issuer on specific merchant webpages. – Mac, Windows, Linux, ChromeOS
+When enabled, users will have the option to pay with buy now pay later with externally linked issuer on specific merchant webpages. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-buy-now-pay-later-for-externally-linked
 
@@ -2627,6 +2747,42 @@ Lens overlay force empty CSB query
 Forces Lens overlay to issue an empty CSB query on invocation. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay-force-empty-csb-query
+
+Default
+Browsing History Actor Integration M1
+Enables the browsing history glic actor integration M1 – Mac, Windows, Linux, ChromeOS
+
+#browsing-history-actor-integration-M1
+
+Default
+Autofill manual testing data
+When set, imports the addresses and cards specified on startup. WARNING: If at least one address/card is specified, all other existing addresses/cards are overwritten. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-manual-testing-data
+
+Disabled
+Support for Home and Work addresses in Autofill
+When enabled, Home and Work addresses from MyAccount are available for autofilling – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-support-for-home-and-work
+
+Default
+Add new tabs to active tab group.
+If enabled, and there is a tab group is focused, then new tabs will be added to the focused tab group. – Mac, Windows, Linux, ChromeOS
+
+#new-tab-adds-to-active-group
+
+Default
+Support for name and email addresses in Autofill
+When enabled, a name and email profile with data comming from the account will be created for autofilling. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-support-for-name-and-email-profile
+
+Default
+Mobile Promo On Desktop
+When enabled, shows a mobile promo on the desktop new tab page. – Mac, Windows, Linux, ChromeOS, Android
+
+#mobile-promo-on-desktop
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
