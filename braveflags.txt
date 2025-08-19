@@ -1,5 +1,5 @@
 Experiments
-139.1.83.32
+139.1.83.58
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -43,6 +43,12 @@ Enabled
 Summarize articles and engage in conversation with AI – Mac, Windows, Linux, Android
 
 #brave-ai-chat
+
+Enabled
+ Brave AI Chat Agent Profile
+Enables Leo's content agent features and only in a separate built-in profile. – Mac, Windows, Linux
+
+#brave-ai-chat-agent-profile
 
 Enabled
  Smooth Scrolling
@@ -580,6 +586,12 @@ Enables the Tree Tab feature – Mac, Windows, Linux
 #brave-tree-tab
 
 Default (Disabled)
+Brave Renaming Tabs
+Enables renaming tabs via tab context menu. – Mac, Windows, Linux
+
+#brave-renaming-tabs
+
+Default (Disabled)
 Brave AI Chat First
 Prioritize Leo vs Search within Brave – Mac, Windows, Linux, Android
 
@@ -596,12 +608,6 @@ Brave AI Chat Tools
 Conversations can provide Tools to the AI to perform more specific actions. – Mac, Windows, Linux, Android
 
 #brave-ai-chat-tools
-
-Default (Disabled)
-Brave AI Chat Agent Profile
-Enables Leo's content agent features and only in a separate built-in profile. – Mac, Windows, Linux
-
-#brave-ai-chat-agent-profile
 
 Default (Disabled)
 Brave AI Host-Specific Distillation
