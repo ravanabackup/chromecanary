@@ -1,5 +1,5 @@
 Experiments
-141.0.7365.0
+141.0.7367.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -1136,7 +1136,7 @@ Enable thresholds for subframe process reuse. When out-of-process iframes attemp
 
 Default
 Stylus Handwriting for Windows.
-Enables an experimental feature that lets users handwrite into text fields using a compatible stylus. Only supported on Windows builds greater than or equal to 26100.3624 – Windows
+Enables an experimental feature that lets users handwrite into text fields using a compatible stylus. Only supported on Windows builds 22621 (patch 5126 and newer), 22631 (patch 5126 and newer) and all builds equal to or newer than 26100.3624 – Windows
 
 #stylus-handwriting-win
 
@@ -2509,6 +2509,12 @@ Adds a few keyboard shortcuts for some tab group interactions. – Mac, Windows,
 #tab-group-shortcuts
 
 Default
+Bundled Security Settings
+Enables new Bundled Security Settings UI on chrome://settings/security. This new UI bundles all security settings into either an enhanced or standard bundle which should simplify the security settings page and also help simplify the user's decision. – Mac, Windows, Linux, ChromeOS
+
+#bundled-security-settings
+
+Default
 Invalidate search engine choice after the install detects it has been transferred to a new device
 When enabled, search engine choices made on what we assume was a different device will not be considered valid, leading to the choice screen potentially retriggering. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2713,6 +2719,12 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
+
+Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2783,6 +2795,18 @@ Mobile Promo On Desktop
 When enabled, shows a mobile promo on the desktop new tab page. – Mac, Windows, Linux, ChromeOS, Android
 
 #mobile-promo-on-desktop
+
+Default
+Reintroduce hybrid passkey entry point
+Reintroduces the hybrid passkey entry point to the Autofill dropdown menu. – Mac, Windows, Linux, ChromeOS
+
+#reintroduce-hybrid-passkey-entry-point
+
+Default
+Lens overlay text selection context menu entrypoint
+Enables invoking the Lens overlay from the selected text context menu. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-text-selection-context-menu-entrypoint
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
