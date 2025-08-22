@@ -1,5 +1,5 @@
 Experiments
-140.1.83.62
+140.1.83.70
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -1456,12 +1456,24 @@ Enables icon button for AI Mode entrypoint in the Omnibox. – Mac, Windows, Lin
 #ai-mode-omnibox-entry-point
 
 Default (Disabled)
+AI Entrypoint Disabled on User Input
+Hide the Omnibox entrypoint for AI Mode while user is typing. – Mac, Windows, Linux, ChromeOS
+
+#hide-aim-omnibox-entrypoint-on-user-input
+
+Default (Disabled)
 Omnibox toolbelt
 Adds a row of buttons at the bottom of the omnibox. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-toolbelt
 
 Default (Disabled)
+Omnibox Allow AI Mode Matches
+Allow showing AI mode matches if returned from the search server. – Mac, Windows, Linux, ChromeOS
+
+#omnibox-allow-ai-mode-matches
+
+Default (Enabled)
 Omnibox Rich Autocompletion Promising Combinations
 Allow autocompletion for titles and non-prefixes. Suggestions whose titles or URLs contain the user input as a continuous chunk, but not necessarily a prefix, can be the default suggestion. Otherwise, only suggestions whose URLs are prefixed by the user input can be. – Mac, Windows, Linux, ChromeOS
 
@@ -3405,7 +3417,7 @@ Allows users to view two tabs simultaneously in a split view. – Mac, Windows, 
 
 #side-by-side
 
-Default (Disabled)
+Default (Enabled)
 Split View Session Restore
 Allows users to restore tabs in split view from previous session when the browser restarts. – Mac, Windows, Linux, ChromeOS
 
@@ -3429,7 +3441,7 @@ Enable to show a confirmation toast that displays when a pinned tab is closed vi
 
 #pinned-tab-toast-on-close
 
-Default (Enabled)
+Default (Disabled)
 Discount Autofill
 Enable discount autofill experiment. – Mac, Windows, Linux, ChromeOS
 
