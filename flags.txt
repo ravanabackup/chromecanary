@@ -1,12 +1,6 @@
 Experiments
-141.0.7371.0
+141.0.7375.3
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
-
-#webium
-
-Disabled
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1037,6 +1031,12 @@ Chrome-wide echo cancellation
 Run WebRTC capture audio processing in the audio process instead of the renderer processes, thereby cancelling echoes from more audio sources. – Mac, Windows, Linux
 
 #chrome-wide-echo-cancellation
+
+Default
+Enable pixel canvas recording
+Pixel canvas recording allows the compositor to raster contents aligned with the pixel and improves text rendering. This should be enabled when a device is using fractional scale factor. – Mac, Windows, Linux, ChromeOS
+
+#enable-pixel-canvas-recording
 
 Default
 Parallel downloading
@@ -2119,6 +2119,12 @@ Testing multiple scenarios for versioning. – Mac, Windows, Linux, ChromeOS, An
 #shared-data-types-kill-switch
 
 Default
+Discounts on navigation
+Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
+
+#discount-on-navigation
+
+Default
 DevTools Privacy UI
 Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2723,6 +2729,12 @@ Lens overlay straight to SRP
 Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay-straight-to-srp
+
+Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
 
 Default
 Default search engine prewarm
