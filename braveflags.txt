@@ -1,5 +1,5 @@
 Experiments
-140.1.83.70
+140.1.84.3
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -265,6 +265,18 @@ Enable Block Element feature
 Allows to block selected HTML element on the page – Mac, Windows, Linux, ChromeOS, Android
 
 #block-element-feature
+
+Default (Enabled)
+Enable Brave Farbling
+Enables randomization of fingerprinting-susceptible WebAPIs – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-farbling
+
+Default (Enabled)
+Enable Provisional TLDEphemeralLifetime
+Cleanup third party cookies set during redirects – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-provisional-tld-ephemeral-lifetime
 
 Default (Enabled)
 Enable Brave Super Referral
@@ -590,6 +602,12 @@ Brave Renaming Tabs
 Enables renaming tabs via tab context menu. – Mac, Windows, Linux
 
 #brave-renaming-tabs
+
+Default (Disabled)
+Brave Darker Theme
+Enables the Brave Darker theme – Mac, Windows, Linux
+
+#brave-darker-theme
 
 Default (Disabled)
 Brave AI Chat First
