@@ -1,5 +1,5 @@
 Experiments
-141.0.7381.3
+141.0.7382.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -2723,6 +2723,12 @@ Safety Hub - Disruptive notification revocation
 Enables autorevoking notifications with high volume and low site engagement score – Mac, Windows, Linux, ChromeOS, Android
 
 #safety-hub-disruptive-notification-revocation
+
+Default
+Safety Hub - unused permission revocation from all surfaces
+Enables autorevoking of unused permissions granted from all UI surfaces. – Mac, Windows, Linux, ChromeOS, Android
+
+#safety-hub-unused-permission-revocation-for-all-surfaces
 
 Default
 Bookmark and tab group conversion
