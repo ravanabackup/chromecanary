@@ -1,5 +1,5 @@
 Experiments
-141.0.7377.0
+141.0.7381.3
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -137,6 +137,12 @@ Overlay Scrollbars
 Enable the experimental overlay scrollbars implementation. You must also enable threaded compositing to have the scrollbars animate. – Windows, Linux, ChromeOS
 
 #overlay-scrollbars
+
+Default
+Flash Overlay Scrollbars When Mouse Enter
+Flash Overlay Scrollbars When Mouse Enter a scrollable area. You must also enable Overlay Scrollbars. – Windows, Linux, ChromeOS
+
+#overlay-scrollbars-flash-when-mouse-enter
 
 Default
 Enable lazy load image for invisible page
@@ -985,8 +991,8 @@ Shows the Composebox on the New Tab Page Searchbox upon clicking the entrypoint.
 #ntp-composebox
 
 Default
-NTP Drive Module No Sync Requirement
-Removes the requirement for Sync to be enabled for the Drive module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
+NTP Drive Module History Sync Requirement
+Replaces the requirement for Sync to be enabled for the Drive module on the New Tab Page with a check for History Sync. – Mac, Windows, Linux, ChromeOS
 
 #ntp-drive-module-no-sync-requirement
 
@@ -2401,10 +2407,10 @@ Will pop up the leaked check dialog on every password form submission. This shou
 #mark-all-credentials-as-leaked
 
 Default
-Enable checkout amount extraction on Chrome desktop and Clank. The suffix `desktop` is kept, it was an error in original naming that can not be updated due to ongoing gcl config experiments.
+Enable checkout amount extraction.
 When enabled, Chrome will extract the checkout amount from the checkout page of the allowlisted merchant websites. – Mac, Windows, Linux, ChromeOS, Android
 
-#autofill-enable-amount-extraction-desktop
+#autofill-enable-amount-extraction
 
 Default
 AXTree Fixing
@@ -2419,10 +2425,10 @@ Enables the `clipboardchange` event API. See: https://chromestatus.com/feature/5
 #enable-clipboardchange-event
 
 Default
-Enable loading and querying the checkout amount extraction allowlist on Chrome Desktop and Clank. The suffix `desktop` is kept, it was an error in original naming that can not be updated due to ongoing gcl config experiments.
+Enable loading and querying the checkout amount extraction allowlist.
 When enabled, Chrome will have the ability to load and query the allowlist for checkout amount extraction, which will be used to check if the current URL is eligible for products that use the checkout amount extraction algorithm. – Mac, Windows, Linux, ChromeOS, Android
 
-#autofill-enable-amount-extraction-allowlist-desktop
+#autofill-enable-amount-extraction-allowlist
 
 Default
 DevTools Project Settings
@@ -2461,8 +2467,8 @@ Enables URL filter interstitial V3 for Family Link users. – Mac, Windows, Linu
 #supervised-user-block-interstitial-v3
 
 Default
-Enable amount extraction testing on Chrome desktop and Clank
-Enables testing of the result of checkout amount extraction on Chrome desktop and Clank. This flag will allow amount extraction to run on any website when a CC form is clicked. – Mac, Windows, Linux, ChromeOS, Android
+Enable amount extraction testing
+Enables testing of the result of checkout amount extraction. This flag will allow amount extraction to run on any website when a CC form is clicked. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-amount-extraction-testing
 
@@ -2825,6 +2831,24 @@ Enables enterprise shortcuts for the New Tab Page
 Enables enterprise shortcuts for the New Tab Page set by the NTPShortcuts policy. – Mac, Windows, Linux, ChromeOS
 
 #enable-ntp-enterprise-shortcuts
+
+Default
+Add context menu when left-clicking a tab group
+When clicking a tab group in the bookmarks bar, the left click will begiven a context menu, similar to the one that appears when right clicking the tab group. – Mac, Windows, Linux, ChromeOS
+
+#tab-group-menu-improvements
+
+Default
+Make options menus to include more tab group actions
+Add options to menus to facilitate tab group creation and interaction – Mac, Windows, Linux, ChromeOS
+
+#tab-group-more-entry-points
+
+Default
+Multicast in Direct Sockets API
+Enables access Multicast in Direct Sockets API. See https://github.com/explainers-by-googlers/multicast-in-direct-sockets for details. – Mac, Windows, Linux, ChromeOS
+
+#multicast-in-direct-sockets
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
