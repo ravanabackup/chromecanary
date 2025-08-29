@@ -1,5 +1,5 @@
 Experiments
-140.1.84.3
+140.1.84.8
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -37,6 +37,12 @@ Enabled
 Enables split view – Mac, Windows, Linux
 
 #brave-split-view
+
+Enabled
+ Brave Darker Theme
+Enables the Brave Darker theme – Mac, Windows, Linux
+
+#brave-darker-theme
 
 Enabled
  Brave AI Chat
@@ -602,12 +608,6 @@ Brave Renaming Tabs
 Enables renaming tabs via tab context menu. – Mac, Windows, Linux
 
 #brave-renaming-tabs
-
-Default (Disabled)
-Brave Darker Theme
-Enables the Brave Darker theme – Mac, Windows, Linux
-
-#brave-darker-theme
 
 Default (Disabled)
 Brave AI Chat First
@@ -3638,6 +3638,12 @@ HTML-in-Canvas
 Enables the Canvas 2D drawElement API and the WebGL texElement2D API for drawing HTML content into a canvas. See: https://github.com/WICG/html-in-canvas – Mac, Windows, Linux, ChromeOS, Android
 
 #canvas-draw-element
+
+Default (Disabled)
+Lens overlay text selection context menu entrypoint
+Enables invoking the Lens overlay from the selected text context menu. – Mac, Windows, Linux, ChromeOS
+
+#enable-lens-overlay-text-selection-context-menu-entrypoint
 
 Default (Disabled)
 Your changes will take effect the next time you relaunch Brave.
