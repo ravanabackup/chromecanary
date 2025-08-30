@@ -1,5 +1,5 @@
 Experiments
-141.0.7382.0
+141.0.7383.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -737,6 +737,12 @@ AI Mode Omnibox entrypoint
 Enables icon button for AI Mode entrypoint in the Omnibox. – Mac, Windows, Linux, ChromeOS
 
 #ai-mode-omnibox-entry-point
+
+Default
+AIM Server Eligibility
+Enable AIM server eligibility checks. – Mac, Windows, Linux, ChromeOS, Android
+
+#aim-server-eligibility
 
 Default
 AI Entrypoint Disabled on User Input
