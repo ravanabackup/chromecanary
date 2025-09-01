@@ -1,5 +1,5 @@
 Experiments
-141.0.7383.0
+141.0.7387.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M139 flags.
 Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -2861,6 +2861,12 @@ Multicast in Direct Sockets API
 Enables access Multicast in Direct Sockets API. See https://github.com/explainers-by-googlers/multicast-in-direct-sockets for details. – Mac, Windows, Linux, ChromeOS
 
 #multicast-in-direct-sockets
+
+Default
+Enable Cross-Device Pref Tracker
+Enables the tracking and sharing of select non-syncing preference values across a user's signed-in devices. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-cross-device-pref-tracker
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
