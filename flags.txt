@@ -1,5 +1,5 @@
 Experiments
-141.0.7388.0
+142.0.7392.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Webium
 Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
@@ -7,16 +7,16 @@ Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
 #webium
 
 Disabled
-Temporarily unexpire M139 flags.
-Temporarily unexpire flags that expired as of M139. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m139
-
-Default
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m140
+
+Default
+Temporarily unexpire M141 flags.
+Temporarily unexpire flags that expired as of M141. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m141
 
 Default
 Enable benchmarking
@@ -187,12 +187,6 @@ Enable web pages to use experimental JavaScript features. – Mac, Windows, Linu
 #enable-javascript-harmony
 
 Disabled
-Enable enterprise badging on the New Tab Page
-Enable enterprise profile badging in the footer on the New Tab Page. This includes showing the enterprise logo and the management disclaimer – Mac, Windows, Linux
-
-#enable-enterprise-badging-for-ntp-footer
-
-Default
 Experimental WebAssembly
 Enable web pages to use experimental WebAssembly features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1405,12 +1399,6 @@ Enables support for XFA forms in PDFs. Has no effect if Chrome was not built wit
 #pdf-xfa-forms
 
 Default
-Clear window name in top-level cross-site cross-browsing-context-group navigation
-Clear the preserved window.name property when it's a top-level cross-site navigation that swaps BrowsingContextGroup. – Mac, Windows, Linux, ChromeOS, Android
-
-#clear-cross-site-cross-browsing-context-group-window-name
-
-Default
 Debugging tools for UI
 Enables additional keyboard shortcuts to help debugging. – Mac, Windows, Linux
 
@@ -1867,12 +1855,6 @@ Enables users to perform an explicit signin upon installing an extension. After 
 #enable-extensions-explicit-browser-signin
 
 Default
-Enable direct playback of HLS manifests
-Enables built-in HLS player for adaptive playback and live streams. – Mac, Windows, Linux, ChromeOS
-
-#enable-hls-playback
-
-Default
 Device Bound Session Credentials
 Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
 
@@ -2137,12 +2119,6 @@ Testing multiple scenarios for versioning. – Mac, Windows, Linux, ChromeOS, An
 #shared-data-types-kill-switch
 
 Default
-Discounts on navigation
-Enable to show available discounts on the page after navigation. – Mac, Windows, Linux, ChromeOS
-
-#discount-on-navigation
-
-Default
 DevTools Privacy UI
 Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2341,12 +2317,6 @@ Enables signature-based integrity checks, as proposed in https://wicg.github.io/
 #signature-based-sri
 
 Default
-Enable Management Promotion Banner
-Enables showing the management promotion banner on chrome://management page. – Mac, Windows, Linux, ChromeOS
-
-#management-promotion-banner-flag
-
-Default
 Enable OAuthMultilogin Cookies Binding
 Enables binding of cookies returned from OAuthMultilogin to cryptographic keys. – Mac, Windows, Linux
 
@@ -2363,12 +2333,6 @@ Three Button Password Save Dialog
 Provides a 'not now' button alongside the 'never' button on the save password dialog. – Mac, Windows, Linux, ChromeOS
 
 #three-button-password-save-dialog
-
-Default
-Client Side Detection Show Scam Verdict Warning
-Show warnings based on the scam verdict field in Client Side Detection response. – Mac, Windows, Linux
-
-#client-side-detection-show-scam-verdict-warning
 
 Default
 Enable showing card benefits for BMO cards
@@ -2633,12 +2597,6 @@ Enable caching field classification predictions
 When enabled, the field classification model uses runtime caching to not run models on the same inputs multiple times. – Mac, Windows, Linux, ChromeOS, Android
 
 #field-classification-model-caching
-
-Default
-Require CVC for possible card update on upload save
-When enabled, if credit card upload save encounters a card with the same four digits as an existing server card but a different expiration date, it requires that CVC was found in the flow before offering to save/update the card. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-require-cvc-for-possible-card-update
 
 Default
 Disable the Autofill strike system
