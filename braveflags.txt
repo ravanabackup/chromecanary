@@ -1,5 +1,5 @@
 Experiments
-140.1.84.13
+140.1.84.32
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -31,12 +31,6 @@ Enabled
 Enable experimental page for viewing and executing commands in Brave – Mac, Windows, Linux
 
 #brave-commands
-
-Enabled
- Enable split view
-Enables split view – Mac, Windows, Linux
-
-#brave-split-view
 
 Enabled
  Brave Darker Theme
@@ -2175,7 +2169,7 @@ Enables the Page Embedded Permission Control feature, which allows the use of th
 
 #permission-element
 
-Default (Enabled)
+Default (Disabled)
 Geolocation permission control (geolocation element)
 Enables the Geolocation Permission Control feature, which allows the use of the HTML 'geolocation' element. – Mac, Windows, Linux
 
