@@ -1,5 +1,5 @@
 Experiments
-142.0.7393.0
+142.0.7396.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
@@ -1723,6 +1723,12 @@ Enables prototype for group promo. – Mac, Windows, Linux, ChromeOS, Android
 #group-promo-prototype
 
 Default
+Sync Autofill Wallet Credential Data
+When enabled, allows syncing of the autofill wallet credential data type. – Mac, Windows, Linux, ChromeOS, Android
+
+#sync-autofill-wallet-credential-data
+
+Default
 Changes the target playout delay for Cast mirroring.
 Choose a target playout delay for Cast mirroring. A lower delay will decrease latency, but may impact other quality indicators. – Mac, Windows, Linux, ChromeOS
 
@@ -1775,6 +1781,12 @@ Extension Disable Unsupported Developer
 When enabled, disable unpacked extensions if developer mode is off. – Mac, Windows, Linux, ChromeOS
 
 #extension-disable-unsupported-developer-mode-extensions
+
+Default
+Enable CVC storage and filling for payments autofill
+When enabled, we will store CVC for both local and server credit cards. This will also allow the users to autofill their CVCs on checkout pages. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-cvc-storage-and-filling
 
 Default
 Privacy Sandbox Enrollment Overrides
@@ -2119,10 +2131,22 @@ Testing multiple scenarios for versioning. – Mac, Windows, Linux, ChromeOS, An
 #shared-data-types-kill-switch
 
 Default
+Enable CVC storage and filling enhancement for payments autofill
+When enabled, will enhance CVV storage project. Provide better suggestion, resolve conflict with COF project and add logging. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-cvc-storage-and-filling-enhancement
+
+Default
 DevTools Privacy UI
 Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android
 
 #devtools-privacy-ui
+
+Default
+Enable individual request throttling in DevTools
+Enables a new feature in DevTools' network panel to apply network conditions to individual requests, extending the per-request blocking behavior. – Mac, Windows, Linux, ChromeOS, Android
+
+#devtools-individual-request-throttling
 
 Default
 PermissionsAIv1
@@ -2165,6 +2189,12 @@ Enable syncing buy now pay later user data.
 When enabled, Chrome will sync user data related to buy now pay later. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-buy-now-pay-later-syncing
+
+Default
+Enable CVC storage and filling standalone form enhancement for payments autofill
+When enabled, this will enhance the CVV storage project. The enhancement will enable CVV storage suggestions for standalone CVC fields. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-cvc-storage-and-filling-standalone-form-enhancement
 
 Default
 Enable bookmarks selected type on sign-in for testing
@@ -2473,6 +2503,12 @@ Enable Local Network Access checks for WebRTC. Requires the #local-network-acces
 #local-network-access-check-webrtc
 
 Default
+Local Network Access Checks for WebSockets
+Enable Local Network Access checks for WebSockets. Requires the #local-network-access-check flag to also be enabled See: https://chromestatus.com/feature/5197681148428288 – Mac, Windows, Linux, ChromeOS, Android
+
+#local-network-access-check-websockets
+
+Default
 Enable noise for canvas readbacks in Incognito
 Enable noising pixels when the contents of a canvas are read back by a script. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2609,12 +2645,6 @@ Web App Installation API
 Enables the Web App Installation API which allows web apps to be installed programmatically using navigator.install(). – Mac, Windows, Linux, ChromeOS
 
 #web-app-installation-api
-
-Default
-TransferableResource pass alpha type directly
-Enables Transferableresource passing the SkAlphaType dierctly rather than flattening it to premul/unpremul – Mac, Windows, Linux, ChromeOS, Android
-
-#transferable-resource-pass-alpha-type-directly
 
 Default
 Enable buy now pay later on Autofill for Klarna
@@ -2831,6 +2861,18 @@ Enable Cross-Device Pref Tracker
 Enables the tracking and sharing of select non-syncing preference values across a user's signed-in devices. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-cross-device-pref-tracker
+
+Default
+Allow Autofill and Passwords in the same dropdown
+Enables a refactoring allowing to add password/passkey suggestions into Autofill dropdowns alongside addresses, etc. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-and-passwords-in-same-surface
+
+Default
+Contextual suggestions UI improvements
+Enables UI improvements for contextual suggestions (e.g. icon and animation). – Mac, Windows, Linux, ChromeOS
+
+#contextual-suggestion-ui-improvements
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
