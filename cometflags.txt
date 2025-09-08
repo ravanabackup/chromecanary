@@ -1,10 +1,10 @@
 Experiments
-139.0.7258.66
+139.1.7258.139
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 Interested in cool new Chrome features? Try our beta channel. Interested in cool new Chrome features? Try our dev channel
 
  Perplexity Autoupdate Comet
-Enables auto-updating of Comet Browser and sub-components. – Mac, Windows, Linux, ChromeOS, Android
+Enables auto-updating of Comet Browser and sub-components. Has no effect when Omaha is used as an updater – Mac, Windows, Linux, ChromeOS, Android
 
 #perplexity-autoupdate
 
