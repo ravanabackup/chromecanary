@@ -1,12 +1,12 @@
 Experiments
-142.0.7397.0
+142.0.7401.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+ Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
 
-#extensions-on-chrome-urls
+#webium
 
-Enabled
+Disabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,6 +103,12 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+
+#extensions-on-chrome-urls
+
+Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2735,12 +2741,6 @@ Lens overlay straight to SRP
 Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay-straight-to-srp
-
-Default
-Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
-
-#webium
 
 Default
 Default search engine prewarm
