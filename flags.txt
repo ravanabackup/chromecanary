@@ -1,12 +1,12 @@
 Experiments
-142.0.7402.0
+142.0.7403.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+ Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
 
-#extensions-on-chrome-urls
+#webium
 
-Enabled
+Disabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,6 +103,12 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+
+#extensions-on-chrome-urls
+
+Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -815,12 +821,6 @@ Omnibox on device tail suggestions
 Google tail non personalized search suggestions provided by a compact on device model. – Mac, Windows, Linux, ChromeOS, Android
 
 #omnibox-on-device-tail-suggestions
-
-Default
-Omnibox Restore Invisible Focus Only
-Only restore omnibox focus if invisible focus is used. Implemented for Split View (#side-by-side). – Mac, Windows, Linux, ChromeOS
-
-#omnibox-restore-invisible-focus-only
 
 Default
 Force color profile
@@ -2737,12 +2737,6 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
-Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
-
-#webium
-
-Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2867,6 +2861,12 @@ Contextual suggestions UI improvements
 Enables UI improvements for contextual suggestions (e.g. icon and animation). – Mac, Windows, Linux, ChromeOS
 
 #contextual-suggestion-ui-improvements
+
+Default
+Verify QWACs
+Enables verification of qualified certificates for website authentication as described in ETSI TS 119 411-5 V2.1.1 (2025-02). – Mac, Windows, Linux, ChromeOS, Android
+
+#verify-qwacs
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
