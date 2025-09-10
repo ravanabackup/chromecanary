@@ -1,12 +1,12 @@
 Experiments
-142.0.7403.0
+142.0.7404.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+ Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
-#webium
+#extensions-on-chrome-urls
 
-Disabled
+Enabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,12 +103,6 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
-Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
-
-#extensions-on-chrome-urls
-
-Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2149,6 +2143,12 @@ Enables a new feature in DevTools' network panel to apply network conditions to 
 #devtools-individual-request-throttling
 
 Default
+Enable JavaScript live editing in DevTools
+Re-enable the deprecated feature in DevTools' Sources panel to apply code edits to the target page live. – Mac, Windows, Linux, ChromeOS, Android
+
+#devtools-live-edit
+
+Default
 PermissionsAIv1
 Use the Permission Predictions Service and the AIv1 model to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
 
@@ -2443,6 +2443,12 @@ Drop input events at the browser process until the process receives the first si
 #drop-input-events-while-paint-holding
 
 Default
+Revamped Delete Browsing Data dialog
+Enables a revamped Delete Browsing Data dialog on Desktop. This includes UI changes and removal of the bulk password deletion option from the dialog. – Mac, Windows, Linux, ChromeOS
+
+#dbd-revamp-desktop
+
+Default
 Enable Card Benefits in-product help bubble
 Enables In-Product-Help that appears when at least one autofill credit card suggestion includes card benefits. – Mac, Windows, Linux, ChromeOS
 
@@ -2735,6 +2741,12 @@ Lens overlay straight to SRP
 Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay-straight-to-srp
+
+Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
 
 Default
 Default search engine prewarm
