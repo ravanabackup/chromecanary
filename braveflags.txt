@@ -1,8 +1,14 @@
 Experiments
-140.1.84.43
+140.1.84.48
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
+ New Tab Page Demo Branded Wallpaper
+Force dummy data for the Branded Wallpaper New Tab Page Experience. View rate and user opt-in conditionals will still be followed to decide when to display the Branded Wallpaper. – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-ntp-branded-wallpaper-demo
+
+Enabled
  New Tab Page refresh
 Enables the refreshed version of the New Tab Page – Mac, Windows, Linux, ChromeOS
 
@@ -31,12 +37,6 @@ Enabled
 Enable experimental page for viewing and executing commands in Brave – Mac, Windows, Linux
 
 #brave-commands
-
-Enabled
- Brave Darker Theme
-Enables the Brave Darker theme – Mac, Windows, Linux
-
-#brave-darker-theme
 
 Enabled
  Brave AI Chat
@@ -121,12 +121,6 @@ Use dev updater url
 Use the dev url for the component updater. This is for internal testing only. – Mac, Windows, Linux, ChromeOS, Android
 
 #use-dev-updater-url
-
-Default (Disabled)
-New Tab Page Demo Branded Wallpaper
-Force dummy data for the Branded Wallpaper New Tab Page Experience. View rate and user opt-in conditionals will still be followed to decide when to display the Branded Wallpaper. – Mac, Windows, Linux, ChromeOS, Android
-
-#brave-ntp-branded-wallpaper-demo
 
 Default (Disabled)
 Brave Search Widget on the NTP
@@ -602,6 +596,12 @@ Brave Renaming Tabs
 Enables renaming tabs via tab context menu. – Mac, Windows, Linux
 
 #brave-renaming-tabs
+
+Default (Disabled)
+Brave Midnight Theme
+Enables the Brave Midnight theme – Mac, Windows, Linux
+
+#brave-midnight-theme
 
 Default (Disabled)
 Brave AI Chat First
