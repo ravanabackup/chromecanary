@@ -1,5 +1,5 @@
 Experiments
-142.0.7406.0
+142.0.7407.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Extensions on chrome:// URLs
 Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
@@ -2687,12 +2687,6 @@ Enable showing in-product help UI for downstream card awareness
 When enabled, in-product help UI will be shown the first time a card added outside of Chrome appears in Autofill card suggestions. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-downstream-card-awareness-iph
-
-Default
-Lens overlay back to page
-Enables the back to live page functionality in the Lens overlay. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-overlay-back-to-page
 
 Default
 Enable new tab page browser feature suggestions
