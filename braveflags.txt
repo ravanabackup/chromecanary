@@ -1,14 +1,8 @@
 Experiments
-140.1.84.48
+140.1.84.53
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
- New Tab Page Demo Branded Wallpaper
-Force dummy data for the Branded Wallpaper New Tab Page Experience. View rate and user opt-in conditionals will still be followed to decide when to display the Branded Wallpaper. – Mac, Windows, Linux, ChromeOS, Android
-
-#brave-ntp-branded-wallpaper-demo
-
-Enabled
  New Tab Page refresh
 Enables the refreshed version of the New Tab Page – Mac, Windows, Linux, ChromeOS
 
@@ -121,6 +115,12 @@ Use dev updater url
 Use the dev url for the component updater. This is for internal testing only. – Mac, Windows, Linux, ChromeOS, Android
 
 #use-dev-updater-url
+
+Default (Disabled)
+New Tab Page Demo Branded Wallpaper
+Force dummy data for the Branded Wallpaper New Tab Page Experience. View rate and user opt-in conditionals will still be followed to decide when to display the Branded Wallpaper. – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-ntp-branded-wallpaper-demo
 
 Default (Disabled)
 Brave Search Widget on the NTP
