@@ -1,12 +1,12 @@
 Experiments
-142.0.7405.0
+142.0.7406.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+ Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
-#webium
+#extensions-on-chrome-urls
 
-Disabled
+Enabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,12 +103,6 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
-Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
-
-#extensions-on-chrome-urls
-
-Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -989,6 +983,12 @@ NTP Composebox
 Shows the Composebox on the New Tab Page Searchbox upon clicking the entrypoint. – Mac, Windows, Linux, ChromeOS
 
 #ntp-composebox
+
+Default
+Composebox uses chrome-compose client
+Composebox will use chrome-compose client when querying suggest for unimodal typed inputs instead of chrome-omni. – Mac, Windows, Linux, ChromeOS
+
+#composebox-uses-chrome-compose-client
 
 Default
 NTP Drive Module History Sync Requirement
@@ -2257,6 +2257,12 @@ Enables reporting of a predictable quota from the StorageManager's estimate API.
 #predictable-reported-quota
 
 Default
+BookmarkBarPrefetch
+If enabled, bookmarkbar can trigger prefetch – Mac, Windows, Linux, ChromeOS
+
+#prefetch-bookmarkbar-trigger
+
+Default
 Glic
 Enables glic – Mac, Windows, Linux
 
@@ -2749,6 +2755,12 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
+
+Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2879,6 +2891,12 @@ Verify QWACs
 Enables verification of qualified certificates for website authentication as described in ETSI TS 119 411-5 V2.1.1 (2025-02). – Mac, Windows, Linux, ChromeOS, Android
 
 #verify-qwacs
+
+Default
+Prefer blocklists instead of allowlists for Payments Autofill Buy Now Pay Later (BNPL)
+When enabled, Payments Autofill Buy Now Pay Later (BNPL) will use each corresponding issuer's blocklist instead of allowlist to check for website eligibility. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-prefer-buy-now-pay-later-blocklists
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
