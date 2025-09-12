@@ -1,5 +1,5 @@
 Experiments
-142.0.7407.0
+142.0.7408.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Extensions on chrome:// URLs
 Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
@@ -143,6 +143,12 @@ Flash Overlay Scrollbars When Mouse Enter
 Flash Overlay Scrollbars When Mouse Enter a scrollable area. You must also enable Overlay Scrollbars. – Windows, Linux, ChromeOS
 
 #overlay-scrollbars-flash-when-mouse-enter
+
+Default
+Flash Overlay Scrollbars Once When Visible
+Flash Overlay Scrollbars only once per scrollbar and when they become visible on the viewport. You must also enable Overlay Scrollbars. – Windows, Linux, ChromeOS
+
+#overlay-scrollbars-flash-once-visible-on-viewport
 
 Default
 Enable lazy load image for invisible page
@@ -1615,6 +1621,12 @@ Allow out-of-order streaming of HTML content using <template patchfor> and node.
 #document-patching
 
 Default
+Route matching
+Allow definition of routes as e.g. URLPattern. Special CSS rules can be used to match active routes. See https://github.com/WICG/declarative-partial-updates/blob/main/route-matching-explainer.md – Mac, Windows, Linux, ChromeOS, Android
+
+#route-matching
+
+Default
 Default Search Engine preload 2
 Enables new DSE preload instead of existing one, which uses //content prefetch – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2261,6 +2273,12 @@ BookmarkBarPrefetch
 If enabled, bookmarkbar can trigger prefetch – Mac, Windows, Linux, ChromeOS
 
 #prefetch-bookmarkbar-trigger
+
+Default
+NewTabPagePrefetch
+If enabled, NewTabPage can trigger prefetch – Mac, Windows, Linux, ChromeOS
+
+#prefetch-new-tab-page-trigger
 
 Default
 Glic
