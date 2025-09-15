@@ -1,5 +1,5 @@
 Experiments
-142.0.7409.0
+142.0.7414.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Extensions on chrome:// URLs
 Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
@@ -527,6 +527,12 @@ HiDPI tab capture support for Cast Streaming
 Enables HiDPI tab capture during Cast Streaming mirroring sessions. May reduce performance on some platforms and also improve quality of video frames. – Mac, Windows, Linux, ChromeOS
 
 #enable-cast-streaming-with-hidpi
+
+Default
+OpenXR Spatial Entities
+Allows the OpenXR runtime to use the spatial entities set of extensions to understand the environment. – Windows, Android
+
+#openxr-spatial-entities
 
 Default
 WebXR Projection Layers
@@ -2915,6 +2921,12 @@ Prefer blocklists instead of allowlists for Payments Autofill Buy Now Pay Later 
 When enabled, Payments Autofill Buy Now Pay Later (BNPL) will use each corresponding issuer's blocklist instead of allowlist to check for website eligibility. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-prefer-buy-now-pay-later-blocklists
+
+Default
+Enable blocking canvas readbacks in Incognito
+Enable throwing an exception when the contents of a canvas are read back by a script. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-block-canvas-readback
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
