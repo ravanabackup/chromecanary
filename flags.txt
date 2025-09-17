@@ -1,12 +1,12 @@
 Experiments
-142.0.7416.0
+142.0.7419.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+ Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
 
-#extensions-on-chrome-urls
+#webium
 
-Enabled
+Disabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,6 +103,12 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+
+#extensions-on-chrome-urls
+
+Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1153,12 +1159,6 @@ Prevents out-of-process iframes from reusing compatible processes from unrelated
 #disable-process-reuse
 
 Default
-Subframe process reuse thresholds
-Enable thresholds for subframe process reuse. When out-of-process iframes attempt to reuse compatible processes from unrelated tabs, process reuse will only be allowed if the process stays below predefined thresholds (e.g., below a certain memory limit). – Mac, Windows, Linux, ChromeOS, Android
-
-#subframe-process-reuse-thresholds
-
-Default
 Stylus Handwriting for Windows.
 Enables an experimental feature that lets users handwrite into text fields using a compatible stylus. Only supported on Windows builds 22621 (patch 5126 and newer), 22631 (patch 5126 and newer) and all builds equal to or newer than 26100.3624 – Windows
 
@@ -1297,6 +1297,12 @@ Enables the tracking protection UI + prefs that will be used for the 3PCD 1%. �
 #tracking-protection-3pcd
 
 Default
+Rollback for Mode B
+Enables the Mode B rollback. – Mac, Windows, Linux, ChromeOS, Android
+
+#tracking-protection-rollback
+
+Default
 MediaFoundation Video Capture
 Enable/Disable the usage of MediaFoundation for video capture. Fall back to DirectShow if disabled. – Windows
 
@@ -1379,12 +1385,6 @@ Privacy Sandbox Internals Page
 Enables the chrome://privacy-sandbox-internals debugging page. – Mac, Windows, Linux, ChromeOS, Android
 
 #privacy-sandbox-internals
-
-Default
-Align SurfaceLayerImpls to pixel grid
-Align SurfaceLayerImpl compositor textures to pixel grid. This is important when an iframe is rendered cross-process to its parent, and fails to align with the pixel grid (e.g. when the parent frame has a non-integral scale factor). Failure to align to the pixel grid can result in the iframe's text becoming blurry. SurfaceLayerImpl also is used for <canvas>, which may also benefit from the alignment. – Mac, Windows, Linux, ChromeOS, Android
-
-#align-surface-layer-impl-to-pixel-grid
 
 Default
 Trees in viz
@@ -2075,12 +2075,6 @@ Storage Access API follows Same Origin Policy
 Modifies the Storage Access API to follow the Same Origin Policy with respect to security. – Mac, Windows, Linux, ChromeOS, Android
 
 #storage-access-api-follows-same-origin-policy
-
-Default
-History Sync Opt-in
-Enables the History Sync Opt-in screen on Desktop platforms. The screen is shown after the user has signed in (in the profile picker or in the dialog) instead of the Sync Confirmation screen. – Mac, Windows, Linux
-
-#enable-history-sync-optin
 
 Default
 Enable bookmarks in transport mode
@@ -2779,12 +2773,6 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
-Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
-
-#webium
-
-Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2897,6 +2885,12 @@ Enable Cross-Device Pref Tracker
 Enables the tracking and sharing of select non-syncing preference values across a user's signed-in devices. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-cross-device-pref-tracker
+
+Default
+Use D3D12 video encoder
+Enables D3D12 video encoding. The system might still fall back to Media Foundation video encoder if D3D12 encoder is not available or fails to initialize. – Windows
+
+#enable-d3d12-video-encoder
 
 Default
 Allow Autofill and Passwords in the same dropdown
