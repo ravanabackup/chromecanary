@@ -1,12 +1,12 @@
 Experiments
-142.0.7419.0
+142.0.7424.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+ Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
-#webium
+#extensions-on-chrome-urls
 
-Disabled
+Enabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,12 +103,6 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
-Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
-
-#extensions-on-chrome-urls
-
-Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1753,6 +1747,12 @@ Enables compression dictionary transport. – Mac, Windows, Linux, ChromeOS, And
 #enable-compression-dictionary-transport
 
 Default
+Compression dictionary transport ttl
+Enables support for the 'ttl' parameter in the 'use-as-dictionary' HTTP response header. – Mac, Windows, Linux, ChromeOS, Android
+
+#enable-compression-dictionary-ttl
+
+Default
 Changes the target playout delay for Cast mirroring.
 Choose a target playout delay for Cast mirroring. A lower delay will decrease latency, but may impact other quality indicators. – Mac, Windows, Linux, ChromeOS
 
@@ -1765,22 +1765,10 @@ Proactively reuses same-site renderer processes to host multiple main frames, up
 #enable-process-per-site-up-to-main-frame-threshold
 
 Default
-Camera and Mic Preview
-Enables camera and mic preview in permission bubble and site settings. – Mac, Windows, Linux
-
-#camera-mic-preview
-
-Default
 getDisplayMedia() confers transient activation.
 When getDisplay() is invoked by the application, the user is shown a dialog which allows them to share a tab, a window or a screen. If this flag is enabled, then after the user chooses what to share, transient activation is conferred on the Web application. – Mac, Windows, Linux, ChromeOS
 
 #get-display-media-confers-activation
-
-Default
-getUserMedia deferred device settings selection
-Enables deferring device settings selection for getUserMedia until after the user grants permission. – Mac, Windows, Linux
-
-#get-user-media-deferred-device-settings-selection
 
 Default
 Enable RenderDocument
@@ -2017,6 +2005,12 @@ If this client is a Google-internal dogfood client, overrides enterprise policy 
 #optimization-guide-enable-dogfood-logging
 
 Disabled
+Enable automatic passkey upgrades in Google Password Manager
+Enable the WebAuthn Conditional Create feature and let websites automatically create passkeys in GPM if there is a matching password credential for the same user. – Mac, Windows, Linux, ChromeOS, Android
+
+#web-authentication-passkey-upgrade
+
+Default
 Prompt API for Gemini Nano
 Enables the exploratory Prompt API, allowing you to send natural language instructions to a built-in large language model (Gemini Nano in Chrome). Exploratory APIs are designed for local prototyping to help discover potential use cases, and may never launch. These explorations will inform the built-in AI roadmap [1]. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -2191,6 +2185,12 @@ Use the Permission Predictions Service and the AIv4 model to surface permission 
 #permissions-ai-v4
 
 Default
+PermissionsAIv5
+Use the Permission Predictions Service and the AIv5 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+
+#permissions-ai-v5
+
+Default
 Task Manager Desktop Refresh
 Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
 
@@ -2243,6 +2243,12 @@ Experimental translation API
 Enables the on-device language translation API. See https://github.com/WICG/translation-api/blob/main/README.md – Mac, Windows, Linux
 
 #translation-api
+
+Default
+Translation API streaming split by sentence
+Enables sentence-split streaming for on-device translation API. – Mac, Windows, Linux
+
+#translation-api-streaming-by-sentence
 
 Default
 Clientside password form classifier.
@@ -2306,7 +2312,7 @@ Enables the Glic actor. – Mac, Windows, Linux
 
 Default
 Glic detached-only mode
-Detach only mode prevents any UI which drags along with an underlying window. – Mac, Windows, Linux
+Detach only mode forces the Glic UI to always be floating – Mac, Windows, Linux
 
 #glic-detached
 
@@ -2345,6 +2351,12 @@ Glic Pre-Warming
 Enables the pre-warming of the Glic panel's web client. – Mac, Windows, Linux
 
 #glic-pre-warming
+
+Default
+Glic side panel
+Enable mulitple side panels for Glic – Mac, Windows, Linux
+
+#glic-side-panel
 
 Default
 Glic FRE Pre-Warming
@@ -2393,6 +2405,12 @@ Three Button Password Save Dialog
 Provides a 'not now' button alongside the 'never' button on the save password dialog. – Mac, Windows, Linux, ChromeOS
 
 #three-button-password-save-dialog
+
+Default
+throttle-main-thread-to-60hz
+Throttle main thread updates to 60fps, even when VSync rate is higher. – Mac, Windows, Linux, ChromeOS, Android
+
+#throttle-main-thread-to-60hz
 
 Default
 Enable showing card benefits for BMO cards
@@ -2773,6 +2791,12 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
+
+Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2921,6 +2945,18 @@ Enable blocking canvas readbacks in Incognito
 Enable throwing an exception when the contents of a canvas are read back by a script. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-block-canvas-readback
+
+Default
+Enable AI-based checkout amount extraction on Chrome
+When enabled, Chrome will extract the checkout amount from the checkout page using server-side AI. – Mac, Windows, Linux, ChromeOS
+
+#autofill-enable-ai-based-amount-extraction
+
+Default
+Contextual Tasks
+Enable the contextual tasks feature. – Mac, Windows, Linux, ChromeOS
+
+#contextual-tasks
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
