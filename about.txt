@@ -25,6 +25,7 @@ chrome://conflicts
 chrome://connection-help
 chrome://connection-monitoring-detected
 chrome://connectors-internals
+chrome://contextual-tasks
 chrome://crashes
 chrome://credits
 chrome://customize-chrome-side-panel.top-chrome
