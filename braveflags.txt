@@ -1,5 +1,5 @@
 Experiments
-140.1.84.76
+140.1.84.89
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -448,6 +448,12 @@ https://github.com/brave/go-sync
 #brave-override-sync-server-url
 
 Disabled
+Enable password syncing by default
+Turn on password syncing when Sync is enabled. – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-sync-default-passwords
+
+Default (Enabled)
 Enable Brave Wallet
 Native cryptocurrency wallet support without the use of extensions – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1466,6 +1472,12 @@ AI Mode Omnibox entrypoint
 Enables icon button for AI Mode entrypoint in the Omnibox. – Mac, Windows, Linux, ChromeOS
 
 #ai-mode-omnibox-entry-point
+
+Default (Disabled)
+AIM Server Eligibility
+Enable AIM server eligibility checks. – Mac, Windows, Linux, ChromeOS, Android
+
+#aim-server-eligibility
 
 Default (Disabled)
 AI Entrypoint Disabled on User Input
