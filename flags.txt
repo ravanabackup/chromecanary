@@ -1,12 +1,12 @@
 Experiments
-142.0.7428.0
+142.0.7432.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+ Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
-#webium
+#extensions-on-chrome-urls
 
-Disabled
+Enabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,12 +103,6 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
-Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
-
-#extensions-on-chrome-urls
-
-Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1442,7 +1436,7 @@ Enables RPs to get identity credentials from registered IdPs. – Mac, Windows, 
 
 Default
 FedCmIframeOrigin
-Allows showing iframe origins in the FedCM UI, if requested by the IDP. – Mac, Windows, Linux, ChromeOS
+Allows showing iframe origins in the FedCM UI, if requested by the IDP. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-iframe-origin
 
@@ -1879,12 +1873,6 @@ Enables the avatar button sync promo for eligible users. Only available on Windo
 #avatar-button-sync-promo
 
 Default
-Enable Extensions Explicit Sign In
-Enables users to perform an explicit signin upon installing an extension. After this, syncing for extensions will be enabled when in transport mode (when a user is signed in but has not turned on full sync). – Mac, Windows, Linux, ChromeOS
-
-#enable-extensions-explicit-browser-signin
-
-Default
 Device Bound Session Credentials
 Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
 
@@ -2191,10 +2179,10 @@ Use the Permission Predictions Service and the AIv4 model to surface permission 
 #permissions-ai-v4
 
 Default
-PermissionsAIv5
-Use the Permission Predictions Service and the AIv5 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+PermissionsAIP92
+Use the Permission Predictions Service and with P92 adjustments to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS, Android
 
-#permissions-ai-v5
+#permissions-ai-p92
 
 Default
 Task Manager Desktop Refresh
@@ -2273,12 +2261,6 @@ PartitionAlloc with Advanced Checks
 Enables an extra security layer on PartitionAlloc. – Mac, Windows, Linux, ChromeOS, Android
 
 #partition-alloc-with-advanced-checks
-
-Default
-Partition the Visited Link Database, including 'self-links'
-Style links as visited only if they have been clicked from this top-level site and frame origin before. Additionally, style links pointing to the same URL as the page it is displayed on, which have been :visited from any top-level site and frame origin, if they are displayed in a top-level frame or same-origin subframe. – Mac, Windows, Linux, ChromeOS, Android
-
-#partition-visited-link-database-with-self-links
 
 Default
 Predictable Reported Quota
@@ -2485,16 +2467,16 @@ Enables the `clipboardchange` event API. See: https://chromestatus.com/feature/5
 #enable-clipboardchange-event
 
 Default
-Enable loading and querying the checkout amount extraction allowlist.
-When enabled, Chrome will have the ability to load and query the allowlist for checkout amount extraction, which will be used to check if the current URL is eligible for products that use the checkout amount extraction algorithm. – Mac, Windows, Linux, ChromeOS, Android
-
-#autofill-enable-amount-extraction-allowlist
-
-Default
 DevTools Project Settings
 If enabled, DevTools will try to fetch project settings in the form of a `com.chrome.devtools.json` file from a well-known URI on local debugging targets. – Mac, Windows, Linux, ChromeOS
 
 #devtools-project-settings
+
+Default
+DevTools @starting-style debugging
+Enables the debugging of @starting-style in the elements panel. – Mac, Windows, Linux, ChromeOS
+
+#devtools-starting-style-debugging
 
 Default
 Drop input events while paint-holding is active
@@ -2797,6 +2779,12 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
+
+Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2957,6 +2945,12 @@ Contextual Tasks
 Enable the contextual tasks feature. – Mac, Windows, Linux, ChromeOS
 
 #contextual-tasks
+
+Default
+Create new tab group menu option at the top level of the app menu
+In the app menu, add an option to create a new tab group at the top level – Mac, Windows, Linux, ChromeOS
+
+#create-new-tab-group-app-menu-top-level
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
