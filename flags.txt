@@ -1,12 +1,12 @@
 Experiments
-142.0.7434.0
+142.0.7442.2
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+ Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
 
-#extensions-on-chrome-urls
+#webium
 
-Enabled
+Disabled
 Temporarily unexpire M140 flags.
 Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,6 +103,12 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+
+#extensions-on-chrome-urls
+
+Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1724,9 +1730,15 @@ Enables the optimization of reducing unnecessary IPC for cloning DeviceBoundSess
 
 Default
 WebUI Omnibox Popup
-If enabled, shows the omnibox suggestions popup in WebUI. – Mac, Windows, Linux, ChromeOS
+If enabled, shows the omnibox suggestions in the popup in WebUI. – Mac, Windows, Linux, ChromeOS
 
 #webui-omnibox-popup
+
+Default
+WebUI Omnibox Popup Debug Mode
+Enables the WebUI for omnibox suggestions without modifying the popup UI. – Mac, Windows, Linux, ChromeOS
+
+#webui-omnibox-popup-debug
 
 Default
 Group Promo Prototype
@@ -1861,12 +1873,6 @@ Enables profiles reordering in the Profile Picker main view by drag and dropping
 #profiles-reordering
 
 Default
-History Sync Opt-in Expansion Pill
-Enables the History Sync Opt-in expansion pill on Desktop platforms. – Mac, Windows, Linux
-
-#enable-history-sync-optin-expansion-pill
-
-Default
 Avatar Sync Promo
 Enables the avatar button sync promo for eligible users. Only available on Windows. – Windows
 
@@ -1979,6 +1985,12 @@ Device Bound Session Credentials (Standard) Persistence
 Enables session persistence for the official version of Device Bound Session Credentials. – Mac, Windows, Linux
 
 #enable-standard-device-bound-session-persistence
+
+Default
+Device Bound Session Credentials (Standard) - Federated Registrations
+Enables federated session registration for the official version of Device Bound Session Credentials. – Mac, Windows, Linux
+
+#enable-standard-device-bound-session-credentials-federated-sessions
 
 Default
 Replace all sync-related UI with sign-in ones
@@ -2437,12 +2449,6 @@ When enabled, card category benefits offered by BMO will be shown in Autofill su
 #autofill-enable-allowlist-for-bmo-card-category-benefits
 
 Default
-Enable System Audio Echo Cancellation (AEC)
-Enables usage of system AEC on Windows and Mac. The goal is to ensure that audio which is played out from from external (non-Chrome) applications does not leak into microphone signals and thereby causing echo. On Windows, Windows 11 24H2 (build 26100) and above is required. – Mac, Windows
-
-#enforce-system-echo-cancellation
-
-Default
 Improved password change service
 Experimental feature, which offers automatic password change to the user when they sign in with a credential known to be leaked. – Mac, Windows, Linux, ChromeOS
 
@@ -2785,12 +2791,6 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
-Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
-
-#webium
-
-Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2957,6 +2957,42 @@ Create new tab group menu option at the top level of the app menu
 In the app menu, add an option to create a new tab group at the top level – Mac, Windows, Linux, ChromeOS
 
 #create-new-tab-group-app-menu-top-level
+
+Default
+Enable issuer names in the second line of a BNPL suggestion
+When enabled, the second line of a BNPL suggestion is updated to include the issuer names for better brand recognition. – Mac, Windows, Linux, ChromeOS, Android
+
+#autofill-enable-buy-now-pay-later-updated-suggestion-second-line-string
+
+Default
+Cryptography Compliance (CNSA)
+If enabled, Chrome will configure its preferred algorithms for TLS to prefer algorithms that satisfy the requirements of the Commercial National Security Algorithm Suite (CNSA) versions 1.0 and 2.0. Enabling this flag does not guarantee that any specific algorithms will be negotiated. This flag is not required for security. – Mac, Windows, Linux, ChromeOS, Android
+
+#cryptography-compliance-cnsa
+
+Default
+Lens search reinvocation affordance
+Enables the Lens button in the AIM Searchbox for reinvocation of selection overlay. – Mac, Windows, Linux, ChromeOS
+
+#lens-reinvocation-affordance
+
+Default
+Lens search zero state CSB
+Enables a zero state CSB query in Lens. – Mac, Windows, Linux, ChromeOS
+
+#lens-search-zero-state-csb
+
+Default
+Lens updated feedback entrypoint
+Enables an updated feedback entry point in the Lens side panel. – Mac, Windows, Linux, ChromeOS
+
+#lens-updated-feedback-entrypoint
+
+Default
+Lens video citations
+Enables special handling for video citations in Lens. – Mac, Windows, Linux, ChromeOS
+
+#lens-video-citations
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
