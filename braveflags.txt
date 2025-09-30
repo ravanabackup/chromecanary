@@ -1,5 +1,5 @@
 Experiments
-141.1.85.9
+141.1.85.13
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -2659,7 +2659,7 @@ https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
 #prompt-api-for-gemini-nano-multimodal-input
 
-Default (Disabled*)
+Default (Disabled)
 Summarization API for Gemini Nano
 Enables the Summarization API, allowing you to summarize a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. This API It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -2667,7 +2667,7 @@ https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
 #summarization-api-for-gemini-nano
 
-Default (Disabled*)
+Default (Disabled)
 Writer API for Gemini Nano
 Enables the Writer API, allowing you to write a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -2675,7 +2675,7 @@ https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
 #writer-api-for-gemini-nano
 
-Default (Disabled*)
+Default (Disabled)
 Rewriter API for Gemini Nano
 Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -2683,7 +2683,7 @@ https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
 #rewriter-api-for-gemini-nano
 
-Default (Disabled*)
+Default (Disabled)
 Proofreader API for Gemini Nano
 Enables the Proofreader API, allowing you to proofread a piece of textwith a built-in large language model (Gemini Nano in Chrome).The API may be subject to changes including the supported options.Please refer to the built-in AI article [1] for details. You must comply with our Prohibited Use Policy [2] which provides additional details about appropriate use of Generative AI. – Mac, Windows, Linux, ChromeOS
 
@@ -2691,7 +2691,7 @@ https://goo.gle/chrome-ai-dev-preview
 https://policies.google.com/terms/generative-ai/use-policy
 #proofreader-api-for-gemini-nano
 
-Default (Disabled*)
+Default (Disabled)
 CSS Masonry Layout
 Enable experimental CSS Masonry Layout implementation. Simple layouts with masonry are supported. Subgrid, fragmentation, and out-of-flow items are not supported yet. The syntax to use CSS Masonry is `display: masonry` together with grid properties (i.e. `grid-column`, `grid-row`, etc.). More details on masonry syntax can be found at https://www.w3.org/TR/css-grid-3/#masonry-model. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2745,7 +2745,7 @@ When enabled, JS can use the web platform's language detection API – Mac, Wind
 
 #language-detection-api
 
-Default (Disabled*)
+Default (Disabled)
 Enable local web approvals feature
 Enables parents to approve blocked websites on a child's device. – Mac, Windows, Linux
 
@@ -2865,7 +2865,7 @@ Enables the on-device language translation API. See https://github.com/WICG/tran
 
 #translation-api
 
-Default (Disabled*)
+Default (Disabled)
 Clientside password form classifier.
 Enable usage of new password form classifier on the client. – Mac, Windows, Linux, ChromeOS, Android
 
