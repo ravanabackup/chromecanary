@@ -80,6 +80,7 @@ chrome://profile-internals
 chrome://profile-picker
 chrome://quota-internals
 chrome://read-later.top-chrome
+chrome://reload-button.top-chrome
 chrome://reset-password
 chrome://sandbox
 chrome://saved-tab-groups-unsupported
