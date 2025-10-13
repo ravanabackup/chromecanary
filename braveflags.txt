@@ -1,5 +1,5 @@
 Experiments
-141.1.85.13
+141.1.85.48
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
 * Overridden by active variations or a command line.
 
@@ -99,6 +99,12 @@ When enabled, Link Preview feature gets to be available to preview a linked page
 #link-preview
 
 Enabled
+V8 Jitless mode
+Enable V8 jitless mode when optimizations are disabled. V8 runs in jitless mode which reduces performance but improves security. This does not affect all pages. – Mac, Windows, Linux, ChromeOS, Android
+
+#brave-v8-jitless-mode
+
+Default (Disabled)
 Use dev updater url
 Use the dev url for the component updater. This is for internal testing only. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -436,6 +442,12 @@ https://github.com/brave/go-sync
 #brave-override-sync-server-url
 
 Disabled
+Enable Ad Block Only Mode
+Ad Block Only mode retains core ad blocking rules of Brave Shields. Warning: removes all privacy protections. Please note that for individual websites broken by Brave's privacy protections, you can set Shields to DOWN. This is an experimental mode. – Mac, Windows, Linux
+
+#brave-ad-block-only-mode
+
+Default (Disabled)
 Enable password syncing by default
 Turn on password syncing when Sync is enabled. – Mac, Windows, Linux, ChromeOS, Android
 
