@@ -1,22 +1,22 @@
 Experiments
-142.0.7444.3
+143.0.7469.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+ Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
 
-#extensions-on-chrome-urls
+#webium
 
-Enabled
-Temporarily unexpire M140 flags.
-Temporarily unexpire flags that expired as of M140. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
-
-#temporary-unexpire-flags-m140
-
-Default
+Disabled
 Temporarily unexpire M141 flags.
 Temporarily unexpire flags that expired as of M141. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
 #temporary-unexpire-flags-m141
+
+Default
+Temporarily unexpire M142 flags.
+Temporarily unexpire flags that expired as of M142. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
+
+#temporary-unexpire-flags-m142
 
 Default
 Enable benchmarking
@@ -103,6 +103,12 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
+
+#extensions-on-chrome-urls
+
+Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -317,12 +323,6 @@ Automatic detection of WebUSB-compatible devices
 When enabled, the user will be notified when a device which advertises support for WebUSB is connected. Disable if problems with USB devices are observed when the browser is running. – Mac, Windows, Linux, ChromeOS
 
 #enable-webusb-device-detection
-
-Default
-Touch initiated drag and drop
-Touch drag and drop can be initiated through long press on a draggable element. – Windows, ChromeOS
-
-#enable-touch-drag-drop
 
 Default
 WebGL Developer Extensions
@@ -649,12 +649,6 @@ Filling of passwords when an account is explicitly selected by the user rather t
 #fill-on-account-select
 
 Default
-Most Visited Tile: Visual deduplication filter
-When computing MV Tiles, remove tiles that are visual duplicates (i.e., have the same title and the same hostname) of another tile with higher score. – Mac, Windows, Linux, ChromeOS, Android
-
-#most-visited-tiles-visual-deduplication
-
-Default
 Omnibox Zero Prefix Suggest Prefetch Request Debouncing
 Enables the use of a request debouncer to throttle the volume of ZPS prefetch requests issued to the remote Suggest service. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -745,12 +739,6 @@ Enables icon button for AI Mode entrypoint in the Omnibox. – Mac, Windows, Lin
 #ai-mode-omnibox-entry-point
 
 Default
-AIM Server Eligibility
-Enable AIM server eligibility checks. – Mac, Windows, Linux, ChromeOS, Android
-
-#aim-server-eligibility
-
-Default
 AI Entrypoint Disabled on User Input
 Hide the Omnibox entrypoint for AI Mode while user is typing. – Mac, Windows, Linux, ChromeOS
 
@@ -809,6 +797,12 @@ Adjust Indentation for Omnibox Text and Suggestions
 Adjusts the indentation of the omnibox and the suggestions to eliminate the visual shift when the popup opens. – Mac, Windows, Linux, ChromeOS
 
 #omnibox-adjust-indentation
+
+Default
+AIM Server Eligibility
+Enable AIM server eligibility checks. – Mac, Windows, Linux, ChromeOS, Android
+
+#aim-server-eligibility
 
 Default
 Omnibox on device head suggestions (non-incognito only)
@@ -961,12 +955,6 @@ Choices for overflow indicators shown when the tabstrip is in scrolling mode. �
 #scrollable-tabstrip-overflow
 
 Default
-Side Panel Resizing
-Allows users to resize the side panel and persist the width across browser sessions. – Mac, Windows, Linux, ChromeOS
-
-#side-panel-resizing
-
-Default
 Product Specifications
 Enable the Product Specifications feature. – Mac, Windows, Linux, ChromeOS
 
@@ -997,10 +985,22 @@ Shows the Composebox on the New Tab Page Searchbox upon clicking the entrypoint.
 #ntp-composebox
 
 Default
+NTP Realbox Next
+Enables the Realbox 'Next' experience. – Mac, Windows, Linux, ChromeOS
+
+#ntp-realbox-next
+
+Default
 Composebox uses chrome-compose client
 Composebox will use chrome-compose client when querying suggest for unimodal typed inputs instead of chrome-omni. – Mac, Windows, Linux, ChromeOS
 
 #composebox-uses-chrome-compose-client
+
+Default
+NTP Customize Chrome Promo
+Shows the Customize Chrome promo on the New Tab Page. – Mac, Windows, Linux, ChromeOS
+
+#ntp-customize-chrome-promo
 
 Default
 NTP Drive Module History Sync Requirement
@@ -1013,6 +1013,12 @@ NTP Modules Sign-in Requirement
 Makes NTP Sign-in Requirement per module, removing the requirement for Microsoft Modules – Mac, Windows, Linux, ChromeOS
 
 #ntp-module-sign-in-requirement
+
+Default
+NTP Next Features
+Enables features (e.g., AI action chips) in NTP Next – Mac, Windows, Linux, ChromeOS
+
+#ntp-next-features
 
 Default
 NTP OneGoogleBar Async Bar Parts
@@ -1081,6 +1087,12 @@ Permit a set of origins to request a uniquely identifying enterprise attestation
 #web-authentication-permit-enterprise-attestation
 
 Disabled
+Exclude Picture-in-Picture windows from screen capture
+When enabled, Picture-in-Picture windows will be excluded from screen captures. – Mac, Windows, Linux, ChromeOS, Android
+
+#exclude-pip-from-screen-capture
+
+Default
 OOPIF for PDF Viewer
 Use an OOPIF for the PDF Viewer, instead of a GuestView. – Mac, Windows, Linux, ChromeOS
 
@@ -1423,6 +1435,12 @@ Enables IdPs to delegate presentation to the browser. – Mac, Windows, Linux, C
 #fedcm-delegation
 
 Default
+FedCmErrorAttribute
+Enables the spec-compliant 'error' attribute in IdentityCredentialError while deprecating the legacy 'code' attribute. – Mac, Windows, Linux, ChromeOS, Android
+
+#fedcm-error-attribute
+
+Default
 FedCM with IdP Registration support
 Enables RPs to get identity credentials from registered IdPs. – Mac, Windows, Linux, ChromeOS
 
@@ -1445,6 +1463,18 @@ FedCmMetricsEndpoint
 Allows the FedCM API to send performance measurement to the metrics endpoint on the identity provider side. Requires FedCM to be enabled. – Mac, Windows, Linux, ChromeOS, Android
 
 #fedcm-metrics-endpoint
+
+Default
+FedCmNonceInParams
+Removes nonce as an explicit parameter of the FedCM API. When enabled, a nonce may be passed in params. – Mac, Windows, Linux, ChromeOS, Android
+
+#fedcm-nonce-in-params
+
+Default
+FedCmWellKnownEndpointValidation
+When enabled, accounts_endpoint and login_url must be present in .well-known/web-identity if client_metadata is used. – Mac, Windows, Linux, ChromeOS, Android
+
+#fedcm-well-known-endpoint-validation
 
 Default
 FedCmWithoutWellKnownEnforcement
@@ -1475,18 +1505,6 @@ Lens overlay
 Enables Lens search via an overlay on any page. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay
-
-Default
-Bind cookies to their setting origin's port
-If enabled, cookies will only be accessible by origins with the same port as the one that originally set the cookie. – Mac, Windows, Linux, ChromeOS, Android
-
-#bind-cookies-to-port
-
-Default
-Bind cookies to their setting origin's scheme
-If enabled, cookies will only be accessible by origins with the same scheme as the one that originally set the cookie – Mac, Windows, Linux, ChromeOS, Android
-
-#bind-cookies-to-scheme
 
 Default
 Enable unsafe SwiftShader fallback
@@ -1723,16 +1741,16 @@ If enabled, shows the omnibox suggestions in the popup in WebUI. – Mac, Window
 #webui-omnibox-popup
 
 Default
+WebUI Omnibox Full Popup
+If enabled, shows the omnibox suggestions and the search input in the popup in WebUI. – Mac, Windows, Linux, ChromeOS
+
+#webui-omnibox-full-popup
+
+Default
 WebUI Omnibox Popup Debug Mode
 Enables the WebUI for omnibox suggestions without modifying the popup UI. – Mac, Windows, Linux, ChromeOS
 
 #webui-omnibox-popup-debug
-
-Default
-Group Promo Prototype
-Enables prototype for group promo. – Mac, Windows, Linux, ChromeOS, Android
-
-#group-promo-prototype
 
 Default
 Sync Autofill Wallet Credential Data
@@ -1819,6 +1837,12 @@ When enabled, Chrome updates the country associated with the profile on open –
 #rcaps-dynamic-profile-country
 
 Default
+Desktop PWA Link Capturing with Scope Extensions
+Allows the 'Desktop PWA Scope Extensions' feature to be used with the 'Desktop PWA Link Capturing' feature. Both of those features are required to be turned on for this flag to have an effect. – Mac, Windows, Linux
+
+#enable-user-link-capturing-scope-extensions-pwa
+
+Default
 Enable OIDC profile remote commands
 Enables remote commands for OIDC profiles. – Mac, Windows, Linux
 
@@ -1849,6 +1873,12 @@ Controls the default for Permissions-Policy unload. If enabled, unload handlers 
 #deprecate-unload
 
 Default
+Ack CopyOutputRequest early for View Transition
+If enabled, send acks for CopyOutputRequest completion immediately to unblock navigation for ViewTransitions while CopyOutputRequests are in progress. This is a fast-path for ViewTransitions. – Mac, Windows, Linux, ChromeOS, Android
+
+#ack-copy-output-request-early-for-view-transition
+
+Default
 Ack On Surface Activation When Interactive
 If enabled, immediately send acks to clients when a viz surface activates and when that surface is a dependency of an interactive frame (i.e., when there is an active scroll or a touch interaction). This effectively removes back-pressure in this case. This can result in wasted work and contention, but should regularize the timing of client rendering. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -1867,22 +1897,10 @@ Enables the avatar button sync promo for eligible users. Only available on Windo
 #avatar-button-sync-promo
 
 Default
-Device Bound Session Credentials
-Enables Google session credentials binding to cryptographic keys. – Mac, Windows, Linux
-
-#enable-bound-session-credentials
-
-Default
 Device Bound Session Credentials with software keys
 Enables mock software-backed cryptographic keys for Google session credentials binding and Chrome refresh tokens binding (not secure). This is intended to be used for manual testing only. – Mac, Windows, Linux
 
 #enable-bound-session-credentials-software-keys-for-manual-testing
-
-Default
-Menu Elements
-A suite of new HTML elements that support customizable, accessible menus. See https://open-ui.org/components/menu.explainer/. – Mac, Windows, Linux, ChromeOS, Android
-
-#menu-elements
 
 Default
 Compose Selection Nudge
@@ -2065,30 +2083,6 @@ Modifies the Storage Access API to follow the Same Origin Policy with respect to
 #storage-access-api-follows-same-origin-policy
 
 Default
-Enable bookmarks in transport mode
-Enables account bookmarks for signed-in non-syncing users – Mac, Windows, Linux
-
-#sync-enable-bookmarks-in-transport-mode
-
-Default
-Enable reading list in transport mode
-Enables account reading list for signed-in non-syncing users – Mac, Windows, Linux
-
-#reading-list-enable-sync-transport-mode-upon-sign-in
-
-Default
-Infinite Tabs Freezing
-Freezes eligible tabs which are not in the 5 most recently used ones, to preserve Chrome speed as new tabs are created. Tabs providing background functionality (e.g. playing audio, handling a video call) are not eligible for freezing. – Mac, Windows, Linux, ChromeOS
-
-#infinite-tabs-freezing
-
-Default
-Memory Purge on Freeze Limit
-Do not purge memory in renderers with frozen pages more than once per backgrounded interval, to minimize overhead when pages are periodically unfrozen. To be enabled with memory-purge-on-freeze-limit. – Mac, Windows, Linux, ChromeOS
-
-#memory-purge-on-freeze-limit
-
-Default
 Adjust feature reports received with WebHID
 Enable/Disable a fix for a bug that caused feature reports to be offset by one byte when received from devices that do not use numbered reports. – Windows
 
@@ -2161,12 +2155,6 @@ Re-enable the deprecated feature in DevTools' Sources panel to apply code edits 
 #devtools-live-edit
 
 Default
-PermissionsAIv1
-Use the Permission Predictions Service and the AIv1 model to surface permission requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
-
-#permissions-ai-v1
-
-Default
 PermissionsAIv3
 Use the Permission Predictions Service and the AIv3 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
 
@@ -2174,7 +2162,7 @@ Use the Permission Predictions Service and the AIv3 model to surface permission 
 
 Default
 PermissionsAIv4
-Use the Permission Predictions Service and the AIv4 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS
+Use the Permission Predictions Service and the AIv4 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled. – Mac, Windows, Linux, ChromeOS, Android
 
 #permissions-ai-v4
 
@@ -2189,12 +2177,6 @@ Task Manager Desktop Refresh
 Enables a refreshed design for the Task Manager on Desktop platforms. – Mac, Windows, Linux, ChromeOS
 
 #enable-task-manager-desktop-refresh
-
-Default
-Enables AIM in Lens side panel.
-Enables AIM follow ups with the Lens overlay results side panel. – Mac, Windows, Linux, ChromeOS
-
-#enable-lens-search-aim-m3
 
 Default
 Enable buy now pay later on Autofill
@@ -2213,12 +2195,6 @@ Enable CVC storage and filling standalone form enhancement for payments autofill
 When enabled, this will enhance the CVV storage project. The enhancement will enable CVV storage suggestions for standalone CVC fields. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-cvc-storage-and-filling-standalone-form-enhancement
-
-Default
-Enable bookmarks selected type on sign-in for testing
-Test-only flag to help with the development of sync-enable-bookmarks-in-transport-mode. Enables the bookmarks UserSelectableType upon sign-in – Mac, Windows, Linux, ChromeOS
-
-#enable-bookmarks-selected-type-on-signin-for-testing
 
 Default
 Enable showing in-process help UI for card benefits
@@ -2353,6 +2329,12 @@ Enables the pre-warming of Glic's FRE web page. – Mac, Windows, Linux
 #glic-fre-pre-warming
 
 Default
+Glic Entrypoint Variations
+Enables visual tweaks to the Glic entry button in the tab strip. – Mac, Windows, Linux
+
+#glic-entrypoint-variations
+
+Default
 ServiceWorkerAutoPreload
 Dispatches a preload request for navigation before starting the service worker. See https://github.com/explainers-by-googlers/service-worker-auto-preload – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2387,12 +2369,6 @@ Enable OAuthMultilogin Cookies Binding Server Experiment
 When enabled, Chrome will send will send a specific URL parameter to Gaia to trigger the server-side experiment for binding the OAuthMultilogin cookies to cryptographic keys. This flag is meant to be used in conjunction with the 'Enable OAuthMultilogin Cookies Binding' flag. – Mac, Windows, Linux
 
 #enable-oauth-multilogin-cookies-binding-server-experiment
-
-Default
-Chrome Refresh Token Binding
-Enables binding of Chrome refresh tokens to cryptographic keys. – Mac, Windows, Linux
-
-#enable-chrome-refresh-token-binding
 
 Default
 Three Button Password Save Dialog
@@ -2551,6 +2527,12 @@ Enable Local Network Access checks for WebSockets. Requires the #local-network-a
 #local-network-access-check-websockets
 
 Default
+Local Network Access Checks for WebTransport
+Enable Local Network Access checks for WebTransport. Requires the #local-network-access-check flag to also be enabled See: https://chromestatus.com/feature/5126430912544768 – Mac, Windows, Linux, ChromeOS, Android
+
+#local-network-access-check-webtransport
+
+Default
 Enable noise for canvas readbacks in Incognito
 Enable noising pixels when the contents of a canvas are read back by a script. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2573,12 +2555,6 @@ Enable showing flat rate card benefits sourced from Curinos
 When enabled, flat rate card benefits sourced from Curinos will be shown in Autofill suggestions. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-enable-flat-rate-card-benefits-from-curinos
-
-Default
-Tab Group Keyboard Shortcuts
-Adds a few keyboard shortcuts for some tab group interactions. – Mac, Windows, Linux, ChromeOS
-
-#tab-group-shortcuts
 
 Default
 Bundled Security Settings
@@ -2605,12 +2581,6 @@ Enables immediate mediation for WebAuthn and passwords for a navigator.credentia
 #web-authentication-immediate-get
 
 Default
-media-playback-while-not-visible permission policy
-Enables the media-playback-while-not-visible permission policy. This permission policy will pause any media being played by any disallowed iframes which are not currently rendered. Seehttps://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/IframeMediaPause/iframe_media_pausing.md for more information. – Mac, Windows, Linux, ChromeOS, Android
-
-#media-playback-while-not-visible-permission-policy
-
-Default
 Split View
 Allows users to view two tabs simultaneously in a split view. – Mac, Windows, Linux, ChromeOS
 
@@ -2633,12 +2603,6 @@ Tab Group Home
 Home surface for a tab group. – Mac, Windows, Linux, ChromeOS
 
 #tab-group-home
-
-Default
-Pinned Tab Toast On Close
-Enable to show a confirmation toast that displays when a pinned tab is closed via the keyboard shortcut. – Mac, Windows, Linux, ChromeOS
-
-#pinned-tab-toast-on-close
 
 Default
 Discount Autofill
@@ -2777,12 +2741,6 @@ Lens overlay straight to SRP
 Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, ChromeOS
 
 #enable-lens-overlay-straight-to-srp
-
-Default
-Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
-
-#webium
 
 Default
 Default search engine prewarm
@@ -2993,6 +2951,30 @@ Prioritize save card bubble over mandatory re-auth
 When enabled, this flag prioritizes showing the save card bubble over the mandatory re-auth bubble when both are applicable. – Mac, Windows, Android
 
 #autofill-prioritize-save-card-over-mandatory-reauth
+
+Default
+Passkey Unlock Error UI
+Enables showing the passkey unlock error UI to passkey users in case when their access to passkeys is “locked” and when they have an available user verification mechanism (either a system UV or a GPM PIN). – Mac, Windows, Linux, ChromeOS
+
+#passkey-unlock-error-ui
+
+Default
+Automatic JS Optimizer Control
+Adds an option to the V8 optimizer content setting that disables the JavaScript optimizer on sites that are unfamiliar to the user. – Mac, Windows, Linux, ChromeOS
+
+#block-v8-optimizer-on-unfamiliar-sites
+
+Default
+ServiceWorkerSyntheticResponse
+Enable service worker synthetic response feature. – Mac, Windows, Linux, ChromeOS, Android
+
+#service-worker-synthetic-response
+
+Default
+Default Browser settings page - updated strings
+Improves the flow and the wording on the Default Browser settings page. – Mac, Windows, Linux, ChromeOS
+
+#user-value-default-browser-strings
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
