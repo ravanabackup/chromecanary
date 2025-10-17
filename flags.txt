@@ -1,12 +1,12 @@
 Experiments
-143.0.7469.0
+143.0.7477.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
- Webium
-Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+ Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
-#webium
+#extensions-on-chrome-urls
 
-Disabled
+Enabled
 Temporarily unexpire M141 flags.
 Temporarily unexpire flags that expired as of M141. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -103,12 +103,6 @@ Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, 
 #web-hid-in-web-view
 
 Default
-Extensions on chrome:// URLs
-Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
-
-#extensions-on-chrome-urls
-
-Disabled
 Extensions on chrome-extension:// URLs
 Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -967,6 +961,12 @@ Enable using the alternate shopping server for testing. – Mac, Windows, Linux,
 #shopping-alternate-server
 
 Default
+Composebox uses chrome-compose client
+Composebox will use chrome-compose client when querying suggest for unimodal typed inputs instead of chrome-omni. – Mac, Windows, Linux, ChromeOS, Android
+
+#composebox-uses-chrome-compose-client
+
+Default
 NTP Calendar Module
 Shows the Google Calendar module on the New Tab Page. – Mac, Windows, Linux, ChromeOS
 
@@ -989,12 +989,6 @@ NTP Realbox Next
 Enables the Realbox 'Next' experience. – Mac, Windows, Linux, ChromeOS
 
 #ntp-realbox-next
-
-Default
-Composebox uses chrome-compose client
-Composebox will use chrome-compose client when querying suggest for unimodal typed inputs instead of chrome-omni. – Mac, Windows, Linux, ChromeOS
-
-#composebox-uses-chrome-compose-client
 
 Default
 NTP Customize Chrome Promo
@@ -1352,7 +1346,7 @@ Enables the Page Embedded Permission Control feature, which allows the use of th
 
 Default
 Geolocation permission control (geolocation element)
-Enables the Geolocation Permission Control feature, which allows the use of the HTML 'geolocation' element. – Mac, Windows, Linux
+Enables the Geolocation Permission Control feature, which allows the use of the HTML 'geolocation' element. – Mac, Windows, Linux, Android
 
 #geolocation-element
 
@@ -1735,10 +1729,10 @@ Enables the optimization of reducing unnecessary IPC for cloning DeviceBoundSess
 #device-bound-session-access-observer-shared-remote
 
 Default
-WebUI Omnibox Popup
-If enabled, shows the omnibox suggestions in the popup in WebUI. – Mac, Windows, Linux, ChromeOS
+WebUI Omnibox AIM Popup
+If enabled, using certain trigger operations the omnibox suggestions popup transition to showing the AI-Mode compose-box input and suggestions. – Mac, Windows, Linux, ChromeOS
 
-#webui-omnibox-popup
+#webui-omnibox-aim-popup
 
 Default
 WebUI Omnibox Full Popup
@@ -1747,10 +1741,22 @@ If enabled, shows the omnibox suggestions and the search input in the popup in W
 #webui-omnibox-full-popup
 
 Default
+WebUI Omnibox Popup
+If enabled, shows the omnibox suggestions in the popup in WebUI. – Mac, Windows, Linux, ChromeOS
+
+#webui-omnibox-popup
+
+Default
 WebUI Omnibox Popup Debug Mode
 Enables the WebUI for omnibox suggestions without modifying the popup UI. – Mac, Windows, Linux, ChromeOS
 
 #webui-omnibox-popup-debug
+
+Default
+Group Promo Prototype
+Enables prototype for group promo. – Mac, Windows, Linux, ChromeOS, Android
+
+#group-promo-prototype
 
 Default
 Sync Autofill Wallet Credential Data
@@ -2095,12 +2101,6 @@ When enabled, JS can use the web platform's language detection API – Mac, Wind
 #language-detection-api
 
 Default
-Enable local web approvals feature
-Enables parents to approve blocked websites on a child's device. – Mac, Windows, Linux
-
-#supervised-user-local-web-approvals
-
-Default
 Data Sharing
 Enabled all Data Sharing related UI and features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2141,6 +2141,12 @@ DevTools Privacy UI
 Enables the Privacy UI in the current 'Security' panel in DevTools. – Mac, Windows, Linux, ChromeOS, Android
 
 #devtools-privacy-ui
+
+Default
+DevTools GreenDev UI
+Enables the experimental GreenDev UI in DevTools. – Mac, Windows, Linux, ChromeOS, Android
+
+#devtools-greendev-ui
 
 Default
 Enable individual request throttling in DevTools
@@ -2743,6 +2749,12 @@ Enables straight to SRP flows for the Lens overlay. – Mac, Windows, Linux, Chr
 #enable-lens-overlay-straight-to-srp
 
 Default
+Webium
+Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
+
+#webium
+
+Default
 Default search engine prewarm
 Performance optimization to prewarm the default search engine used in the Omnibox – Mac, Windows, Linux, ChromeOS
 
@@ -2953,6 +2965,12 @@ When enabled, this flag prioritizes showing the save card bubble over the mandat
 #autofill-prioritize-save-card-over-mandatory-reauth
 
 Default
+Variations seed corpus
+The value of the 'corpus' parameter in the variations seed request. If unspecified, the 'corpus' parameter is omitted from the request. – Mac, Windows, Linux, ChromeOS, Android
+
+#variations-seed-corpus
+
+Disabled
 Passkey Unlock Error UI
 Enables showing the passkey unlock error UI to passkey users in case when their access to passkeys is “locked” and when they have an available user verification mechanism (either a system UV or a GPM PIN). – Mac, Windows, Linux, ChromeOS
 
@@ -2975,6 +2993,24 @@ Default Browser settings page - updated strings
 Improves the flow and the wording on the Default Browser settings page. – Mac, Windows, Linux, ChromeOS
 
 #user-value-default-browser-strings
+
+Default
+Reading Mode Read Aloud Experimental Text Segmentation
+Enables the experimental text segmentation method for reading mode. – Mac, Windows, Linux, ChromeOS
+
+#read-anything-read-aloud-ts-text-segmentation
+
+Default
+Enable CTA experiment for sign-in level up
+As part of the Sign In Level Up experiment, changes the decline sign in CTA string in profile creation entry points – Mac, Windows, Linux
+
+#profile-creation-decline-signin-cta-experiment
+
+Default
+Show profile picker to all users
+As part of the Growth experiments, show the profile picker to users who only have one profile – Mac, Windows, Linux
+
+#show-profile-picker-to-all-users-experiment
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
