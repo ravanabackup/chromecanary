@@ -136,6 +136,7 @@ chrome://family-link-user-internals
 chrome://history-clusters-internals
 chrome://infobar-internals
 chrome://interstitials
+chrome://legion-internals
 chrome://local-state
 chrome://location-internals
 chrome://media-router-internals
