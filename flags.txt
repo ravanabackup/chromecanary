@@ -1,5 +1,5 @@
 Experiments
-144.0.7510.0
+144.0.7541.0
 Warning: Experimental features ahead! By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
  Webium
 Webium Prototype Browser. – Mac, Windows, Linux, ChromeOS
@@ -109,6 +109,12 @@ Enables running extensions on chrome-extension:// URLs, where extensions explici
 #extensions-on-extension-urls
 
 Disabled
+Enable SecurityInfo in WebRequest API
+Enables SecurityInfo in WebRequest API for extensions, allowing listeners to retrieve certificate details of web requests. – Mac, Windows, Linux, ChromeOS
+
+#web-request-security-info
+
+Default
 Show Autofill predictions
 Annotates web forms with Autofill field type predictions as placeholder text. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -251,6 +257,12 @@ Hardware Secure Decryption
 Enable/Disable the use of hardware secure Content Decryption Module (CDM) for protected content playback. – Windows
 
 #enable-hardware-secure-decryption
+
+Default
+Hardware Secure Decryption Fallback
+Allows automatically disabling hardware secure Content Decryption Module (CDM) after failures or crashes. Subsequent playback may use software secure CDMs. If this feature is disabled, the fallback will never happen and users could be stuck with playback failures. – Windows
+
+#enable-hardware-secure-decryption-fallback
 
 Default
 Media Foundation Camera Usage Monitoring
@@ -511,6 +523,12 @@ Allows the OpenXR runtime to use the spatial entities set of extensions to under
 #openxr-spatial-entities
 
 Default
+Spatial Entities Depth-based Hit Test
+Controls whether the spatial entities framework is allowed to use depth-based hit tests or only plane-based ones. – Windows, Android
+
+#spatial-entities-depth-hit-test
+
+Default
 WebXR Projection Layers
 Enables use of XRProjectionLayers. – Windows, Android
 
@@ -617,6 +635,12 @@ Web Payments App Store Billing Debug Mode
 App-store purchases (e.g., Google Play Store) within a TWA can be requested using the Payment Request API. This flag removes the restriction that the TWA has to be installed from the app-store. – Mac, Windows, Linux, ChromeOS, Android
 
 #enable-debug-for-store-billing
+
+Default
+Secure Payment Confirmation Browser Bound Key
+This flag enables an additional browser-bound signature in secure payment confirmation in PaymentRequest and for WebAuthn payment credentials. – Mac, Windows, Android
+
+#enable-secure-payment-confirmation-browser-bound-key
 
 Default
 Fill passwords on account selection
@@ -833,12 +857,6 @@ Heap profiling stack traces type.
 By default heap profiling service records native stacks. A post-processing step is required to symbolize the stacks. 'Native with thread names' adds the thread name as the first frame of each native stack. It's also possible to record a pseudo stack using trace events as identifiers. It's also possible to do a mix of both. – Mac, Windows, Linux, ChromeOS, Android
 
 #memlog-stack-mode
-
-Default
-Omnibox Max URL Matches
-The maximum number of URL matches to show, unless there are no replacements. – Mac, Windows, Linux, ChromeOS, Android
-
-#omnibox-max-url-matches
 
 Default
 Omnibox Mia ZPS on NTP
@@ -1189,6 +1207,12 @@ Predicts the scroll amount after the vsync time to more closely match when the f
 #enable-resampling-scroll-events-experimental-prediction
 
 Default
+Happiness Tracking Surveys Demo
+Enable showing Happiness Tracking Surveys Demo to users on Desktop – Mac, Windows, Linux, ChromeOS
+
+#happiness-tracking-surveys-for-desktop-demo
+
+Default
 Choose ANGLE graphics backend
 Choose the graphics backend for ANGLE. D3D11 is used on most Windows computers by default. – Windows
 
@@ -1382,7 +1406,7 @@ Allows omnibox to prefetch search suggestions provided by the Default Search Eng
 
 Default
 PDF XFA support
-Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support. – Mac, Windows, Linux, ChromeOS
+Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support, or if controlled by an enterprise policy. – Mac, Windows, Linux, ChromeOS
 
 #pdf-xfa-forms
 
@@ -1583,12 +1607,6 @@ Auto picture in picture for video playback
 Enables auto picture in picture for video playback – Mac, Windows, Linux, ChromeOS
 
 #auto-picture-in-picture-for-video-playback
-
-Default
-Video picture-in-picture controls update 2024
-Displays an updated UI for video picture-in-picture controls from its 2024UI update – Mac, Windows, Linux, ChromeOS
-
-#video-picture-in-picture-controls-update-2024
 
 Default
 Document Picture-in-Picture Animate Resize
@@ -2077,6 +2095,12 @@ Enables suggestions in the Lens composebox. This will have an effect only when t
 #lens-aim-suggestions
 
 Default
+Lens AIM M3 Side Panel Suggestions Gradient Background
+Enables a gradient background for the Lens composebox dropdown that does not cover the entire side panel. – Mac, Windows, Linux, ChromeOS, Android
+
+#lens-aim-gradient-suggest-background
+
+Default
 Data Sharing
 Enabled all Data Sharing related UI and features. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2221,6 +2245,12 @@ Enables an extra security layer on PartitionAlloc. – Mac, Windows, Linux, Chro
 #partition-alloc-with-advanced-checks
 
 Default
+Partition the Visited Link Database, including 'self-links'
+Style links as visited only if they have been clicked from this top-level site and frame origin before. Additionally, style links pointing to the same URL as the page it is displayed on, which have been :visited from any top-level site and frame origin, if they are displayed in a top-level frame or same-origin subframe. – Mac, Windows, Linux, ChromeOS, Android
+
+#partition-visited-link-database-with-self-links
+
+Default
 Predictable Reported Quota
 Enables reporting of a predictable quota from the StorageManager's estimate API. This flag is intended only for validating if this change caused an unforeseen bug. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2240,19 +2270,19 @@ If enabled, NewTabPage can trigger prefetch – Mac, Windows, Linux, ChromeOS
 
 Default
 Glic
-Enables glic – Mac, Windows, Linux
+Enables glic – Mac, Windows, Linux, ChromeOS
 
 #glic
 
 Default
 Glic Z Order Changes
-Enables glic z order changing – Mac, Windows, Linux
+Enables glic z order changing – Mac, Windows, Linux, ChromeOS
 
 #glic-z-order-changes
 
 Default
 Glic actor
-Enables the Glic actor. – Mac, Windows, Linux
+Enables the Glic actor. – Mac, Windows, Linux, ChromeOS
 
 #glic-actor
 
@@ -2276,79 +2306,79 @@ Enables the credit card type to be filled by the Actor Form Filling Service. –
 
 Default
 Glic detached-only mode
-Detach only mode forces the Glic UI to always be floating – Mac, Windows, Linux
+Detach only mode forces the Glic UI to always be floating – Mac, Windows, Linux, ChromeOS
 
 #glic-detached
 
 Default
 Glic Panel Reset With Top Chrome Button
-Configure how the tab strip button can be used to reset the glic panel location. – Mac, Windows, Linux
+Configure how the tab strip button can be used to reset the glic panel location. – Mac, Windows, Linux, ChromeOS
 
 #glic-panel-reset-top-chrome-button
 
 Default
 Glic Panel Reset On Start
-Enables resetting the glic panel position on startup. – Mac, Windows, Linux
+Enables resetting the glic panel position on startup. – Mac, Windows, Linux, ChromeOS
 
 #glic-panel-reset-on-start
 
 Default
 Glic Panel Set Position On Drag
-Enables only saving the glic panel position after a drag. – Mac, Windows, Linux
+Enables only saving the glic panel position after a drag. – Mac, Windows, Linux, ChromeOS
 
 #glic-panel-set-position-on-drag
 
 Default
 Glic Panel Reset On Session Timeout
-Enables resetting the panel position after a session timeout. – Mac, Windows, Linux
+Enables resetting the panel position after a session timeout. – Mac, Windows, Linux, ChromeOS
 
 #glic-panel-reset-on-session-timeout
 
 Default
 Glic Panel Reset Size and Location
-Enables resetting the panel size and position on every open. – Mac, Windows, Linux
+Enables resetting the panel size and position on every open. – Mac, Windows, Linux, ChromeOS
 
 #glic-panel-reset-size-and-location-on-open
 
 Default
 Glic Pre-Warming
-Enables the pre-warming of the Glic panel's web client. – Mac, Windows, Linux
+Enables the pre-warming of the Glic panel's web client. – Mac, Windows, Linux, ChromeOS
 
 #glic-pre-warming
 
 Default
 Glic side panel
-Enable mulitple side panels for Glic – Mac, Windows, Linux
+Enable mulitple side panels for Glic – Mac, Windows, Linux, ChromeOS
 
 #glic-side-panel
 
 Default
 Glic FRE Pre-Warming
-Enables the pre-warming of Glic's FRE web page. – Mac, Windows, Linux
+Enables the pre-warming of Glic's FRE web page. – Mac, Windows, Linux, ChromeOS
 
 #glic-fre-pre-warming
 
 Default
 Glic Entrypoint Variations
-Enables visual tweaks to the Glic entry button in the tab strip. – Mac, Windows, Linux
+Enables visual tweaks to the Glic entry button in the tab strip. – Mac, Windows, Linux, ChromeOS
 
 #glic-entrypoint-variations
 
 Default
 Glic Default To Last Active Conversation
-Enables the last active conversation as the default conversation when opening a new Glic side panel instance. – Mac, Windows, Linux
+Enables the last active conversation as the default conversation when opening a new Glic side panel instance. – Mac, Windows, Linux, ChromeOS
 
 #glic-default-to-last-active-conversation
 
 Default
 Glic Bind a Shared Tab If Unbound
-When a tab is shared with conversation and not yet bound to any conversation, bind it to the current one – Mac, Windows, Linux
+When a tab is shared with conversation and not yet bound to any conversation, bind it to the current one – Mac, Windows, Linux, ChromeOS
 
 #glic-bind-pinned-unbound-tab
 
 Default
 Glic Button Pressed State
-Enables visual changes to the Glic entry button when Glic is open. – Mac, Windows, Linux
+Enables visual changes to the Glic entry button when Glic is open. – Mac, Windows, Linux, ChromeOS
 
 #glic-button-pressed-state
 
@@ -2360,13 +2390,13 @@ Enables Glic to capture a region of the screen. – Mac, Windows, Linux, ChromeO
 
 Default
 Glic Daisy chain new tabs
-Daisy chains new tabs if the active tab when the new tab was create has an open glic side panel – Mac, Windows, Linux
+Daisy chains new tabs if the active tab when the new tab was create has an open glic side panel – Mac, Windows, Linux, ChromeOS
 
 #glic-daisy-chain-new-tabs
 
 Default
 Glic Use Toolbar Height Side Panel
-Enables Glic to use the toolbar height side panel instead of content height side panel when enabled to use side panel – Mac, Windows, Linux
+Enables Glic to use the toolbar height side panel instead of content height side panel when enabled to use side panel – Mac, Windows, Linux, ChromeOS
 
 #glic-toolbar-height-side-panel
 
@@ -2387,12 +2417,6 @@ Happy Eyeballs Version 3
 Enables the Happy Eyeballs Version 3 algorithm. See https://datatracker.ietf.org/doc/draft-pauly-v6ops-happy-eyeballs-v3/ – Mac, Windows, Linux, ChromeOS, Android
 
 #happy-eyeballs-v3
-
-Default
-Signature-based Integrity Checks
-Enables signature-based integrity checks, as proposed in https://wicg.github.io/signature-based-sri/. – Mac, Windows, Linux, ChromeOS, Android
-
-#signature-based-sri
 
 Default
 Enable OAuthMultilogin Cookies Binding
@@ -2519,6 +2543,12 @@ Enable Autofill new FOP display on Desktop
 When enabled, updates payment method Autofill suggestions and settings UI. – Mac, Windows, Linux, ChromeOS
 
 #autofill-enable-new-fop-display-desktop
+
+Default
+Align PDF default print settings with HTML
+Align the default print settings for PDFs with those for HTML, including scaling and centering. – Mac, Windows, Linux, ChromeOS, Android
+
+#align-pdf-default-print-settings-with-html
 
 Default
 Enable URL filter interstitial V3
@@ -2779,12 +2809,6 @@ Enable using clientside model predictions to fill password forms. – Mac, Windo
 #apply-clientside-model-predictions-for-password-types
 
 Default
-Apply clientside model predictions for OTPs.
-Enable using clientside model predictions to fill OTP forms. – Mac, Windows, Linux, ChromeOS, Android
-
-#apply-clientside-model-predictions-for-otps
-
-Default
 HTML-in-Canvas
 Enables the Canvas 2D drawElement API and the WebGL texElement2D API for drawing HTML content into a canvas. See: https://github.com/WICG/html-in-canvas – Mac, Windows, Linux, ChromeOS, Android
 
@@ -2873,6 +2897,12 @@ Multicast in Direct Sockets API
 Enables access Multicast in Direct Sockets API. See https://github.com/WICG/direct-sockets/blob/main/docs/multicast-explainer.md for details. – Mac, Windows, Linux, ChromeOS
 
 #multicast-in-direct-sockets
+
+Default
+Enable SecurityInfo in WebRequest API for ControlledFrame
+Enables SecurityInfo in WebRequest API for ControlledFrames, allowing listeners to retrieve certificate details of web requests. – Mac, Windows, Linux, ChromeOS
+
+#controlled-frame-web-request-security-info
 
 Default
 Enable Cross-Device Pref Tracker
@@ -2983,8 +3013,14 @@ The value of the 'corpus' parameter in the variations seed request. If unspecifi
 #variations-seed-corpus
 
 Disabled
+Passkey Unlock Manager
+Enables the Passkey Unlock Manager, which tracks the state of passkeys and publishes the corresponding metrics. – Mac, Windows, Linux, ChromeOS
+
+#passkey-unlock-manager
+
+Default
 Passkey Unlock Error UI
-Enables showing the passkey unlock error UI to passkey users in case when their access to passkeys is “locked” and when they have an available user verification mechanism (either a system UV or a GPM PIN). – Mac, Windows, Linux, ChromeOS
+Enables showing the passkey unlock error UI to passkey users in case when their access to passkeys is “locked” and when they have an available user verification mechanism (either a system UV or a GPM PIN). This flag requires the flag `PasskeyUnlockManager` to be active. – Mac, Windows, Linux, ChromeOS
 
 #passkey-unlock-error-ui
 
@@ -3031,6 +3067,12 @@ As part of the Growth experiments, show the profile picker to users who only hav
 #show-profile-picker-to-all-users-experiment
 
 Default
+Add button to open all profiles from profile picker
+As part of the Growth experiments, add a button to open all profiles from the profile picker. – Mac, Windows, Linux
+
+#open-all-profiles-from-profile-picker-experiment
+
+Default
 Profile Signals Reporting Enabled
 Enables the profile signals reporting flow for Chrome Enterprise. – Mac, Windows, Linux, ChromeOS, Android
 
@@ -3041,6 +3083,12 @@ Enable UnexportableKeyService mojo service in the browser process.
 When enabled, the browser process will create an Unexportable Key Service which can be used by other, less privileged processes. This enables DBSC in platforms where access to TPM-like features is privileged. – Mac, Windows, Linux
 
 #use-unexportable-key-service-in-browser-process
+
+Default
+Profile Creation Friction Reduction
+As part of the Profile experiments, changes parts of the profile creation flow to reduce friction. – Mac, Windows, Linux
+
+#profile-creation-friction-reduction-experiment
 
 Default
 Profile Picker Text Variations
@@ -3079,6 +3127,12 @@ Enables the omnibox chip entry point for Reading mode – Mac, Windows, Linux, C
 #read-anything-omnibox-chip
 
 Default
+App Browser Use New Layout
+Use the new App Browser Layout. Visually nothing should change. – Mac, Windows, Linux, ChromeOS
+
+#app-browser-use-new-layout
+
+Default
 Tabbed Browser Use New Layout
 Use the new Tabbed Browser Layout. Visually nothing should change. – Mac, Windows, Linux, ChromeOS
 
@@ -3086,7 +3140,7 @@ Use the new Tabbed Browser Layout. Visually nothing should change. – Mac, Wind
 
 Default
 Disable the country check for BNPL testing
-Enables testing BNPL in countries where it would otherwise be disabled. – Mac, Windows, Linux, ChromeOS
+Enables testing BNPL in countries where it would otherwise be disabled. – Mac, Windows, Linux, ChromeOS, Android
 
 #autofill-disable-bnpl-country-check-for-testing
 
@@ -3095,6 +3149,30 @@ Infobar Refresh
 Renders infobars with a refreshed UI. – Mac, Windows, Linux, ChromeOS, Android
 
 #infobar-refresh
+
+Default
+Reading Mode Experimental Immersive Mode
+Enables the infrastructure for Immersive Reading Mode. No visual changes currently included. – Mac, Windows, Linux, ChromeOS
+
+#read-anything-immersive-reading-mode
+
+Default
+Lens overlay non-blocking privacy notice
+Enables non-blocking privacy notice in the Lens overlay. – Mac, Windows, Linux, ChromeOS
+
+#lens-overlay-non-blocking-privacy-notice
+
+Default
+Migrate syncing user to signed in state
+When enabled, a syncing user is migrated to the signed in non-syncing state on the next browser startup. – Mac, Windows, Linux
+
+#migrate-syncing-user-to-signed-in
+
+Default
+Undo the migration of syncing users to signed-in state
+When enabled, reverts the migration of syncing users who were previously migrated to the signed-in, non-syncing state. – Mac, Windows, Linux
+
+#undo-migration-of-syncing-user-to-signed-in
 
 Default
 Your changes will take effect the next time that you relaunch Chrome.
