@@ -70,7 +70,6 @@ chrome://password-manager-internals
 chrome://policy
 chrome://predictors
 chrome://print
-chrome://privacy-sandbox-base-dialog
 chrome://privacy-sandbox-dialog
 chrome://privacy-sandbox-internals
 chrome://private-aggregation-internals
@@ -106,6 +105,7 @@ chrome://tab-strip.top-chrome
 chrome://terms
 chrome://topics-internals
 chrome://translate-internals
+chrome://updater
 chrome://usb-internals
 chrome://version
 chrome://view-cert
@@ -146,6 +146,7 @@ chrome://omnibox
 chrome://on-device-internals
 chrome://optimization-guide-internals
 chrome://profile-internals
+chrome://regional-capabilities-internals
 chrome://safe-browsing
 chrome://tab-strip-internals
 chrome://traces
